@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "---\ntitle: \"About Me\"\n---\n\nWhy I am awesome. ",
+    "contents" : "---\ntitle: \"About This Website\"\n---\n\nMore about this website.",
     "created" : 1481617538795.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "271495062",
+    "hash" : "2444316855",
     "id" : "5FFA38A9",
-    "lastKnownWriteTime" : 1481617830,
-    "last_content_update" : 1481617830113,
+    "lastKnownWriteTime" : 1481619458,
+    "last_content_update" : 1481619458858,
     "path" : "~/Desktop/DataScience/Other/Website/ProQuestionAsker.github.io/about.Rmd",
     "project_path" : "about.Rmd",
     "properties" : {
