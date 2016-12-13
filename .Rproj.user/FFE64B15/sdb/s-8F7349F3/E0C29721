@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "setwd(\"~/Desktop/DataScience/Other/Website/ProQuestionAsker.github.io\")\nrmarkdown::render_site()\n\n",
+    "created" : 1481619751466.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1632681976",
+    "id" : "E0C29721",
+    "lastKnownWriteTime" : 1481619366,
+    "last_content_update" : 1481619796224,
+    "path" : "~/Desktop/DataScience/Other/Website/ProQuestionAsker.github.io/build_site.R",
+    "project_path" : "build_site.R",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
