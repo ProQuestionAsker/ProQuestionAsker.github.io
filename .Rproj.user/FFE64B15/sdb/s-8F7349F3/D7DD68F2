@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "name: \"My Website\"\nnavbar:\n  title: \"Amber Thomas\"\n  left:\n    - text: \"Home\"\n      href: index.html\n    - text: \"About\"\n      href: about.html\noutput:\n  html_document:\n    theme: cosmo\n    highlight: textmate\n    css: styles.css",
+    "created" : 1481617532461.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1398821539",
+    "id" : "D7DD68F2",
+    "lastKnownWriteTime" : 1481618913,
+    "last_content_update" : 1481618913343,
+    "path" : "~/Desktop/DataScience/Other/Website/ProQuestionAsker.github.io/_site.yml",
+    "project_path" : "_site.yml",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "yaml"
+}

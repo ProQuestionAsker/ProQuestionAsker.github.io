@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"Amber's Website\"\n---\n\nHello, World!",
+    "created" : 1481617543972.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2670049876",
+    "id" : "711DC773",
+    "lastKnownWriteTime" : 1481618318,
+    "last_content_update" : 1481618318396,
+    "path" : "~/Desktop/DataScience/Other/Website/ProQuestionAsker.github.io/index.Rmd",
+    "project_path" : "index.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
