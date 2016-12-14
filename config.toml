@@ -1,4 +1,4 @@
-baseurl = "/Users/amberthomas1/Desktop/DataScience/Other/Blogdown/public/"
+baseurl = "https://proquestionasker.github.io/"
 title = "Amber Thomas"
 theme = "hugo-creative-portfolio-theme"
 languageCode = "en-us"
