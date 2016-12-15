@@ -824,8 +824,61 @@ wordcloud(names_2, scale = c(5, 0.2), max.words = 150, random.order = FALSE,
       <pubDate>Thu, 10 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://proquestionasker.github.io/portfolio/Bicycle_Sharing_2/</guid>
-      <description>&lt;p&gt;Data exploration, mapping, and data viz in RMarkdown.
-&lt;/p&gt;
+      <description>
+
+&lt;p&gt;Data exploration, mapping, and data viz in RMarkdown.
+&lt;!---more---&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#loading-necessary-packages&#34;&gt;Loading Necessary Packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#importing-data&#34;&gt;Importing Data&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-structures-and-variables&#34;&gt;Data Structures and Variables&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-visualizations&#34;&gt;Data Visualizations&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#exploring-the-stations-dataset&#34;&gt;Exploring the Stations Dataset&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#station-installations&#34;&gt;Station Installations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#current-station-size&#34;&gt;Current Station Size&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exploring-the-trips-dataset&#34;&gt;Exploring the Trips Dataset&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#plotting-trips-per-month-by-season&#34;&gt;Plotting Trips Per Month (By Season)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#average-trip-duration&#34;&gt;Average Trip Duration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#number-of-trips-by-day-of-week&#34;&gt;Number of Trips by Day of Week&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#number-of-trips-by-time-of-day&#34;&gt;Number of Trips by Time of Day&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#number-of-trips-by-member-type&#34;&gt;Number of Trips by Member Type&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#trip-duration-by-member-type&#34;&gt;Trip Duration by Member Type&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#member-demographics&#34;&gt;Member Demographics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#trip-routes&#34;&gt;Trip Routes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#station-by-trip-departure-and-arrival&#34;&gt;Station by Trip Departure and arrival&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#station-usage&#34;&gt;Station Usage&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exploring-the-weather-dataset&#34;&gt;Exploring the Weather Dataset&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#temperature&#34;&gt;Temperature&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#events&#34;&gt;Events&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#combining-weather-and-trip-datasets&#34;&gt;Combining Weather and Trip Datasets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mean-temperature-vs.-number-of-trips&#34;&gt;Mean Temperature vs. Number of Trips&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#precipitation-vs.-number-of-trips&#34;&gt;Precipitation vs. Number of Trips&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#conclusions&#34;&gt;Conclusions&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#suggestions-for-pronto&#34;&gt;Suggestions for Pronto!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 
@@ -1013,11 +1066,11 @@ ggmap(mymap) + geom_point(aes(x = long, y = lat), data = station_locs,
     alpha = 0.7, color = &amp;quot;darkred&amp;quot;, size = 2)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-8-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-8-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So it looks like all of the stations are located near the Lower Queen Anne, Belltown, International District, Capitol Hill and University of Washington areas. Let&amp;rsquo;s take a more zoomed-in look.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-9-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-9-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Great! So the locations are pretty well clustered. I wonder what order they were added in.&lt;/p&gt;
 
@@ -1057,13 +1110,13 @@ station %&amp;gt;% group_by(install_date) %&amp;gt;% summarise(count = n()) %&am
 
 &lt;p&gt;It looks like the vast majority (86%) of the stations were added on opening day. Let&amp;rsquo;s see where those original ones were and where the rest were added.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-12-1.png&#34; alt=&#34;&#34; /&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-12-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-12-1.png&#34; alt=&#34;&#34; /&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-12-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So they added more stations throughout the district that they serve, instead of adding several new stations to a single neighborhood all at once. Good to know.&lt;/p&gt;
 
 &lt;p&gt;Now, I wonder how many bikes can be parked at each station (as of August 31,2016)?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-13-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-13-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Well that&amp;rsquo;s weird, some of the stations have a dock count of 0. I&amp;rsquo;m assuming they didn&amp;rsquo;t start that way. Let&amp;rsquo;s calculate the change in dock count from station installation to August 31, 2016 and plot it on a map.&lt;/p&gt;
 
@@ -1074,13 +1127,13 @@ station %&amp;gt;% group_by(install_date) %&amp;gt;% summarise(count = n()) %&am
 
 &lt;h5 id=&#34;change-in-number-of-bike-docks-per-station&#34;&gt;Change in Number of Bike Docks Per Station&lt;/h5&gt;
 
-&lt;p&gt;Any stations with no change in number of docks are not shown here. &lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-15-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Any stations with no change in number of docks are not shown here. &lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-15-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow! Looks like quite a few stations took away bike docks and none gained any. Perhaps those stations weren&amp;rsquo;t being used very frequently. We&amp;rsquo;ll have to look at that a bit later.&lt;/p&gt;
 
 &lt;h4 id=&#34;current-station-size&#34;&gt;Current Station Size&lt;/h4&gt;
 
-&lt;p&gt;I&amp;rsquo;m going to take one quick look at the current size of each station before moving on to the next dataset. &lt;em&gt;Note: I did not include any stations that were closed as of August 31, 2016 in this map&lt;/em&gt; &lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-16-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m going to take one quick look at the current size of each station before moving on to the next dataset. &lt;em&gt;Note: I did not include any stations that were closed as of August 31, 2016 in this map&lt;/em&gt; &lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-16-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So it looks like the biggest stations tend to be on the outskirts of the rest. Where there are several stations in close proximity, there tend to be fewer bike docks at each station. That makes sense, logically speaking. If you go to a station and there is no bike to rent, you can easily go to another nearby, assuming there is another nearby. In areas where the stations are more secluded, it&amp;rsquo;s more important that there be bikes and open spaces readily available for users.&lt;/p&gt;
 
@@ -1123,7 +1176,7 @@ trip_2$stop_date &amp;lt;- mdy(trip_2$stop_date)
 
 &lt;p&gt;Great! Time to visualize the number of rides per day.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-19-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-19-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hmm, grouping by day is a little noisy. Perhaps we should try by month?&lt;/p&gt;
 
@@ -1137,7 +1190,7 @@ trip_2$stop_date &amp;lt;- mdy(trip_2$stop_date)
 
 &lt;p&gt;Now plot. I think I&amp;rsquo;ll plot this by month but color it by season (where December, January, and February are &amp;ldquo;winter&amp;rdquo;, March, April, and May are &amp;ldquo;spring&amp;rdquo;, June, July, August are &amp;ldquo;summer&amp;rdquo;, and September, October, November are &amp;ldquo;autumn&amp;rdquo;)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-21-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-21-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Well that intuitively makes sense. The number of trips taken per month increases in the spring, reaches a maximum in the summer, declines through the fall, remains fairly stable in the winter and then repeats.&lt;/p&gt;
 
@@ -1153,7 +1206,7 @@ Trip_Duration_Month &amp;lt;- start_date_ym %&amp;gt;% mutate(trip_duration_min 
 
 &lt;p&gt;Now to plot the average trip duration (in minutes) (plus or minus standard error), with colors indicating season.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-23-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-23-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There&amp;rsquo;s surprisingly not a huge range in trip durations here.&lt;/p&gt;
 
@@ -1170,11 +1223,11 @@ Trip_Duration_Month &amp;lt;- start_date_ym %&amp;gt;% mutate(trip_duration_min 
 
 &lt;p&gt;Now to plot the total number of trips by day of the week.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-25-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-25-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ok, so there are definitely more trips during the week than on the weekends. I wonder if this varies by season too.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-26-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-26-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So it looks like usage is relatively consistent across seasons, at least as far as the number of trips are concerned.&lt;/p&gt;
 
@@ -1182,7 +1235,7 @@ Trip_Duration_Month &amp;lt;- start_date_ym %&amp;gt;% mutate(trip_duration_min 
 
 &lt;p&gt;How about time of day? Are people using these around commuting times during the week and later on weekends?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-27-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-27-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow, looks like regardless of the season, people are commuting to/from work using this service (there&amp;rsquo;s a spike between 8 and 10 AM and another between 4 and 7 PM Monday through Friday). But the weekends seem to be popular between 10 AM and 10 PM.&lt;/p&gt;
 
@@ -1192,7 +1245,7 @@ Trip_Duration_Month &amp;lt;- start_date_ym %&amp;gt;% mutate(trip_duration_min 
 
 &lt;p&gt;If I were to guess, I&amp;rsquo;d think the short-term passes would be ideal for tourists or people looking for a quick weekend trip, whereas members may be more likely to continue using the service year-round. Let&amp;rsquo;s check out my assumptions by plotting, once again colored by season.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-28-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-28-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Surprisingly (to me, at least), different types of users seem to follow similar patterns of usage. Spring and Summer are definitely the most popular times for anyone to ride a bike in the Seattle area.&lt;/p&gt;
 
@@ -1202,7 +1255,7 @@ Trip_Duration_Month &amp;lt;- start_date_ym %&amp;gt;% mutate(trip_duration_min 
 
 &lt;p&gt;Let&amp;rsquo;s see if these time limits cause differing behaviors in our users.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-29-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-29-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ok, so our members are pretty good about making sure that they return their bike before they incur extra charges, but the short-term pass holders frequently go over their time limit. I wonder how the cost of a trip varies for members and pass holders. Let&amp;rsquo;s try to calculate the cost of a trip.&lt;/p&gt;
 
@@ -1219,7 +1272,7 @@ Trip_Duration_Month &amp;lt;- start_date_ym %&amp;gt;% mutate(trip_duration_min 
 
 &lt;p&gt;That was a complicated nested if/else statement! Let&amp;rsquo;s see how much these folks are paying in additional fees!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-31-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-31-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Looks like short-term pass holders (who are already paying a higher price per day of biking), are also paying lots of extra fees. This could be because they are unfamiliar with the pricing structure and don&amp;rsquo;t realize they need to return their bike to a station within 30 minutes without getting charged. It is also possible that short-term users may be tourists who don&amp;rsquo;t know their way around as easily, and thus can&amp;rsquo;t find their way to a station within the time limit.&lt;/p&gt;
 
@@ -1236,7 +1289,7 @@ hist(trip_age$age, main = &amp;quot;Member Age&amp;quot;, xlab = &amp;quot;Numbe
     col = &amp;quot;#56B4E9&amp;quot;, breaks = 25)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;My first instinct here is to say &amp;ldquo;Wow! There&amp;rsquo;s a lot of 20 and 30-somethings that use this service!&amp;rdquo; But this figure (and these data) may be a little misleading. You see, we don&amp;rsquo;t have any sort of Rider ID number, meaning we can&amp;rsquo;t take &amp;ldquo;individual activity level&amp;rdquo; into account. So we can&amp;rsquo;t tell if the tallest spike is because 5 very athletic 28-year-olds went on 4,000 trips each, or if 100 people went on 200 trips each, or if there were 20,000 28-year-olds who each only used the service once.&lt;/p&gt;
 
@@ -1275,7 +1328,7 @@ trip_route$stop_long &amp;lt;- station_coord[match(trip_route$to_station_id,
 
 &lt;p&gt;I&amp;rsquo;ll start by looking at the possible routes of the very first trip.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-34-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-34-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Cool! So Google Maps API was able to give us two potential routes for this particular trip. We can make a best guess on which trip was taken by determining the trip duration.&lt;/p&gt;
 
@@ -1294,19 +1347,18 @@ trip_route[1, &amp;quot;tripduration&amp;quot;]
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;leg_1 %&amp;gt;% group_by(route) %&amp;gt;% summarise(duration = sum(minutes))
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code&gt;## # A tibble: 3 × 2
+&lt;pre&gt;&lt;code&gt;## # A tibble: 2 × 2
 ##   route duration
 ##   &amp;lt;chr&amp;gt;    &amp;lt;dbl&amp;gt;
 ## 1     A 4.950000
-## 2     B 5.650000
-## 3     C 5.483333
+## 2     B 5.583333
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Hmm, looks like Google estimates those trips should have only taken between 5 and 6 minutes. It is very possible that our user did not go directly from one station to the other. It&amp;rsquo;s also possible that he got stopped at a few red lights along his route.&lt;/p&gt;
 
 &lt;p&gt;Perhaps this, being the first trip, was a demo of some sort. Let&amp;rsquo;s check out the last trip that was recorded and see if we still run into the same time disconnect.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-37-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt; Well this was certainly a longer ride than the first one we looked at!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-37-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt; Well this was certainly a longer ride than the first one we looked at!&lt;/p&gt;
 
 &lt;p&gt;How long did this trip take?&lt;/p&gt;
 
@@ -1339,7 +1391,7 @@ trip_route[1, &amp;quot;tripduration&amp;quot;]
 
 &lt;h5 id=&#34;trip-departure&#34;&gt;Trip Departure&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-40-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-40-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Great, so it looks like the station that sends the highest number of bikes out and takes the highest number of bikes in is located at Pier 69 / Alaskan Way &amp;amp; Clay Street. Looks like this is pretty close to a few parks and several big tourist attractions.&lt;/p&gt;
 
@@ -1347,7 +1399,7 @@ trip_route[1, &amp;quot;tripduration&amp;quot;]
 
 &lt;h5 id=&#34;trip-arrival&#34;&gt;Trip Arrival&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-41-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-41-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Great, so it looks like the station that sends the highest number of bikes out and takes the highest number of bikes in is located at Pier 69 / Alaskan Way &amp;amp; Clay Street. Looks like this is pretty close to a few parks and several big tourist attractions.&lt;/p&gt;
 
@@ -1521,19 +1573,19 @@ weather$Events &amp;lt;- as.factor(weather$Events)
 
 &lt;h5 id=&#34;minimum&#34;&gt;Minimum&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-51-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-51-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h5 id=&#34;mean&#34;&gt;Mean&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-52-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-52-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h5 id=&#34;maximum&#34;&gt;Maximum&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-53-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-53-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;events&#34;&gt;Events&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-54-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-54-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;combining-weather-and-trip-datasets&#34;&gt;Combining Weather and Trip Datasets&lt;/h4&gt;
 
@@ -1553,11 +1605,11 @@ trip_weather &amp;lt;- left_join(trip_3, weather, by = &amp;quot;Date&amp;quot;)
 
 &lt;p&gt;Ok. Now let&amp;rsquo;s see how the number of trips per day is influenced by weather (mean temperature, rounded to the nearest 5 degrees F)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-56-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-56-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So, as expected, there are more trips when the weather is mild but not too warm (over 70F) or too cold (below 50F). However, this figure may be influenced by the overall number of days that exhibited each mean temperature. Let&amp;rsquo;s try to standardize that.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-57-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-57-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So when we standardize our measurements, correcting for the number of days that actually reached each temperature, we see a steady increase in the number of trips until around 75F where the trend levels off. People are more likely to ride a bike when it&amp;rsquo;s warm outside.&lt;/p&gt;
 
@@ -1565,7 +1617,7 @@ trip_weather &amp;lt;- left_join(trip_3, weather, by = &amp;quot;Date&amp;quot;)
 
 &lt;p&gt;If you&amp;rsquo;ve ever heard of Seattle, you probably hear that it rains all the time there. Let&amp;rsquo;s see if that has an impact on the number of trips taken in a day.&lt;/p&gt;
 
-&lt;p&gt;We&amp;rsquo;ll start with a figure standardized for number of days at a precipitation level, rounded to the nearest 0.2 inches. &lt;img src=&#34;Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-58-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ll start with a figure standardized for number of days at a precipitation level, rounded to the nearest 0.2 inches. &lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-58-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Looks like even Seattleites have a limit when it comes to riding a bike in the rain. The more it rained, the fewer trips were taken per day.&lt;/p&gt;
 
@@ -1591,7 +1643,8 @@ trip_weather &amp;lt;- left_join(trip_3, weather, by = &amp;quot;Date&amp;quot;)
 &lt;li&gt;Consider a 3rd membership option: &amp;ldquo;Commuter&amp;rdquo;. This may allow users to take bikes between 7-10 AM and 4-7 PM for free, but operate under a different time limit schedule during other times of day.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;As always, I appreciate any and all feedback from my work and appreciate you taking the time to see what I&amp;rsquo;ve done. Thanks!&lt;/p&gt;</description>
+&lt;p&gt;As always, I appreciate any and all feedback from my work and appreciate you taking the time to see what I&amp;rsquo;ve done. Thanks!&lt;/p&gt;
+</description>
     </item>
     
     <item>
