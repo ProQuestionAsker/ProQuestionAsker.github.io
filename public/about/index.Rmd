@@ -54,3 +54,22 @@ knitr::include_graphics("images/all_animals.png")
 ```
 
 Only about **5 - 10%** of my time was spent working with animals. My professional experience (in time spent performing a single activity) breaks down like this:
+
+```{r echo = FALSE, message = FALSE, out.height = "300px"}
+library(highcharter)
+
+highchart () %>% 
+  hc_chart(type = "bar") %>% 
+  hc_yAxis(title = list(text = "Percentage of Time")) %>% 
+  hc_plotOptions(bar = list(
+    dataLabels = list(enabled = FALSE),
+    stacking = "percent")) %>% 
+      hc_add_series(name = "Animal Care", data = c(10)) %>% 
+      hc_add_series(name = "Experimental Design", data = c(20)) %>% 
+      hc_add_series(name = "Data Collection", data = c(30)) %>% 
+      hc_add_series(name = "Data Analysis", data = c(40)) %>%
+      hc_add_series(name = "Project Communication", data = c(20)) %>% 
+  hc_add_theme(hc_theme_darkunica())
+  
+```
+
