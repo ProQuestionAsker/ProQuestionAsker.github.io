@@ -34,7 +34,7 @@ googleAnalytics = ""
   # Nav links in the side bar
   [[params.navlinks]]
   name = "Home"
-  url = "index.html"
+  url = ""
 
   [[params.navlinks]]
   name = "About"
