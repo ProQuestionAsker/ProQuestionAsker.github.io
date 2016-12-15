@@ -2,19 +2,12 @@
 showonlyimage = false
 draft = false
 image = "img/portfolio/Bike_Season_DOW.png"
-date = "November 10, 2016"
+date = "2016-11-10"
 title = "Pronto! Bicycle Sharing in Seattle"
 weight = 0
 +++
 
 <!--more-->
-
-
-# Bicycle Sharing Seattle
-Amber Thomas  
-November 10, 2016  
-
-
 
 ## Introduction
 
