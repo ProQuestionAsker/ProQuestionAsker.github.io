@@ -1,3 +1,15 @@
++++
+showonlyimage = false
+draft = false
+image = "img/portfolio/map.png"
+date = "2016-11-16"
+title = "Dog Ownership in Seattle"
+weight = 0
++++
+
+Data cleaning, exploration, mapping, and data viz in RMarkdown.
+<!--more-->
+
 -   [Introduction](#introduction)
     -   [Loading Necessary Packages](#loading-necessary-packages)
     -   [Importing Licensed Dog Ownership Data](#importing-licensed-dog-ownership-data)
