@@ -8,8 +8,6 @@ weight = 0
 +++
 
 
-
-
 ## Introduction
 
 This is an exploration of bicycle-sharing data in the city of Seattle, WA (USA) from October 2014 - August 2016.  I hope to eventually combine this data with other forms of ride-sharing and transportation in the city, but this will be the first step.  
