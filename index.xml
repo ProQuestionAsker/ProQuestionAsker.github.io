@@ -824,10 +824,8 @@ wordcloud(names_2, scale = c(5, 0.2), max.words = 150, random.order = FALSE,
       <pubDate>Thu, 10 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://proquestionasker.github.io/portfolio/Bicycle_Sharing_2/</guid>
-      <description>
-
-&lt;p&gt;Data exploration, mapping, and data viz in RMarkdown.
-&lt;!---more---&gt;&lt;/p&gt;
+      <description>&lt;p&gt;Data exploration, mapping, and data viz in RMarkdown.
+&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;
@@ -1643,8 +1641,7 @@ trip_weather &amp;lt;- left_join(trip_3, weather, by = &amp;quot;Date&amp;quot;)
 &lt;li&gt;Consider a 3rd membership option: &amp;ldquo;Commuter&amp;rdquo;. This may allow users to take bikes between 7-10 AM and 4-7 PM for free, but operate under a different time limit schedule during other times of day.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;As always, I appreciate any and all feedback from my work and appreciate you taking the time to see what I&amp;rsquo;ve done. Thanks!&lt;/p&gt;
-</description>
+&lt;p&gt;As always, I appreciate any and all feedback from my work and appreciate you taking the time to see what I&amp;rsquo;ve done. Thanks!&lt;/p&gt;</description>
     </item>
     
     <item>
