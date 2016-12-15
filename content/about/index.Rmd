@@ -55,7 +55,7 @@ knitr::include_graphics("images/all_animals.png")
 
 Only about **5 - 10%** of my time was spent working with animals. My professional experience (in time spent performing a single activity) breaks down like this:
 
-```{r echo = FALSE, message = FALSE, out.height = "300px"}
+```{r echo = FALSE, message = FALSE, out.height = "200px"}
 library(highcharter)
 
 highchart () %>% 
