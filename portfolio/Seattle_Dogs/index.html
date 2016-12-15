@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Dog Ownership in Seattle</title>
+
 <meta name="description" content="Describe your website">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
@@ -96,17 +96,15 @@ ga('send', 'pageview');
   <div class="row">
     <div class="col-lg-8">
       <div class="content-column-content">
-         <h1>Dog Ownership in Seattle</h1>
-         <p>Data exploration, mapping, and data viz in RMarkdown.
-</p>
+         <h1></h1>
+         
 
 <ul>
 <li><a href="#introduction">Introduction</a>
 
 <ul>
 <li><a href="#loading-necessary-packages">Loading Necessary Packages</a></li>
-<li><a href="#importing-licensed-dog-ownership-data">Importing Licensed Dog Ownership
-Data</a></li>
+<li><a href="#importing-licensed-dog-ownership-data">Importing Licensed Dog Ownership Data</a></li>
 </ul></li>
 <li><a href="#cleaning-data">Cleaning Data</a></li>
 <li><a href="#data-visualizations">Data Visualizations</a>
@@ -123,28 +121,24 @@ Data</a></li>
 <li><a href="#large">Large</a></li>
 <li><a href="#giant">Giant</a></li>
 </ul></li>
-<li><a href="#caveats-of-dog-size-by-zipcode">Caveats of Dog Size by
-Zipcode</a></li>
+<li><a href="#caveats-of-dog-size-by-zipcode">Caveats of Dog Size by Zipcode</a></li>
 <li><a href="#dog-names">Dog Names</a></li>
 </ul></li>
 <li><a href="#conclusions">Conclusions</a></li>
 </ul>
 
-<h2 id="introduction-introduction">Introduction {#introduction}</h2>
+<h2 id="introduction">Introduction</h2>
 
 <p>This report investigates licensed dog ownership in Seattle, WA (USA).</p>
 
 <p>I&rsquo;m curious about a few things here:</p>
 
 <ul>
-<li><p>People estimate that there are 160,000 dogs in Seattle. Where are
-they?</p></li>
+<li><p>People estimate that there are 160,000 dogs in Seattle. Where are they?</p></li>
 
-<li><p>Seattle is a relatively densely-populated area. Are small,
-apartment-friendly dogs preferred?</p></li>
+<li><p>Seattle is a relatively densely-populated area. Are small, apartment-friendly dogs preferred?</p></li>
 
-<li><p>Using this information, what recommendations could be made to
-aspiring dog sitters and walkers in Seattle?</p></li>
+<li><p>Using this information, what recommendations could be made to aspiring dog sitters and walkers in Seattle?</p></li>
 </ul>
 
 <p>I will annotate each step of data analysis as I go.</p>
@@ -176,16 +170,7 @@ library(caret)
 
 <h3 id="importing-licensed-dog-ownership-data">Importing Licensed Dog Ownership Data</h3>
 
-<p>The spreadsheet containing all licensed dog ownership information was
-obtained from the Seattle Times article <a href="http://www.seattletimes.com/life/pets/mapping-the-dogs-of-seattle/">&ldquo;Mapping the Dogs of
-Seattle&rdquo;</a>
-and is available for
-<a href="https://docs.google.com/spreadsheets/d/1XWLw_hxWM2RHiwALzcM_QxNpzQn_cDmS3Z9HFoZMvTo/edit#gid=460106206">download</a>.
-According to the article, the original data were obtained from the
-Seattle Animal Shelter and represent the 43,000 licensed dogs in Seattle
-as of February 2015. <em>Note: This number is thought to only represent
-approximately <a href="http://www.seattle.gov/Documents/Departments/ParksAndRecreation/PoliciesPlanning/Plans/Response_to_SLI_69-1-B-1_(Dog_Off-Leash_Areas).pdf">27% of the dog population in
-Seattle</a></em></p>
+<p>The spreadsheet containing all licensed dog ownership information was obtained from the Seattle Times article <a href="http://www.seattletimes.com/life/pets/mapping-the-dogs-of-seattle/">&ldquo;Mapping the Dogs of Seattle&rdquo;</a> and is available for <a href="https://docs.google.com/spreadsheets/d/1XWLw_hxWM2RHiwALzcM_QxNpzQn_cDmS3Z9HFoZMvTo/edit#gid=460106206">download</a>. According to the article, the original data were obtained from the Seattle Animal Shelter and represent the 43,000 licensed dogs in Seattle as of February 2015. <em>Note: This number is thought to only represent approximately <a href="http://www.seattle.gov/Documents/Departments/ParksAndRecreation/PoliciesPlanning/Plans/Response_to_SLI_69-1-B-1_(Dog_Off-Leash_Areas).pdf">27% of the dog population in Seattle</a></em></p>
 
 <pre><code class="language-r">dogs &lt;- read.csv(file = &quot;Seattle_Dogs_2015.csv&quot;, header = TRUE, 
     stringsAsFactors = TRUE)
@@ -210,8 +195,7 @@ Seattle</a></em></p>
 
 <ul>
 <li><strong>License Type</strong> : Indicates what type of license the dog has</li>
-<li><strong>Animal Type</strong> : Since this dataset is all about dogs, there is
-only one animal type listed: &ldquo;Dog&rdquo;</li>
+<li><strong>Animal Type</strong> : Since this dataset is all about dogs, there is only one animal type listed: &ldquo;Dog&rdquo;</li>
 <li><strong>Gender</strong> : Dog&rsquo;s sex (&ldquo;Male&rdquo;, &ldquo;Female&rdquo;, or &ldquo;Unspec&rdquo;)</li>
 <li><strong>Primary Breed</strong> : Indicates the general breed of the dog</li>
 <li><strong>Primary Color</strong> : Indicates the dog&rsquo;s overall color</li>
@@ -219,8 +203,7 @@ only one animal type listed: &ldquo;Dog&rdquo;</li>
 <li><strong>Zip.C</strong> : Indicates the zipcode where the dog is registered</li>
 </ul>
 
-<p>We can eliminate the &ldquo;Animal Type&rdquo; column since it doesn&rsquo;t give us any
-additional information.</p>
+<p>We can eliminate the &ldquo;Animal Type&rdquo; column since it doesn&rsquo;t give us any additional information.</p>
 
 <pre><code class="language-r">dogs &lt;- dogs %&gt;% select(-2)
 </code></pre>
@@ -348,14 +331,9 @@ additional information.</p>
 ## [227] &quot;Yorkshire Terrier&quot;
 </code></pre>
 
-<p>Wow! That&rsquo;s quite a few! We&rsquo;ll come back to cleaning up the species
-names in a bit.</p>
+<p>Wow! That&rsquo;s quite a few! We&rsquo;ll come back to cleaning up the species names in a bit.</p>
 
-<p>Generally, the dog&rsquo;s estimated size may be more beneficial than their
-breed, so let&rsquo;s try to pair these data up with information from other
-sources. The data used are available
-<a href="http://modernpuppies.com/breedweightchart.aspx">here</a>. Time to import
-the database of dog breeds with their sizes.</p>
+<p>Generally, the dog&rsquo;s estimated size may be more beneficial than their breed, so let&rsquo;s try to pair these data up with information from other sources. The data used are available <a href="http://modernpuppies.com/breedweightchart.aspx">here</a>. Time to import the database of dog breeds with their sizes.</p>
 
 <pre><code class="language-r">weight &lt;- read.csv(file = &quot;Breed_Wt.csv&quot;, header = TRUE, stringsAsFactors = FALSE)
 </code></pre>
@@ -383,10 +361,9 @@ the database of dog breeds with their sizes.</p>
 ## 6               Aussiedoodle     Male: 35-65 lbs       Female: 25-55 lbs
 </code></pre>
 
-<h2 id="cleaning-data-cleaning-data">Cleaning Data {#cleaning-data}</h2>
+<h2 id="cleaning-data">Cleaning Data</h2>
 
-<p>Looks like lots of character strings. Time to split out some of these
-columns. We&rsquo;ll use the R packages <code>tidyr</code> and <code>dplyr</code> for this.</p>
+<p>Looks like lots of character strings. Time to split out some of these columns. We&rsquo;ll use the R packages <code>tidyr</code> and <code>dplyr</code> for this.</p>
 
 <pre><code class="language-r"># Delete empty rows
 weight &lt;- weight[!apply(weight == &quot;&quot;, 1, all), ]
@@ -425,9 +402,7 @@ head(weight_split_all)
 ## 6    Cairn Terrier       14         13
 </code></pre>
 
-<p>Great! Now we have a dataframe that just lists breed, and then average
-weight for males and females. Now we can use this to fill in the
-estimated weight for each of the animals in our <code>dogs</code> dataset.</p>
+<p>Great! Now we have a dataframe that just lists breed, and then average weight for males and females. Now we can use this to fill in the estimated weight for each of the animals in our <code>dogs</code> dataset.</p>
 
 <pre><code class="language-r"># Make a copy of our dataset
 dogs_2 &lt;- dogs
@@ -454,9 +429,7 @@ dogs_2$Female_Avg &lt;- as.numeric(dogs_2$Female_Avg)
 ##    5.00   16.00   52.50   47.53   72.50  182.50   11611
 </code></pre>
 
-<p>Well, looks like our system automatically placed 73% of our entries, the
-remaining 27% (or 11,611 dogs) were not found. Let&rsquo;s see if those were
-all the same or similar species.</p>
+<p>Well, looks like our system automatically placed 73% of our entries, the remaining 27% (or 11,611 dogs) were not found. Let&rsquo;s see if those were all the same or similar species.</p>
 
 <pre><code class="language-r">missing_size &lt;- dogs_2 %&gt;% filter(is.na(Male_Avg)) %&gt;% group_by(Primary.Breed) %&gt;% 
     summarise(count = n())
@@ -475,13 +448,9 @@ head(missing_size)
 ## 6         Australian Shepard  1216
 </code></pre>
 
-<p>Ah, looks like we have a few misspelled names in our original database.
-Let&rsquo;s try to clean those up a bit.</p>
+<p>Ah, looks like we have a few misspelled names in our original database. Let&rsquo;s try to clean those up a bit.</p>
 
-<p>Due to the random nature of the misspellings and re-wording of breeds in
-this dataset, I&rsquo;ll use the <code>gsub</code> function to manually recode the ones
-that need it. This also allows for verification that the correct new
-term is being used.</p>
+<p>Due to the random nature of the misspellings and re-wording of breeds in this dataset, I&rsquo;ll use the <code>gsub</code> function to manually recode the ones that need it. This also allows for verification that the correct new term is being used.</p>
 
 <pre><code class="language-r"># Fixing Misspellings
 dogs_2$Primary.Breed &lt;- gsub(&quot;Alaskan Malumute&quot;, &quot;Alaskan Malamute&quot;, 
@@ -614,8 +583,7 @@ dogs_2$Primary.Breed &lt;- gsub(&quot;^Schnauzer$|Schnauzer, Standard&quot;,
     &quot;Standard Schnauzer&quot;, dogs_2$Primary.Breed)
 </code></pre>
 
-<p>That was a lot of very different errors in that dataset! Let&rsquo;s see if
-that helped.</p>
+<p>That was a lot of very different errors in that dataset! Let&rsquo;s see if that helped.</p>
 
 <pre><code class="language-r"># Match dog breed from dogs dataset to breed from
 # weight_split_all dataset
@@ -639,8 +607,7 @@ dogs_2$Female_Avg &lt;- as.numeric(dogs_2$Female_Avg)
 ##    5.00   15.50   50.00   45.19   72.50  182.50    3503
 </code></pre>
 
-<p>Well, that did fix some of the missing values! Still another 3,503 (or
-8%) to go!</p>
+<p>Well, that did fix some of the missing values! Still another 3,503 (or 8%) to go!</p>
 
 <pre><code class="language-r">missing_size_2 &lt;- dogs_2 %&gt;% filter(is.na(Male_Avg)) %&gt;% group_by(Primary.Breed) %&gt;% 
     summarise(count = n())
@@ -665,9 +632,7 @@ missing_size_2$Primary.Breed
 ## [29] &quot;Wolf Hybrid&quot;            &quot;Xolo&quot;
 </code></pre>
 
-<p>It looks like a few of these can&rsquo;t be sorted. For example, we have no
-way of estimating size for &ldquo;Looks Like&rdquo;, &ldquo;Mix&rdquo;, &ldquo;Purebred&rdquo;, &ldquo;See Notes&rdquo;
-or &ldquo;Unspecified&rdquo;, so I&rsquo;ll make the sizes of all of those &ldquo;NA&rdquo;.</p>
+<p>It looks like a few of these can&rsquo;t be sorted. For example, we have no way of estimating size for &ldquo;Looks Like&rdquo;, &ldquo;Mix&rdquo;, &ldquo;Purebred&rdquo;, &ldquo;See Notes&rdquo; or &ldquo;Unspecified&rdquo;, so I&rsquo;ll make the sizes of all of those &ldquo;NA&rdquo;.</p>
 
 <pre><code class="language-r">dogs_2$Primary.Breed &lt;- gsub(&quot;Looks Like|^Mix$|NULL|Purebred|See Notes|Unspecified|^Curs$&quot;, 
     NA, dogs_2$Primary.Breed)
@@ -677,8 +642,7 @@ missing_size_3 &lt;- dogs_2 %&gt;% filter(is.na(Male_Avg)) %&gt;% group_by(Prima
     summarise(count = n())
 </code></pre>
 
-<p>So of our remaining 3,503 dogs, how many of them have sizes that we
-can&rsquo;t estimate?</p>
+<p>So of our remaining 3,503 dogs, how many of them have sizes that we can&rsquo;t estimate?</p>
 
 <pre><code class="language-r">missing_size_3[which(is.na(missing_size_3)), ]
 </code></pre>
@@ -689,10 +653,7 @@ can&rsquo;t estimate?</p>
 ## 1          &lt;NA&gt;  1313
 </code></pre>
 
-<p>We can&rsquo;t estimate 1,313 dogs&rsquo; sizes, which means that we can still
-estimate the size of the remaining 2,190 dogs. We only have a few
-species left, and it looks like they weren&rsquo;t ones that were in our
-original weights dataset.</p>
+<p>We can&rsquo;t estimate 1,313 dogs&rsquo; sizes, which means that we can still estimate the size of the remaining 2,190 dogs. We only have a few species left, and it looks like they weren&rsquo;t ones that were in our original weights dataset.</p>
 
 <pre><code class="language-r">missing_size_3$Primary.Breed
 </code></pre>
@@ -711,9 +672,7 @@ original weights dataset.</p>
 ## [23] &quot;Xolo&quot;                   NA
 </code></pre>
 
-<p>Since there are only a few breeds left, I will manually create a
-database of the average weights (all found on the Wikipedia pages for
-the species).</p>
+<p>Since there are only a few breeds left, I will manually create a database of the average weights (all found on the Wikipedia pages for the species).</p>
 
 <p>I&rsquo;ll upload in the supplemental file and match the breed name and mass.</p>
 
@@ -749,9 +708,7 @@ dogs_5 &lt;- rbind(dogs_3, dogs_4)
 ##    5.00   16.00   50.00   45.77   72.50  182.50    1313
 </code></pre>
 
-<p>Awesome! So the only dogs that we still don&rsquo;t have approximate weights
-on are the ones with miscoded breeds. Now let&rsquo;s get a better
-approximation of weight based on gender.</p>
+<p>Awesome! So the only dogs that we still don&rsquo;t have approximate weights on are the ones with miscoded breeds. Now let&rsquo;s get a better approximation of weight based on gender.</p>
 
 <pre><code class="language-r">dogs_5$Gender &lt;- as.factor(dogs_5$Gender)
 
@@ -759,10 +716,7 @@ dogs_5 &lt;- dogs_5 %&gt;% mutate(weight = ifelse(Gender == &quot;Female&quot;,
     Female_Avg, Male_Avg))
 </code></pre>
 
-<p>Perfect. Now we can make an estimate of how they would be categorized on
-&ldquo;<a href="www.rover.com">Rover.com</a>&rdquo;, a Seattle-based website aimed at helping
-dog-owners find reliable dog-sitters and walkers. Their website lists
-the following size cutoffs (in lbs):</p>
+<p>Perfect. Now we can make an estimate of how they would be categorized on &ldquo;<a href="www.rover.com">Rover.com</a>&rdquo;, a Seattle-based website aimed at helping dog-owners find reliable dog-sitters and walkers. Their website lists the following size cutoffs (in lbs):</p>
 
 <ul>
 <li>Small = 0 - 15</li>
@@ -781,41 +735,31 @@ the following size cutoffs (in lbs):</p>
 dogs_5$size_class &lt;- as.factor(dogs_5$size_class)
 </code></pre>
 
-<p>Now we&rsquo;ve got information on dogs, with their breeds, zipcodes and
-approximate sizes and size classes. This will help us later.</p>
+<p>Now we&rsquo;ve got information on dogs, with their breeds, zipcodes and approximate sizes and size classes. This will help us later.</p>
 
-<h2 id="data-visualizations-data-visualizations">Data Visualizations {#data-visualizations}</h2>
+<h2 id="data-visualizations">Data Visualizations</h2>
 
-<h3 id="dog-popularity----by-breed">Dog Popularity &ndash; By Breed</h3>
+<h3 id="dog-popularity-by-breed">Dog Popularity &ndash; By Breed</h3>
 
-<p>Now let&rsquo;s look at some visualizations. We&rsquo;ll start with the popularity
-of each dog breed within Seattle. This figure shows the top 24 most
-popular breeds in the city.</p>
+<p>Now let&rsquo;s look at some visualizations. We&rsquo;ll start with the popularity of each dog breed within Seattle. This figure shows the top 24 most popular breeds in the city.</p>
 
-<p><img src="Seattle_Dogs_files/figure-markdown_phpextra+backtick_code_blocks/unnamed-chunk-23-1.png" style="display: block; margin: auto;" /></p>
+<p><img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-23-1.png" style="display: block; margin: auto;" /></p>
 
-<p>Wow! Looks like labrador retrievers are by far the most popular breed of
-dog in Seattle.</p>
+<p>Wow! Looks like labrador retrievers are by far the most popular breed of dog in Seattle.</p>
 
-<h3 id="dog-popularity----by-size">Dog Popularity &ndash; By Size</h3>
+<h3 id="dog-popularity-by-size">Dog Popularity &ndash; By Size</h3>
 
 <p>How do the numbers of dogs break down by dog size?</p>
 
-<p><img src="Seattle_Dogs_files/figure-markdown_phpextra+backtick_code_blocks/unnamed-chunk-24-1.png" style="display: block; margin: auto;" /></p>
+<p><img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-24-1.png" style="display: block; margin: auto;" /></p>
 
-<p>For a city filled with apartment buildings, Seattle-ites really love
-large dogs (almost as much as medium and small dogs combined!).</p>
+<p>For a city filled with apartment buildings, Seattle-ites really love large dogs (almost as much as medium and small dogs combined!).</p>
 
-<p>I wonder if this trend varies depending on which part of the city the
-pets are living in.</p>
+<p>I wonder if this trend varies depending on which part of the city the pets are living in.</p>
 
 <h3 id="dog-populations-by-zip-code">Dog Populations by Zip Code</h3>
 
-<p>First let&rsquo;s see the density of dogs living in each zip code. Looks like
-we have some messy zip code data with quite a few zip codes not falling
-in the Seattle area. We&rsquo;ll use a list of <a href="http://www.unitedstateszipcodes.org/wa/#zips-list">Washington State zip
-codes</a> to narrow this
-list down.</p>
+<p>First let&rsquo;s see the density of dogs living in each zip code. Looks like we have some messy zip code data with quite a few zip codes not falling in the Seattle area. We&rsquo;ll use a list of <a href="http://www.unitedstateszipcodes.org/wa/#zips-list">Washington State zip codes</a> to narrow this list down.</p>
 
 <pre><code class="language-r"># Import Zipcode dataset
 zipcodes &lt;- read.csv(&quot;Zipcodes.csv&quot;, header = TRUE, stringsAsFactors = FALSE)
@@ -833,26 +777,15 @@ sum(is.na(dogs_5$zip))
 <pre><code>## [1] 365
 </code></pre>
 
-<p>Ok, so there were 365 dog licenses that didn&rsquo;t list appropriate zip
-codes. That&rsquo;s alright, that&rsquo;s less than 1% of our dataset. Let&rsquo;s move
-forward.</p>
+<p>Ok, so there were 365 dog licenses that didn&rsquo;t list appropriate zip codes. That&rsquo;s alright, that&rsquo;s less than 1% of our dataset. Let&rsquo;s move forward.</p>
 
-<p><em>It looks like several of the zipcodes listed are &ldquo;industrial&rdquo; zip
-codes. We&rsquo;ll replace the zip code with the residential zip code that
-each industrial one falls within.</em></p>
+<p><em>It looks like several of the zipcodes listed are &ldquo;industrial&rdquo; zip codes. We&rsquo;ll replace the zip code with the residential zip code that each industrial one falls within.</em></p>
 
-<p><img src="Seattle_Dogs_files/figure-markdown_phpextra+backtick_code_blocks/unnamed-chunk-26-1.png" style="display: block; margin: auto;" /></p>
+<p><img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-26-1.png" style="display: block; margin: auto;" /></p>
 
-<p>Looks like the highest populations of licensed dogs are found in
-zipcodes 98115, 98103, and 98117. That corresponds roughly to Northeast
-Seattle, the area between Fremont and Greenwood, and the Ballard to
-Crown Hill area. It is certainly possible that the high dog populations
-in those areas could be correlated with the human population in the same
-areas. Let&rsquo;s see how many licensed dogs there are per person in these
-areas.</p>
+<p>Looks like the highest populations of licensed dogs are found in zipcodes 98115, 98103, and 98117. That corresponds roughly to Northeast Seattle, the area between Fremont and Greenwood, and the Ballard to Crown Hill area. It is certainly possible that the high dog populations in those areas could be correlated with the human population in the same areas. Let&rsquo;s see how many licensed dogs there are per person in these areas.</p>
 
-<p><em>Human Population Data Obtained
-<a href="http://zipatlas.com/us/wa/seattle/zip-code-comparison/population-density.htm">Here</a></em></p>
+<p><em>Human Population Data Obtained <a href="http://zipatlas.com/us/wa/seattle/zip-code-comparison/population-density.htm">Here</a></em></p>
 
 <pre><code class="language-r">human_pop &lt;- read.csv(&quot;Human_Pop.csv&quot;, header = TRUE, stringsAsFactors = FALSE)
 
@@ -879,57 +812,41 @@ zip_choropleth(pop_zip_2, zip_zoom = (pop_zip_2$region), legend = &quot;Dog:Huma
     reference_map = TRUE, num_colors = 1)
 </code></pre>
 
-<p><img src="Seattle_Dogs_files/figure-markdown_phpextra+backtick_code_blocks/unnamed-chunk-27-1.png" style="display: block; margin: auto;" /></p>
+<p><img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-27-1.png" style="display: block; margin: auto;" /></p>
 
-<p>Generally speaking, central Seattle has a higher &ldquo;Licensed Dogs :
-People&rdquo; Ratio than the neighborhoods along the north and south edges.
-The highest proportion is found in zipcode 98117 or the Ballard to Crown
-Hill area with roughly 1 licensed dog for every 10 people. That is a
-residential area with lots of homes and fewer apartment buildings than
-the downtown-area.</p>
+<p>Generally speaking, central Seattle has a higher &ldquo;Licensed Dogs : People&rdquo; Ratio than the neighborhoods along the north and south edges. The highest proportion is found in zipcode 98117 or the Ballard to Crown Hill area with roughly 1 licensed dog for every 10 people. That is a residential area with lots of homes and fewer apartment buildings than the downtown-area.</p>
 
-<p>I wonder if there are more large dogs in those house-filled areas and
-small dogs in apartment-laden areas. Let&rsquo;s map dog populations by their
-size.</p>
+<p>I wonder if there are more large dogs in those house-filled areas and small dogs in apartment-laden areas. Let&rsquo;s map dog populations by their size.</p>
 
-<p>These figures will be proportions of small, medium, large and giant dogs
-in proportion to the number of dogs in each zipcode.</p>
+<p>These figures will be proportions of small, medium, large and giant dogs in proportion to the number of dogs in each zipcode.</p>
 
-<h3 id="dog-populations-by-size .tabset">Dog Populations by Size</h3>
+<h3 id="dog-populations-by-size">Dog Populations by Size</h3>
 
 <h4 id="small">Small</h4>
 
-<p><img src="Seattle_Dogs_files/figure-markdown_phpextra+backtick_code_blocks/unnamed-chunk-28-1.png" style="display: block; margin: auto;" /></p>
+<p><img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-28-1.png" style="display: block; margin: auto;" /></p>
 
 <h4 id="medium">Medium</h4>
 
-<p><img src="Seattle_Dogs_files/figure-markdown_phpextra+backtick_code_blocks/unnamed-chunk-29-1.png" style="display: block; margin: auto;" /></p>
+<p><img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-29-1.png" style="display: block; margin: auto;" /></p>
 
 <h4 id="large">Large</h4>
 
-<p><img src="Seattle_Dogs_files/figure-markdown_phpextra+backtick_code_blocks/unnamed-chunk-30-1.png" style="display: block; margin: auto;" /></p>
+<p><img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-30-1.png" style="display: block; margin: auto;" /></p>
 
 <h4 id="giant">Giant</h4>
 
-<p><img src="Seattle_Dogs_files/figure-markdown_phpextra+backtick_code_blocks/unnamed-chunk-31-1.png" style="display: block; margin: auto;" /></p>
+<p><img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-31-1.png" style="display: block; margin: auto;" /></p>
 
 <h3 id="caveats-of-dog-size-by-zipcode">Caveats of Dog Size by Zipcode</h3>
 
-<p>Wow! Looks like the largest proportion of small dogs is quite
-concentrated to zipcodes 98134 (Industrial District) and 98101 (Downtown
-Seattle, near Pike Place Market). These zip codes do have relatively
-small total dog populations though, totalling at only 38 and 487 dogs,
-respectively.</p>
+<p>Wow! Looks like the largest proportion of small dogs is quite concentrated to zipcodes 98134 (Industrial District) and 98101 (Downtown Seattle, near Pike Place Market). These zip codes do have relatively small total dog populations though, totalling at only 38 and 487 dogs, respectively.</p>
 
-<p>Medium, large and giant sized dogs have a generally more consistent
-proportional distribution throughout the city. Both medium and large
-dogs have a higher than average proportion in zip code 98155, but again,
-this area boasts a small overall dog population (17 dogs total).</p>
+<p>Medium, large and giant sized dogs have a generally more consistent proportional distribution throughout the city. Both medium and large dogs have a higher than average proportion in zip code 98155, but again, this area boasts a small overall dog population (17 dogs total).</p>
 
 <h3 id="dog-names">Dog Names</h3>
 
-<p>Just for fun, let&rsquo;s take a look at the most popular dog names in
-Seattle. Word cloud, anyone?</p>
+<p>Just for fun, let&rsquo;s take a look at the most popular dog names in Seattle. Word cloud, anyone?</p>
 
 <pre><code class="language-r"># Create a corpus
 names &lt;- Corpus(VectorSource(dogs_5$Name))
@@ -951,11 +868,9 @@ wordcloud(names, scale = c(5, 0.2), max.words = 150, random.order = FALSE,
         &quot;Greens&quot;)[c(4, 5, 6, 7, 8, 9)])
 </code></pre>
 
-<p><img src="Seattle_Dogs_files/figure-markdown_phpextra+backtick_code_blocks/unnamed-chunk-32-1.png" style="display: block; margin: auto;" /></p>
+<p><img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-32-1.png" style="display: block; margin: auto;" /></p>
 
-<p>Oops! Looks like a few of those are probably not real names. We&rsquo;ll go
-ahead and remove &ldquo;dog&rdquo;, &ldquo;null&rdquo;, &ldquo;altered&rdquo;, &ldquo;female&rdquo;, &ldquo;male&rdquo;, &ldquo;labrador&rdquo;,
-&ldquo;retriever&rdquo;, &ldquo;year&rdquo;, and &ldquo;seattle&rdquo; from the wordcloud.</p>
+<p>Oops! Looks like a few of those are probably not real names. We&rsquo;ll go ahead and remove &ldquo;dog&rdquo;, &ldquo;null&rdquo;, &ldquo;altered&rdquo;, &ldquo;female&rdquo;, &ldquo;male&rdquo;, &ldquo;labrador&rdquo;, &ldquo;retriever&rdquo;, &ldquo;year&rdquo;, and &ldquo;seattle&rdquo; from the wordcloud.</p>
 
 <pre><code class="language-r"># Remove non-names
 names_2 &lt;- tm_map(names, removeWords, c(&quot;dog&quot;, &quot;null&quot;, &quot;seattle&quot;, 
@@ -967,12 +882,11 @@ wordcloud(names_2, scale = c(5, 0.2), max.words = 150, random.order = FALSE,
         &quot;Greens&quot;)[c(4, 5, 6, 7, 8, 9)])
 </code></pre>
 
-<p><img src="Seattle_Dogs_files/figure-markdown_phpextra+backtick_code_blocks/unnamed-chunk-33-1.png" style="display: block; margin: auto;" /></p>
+<p><img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-33-1.png" style="display: block; margin: auto;" /></p>
 
 <p>Wow! Lucy looks like the clear winner here!</p>
 
-<p>Looks like some other well-known dog names (like Buddy) are pretty
-common in Seattle. How about &ldquo;Rover&rdquo;?</p>
+<p>Looks like some other well-known dog names (like Buddy) are pretty common in Seattle. How about &ldquo;Rover&rdquo;?</p>
 
 <pre><code class="language-r">dogs_5 %&gt;% filter(Name == &quot;Rover&quot;)
 </code></pre>
@@ -995,38 +909,27 @@ common in Seattle. How about &ldquo;Rover&rdquo;?</p>
 
 <p>There are 6 licensed dogs in Seattle named Rover!</p>
 
-<h2 id="conclusions-conclusions">Conclusions {#conclusions}</h2>
+<h2 id="conclusions">Conclusions</h2>
 
 <ul>
-<li><p>Dogs are basically everywhere in Seattle, but are most highly
-concentrated closer to the center of the city rather than on
-bordering neighborhoods.</p></li>
+<li><p>Dogs are basically everywhere in Seattle, but are most highly concentrated closer to the center of the city rather than on bordering neighborhoods.</p></li>
 
-<li><p>Regardless of apartment-living, Seattle-ites are big fans of big
-dogs throughout the city.</p></li>
+<li><p>Regardless of apartment-living, Seattle-ites are big fans of big dogs throughout the city.</p></li>
 
-<li><p>The highest dog to human ratio is found in the Ballard to Crown Hill
-area, with nearly 1 dog per 10 people.</p></li>
+<li><p>The highest dog to human ratio is found in the Ballard to Crown Hill area, with nearly 1 dog per 10 people.</p></li>
 
-<li><p>Generally, Seattle would be a great place to be a dog sitter
-or walker. To increase the likelihood of finding customers, I&rsquo;d
-suggest being open to walking or pet-sitting large dogs
-where possible.</p></li>
+<li><p>Generally, Seattle would be a great place to be a dog sitter or walker. To increase the likelihood of finding customers, I&rsquo;d suggest being open to walking or pet-sitting large dogs where possible.</p></li>
 
-<li><p>For a company like Rover.com which aims to connect dog-parents to
-dog sitters and walkers, I&rsquo;d recommend providing this type of
-city-wide breakdown to potential sitters. I&rsquo;d also suggest reaching
-out to large-dog owners to investigate their interest in becoming a
-sitter of other large dogs.</p></li>
+<li><p>For a company like Rover.com which aims to connect dog-parents to dog sitters and walkers, I&rsquo;d recommend providing this type of city-wide breakdown to potential sitters. I&rsquo;d also suggest reaching out to large-dog owners to investigate their interest in becoming a sitter of other large dogs.</p></li>
 </ul>
 
-<p><em>Without both sitter and user data from Rover.com, I am unable to make
-recommendations regarding the best neighborhood to become a dog sitter.</em></p>
+<p><em>Without both sitter and user data from Rover.com, I am unable to make recommendations regarding the best neighborhood to become a dog sitter.</em></p>
+
          <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'Amber Thomas';
     var disqus_identifier = 'https:\/\/proquestionasker.github.io\/portfolio\/Seattle_Dogs\/';
-    var disqus_title = 'Dog Ownership in Seattle';
+    var disqus_title = '';
     var disqus_url = 'https:\/\/proquestionasker.github.io\/portfolio\/Seattle_Dogs\/';
 
     (function() {
