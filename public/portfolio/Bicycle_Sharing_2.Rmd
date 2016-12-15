@@ -2,10 +2,10 @@
 title: "Bicycle Sharing Seattle"
 author: "Amber Thomas"
 date: "November 10, 2016"
-showonlyimage: false
-draft: false
-image: "img/portfolio/Bike_Season_DOW.png"
-weight = 0
+output: 
+  html_document: 
+    css: ~/Desktop/DataScience/Other/Website/ProQuestionAsker.github.io/public/css/bootstrap.min.css
+    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
