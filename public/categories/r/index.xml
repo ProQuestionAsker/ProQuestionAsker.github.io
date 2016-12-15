@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Amber Thomas</title>
-    <link>/Users/amberthomas1/Desktop/DataScience/Other/Blogdown/public/categories/r/index.xml</link>
+    <link>https://proquestionasker.github.io/categories/r/index.xml</link>
     <description>Recent content on Amber Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Amber Thomas</copyright>
-    <atom:link href="/Users/amberthomas1/Desktop/DataScience/Other/Blogdown/public/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://proquestionasker.github.io/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hello World</title>
-      <link>/Users/amberthomas1/Desktop/DataScience/Other/Blogdown/public/post/hello-world/</link>
+      <link>https://proquestionasker.github.io/post/hello-world/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/Users/amberthomas1/Desktop/DataScience/Other/Blogdown/public/post/hello-world/</guid>
+      <guid>https://proquestionasker.github.io/post/hello-world/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
