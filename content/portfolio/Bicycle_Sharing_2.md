@@ -8,7 +8,7 @@ weight = 0
 +++
 
 Data exploration, mapping, and data viz in RMarkdown.
-<!---more--->
+<!--more-->
 
 -   [Introduction](#introduction)
     -   [Loading Necessary Packages](#loading-necessary-packages)
