@@ -19,8 +19,7 @@ library(knitr)
 ```
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,
-                      '../index_files/figure-markdown_github/')
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ### TL;DR
