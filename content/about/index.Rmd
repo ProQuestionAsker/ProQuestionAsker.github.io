@@ -1,11 +1,5 @@
 ---
 title: "About Me"
-output:
-  md_document:
-    toc: true
-    toc_depth: 4
-    variant: markdown_github
-always_allow_html: yes
 ---
 
 ```{r, echo = FALSE}
@@ -64,7 +58,7 @@ Only about **5 - 10%** of my time was spent working with animals. My professiona
 ```{r echo = FALSE, message = FALSE}
 library(highcharter)
 
-highchart () %>% 
+highchart() %>% 
   hc_chart(type = "bar") %>% 
   hc_yAxis(title = list(text = "Percentage of Time")) %>% 
   hc_plotOptions(bar = list(
