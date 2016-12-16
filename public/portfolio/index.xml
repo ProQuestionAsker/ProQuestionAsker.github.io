@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Portfolio-rsses on Amber Thomas</title>
-    <link>/portfolio/index.xml</link>
+    <link>https://proquestionasker.github.io/portfolio/index.xml</link>
     <description>Recent content in Portfolio-rsses on Amber Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Amber Thomas</copyright>
     <lastBuildDate>Wed, 16 Nov 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://proquestionasker.github.io/portfolio/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Dog Ownership in Seattle</title>
-      <link>/portfolio/Seattle_Dogs/</link>
+      <link>https://proquestionasker.github.io/portfolio/Seattle_Dogs/</link>
       <pubDate>Wed, 16 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/portfolio/Seattle_Dogs/</guid>
+      <guid>https://proquestionasker.github.io/portfolio/Seattle_Dogs/</guid>
       <description>&lt;p&gt;Data cleaning, exploration, mapping, and data viz in RMarkdown.
 &lt;/p&gt;
 
@@ -848,10 +848,10 @@ wordcloud(names_2, scale = c(5, 0.2), max.words = 150, random.order = FALSE,
     
     <item>
       <title>Pronto! Bicycle Sharing in Seattle</title>
-      <link>/portfolio/Bicycle_Sharing_2/</link>
+      <link>https://proquestionasker.github.io/portfolio/Bicycle_Sharing_2/</link>
       <pubDate>Thu, 10 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/portfolio/Bicycle_Sharing_2/</guid>
+      <guid>https://proquestionasker.github.io/portfolio/Bicycle_Sharing_2/</guid>
       <description>&lt;p&gt;Data exploration, mapping, and data viz in RMarkdown.
 &lt;/p&gt;
 
@@ -1674,10 +1674,10 @@ trip_weather &amp;lt;- left_join(trip_3, weather, by = &amp;quot;Date&amp;quot;)
     
     <item>
       <title>Kaggle - Ghosts, Goblins, and Ghouls</title>
-      <link>/portfolio/Ghosts_Goblins_Ghouls_01/</link>
+      <link>https://proquestionasker.github.io/portfolio/Ghosts_Goblins_Ghouls_01/</link>
       <pubDate>Wed, 09 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/portfolio/Ghosts_Goblins_Ghouls_01/</guid>
+      <guid>https://proquestionasker.github.io/portfolio/Ghosts_Goblins_Ghouls_01/</guid>
       <description>&lt;p&gt;Data exploration and machine learning in RMarkdown.
 &lt;/p&gt;
 
@@ -2149,10 +2149,10 @@ write.csv(my_solution_GGG_03, file = &amp;quot;my_solution_GGG_03.csv&amp;quot;,
     
     <item>
       <title>Portfolio</title>
-      <link>/portfolio/</link>
+      <link>https://proquestionasker.github.io/portfolio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/portfolio/</guid>
+      <guid>https://proquestionasker.github.io/portfolio/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
@@ -2174,10 +2174,10 @@ write.csv(my_solution_GGG_03, file = &amp;quot;my_solution_GGG_03.csv&amp;quot;,
     
     <item>
       <title>Kaggle - Machine Learning from Disaster</title>
-      <link>/portfolio/Titanic_Survival/</link>
+      <link>https://proquestionasker.github.io/portfolio/Titanic_Survival/</link>
       <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
       
-      <guid>/portfolio/Titanic_Survival/</guid>
+      <guid>https://proquestionasker.github.io/portfolio/Titanic_Survival/</guid>
       <description>&lt;p&gt;Data exploration and machine learning in RMarkdown.
 &lt;/p&gt;
 
