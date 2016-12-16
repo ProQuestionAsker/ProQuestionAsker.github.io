@@ -1,0 +1,15 @@
+---
+date: 2016-12-15T17:40:04-08:00
+draft: true
+image: "img/portfolio/map.png"
+showonlyimage: false
+title: new
+---
+
+# Testing Titles
+
+```{r}
+y <- 1 + 7
+```
+ 
+ Testing .Rmd formatting
