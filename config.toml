@@ -54,6 +54,6 @@ googleAnalytics = "UA-89036876-1"
 
   [params.social]
   email        = "AmberThomasMSc@gmail.com"
-  twitter      = "ProQuesAsker"
+  twitter      = "https://twitter.com/ProQuesAsker"
   linkedin     = "https://www.linkedin.com/in/amberrthomas"
   github       = "ProQuestionAsker"
