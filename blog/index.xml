@@ -1791,5 +1791,31 @@ Liquid::Template.register_tag(&#39;image&#39;, Jekyll::ImageTag)
 &lt;p&gt;&lt;a href=&#34;http://heyitsalex.net/&#34;&gt;Hey, it&amp;rsquo;s Alex&lt;/a&gt; was migrated in less than a &lt;em&gt;father-with-kids day&lt;/em&gt; from Jekyll to Hugo. You can see all the changes (and screw-ups) by looking at this &lt;a href=&#34;https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610&#34;&gt;diff&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Blogs</title>
+      <link>https://proquestionasker.github.io/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://proquestionasker.github.io/blog/</guid>
+      <description>&lt;!-- BLOGDOWN-BODY-BEFORE
+
+/BLOGDOWN-BODY-BEFORE --&gt;
+
+&lt;p&gt;You know when you’re working on a project and you run into a really specific problem that you think no one could have possibly solved? And then you find &lt;strong&gt;the most perfect post&lt;/strong&gt; by some kind human being who documented their own solutions to issues?&lt;/p&gt;
+&lt;p&gt;Well, I hope that someday this will be the home to at least one post that makes someone’s day a little easier. I plan to fill it up with all of my solutions to problems I’ve run into on my R journeys.&lt;/p&gt;
+
+
+
+&lt;!-- BLOGDOWN-HEAD
+
+
+
+
+
+
+/BLOGDOWN-HEAD --&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
