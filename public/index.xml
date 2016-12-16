@@ -7,90 +7,62 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Amber Thomas</copyright>
-    <lastBuildDate>Thu, 15 Dec 2016 17:22:56 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 15 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://proquestionasker.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>abtest</title>
-      <link>https://proquestionasker.github.io/about/abtest/</link>
-      <pubDate>Thu, 15 Dec 2016 17:22:56 -0800</pubDate>
+      <title>About Me</title>
+      <link>https://proquestionasker.github.io/about/</link>
+      <pubDate>Thu, 15 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://proquestionasker.github.io/about/abtest/</guid>
+      <guid>https://proquestionasker.github.io/about/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
 
-&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;R Markdown&lt;/h1&gt;
-&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit &amp;lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;tldr&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;TL;DR&lt;/h3&gt;
+&lt;p&gt;I’m a marine biologist and science communicator by training, but I’m taking all of the data analysis, statistics, and mathematical modeling skills I’ve learned (and continue to learn) and I’m now applying them to new problems.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Including Plots&lt;/h1&gt;
-&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
-  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
-  init.angle = -50, border = NA
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;#####../content/about/abtest_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 1: A fancy pie chart.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;htmlwidget-5bbf0ef5f078612797f2&#34; style=&#34;width:100%;height:500px;&#34; class=&#34;highchart html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-5bbf0ef5f078612797f2&#34;&gt;{&#34;x&#34;:{&#34;hc_opts&#34;:{&#34;title&#34;:{&#34;text&#34;:null},&#34;yAxis&#34;:{&#34;title&#34;:{&#34;text&#34;:&#34;Percentage of Time&#34;}},&#34;credits&#34;:{&#34;enabled&#34;:false},&#34;exporting&#34;:{&#34;enabled&#34;:false},&#34;plotOptions&#34;:{&#34;series&#34;:{&#34;turboThreshold&#34;:0},&#34;bar&#34;:{&#34;dataLabels&#34;:{&#34;enabled&#34;:false},&#34;stacking&#34;:&#34;percent&#34;}},&#34;chart&#34;:{&#34;type&#34;:&#34;bar&#34;},&#34;series&#34;:[{&#34;name&#34;:&#34;Animal Care&#34;,&#34;data&#34;:[10]},{&#34;name&#34;:&#34;Experimental Design&#34;,&#34;data&#34;:[20]},{&#34;name&#34;:&#34;Data Collection&#34;,&#34;data&#34;:[30]},{&#34;name&#34;:&#34;Data Analysis&#34;,&#34;data&#34;:[40]},{&#34;name&#34;:&#34;Project Communication&#34;,&#34;data&#34;:[20]}]},&#34;theme&#34;:{&#34;colors&#34;:[&#34;#2b908f&#34;,&#34;#90ee7e&#34;,&#34;#f45b5b&#34;,&#34;#7798BF&#34;,&#34;#aaeeee&#34;,&#34;#ff0066&#34;,&#34;#eeaaee&#34;,&#34;#55BF3B&#34;],&#34;chart&#34;:{&#34;backgroundColor&#34;:{&#34;linearGradient&#34;:{&#34;x1&#34;:0,&#34;y1&#34;:0,&#34;x2&#34;:1,&#34;y2&#34;:1},&#34;stops&#34;:[[0,&#34;#2a2a2b&#34;],[1,&#34;#3e3e40&#34;]]},&#34;style&#34;:{&#34;fontFamily&#34;:&#34;Unica One, sans-serif&#34;},&#34;plotBorderColor&#34;:&#34;#606063&#34;},&#34;title&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#E0E0E3&#34;,&#34;textTransform&#34;:&#34;uppercase&#34;,&#34;fontSize&#34;:&#34;20px&#34;}},&#34;subtitle&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#E0E0E3&#34;,&#34;textTransform&#34;:&#34;uppercase&#34;}},&#34;xAxis&#34;:{&#34;gridLineColor&#34;:&#34;#707073&#34;,&#34;labels&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#E0E0E3&#34;}},&#34;lineColor&#34;:&#34;#707073&#34;,&#34;minorGridLineColor&#34;:&#34;#505053&#34;,&#34;tickColor&#34;:&#34;#707073&#34;,&#34;title&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#A0A0A3&#34;}}},&#34;yAxis&#34;:{&#34;gridLineColor&#34;:&#34;#707073&#34;,&#34;labels&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#E0E0E3&#34;}},&#34;lineColor&#34;:&#34;#707073&#34;,&#34;minorGridLineColor&#34;:&#34;#505053&#34;,&#34;tickColor&#34;:&#34;#707073&#34;,&#34;tickWidth&#34;:1,&#34;title&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#A0A0A3&#34;}}},&#34;tooltip&#34;:{&#34;backgroundColor&#34;:&#34;rgba(0, 0, 0, 0.85)&#34;,&#34;style&#34;:{&#34;color&#34;:&#34;#F0F0F0&#34;}},&#34;plotOptions&#34;:{&#34;series&#34;:{&#34;dataLabels&#34;:{&#34;color&#34;:&#34;#B0B0B3&#34;},&#34;marker&#34;:{&#34;lineColor&#34;:&#34;#333&#34;}},&#34;boxplot&#34;:{&#34;fillColor&#34;:&#34;#505053&#34;},&#34;candlestick&#34;:{&#34;lineColor&#34;:&#34;white&#34;},&#34;errorbar&#34;:{&#34;color&#34;:&#34;white&#34;}},&#34;legend&#34;:{&#34;itemStyle&#34;:{&#34;color&#34;:&#34;#E0E0E3&#34;},&#34;itemHoverStyle&#34;:{&#34;color&#34;:&#34;#FFF&#34;},&#34;itemHiddenStyle&#34;:{&#34;color&#34;:&#34;#606063&#34;}},&#34;credits&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#666&#34;}},&#34;labels&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#707073&#34;}},&#34;drilldown&#34;:{&#34;activeAxisLabelStyle&#34;:{&#34;color&#34;:&#34;#F0F0F3&#34;},&#34;activeDataLabelStyle&#34;:{&#34;color&#34;:&#34;#F0F0F3&#34;}},&#34;navigation&#34;:{&#34;buttonOptions&#34;:{&#34;symbolStroke&#34;:&#34;#DDDDDD&#34;,&#34;theme&#34;:{&#34;fill&#34;:&#34;#505053&#34;}}},&#34;rangeSelector&#34;:{&#34;buttonTheme&#34;:{&#34;fill&#34;:&#34;#505053&#34;,&#34;stroke&#34;:&#34;#000000&#34;,&#34;style&#34;:{&#34;color&#34;:&#34;#CCC&#34;},&#34;states&#34;:{&#34;hover&#34;:{&#34;fill&#34;:&#34;#707073&#34;,&#34;stroke&#34;:&#34;#000000&#34;,&#34;style&#34;:{&#34;color&#34;:&#34;white&#34;}},&#34;select&#34;:{&#34;fill&#34;:&#34;#000003&#34;,&#34;stroke&#34;:&#34;#000000&#34;,&#34;style&#34;:{&#34;color&#34;:&#34;white&#34;}}}},&#34;inputBoxBorderColor&#34;:&#34;#505053&#34;,&#34;inputStyle&#34;:{&#34;backgroundColor&#34;:&#34;#333&#34;,&#34;color&#34;:&#34;silver&#34;},&#34;labelStyle&#34;:{&#34;color&#34;:&#34;silver&#34;}},&#34;navigator&#34;:{&#34;handles&#34;:{&#34;backgroundColor&#34;:&#34;#666&#34;,&#34;borderColor&#34;:&#34;#AAA&#34;},&#34;outlineColor&#34;:&#34;#CCC&#34;,&#34;maskFill&#34;:&#34;rgba(255,255,255,0.1)&#34;,&#34;series&#34;:{&#34;color&#34;:&#34;#7798BF&#34;,&#34;lineColor&#34;:&#34;#A6C7ED&#34;},&#34;xAxis&#34;:{&#34;gridLineColor&#34;:&#34;#505053&#34;}},&#34;scrollbar&#34;:{&#34;barBackgroundColor&#34;:&#34;#808083&#34;,&#34;barBorderColor&#34;:&#34;#808083&#34;,&#34;buttonArrowColor&#34;:&#34;#CCC&#34;,&#34;buttonBackgroundColor&#34;:&#34;#606063&#34;,&#34;buttonBorderColor&#34;:&#34;#606063&#34;,&#34;rifleColor&#34;:&#34;#FFF&#34;,&#34;trackBackgroundColor&#34;:&#34;#404043&#34;,&#34;trackBorderColor&#34;:&#34;#404043&#34;},&#34;legendBackgroundColor&#34;:&#34;rgba(0, 0, 0, 0.5)&#34;,&#34;background2&#34;:&#34;#505053&#34;,&#34;dataLabelsColor&#34;:&#34;#B0B0B3&#34;,&#34;textColor&#34;:&#34;#C0C0C0&#34;,&#34;contrastTextColor&#34;:&#34;#F0F0F3&#34;,&#34;maskColor&#34;:&#34;rgba(255,255,255,0.3)&#34;},&#34;conf_opts&#34;:{&#34;global&#34;:{&#34;Date&#34;:null,&#34;VMLRadialGradientURL&#34;:&#34;http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png&#34;,&#34;canvasToolsURL&#34;:&#34;http =//code.highcharts.com/list(version)/modules/canvas-tools.js&#34;,&#34;getTimezoneOffset&#34;:null,&#34;timezoneOffset&#34;:0,&#34;useUTC&#34;:true},&#34;lang&#34;:{&#34;contextButtonTitle&#34;:&#34;Chart context menu&#34;,&#34;decimalPoint&#34;:&#34;.&#34;,&#34;downloadJPEG&#34;:&#34;Download JPEG image&#34;,&#34;downloadPDF&#34;:&#34;Download PDF document&#34;,&#34;downloadPNG&#34;:&#34;Download PNG image&#34;,&#34;downloadSVG&#34;:&#34;Download SVG vector image&#34;,&#34;drillUpText&#34;:&#34;Back to {series.name}&#34;,&#34;invalidDate&#34;:null,&#34;loading&#34;:&#34;Loading...&#34;,&#34;months&#34;:[&#34;January&#34;,&#34;February&#34;,&#34;March&#34;,&#34;April&#34;,&#34;May&#34;,&#34;June&#34;,&#34;July&#34;,&#34;August&#34;,&#34;September&#34;,&#34;October&#34;,&#34;November&#34;,&#34;December&#34;],&#34;noData&#34;:&#34;No data to display&#34;,&#34;numericSymbols&#34;:[&#34;k&#34;,&#34;M&#34;,&#34;G&#34;,&#34;T&#34;,&#34;P&#34;,&#34;E&#34;],&#34;printChart&#34;:&#34;Print chart&#34;,&#34;resetZoom&#34;:&#34;Reset zoom&#34;,&#34;resetZoomTitle&#34;:&#34;Reset zoom level 1:1&#34;,&#34;shortMonths&#34;:[&#34;Jan&#34;,&#34;Feb&#34;,&#34;Mar&#34;,&#34;Apr&#34;,&#34;May&#34;,&#34;Jun&#34;,&#34;Jul&#34;,&#34;Aug&#34;,&#34;Sep&#34;,&#34;Oct&#34;,&#34;Nov&#34;,&#34;Dec&#34;],&#34;thousandsSep&#34;:&#34; &#34;,&#34;weekdays&#34;:[&#34;Sunday&#34;,&#34;Monday&#34;,&#34;Tuesday&#34;,&#34;Wednesday&#34;,&#34;Thursday&#34;,&#34;Friday&#34;,&#34;Saturday&#34;]}},&#34;type&#34;:&#34;chart&#34;,&#34;fonts&#34;:&#34;Unica+One&#34;,&#34;debug&#34;:false},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;div id=&#34;the-long-version&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;The Long Version&lt;/h3&gt;
+&lt;p&gt;I’ve always loved science, exploration, and discovery. My natural curiosity, love of animals and the environment, and constant pursuit of knowledge led me into a marine biology and chemistry double major in college (BS/BA) and a Master’s degree in Marine Sciences. That generally leads people to think that I was “playing with animals” all day.&lt;/p&gt;
+&lt;p&gt;And while I &lt;em&gt;did&lt;/em&gt; get to work with some amazing animals over the years…&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/all_animals.png&#34; width=&#34;90%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Only about &lt;strong&gt;5 - 10%&lt;/strong&gt; of my time was spent working with animals. My professional experience (in time spent performing a single activity) breaks down like this:&lt;/p&gt;
+&lt;div id=&#34;htmlwidget-778bcb208bf37ceeec8d&#34; style=&#34;width:100%;height:500px;&#34; class=&#34;highchart html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-778bcb208bf37ceeec8d&#34;&gt;{&#34;x&#34;:{&#34;hc_opts&#34;:{&#34;title&#34;:{&#34;text&#34;:null},&#34;yAxis&#34;:{&#34;title&#34;:{&#34;text&#34;:&#34;Percentage of Time&#34;}},&#34;credits&#34;:{&#34;enabled&#34;:false},&#34;exporting&#34;:{&#34;enabled&#34;:false},&#34;plotOptions&#34;:{&#34;series&#34;:{&#34;turboThreshold&#34;:0},&#34;bar&#34;:{&#34;dataLabels&#34;:{&#34;enabled&#34;:false},&#34;stacking&#34;:&#34;percent&#34;}},&#34;chart&#34;:{&#34;type&#34;:&#34;bar&#34;},&#34;series&#34;:[{&#34;name&#34;:&#34;Animal Care&#34;,&#34;data&#34;:[10]},{&#34;name&#34;:&#34;Experimental Design&#34;,&#34;data&#34;:[20]},{&#34;name&#34;:&#34;Data Collection&#34;,&#34;data&#34;:[30]},{&#34;name&#34;:&#34;Data Analysis&#34;,&#34;data&#34;:[40]},{&#34;name&#34;:&#34;Project Communication&#34;,&#34;data&#34;:[20]}]},&#34;theme&#34;:{&#34;colors&#34;:[&#34;#2b908f&#34;,&#34;#90ee7e&#34;,&#34;#f45b5b&#34;,&#34;#7798BF&#34;,&#34;#aaeeee&#34;,&#34;#ff0066&#34;,&#34;#eeaaee&#34;,&#34;#55BF3B&#34;],&#34;chart&#34;:{&#34;backgroundColor&#34;:{&#34;linearGradient&#34;:{&#34;x1&#34;:0,&#34;y1&#34;:0,&#34;x2&#34;:1,&#34;y2&#34;:1},&#34;stops&#34;:[[0,&#34;#2a2a2b&#34;],[1,&#34;#3e3e40&#34;]]},&#34;style&#34;:{&#34;fontFamily&#34;:&#34;Unica One, sans-serif&#34;},&#34;plotBorderColor&#34;:&#34;#606063&#34;},&#34;title&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#E0E0E3&#34;,&#34;textTransform&#34;:&#34;uppercase&#34;,&#34;fontSize&#34;:&#34;20px&#34;}},&#34;subtitle&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#E0E0E3&#34;,&#34;textTransform&#34;:&#34;uppercase&#34;}},&#34;xAxis&#34;:{&#34;gridLineColor&#34;:&#34;#707073&#34;,&#34;labels&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#E0E0E3&#34;}},&#34;lineColor&#34;:&#34;#707073&#34;,&#34;minorGridLineColor&#34;:&#34;#505053&#34;,&#34;tickColor&#34;:&#34;#707073&#34;,&#34;title&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#A0A0A3&#34;}}},&#34;yAxis&#34;:{&#34;gridLineColor&#34;:&#34;#707073&#34;,&#34;labels&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#E0E0E3&#34;}},&#34;lineColor&#34;:&#34;#707073&#34;,&#34;minorGridLineColor&#34;:&#34;#505053&#34;,&#34;tickColor&#34;:&#34;#707073&#34;,&#34;tickWidth&#34;:1,&#34;title&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#A0A0A3&#34;}}},&#34;tooltip&#34;:{&#34;backgroundColor&#34;:&#34;rgba(0, 0, 0, 0.85)&#34;,&#34;style&#34;:{&#34;color&#34;:&#34;#F0F0F0&#34;}},&#34;plotOptions&#34;:{&#34;series&#34;:{&#34;dataLabels&#34;:{&#34;color&#34;:&#34;#B0B0B3&#34;},&#34;marker&#34;:{&#34;lineColor&#34;:&#34;#333&#34;}},&#34;boxplot&#34;:{&#34;fillColor&#34;:&#34;#505053&#34;},&#34;candlestick&#34;:{&#34;lineColor&#34;:&#34;white&#34;},&#34;errorbar&#34;:{&#34;color&#34;:&#34;white&#34;}},&#34;legend&#34;:{&#34;itemStyle&#34;:{&#34;color&#34;:&#34;#E0E0E3&#34;},&#34;itemHoverStyle&#34;:{&#34;color&#34;:&#34;#FFF&#34;},&#34;itemHiddenStyle&#34;:{&#34;color&#34;:&#34;#606063&#34;}},&#34;credits&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#666&#34;}},&#34;labels&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#707073&#34;}},&#34;drilldown&#34;:{&#34;activeAxisLabelStyle&#34;:{&#34;color&#34;:&#34;#F0F0F3&#34;},&#34;activeDataLabelStyle&#34;:{&#34;color&#34;:&#34;#F0F0F3&#34;}},&#34;navigation&#34;:{&#34;buttonOptions&#34;:{&#34;symbolStroke&#34;:&#34;#DDDDDD&#34;,&#34;theme&#34;:{&#34;fill&#34;:&#34;#505053&#34;}}},&#34;rangeSelector&#34;:{&#34;buttonTheme&#34;:{&#34;fill&#34;:&#34;#505053&#34;,&#34;stroke&#34;:&#34;#000000&#34;,&#34;style&#34;:{&#34;color&#34;:&#34;#CCC&#34;},&#34;states&#34;:{&#34;hover&#34;:{&#34;fill&#34;:&#34;#707073&#34;,&#34;stroke&#34;:&#34;#000000&#34;,&#34;style&#34;:{&#34;color&#34;:&#34;white&#34;}},&#34;select&#34;:{&#34;fill&#34;:&#34;#000003&#34;,&#34;stroke&#34;:&#34;#000000&#34;,&#34;style&#34;:{&#34;color&#34;:&#34;white&#34;}}}},&#34;inputBoxBorderColor&#34;:&#34;#505053&#34;,&#34;inputStyle&#34;:{&#34;backgroundColor&#34;:&#34;#333&#34;,&#34;color&#34;:&#34;silver&#34;},&#34;labelStyle&#34;:{&#34;color&#34;:&#34;silver&#34;}},&#34;navigator&#34;:{&#34;handles&#34;:{&#34;backgroundColor&#34;:&#34;#666&#34;,&#34;borderColor&#34;:&#34;#AAA&#34;},&#34;outlineColor&#34;:&#34;#CCC&#34;,&#34;maskFill&#34;:&#34;rgba(255,255,255,0.1)&#34;,&#34;series&#34;:{&#34;color&#34;:&#34;#7798BF&#34;,&#34;lineColor&#34;:&#34;#A6C7ED&#34;},&#34;xAxis&#34;:{&#34;gridLineColor&#34;:&#34;#505053&#34;}},&#34;scrollbar&#34;:{&#34;barBackgroundColor&#34;:&#34;#808083&#34;,&#34;barBorderColor&#34;:&#34;#808083&#34;,&#34;buttonArrowColor&#34;:&#34;#CCC&#34;,&#34;buttonBackgroundColor&#34;:&#34;#606063&#34;,&#34;buttonBorderColor&#34;:&#34;#606063&#34;,&#34;rifleColor&#34;:&#34;#FFF&#34;,&#34;trackBackgroundColor&#34;:&#34;#404043&#34;,&#34;trackBorderColor&#34;:&#34;#404043&#34;},&#34;legendBackgroundColor&#34;:&#34;rgba(0, 0, 0, 0.5)&#34;,&#34;background2&#34;:&#34;#505053&#34;,&#34;dataLabelsColor&#34;:&#34;#B0B0B3&#34;,&#34;textColor&#34;:&#34;#C0C0C0&#34;,&#34;contrastTextColor&#34;:&#34;#F0F0F3&#34;,&#34;maskColor&#34;:&#34;rgba(255,255,255,0.3)&#34;},&#34;conf_opts&#34;:{&#34;global&#34;:{&#34;Date&#34;:null,&#34;VMLRadialGradientURL&#34;:&#34;http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png&#34;,&#34;canvasToolsURL&#34;:&#34;http =//code.highcharts.com/list(version)/modules/canvas-tools.js&#34;,&#34;getTimezoneOffset&#34;:null,&#34;timezoneOffset&#34;:0,&#34;useUTC&#34;:true},&#34;lang&#34;:{&#34;contextButtonTitle&#34;:&#34;Chart context menu&#34;,&#34;decimalPoint&#34;:&#34;.&#34;,&#34;downloadJPEG&#34;:&#34;Download JPEG image&#34;,&#34;downloadPDF&#34;:&#34;Download PDF document&#34;,&#34;downloadPNG&#34;:&#34;Download PNG image&#34;,&#34;downloadSVG&#34;:&#34;Download SVG vector image&#34;,&#34;drillUpText&#34;:&#34;Back to {series.name}&#34;,&#34;invalidDate&#34;:null,&#34;loading&#34;:&#34;Loading...&#34;,&#34;months&#34;:[&#34;January&#34;,&#34;February&#34;,&#34;March&#34;,&#34;April&#34;,&#34;May&#34;,&#34;June&#34;,&#34;July&#34;,&#34;August&#34;,&#34;September&#34;,&#34;October&#34;,&#34;November&#34;,&#34;December&#34;],&#34;noData&#34;:&#34;No data to display&#34;,&#34;numericSymbols&#34;:[&#34;k&#34;,&#34;M&#34;,&#34;G&#34;,&#34;T&#34;,&#34;P&#34;,&#34;E&#34;],&#34;printChart&#34;:&#34;Print chart&#34;,&#34;resetZoom&#34;:&#34;Reset zoom&#34;,&#34;resetZoomTitle&#34;:&#34;Reset zoom level 1:1&#34;,&#34;shortMonths&#34;:[&#34;Jan&#34;,&#34;Feb&#34;,&#34;Mar&#34;,&#34;Apr&#34;,&#34;May&#34;,&#34;Jun&#34;,&#34;Jul&#34;,&#34;Aug&#34;,&#34;Sep&#34;,&#34;Oct&#34;,&#34;Nov&#34;,&#34;Dec&#34;],&#34;thousandsSep&#34;:&#34; &#34;,&#34;weekdays&#34;:[&#34;Sunday&#34;,&#34;Monday&#34;,&#34;Tuesday&#34;,&#34;Wednesday&#34;,&#34;Thursday&#34;,&#34;Friday&#34;,&#34;Saturday&#34;]}},&#34;type&#34;:&#34;chart&#34;,&#34;fonts&#34;:&#34;Unica+One&#34;,&#34;debug&#34;:false},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;/div&gt;
 
 
 
 &lt;!-- BLOGDOWN-HEAD
 
-&lt;script src=&#34;#####../content/about/abtest_files/htmlwidgets-0.8/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/jquery-1.11.1/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/underscore-1.8.3/underscore-min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;#####../content/about/abtest_files/highcharts-4.2.4/css/motion.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/highstock.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/highcharts-more.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/highcharts-3d.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/modules/exporting.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/modules/drilldown.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/modules/data.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/modules/heatmap.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/modules/map.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/modules/treemap.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/modules/funnel.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/modules/solid-gauge.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/modules/reset.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/plugins/annotations.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/plugins/motion.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/plugins/draggable-points.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/plugins/pattern-fill-v2.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/plugins/text-symbols.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highcharts-4.2.4/plugins/symbols-extra.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;#####../content/about/abtest_files/fontawesome-4.5.0/font-awesome.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;#####../content/about/abtest_files/htmlwdgtgrid-1/htmlwdgtgrid.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;#####../content/about/abtest_files/highchart-binding-0.4.0/highchart.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/htmlwidgets-0.8/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/jquery-1.11.1/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/underscore-1.8.3/underscore-min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;#####../content/about/index_files/highcharts-4.2.4/css/motion.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/highstock.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/highcharts-more.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/highcharts-3d.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/exporting.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/drilldown.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/data.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/heatmap.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/map.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/treemap.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/funnel.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/solid-gauge.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/reset.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/annotations.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/motion.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/draggable-points.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/pattern-fill-v2.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/text-symbols.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/symbols-extra.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;#####../content/about/index_files/fontawesome-4.5.0/font-awesome.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;#####../content/about/index_files/htmlwdgtgrid-1/htmlwdgtgrid.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;#####../content/about/index_files/highchart-binding-0.4.0/highchart.js&#34;&gt;&lt;/script&gt;
 
 
 
@@ -4093,136 +4065,6 @@ Liquid::Template.register_tag(&#39;image&#39;, Jekyll::ImageTag)
 &lt;h2 id=&#34;a-practical-example-in-a-diff&#34;&gt;A practical example in a diff&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://heyitsalex.net/&#34;&gt;Hey, it&amp;rsquo;s Alex&lt;/a&gt; was migrated in less than a &lt;em&gt;father-with-kids day&lt;/em&gt; from Jekyll to Hugo. You can see all the changes (and screw-ups) by looking at this &lt;a href=&#34;https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610&#34;&gt;diff&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://proquestionasker.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://proquestionasker.github.io/about/</guid>
-      <description>
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#tldr&#34;&gt;TL;DR&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#the-long-version&#34;&gt;The Long Version&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;tl-dr&#34;&gt;TL;DR&lt;/h3&gt;
-
-&lt;p&gt;I&amp;rsquo;m a marine biologist and science communicator by training, but I&amp;rsquo;m taking all of the data analysis, statistics, and mathematical modeling skills I&amp;rsquo;ve learned (and continue to learn) and I&amp;rsquo;m now applying them to new problems.&lt;/p&gt;
-
-&lt;h3 id=&#34;the-long-version&#34;&gt;The Long Version&lt;/h3&gt;
-
-&lt;p&gt;I&amp;rsquo;ve always loved science, exploration, and discovery. My natural curiosity, love of animals and the environment, and constant pursuit of knowledge led me into a marine biology and chemistry double major in college (BS/BA) and a Master&amp;rsquo;s degree in Marine Sciences. That generally leads people to think that I was &amp;ldquo;playing with animals&amp;rdquo; all day.&lt;/p&gt;
-
-&lt;p&gt;And while I &lt;em&gt;did&lt;/em&gt; get to work with some amazing animals over the years&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;images/all_animals.png&#34; width=&#34;90%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Only about &lt;strong&gt;5 - 10%&lt;/strong&gt; of my time was spent working with animals. My professional experience (in time spent performing a single activity) breaks down like this:&lt;/p&gt;
-
-&lt;!--html_preserve--&gt;
-
-&lt;p&gt;&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-b4a52e1001f0f7f13a13&#34;&gt;{&amp;ldquo;x&amp;rdquo;:{&amp;ldquo;hc_opts&amp;rdquo;:{&amp;ldquo;title&amp;rdquo;:{&amp;ldquo;text&amp;rdquo;:null},&amp;ldquo;yAxis&amp;rdquo;:{&amp;ldquo;title&amp;rdquo;:{&amp;ldquo;text&amp;rdquo;:&amp;ldquo;Percentage of Time&amp;rdquo;}},&amp;ldquo;credits&amp;rdquo;:{&amp;ldquo;enabled&amp;rdquo;:false},&amp;ldquo;exporting&amp;rdquo;:{&amp;ldquo;enabled&amp;rdquo;:false},&amp;ldquo;plotOptions&amp;rdquo;:{&amp;ldquo;series&amp;rdquo;:{&amp;ldquo;turboThreshold&amp;rdquo;:0},&amp;ldquo;bar&amp;rdquo;:{&amp;ldquo;dataLabels&amp;rdquo;:{&amp;ldquo;enabled&amp;rdquo;:false},&amp;ldquo;stacking&amp;rdquo;:&amp;ldquo;percent&amp;rdquo;}},&amp;ldquo;chart&amp;rdquo;:{&amp;ldquo;type&amp;rdquo;:&amp;ldquo;bar&amp;rdquo;},&amp;ldquo;series&amp;rdquo;:[{&amp;ldquo;name&amp;rdquo;:&amp;ldquo;Animal Care&amp;rdquo;,&amp;ldquo;data&amp;rdquo;:[10]},{&amp;ldquo;name&amp;rdquo;:&amp;ldquo;Experimental Design&amp;rdquo;,&amp;ldquo;data&amp;rdquo;:[20]},{&amp;ldquo;name&amp;rdquo;:&amp;ldquo;Data Collection&amp;rdquo;,&amp;ldquo;data&amp;rdquo;:[30]},{&amp;ldquo;name&amp;rdquo;:&amp;ldquo;Data Analysis&amp;rdquo;,&amp;ldquo;data&amp;rdquo;:[40]},{&amp;ldquo;name&amp;rdquo;:&amp;ldquo;Project Communication&amp;rdquo;,&amp;ldquo;data&amp;rdquo;:[20]}]},&amp;ldquo;theme&amp;rdquo;:{&amp;ldquo;colors&amp;rdquo;:[&amp;ldquo;#2b908f&amp;rdquo;,&amp;ldquo;#90ee7e&amp;rdquo;,&amp;ldquo;#f45b5b&amp;rdquo;,&amp;ldquo;#7798BF&amp;rdquo;,&amp;ldquo;#aaeeee&amp;rdquo;,&amp;ldquo;#ff0066&amp;rdquo;,&amp;ldquo;#eeaaee&amp;rdquo;,&amp;ldquo;#55BF3B&amp;rdquo;],&amp;ldquo;chart&amp;rdquo;:{&amp;ldquo;backgroundColor&amp;rdquo;:{&amp;ldquo;linearGradient&amp;rdquo;:{&amp;ldquo;x1&amp;rdquo;:0,&amp;ldquo;y1&amp;rdquo;:0,&amp;ldquo;x2&amp;rdquo;:1,&amp;ldquo;y2&amp;rdquo;:1},&amp;ldquo;stops&amp;rdquo;:[[0,&amp;ldquo;#2a2a2b&amp;rdquo;],[1,&amp;ldquo;#3e3e40&amp;rdquo;]]},&amp;ldquo;style&amp;rdquo;:{&amp;ldquo;fontFamily&amp;rdquo;:&amp;ldquo;Unica One, sans-serif&amp;rdquo;},&amp;ldquo;plotBorderColor&amp;rdquo;:&amp;ldquo;#606063&amp;rdquo;},&amp;ldquo;title&amp;rdquo;:{&amp;ldquo;style&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#E0E0E3&amp;rdquo;,&amp;ldquo;textTransform&amp;rdquo;:&amp;ldquo;uppercase&amp;rdquo;,&amp;ldquo;fontSize&amp;rdquo;:&amp;ldquo;20px&amp;rdquo;}},&amp;ldquo;subtitle&amp;rdquo;:{&amp;ldquo;style&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#E0E0E3&amp;rdquo;,&amp;ldquo;textTransform&amp;rdquo;:&amp;ldquo;uppercase&amp;rdquo;}},&amp;ldquo;xAxis&amp;rdquo;:{&amp;ldquo;gridLineColor&amp;rdquo;:&amp;ldquo;#707073&amp;rdquo;,&amp;ldquo;labels&amp;rdquo;:{&amp;ldquo;style&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#E0E0E3&amp;rdquo;}},&amp;ldquo;lineColor&amp;rdquo;:&amp;ldquo;#707073&amp;rdquo;,&amp;ldquo;minorGridLineColor&amp;rdquo;:&amp;ldquo;#505053&amp;rdquo;,&amp;ldquo;tickColor&amp;rdquo;:&amp;ldquo;#707073&amp;rdquo;,&amp;ldquo;title&amp;rdquo;:{&amp;ldquo;style&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#A0A0A3&amp;rdquo;}}},&amp;ldquo;yAxis&amp;rdquo;:{&amp;ldquo;gridLineColor&amp;rdquo;:&amp;ldquo;#707073&amp;rdquo;,&amp;ldquo;labels&amp;rdquo;:{&amp;ldquo;style&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#E0E0E3&amp;rdquo;}},&amp;ldquo;lineColor&amp;rdquo;:&amp;ldquo;#707073&amp;rdquo;,&amp;ldquo;minorGridLineColor&amp;rdquo;:&amp;ldquo;#505053&amp;rdquo;,&amp;ldquo;tickColor&amp;rdquo;:&amp;ldquo;#707073&amp;rdquo;,&amp;ldquo;tickWidth&amp;rdquo;:1,&amp;ldquo;title&amp;rdquo;:{&amp;ldquo;style&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#A0A0A3&amp;rdquo;}}},&amp;ldquo;tooltip&amp;rdquo;:{&amp;ldquo;backgroundColor&amp;rdquo;:&amp;ldquo;rgba(0, 0, 0, 0.85)&amp;rdquo;,&amp;ldquo;style&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#F0F0F0&amp;rdquo;}},&amp;ldquo;plotOptions&amp;rdquo;:{&amp;ldquo;series&amp;rdquo;:{&amp;ldquo;dataLabels&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#B0B0B3&amp;rdquo;},&amp;ldquo;marker&amp;rdquo;:{&amp;ldquo;lineColor&amp;rdquo;:&amp;ldquo;#333&amp;rdquo;}},&amp;ldquo;boxplot&amp;rdquo;:{&amp;ldquo;fillColor&amp;rdquo;:&amp;ldquo;#505053&amp;rdquo;},&amp;ldquo;candlestick&amp;rdquo;:{&amp;ldquo;lineColor&amp;rdquo;:&amp;ldquo;white&amp;rdquo;},&amp;ldquo;errorbar&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;white&amp;rdquo;}},&amp;ldquo;legend&amp;rdquo;:{&amp;ldquo;itemStyle&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#E0E0E3&amp;rdquo;},&amp;ldquo;itemHoverStyle&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#FFF&amp;rdquo;},&amp;ldquo;itemHiddenStyle&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#606063&amp;rdquo;}},&amp;ldquo;credits&amp;rdquo;:{&amp;ldquo;style&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#666&amp;rdquo;}},&amp;ldquo;labels&amp;rdquo;:{&amp;ldquo;style&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#707073&amp;rdquo;}},&amp;ldquo;drilldown&amp;rdquo;:{&amp;ldquo;activeAxisLabelStyle&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#F0F0F3&amp;rdquo;},&amp;ldquo;activeDataLabelStyle&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#F0F0F3&amp;rdquo;}},&amp;ldquo;navigation&amp;rdquo;:{&amp;ldquo;buttonOptions&amp;rdquo;:{&amp;ldquo;symbolStroke&amp;rdquo;:&amp;ldquo;#DDDDDD&amp;rdquo;,&amp;ldquo;theme&amp;rdquo;:{&amp;ldquo;fill&amp;rdquo;:&amp;ldquo;#505053&amp;rdquo;}}},&amp;ldquo;rangeSelector&amp;rdquo;:{&amp;ldquo;buttonTheme&amp;rdquo;:{&amp;ldquo;fill&amp;rdquo;:&amp;ldquo;#505053&amp;rdquo;,&amp;ldquo;stroke&amp;rdquo;:&amp;ldquo;#000000&amp;rdquo;,&amp;ldquo;style&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#CCC&amp;rdquo;},&amp;ldquo;states&amp;rdquo;:{&amp;ldquo;hover&amp;rdquo;:{&amp;ldquo;fill&amp;rdquo;:&amp;ldquo;#707073&amp;rdquo;,&amp;ldquo;stroke&amp;rdquo;:&amp;ldquo;#000000&amp;rdquo;,&amp;ldquo;style&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;white&amp;rdquo;}},&amp;ldquo;select&amp;rdquo;:{&amp;ldquo;fill&amp;rdquo;:&amp;ldquo;#000003&amp;rdquo;,&amp;ldquo;stroke&amp;rdquo;:&amp;ldquo;#000000&amp;rdquo;,&amp;ldquo;style&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;white&amp;rdquo;}}}},&amp;ldquo;inputBoxBorderColor&amp;rdquo;:&amp;ldquo;#505053&amp;rdquo;,&amp;ldquo;inputStyle&amp;rdquo;:{&amp;ldquo;backgroundColor&amp;rdquo;:&amp;ldquo;#333&amp;rdquo;,&amp;ldquo;color&amp;rdquo;:&amp;ldquo;silver&amp;rdquo;},&amp;ldquo;labelStyle&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;silver&amp;rdquo;}},&amp;ldquo;navigator&amp;rdquo;:{&amp;ldquo;handles&amp;rdquo;:{&amp;ldquo;backgroundColor&amp;rdquo;:&amp;ldquo;#666&amp;rdquo;,&amp;ldquo;borderColor&amp;rdquo;:&amp;ldquo;#AAA&amp;rdquo;},&amp;ldquo;outlineColor&amp;rdquo;:&amp;ldquo;#CCC&amp;rdquo;,&amp;ldquo;maskFill&amp;rdquo;:&amp;ldquo;rgba(255,255,255,0.1)&amp;rdquo;,&amp;ldquo;series&amp;rdquo;:{&amp;ldquo;color&amp;rdquo;:&amp;ldquo;#7798BF&amp;rdquo;,&amp;ldquo;lineColor&amp;rdquo;:&amp;ldquo;#A6C7ED&amp;rdquo;},&amp;ldquo;xAxis&amp;rdquo;:{&amp;ldquo;gridLineColor&amp;rdquo;:&amp;ldquo;#505053&amp;rdquo;}},&amp;ldquo;scrollbar&amp;rdquo;:{&amp;ldquo;barBackgroundColor&amp;rdquo;:&amp;ldquo;#808083&amp;rdquo;,&amp;ldquo;barBorderColor&amp;rdquo;:&amp;ldquo;#808083&amp;rdquo;,&amp;ldquo;buttonArrowColor&amp;rdquo;:&amp;ldquo;#CCC&amp;rdquo;,&amp;ldquo;buttonBackgroundColor&amp;rdquo;:&amp;ldquo;#606063&amp;rdquo;,&amp;ldquo;buttonBorderColor&amp;rdquo;:&amp;ldquo;#606063&amp;rdquo;,&amp;ldquo;rifleColor&amp;rdquo;:&amp;ldquo;#FFF&amp;rdquo;,&amp;ldquo;trackBackgroundColor&amp;rdquo;:&amp;ldquo;#404043&amp;rdquo;,&amp;ldquo;trackBorderColor&amp;rdquo;:&amp;ldquo;#404043&amp;rdquo;},&amp;ldquo;legendBackgroundColor&amp;rdquo;:&amp;ldquo;rgba(0, 0, 0, 0.5)&amp;rdquo;,&amp;ldquo;background2&amp;rdquo;:&amp;ldquo;#505053&amp;rdquo;,&amp;ldquo;dataLabelsColor&amp;rdquo;:&amp;ldquo;#B0B0B3&amp;rdquo;,&amp;ldquo;textColor&amp;rdquo;:&amp;ldquo;#C0C0C0&amp;rdquo;,&amp;ldquo;contrastTextColor&amp;rdquo;:&amp;ldquo;#F0F0F3&amp;rdquo;,&amp;ldquo;maskColor&amp;rdquo;:&amp;ldquo;rgba(255,255,255,0.3)&amp;rdquo;},&amp;ldquo;conf_opts&amp;rdquo;:{&amp;ldquo;global&amp;rdquo;:{&amp;ldquo;Date&amp;rdquo;:null,&amp;ldquo;VMLRadialGradientURL&amp;rdquo;:&amp;ldquo;http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png&amp;rdquo;,&amp;ldquo;canvasToolsURL&amp;rdquo;:&amp;ldquo;http =//code.highcharts.com/list(version)/modules/canvas-tools.js&amp;rdquo;,&amp;ldquo;getTimezoneOffset&amp;rdquo;:null,&amp;ldquo;timezoneOffset&amp;rdquo;:0,&amp;ldquo;useUTC&amp;rdquo;:true},&amp;ldquo;lang&amp;rdquo;:{&amp;ldquo;contextButtonTitle&amp;rdquo;:&amp;ldquo;Chart context menu&amp;rdquo;,&amp;ldquo;decimalPoint&amp;rdquo;:&amp;ldquo;.&amp;rdquo;,&amp;ldquo;downloadJPEG&amp;rdquo;:&amp;ldquo;Download JPEG image&amp;rdquo;,&amp;ldquo;downloadPDF&amp;rdquo;:&amp;ldquo;Download PDF document&amp;rdquo;,&amp;ldquo;downloadPNG&amp;rdquo;:&amp;ldquo;Download PNG image&amp;rdquo;,&amp;ldquo;downloadSVG&amp;rdquo;:&amp;ldquo;Download SVG vector image&amp;rdquo;,&amp;ldquo;drillUpText&amp;rdquo;:&amp;ldquo;Back to {series.name}&amp;rdquo;,&amp;ldquo;invalidDate&amp;rdquo;:null,&amp;ldquo;loading&amp;rdquo;:&amp;ldquo;Loading&amp;hellip;&amp;rdquo;,&amp;ldquo;months&amp;rdquo;:[&amp;ldquo;January&amp;rdquo;,&amp;ldquo;February&amp;rdquo;,&amp;ldquo;March&amp;rdquo;,&amp;ldquo;April&amp;rdquo;,&amp;ldquo;May&amp;rdquo;,&amp;ldquo;June&amp;rdquo;,&amp;ldquo;July&amp;rdquo;,&amp;ldquo;August&amp;rdquo;,&amp;ldquo;September&amp;rdquo;,&amp;ldquo;October&amp;rdquo;,&amp;ldquo;November&amp;rdquo;,&amp;ldquo;December&amp;rdquo;],&amp;ldquo;noData&amp;rdquo;:&amp;ldquo;No data to display&amp;rdquo;,&amp;ldquo;numericSymbols&amp;rdquo;:[&amp;ldquo;k&amp;rdquo;,&amp;ldquo;M&amp;rdquo;,&amp;ldquo;G&amp;rdquo;,&amp;ldquo;T&amp;rdquo;,&amp;ldquo;P&amp;rdquo;,&amp;ldquo;E&amp;rdquo;],&amp;ldquo;printChart&amp;rdquo;:&amp;ldquo;Print chart&amp;rdquo;,&amp;ldquo;resetZoom&amp;rdquo;:&amp;ldquo;Reset zoom&amp;rdquo;,&amp;ldquo;resetZoomTitle&amp;rdquo;:&amp;ldquo;Reset zoom level 1:1&amp;rdquo;,&amp;ldquo;shortMonths&amp;rdquo;:[&amp;ldquo;Jan&amp;rdquo;,&amp;ldquo;Feb&amp;rdquo;,&amp;ldquo;Mar&amp;rdquo;,&amp;ldquo;Apr&amp;rdquo;,&amp;ldquo;May&amp;rdquo;,&amp;ldquo;Jun&amp;rdquo;,&amp;ldquo;Jul&amp;rdquo;,&amp;ldquo;Aug&amp;rdquo;,&amp;ldquo;Sep&amp;rdquo;,&amp;ldquo;Oct&amp;rdquo;,&amp;ldquo;Nov&amp;rdquo;,&amp;ldquo;Dec&amp;rdquo;],&amp;ldquo;thousandsSep&amp;rdquo;:&amp;rdquo; &amp;ldquo;,&amp;ldquo;weekdays&amp;rdquo;:[&amp;ldquo;Sunday&amp;rdquo;,&amp;ldquo;Monday&amp;rdquo;,&amp;ldquo;Tuesday&amp;rdquo;,&amp;ldquo;Wednesday&amp;rdquo;,&amp;ldquo;Thursday&amp;rdquo;,&amp;ldquo;Friday&amp;rdquo;,&amp;ldquo;Saturday&amp;rdquo;]}},&amp;ldquo;type&amp;rdquo;:&amp;ldquo;chart&amp;rdquo;,&amp;ldquo;fonts&amp;rdquo;:&amp;ldquo;Unica+One&amp;rdquo;,&amp;ldquo;debug&amp;rdquo;:false},&amp;ldquo;evals&amp;rdquo;:[],&amp;ldquo;jsHooks&amp;rdquo;:[]}&lt;/script&gt;
-&lt;!--/html_preserve--&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>https://proquestionasker.github.io/about/aboutme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://proquestionasker.github.io/about/aboutme/</guid>
-      <description>&lt;!-- BLOGDOWN-BODY-BEFORE
-
-/BLOGDOWN-BODY-BEFORE --&gt;
-
-&lt;div id=&#34;tldr&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;TL;DR&lt;/h3&gt;
-&lt;p&gt;I’m a marine biologist and science communicator by training, but I’m taking all of the data analysis, statistics, and mathematical modeling skills I’ve learned and I’m now applying them to new problems.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;the-long-version&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;The Long Version&lt;/h3&gt;
-&lt;p&gt;I’ve always loved science, exploration, and discovery. My natural curiosity, love of animals and the environment, and constant pursuit of knowledge led me into a marine biology and chemistry double major in college (BS/BA) and a Master’s degree in Marine Sciences. That generally leads people to think that I was “playing with animals” all day.&lt;/p&gt;
-&lt;p&gt;And while I &lt;em&gt;did&lt;/em&gt; get to work with some amazing animals over the years…&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://proquestionasker.github.io/private/var/folders/pt/1zhlf3gd7pxf4hxnp9877z1c0000gp/T/RtmpclUWRe/file3766275c770f.jpeg&#34; width=&#34;655&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-
-
-&lt;!-- BLOGDOWN-HEAD
-
-
-
-
-
-
-/BLOGDOWN-HEAD --&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>https://proquestionasker.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://proquestionasker.github.io/about/</guid>
-      <description>&lt;!-- BLOGDOWN-BODY-BEFORE
-
-/BLOGDOWN-BODY-BEFORE --&gt;
-
-&lt;div id=&#34;tldr&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;TL;DR&lt;/h3&gt;
-&lt;p&gt;I’m a marine biologist and science communicator by training, but I’m taking all of the data analysis, statistics, and mathematical modeling skills I’ve learned (and continue to learn) and I’m now applying them to new problems.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;the-long-version&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;The Long Version&lt;/h3&gt;
-&lt;p&gt;I’ve always loved science, exploration, and discovery. My natural curiosity, love of animals and the environment, and constant pursuit of knowledge led me into a marine biology and chemistry double major in college (BS/BA) and a Master’s degree in Marine Sciences. That generally leads people to think that I was “playing with animals” all day.&lt;/p&gt;
-&lt;p&gt;And while I &lt;em&gt;did&lt;/em&gt; get to work with some amazing animals over the years…&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;images/all_animals.png&#34; width=&#34;90%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Only about &lt;strong&gt;5 - 10%&lt;/strong&gt; of my time was spent working with animals. My professional experience (in time spent performing a single activity) breaks down like this:&lt;/p&gt;
-&lt;div id=&#34;htmlwidget-778bcb208bf37ceeec8d&#34; style=&#34;width:100%;height:500px;&#34; class=&#34;highchart html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-778bcb208bf37ceeec8d&#34;&gt;{&#34;x&#34;:{&#34;hc_opts&#34;:{&#34;title&#34;:{&#34;text&#34;:null},&#34;yAxis&#34;:{&#34;title&#34;:{&#34;text&#34;:&#34;Percentage of Time&#34;}},&#34;credits&#34;:{&#34;enabled&#34;:false},&#34;exporting&#34;:{&#34;enabled&#34;:false},&#34;plotOptions&#34;:{&#34;series&#34;:{&#34;turboThreshold&#34;:0},&#34;bar&#34;:{&#34;dataLabels&#34;:{&#34;enabled&#34;:false},&#34;stacking&#34;:&#34;percent&#34;}},&#34;chart&#34;:{&#34;type&#34;:&#34;bar&#34;},&#34;series&#34;:[{&#34;name&#34;:&#34;Animal Care&#34;,&#34;data&#34;:[10]},{&#34;name&#34;:&#34;Experimental Design&#34;,&#34;data&#34;:[20]},{&#34;name&#34;:&#34;Data Collection&#34;,&#34;data&#34;:[30]},{&#34;name&#34;:&#34;Data Analysis&#34;,&#34;data&#34;:[40]},{&#34;name&#34;:&#34;Project Communication&#34;,&#34;data&#34;:[20]}]},&#34;theme&#34;:{&#34;colors&#34;:[&#34;#2b908f&#34;,&#34;#90ee7e&#34;,&#34;#f45b5b&#34;,&#34;#7798BF&#34;,&#34;#aaeeee&#34;,&#34;#ff0066&#34;,&#34;#eeaaee&#34;,&#34;#55BF3B&#34;],&#34;chart&#34;:{&#34;backgroundColor&#34;:{&#34;linearGradient&#34;:{&#34;x1&#34;:0,&#34;y1&#34;:0,&#34;x2&#34;:1,&#34;y2&#34;:1},&#34;stops&#34;:[[0,&#34;#2a2a2b&#34;],[1,&#34;#3e3e40&#34;]]},&#34;style&#34;:{&#34;fontFamily&#34;:&#34;Unica One, sans-serif&#34;},&#34;plotBorderColor&#34;:&#34;#606063&#34;},&#34;title&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#E0E0E3&#34;,&#34;textTransform&#34;:&#34;uppercase&#34;,&#34;fontSize&#34;:&#34;20px&#34;}},&#34;subtitle&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#E0E0E3&#34;,&#34;textTransform&#34;:&#34;uppercase&#34;}},&#34;xAxis&#34;:{&#34;gridLineColor&#34;:&#34;#707073&#34;,&#34;labels&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#E0E0E3&#34;}},&#34;lineColor&#34;:&#34;#707073&#34;,&#34;minorGridLineColor&#34;:&#34;#505053&#34;,&#34;tickColor&#34;:&#34;#707073&#34;,&#34;title&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#A0A0A3&#34;}}},&#34;yAxis&#34;:{&#34;gridLineColor&#34;:&#34;#707073&#34;,&#34;labels&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#E0E0E3&#34;}},&#34;lineColor&#34;:&#34;#707073&#34;,&#34;minorGridLineColor&#34;:&#34;#505053&#34;,&#34;tickColor&#34;:&#34;#707073&#34;,&#34;tickWidth&#34;:1,&#34;title&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#A0A0A3&#34;}}},&#34;tooltip&#34;:{&#34;backgroundColor&#34;:&#34;rgba(0, 0, 0, 0.85)&#34;,&#34;style&#34;:{&#34;color&#34;:&#34;#F0F0F0&#34;}},&#34;plotOptions&#34;:{&#34;series&#34;:{&#34;dataLabels&#34;:{&#34;color&#34;:&#34;#B0B0B3&#34;},&#34;marker&#34;:{&#34;lineColor&#34;:&#34;#333&#34;}},&#34;boxplot&#34;:{&#34;fillColor&#34;:&#34;#505053&#34;},&#34;candlestick&#34;:{&#34;lineColor&#34;:&#34;white&#34;},&#34;errorbar&#34;:{&#34;color&#34;:&#34;white&#34;}},&#34;legend&#34;:{&#34;itemStyle&#34;:{&#34;color&#34;:&#34;#E0E0E3&#34;},&#34;itemHoverStyle&#34;:{&#34;color&#34;:&#34;#FFF&#34;},&#34;itemHiddenStyle&#34;:{&#34;color&#34;:&#34;#606063&#34;}},&#34;credits&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#666&#34;}},&#34;labels&#34;:{&#34;style&#34;:{&#34;color&#34;:&#34;#707073&#34;}},&#34;drilldown&#34;:{&#34;activeAxisLabelStyle&#34;:{&#34;color&#34;:&#34;#F0F0F3&#34;},&#34;activeDataLabelStyle&#34;:{&#34;color&#34;:&#34;#F0F0F3&#34;}},&#34;navigation&#34;:{&#34;buttonOptions&#34;:{&#34;symbolStroke&#34;:&#34;#DDDDDD&#34;,&#34;theme&#34;:{&#34;fill&#34;:&#34;#505053&#34;}}},&#34;rangeSelector&#34;:{&#34;buttonTheme&#34;:{&#34;fill&#34;:&#34;#505053&#34;,&#34;stroke&#34;:&#34;#000000&#34;,&#34;style&#34;:{&#34;color&#34;:&#34;#CCC&#34;},&#34;states&#34;:{&#34;hover&#34;:{&#34;fill&#34;:&#34;#707073&#34;,&#34;stroke&#34;:&#34;#000000&#34;,&#34;style&#34;:{&#34;color&#34;:&#34;white&#34;}},&#34;select&#34;:{&#34;fill&#34;:&#34;#000003&#34;,&#34;stroke&#34;:&#34;#000000&#34;,&#34;style&#34;:{&#34;color&#34;:&#34;white&#34;}}}},&#34;inputBoxBorderColor&#34;:&#34;#505053&#34;,&#34;inputStyle&#34;:{&#34;backgroundColor&#34;:&#34;#333&#34;,&#34;color&#34;:&#34;silver&#34;},&#34;labelStyle&#34;:{&#34;color&#34;:&#34;silver&#34;}},&#34;navigator&#34;:{&#34;handles&#34;:{&#34;backgroundColor&#34;:&#34;#666&#34;,&#34;borderColor&#34;:&#34;#AAA&#34;},&#34;outlineColor&#34;:&#34;#CCC&#34;,&#34;maskFill&#34;:&#34;rgba(255,255,255,0.1)&#34;,&#34;series&#34;:{&#34;color&#34;:&#34;#7798BF&#34;,&#34;lineColor&#34;:&#34;#A6C7ED&#34;},&#34;xAxis&#34;:{&#34;gridLineColor&#34;:&#34;#505053&#34;}},&#34;scrollbar&#34;:{&#34;barBackgroundColor&#34;:&#34;#808083&#34;,&#34;barBorderColor&#34;:&#34;#808083&#34;,&#34;buttonArrowColor&#34;:&#34;#CCC&#34;,&#34;buttonBackgroundColor&#34;:&#34;#606063&#34;,&#34;buttonBorderColor&#34;:&#34;#606063&#34;,&#34;rifleColor&#34;:&#34;#FFF&#34;,&#34;trackBackgroundColor&#34;:&#34;#404043&#34;,&#34;trackBorderColor&#34;:&#34;#404043&#34;},&#34;legendBackgroundColor&#34;:&#34;rgba(0, 0, 0, 0.5)&#34;,&#34;background2&#34;:&#34;#505053&#34;,&#34;dataLabelsColor&#34;:&#34;#B0B0B3&#34;,&#34;textColor&#34;:&#34;#C0C0C0&#34;,&#34;contrastTextColor&#34;:&#34;#F0F0F3&#34;,&#34;maskColor&#34;:&#34;rgba(255,255,255,0.3)&#34;},&#34;conf_opts&#34;:{&#34;global&#34;:{&#34;Date&#34;:null,&#34;VMLRadialGradientURL&#34;:&#34;http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png&#34;,&#34;canvasToolsURL&#34;:&#34;http =//code.highcharts.com/list(version)/modules/canvas-tools.js&#34;,&#34;getTimezoneOffset&#34;:null,&#34;timezoneOffset&#34;:0,&#34;useUTC&#34;:true},&#34;lang&#34;:{&#34;contextButtonTitle&#34;:&#34;Chart context menu&#34;,&#34;decimalPoint&#34;:&#34;.&#34;,&#34;downloadJPEG&#34;:&#34;Download JPEG image&#34;,&#34;downloadPDF&#34;:&#34;Download PDF document&#34;,&#34;downloadPNG&#34;:&#34;Download PNG image&#34;,&#34;downloadSVG&#34;:&#34;Download SVG vector image&#34;,&#34;drillUpText&#34;:&#34;Back to {series.name}&#34;,&#34;invalidDate&#34;:null,&#34;loading&#34;:&#34;Loading...&#34;,&#34;months&#34;:[&#34;January&#34;,&#34;February&#34;,&#34;March&#34;,&#34;April&#34;,&#34;May&#34;,&#34;June&#34;,&#34;July&#34;,&#34;August&#34;,&#34;September&#34;,&#34;October&#34;,&#34;November&#34;,&#34;December&#34;],&#34;noData&#34;:&#34;No data to display&#34;,&#34;numericSymbols&#34;:[&#34;k&#34;,&#34;M&#34;,&#34;G&#34;,&#34;T&#34;,&#34;P&#34;,&#34;E&#34;],&#34;printChart&#34;:&#34;Print chart&#34;,&#34;resetZoom&#34;:&#34;Reset zoom&#34;,&#34;resetZoomTitle&#34;:&#34;Reset zoom level 1:1&#34;,&#34;shortMonths&#34;:[&#34;Jan&#34;,&#34;Feb&#34;,&#34;Mar&#34;,&#34;Apr&#34;,&#34;May&#34;,&#34;Jun&#34;,&#34;Jul&#34;,&#34;Aug&#34;,&#34;Sep&#34;,&#34;Oct&#34;,&#34;Nov&#34;,&#34;Dec&#34;],&#34;thousandsSep&#34;:&#34; &#34;,&#34;weekdays&#34;:[&#34;Sunday&#34;,&#34;Monday&#34;,&#34;Tuesday&#34;,&#34;Wednesday&#34;,&#34;Thursday&#34;,&#34;Friday&#34;,&#34;Saturday&#34;]}},&#34;type&#34;:&#34;chart&#34;,&#34;fonts&#34;:&#34;Unica+One&#34;,&#34;debug&#34;:false},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-
-
-
-&lt;!-- BLOGDOWN-HEAD
-
-&lt;script src=&#34;#####../content/about/index_files/htmlwidgets-0.8/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/jquery-1.11.1/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/underscore-1.8.3/underscore-min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;#####../content/about/index_files/highcharts-4.2.4/css/motion.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/highstock.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/highcharts-more.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/highcharts-3d.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/exporting.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/drilldown.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/data.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/heatmap.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/map.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/treemap.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/funnel.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/solid-gauge.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/reset.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/annotations.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/motion.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/draggable-points.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/pattern-fill-v2.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/text-symbols.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/symbols-extra.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;#####../content/about/index_files/fontawesome-4.5.0/font-awesome.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;#####../content/about/index_files/htmlwdgtgrid-1/htmlwdgtgrid.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;#####../content/about/index_files/highchart-binding-0.4.0/highchart.js&#34;&gt;&lt;/script&gt;
-
-
-
-
-
-/BLOGDOWN-HEAD --&gt;
-</description>
     </item>
     
     <item>
