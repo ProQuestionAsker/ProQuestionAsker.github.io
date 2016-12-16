@@ -1,0 +1,7 @@
+---
+title: Blogs
+---
+
+You know when you're working on a project and you run into a really specific problem that you think no one could have possibly solved? And then you find **the most perfect post** by some kind human being who documented their own solutions to issues?
+
+Well, I hope that someday this will be the home to at least one post that makes someone's day a little easier. I plan to fill it up with all of my solutions to problems I've run into on my R journeys. 
