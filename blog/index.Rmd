@@ -1,5 +1,6 @@
 ---
 title: Blogs
+type: "blog"
 ---
 
 You know when you're working on a project and you run into a really specific problem that you think no one could have possibly solved? And then you find **the most perfect post** by some kind human being who documented their own solutions to issues?
