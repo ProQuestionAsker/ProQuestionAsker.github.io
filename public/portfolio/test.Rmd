@@ -4,6 +4,7 @@ draft: true
 image: "img/portfolio/map.png"
 showonlyimage: false
 title: test
+<<<<<<< HEAD
 output:
   md_document
 ---
@@ -38,3 +39,8 @@ pie(
   init.angle = -50, border = NA
 )
 ```
+=======
+---
+
+Testing
+>>>>>>> d6a4b5df9cc154e420e79a9f8745090c320d98f4
