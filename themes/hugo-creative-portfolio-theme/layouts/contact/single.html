@@ -7,10 +7,10 @@
       <div class="content-column-content">
          <h1>{{ .Title }}</h1>
          {{ .Content }}
-         <h4>You can find me also on:</h4>
+         <h4>Find me here:</h4>
          {{ partial "socialButtonsInContact.html" . }}
          {{ with .Site.Params.email }}
-         <h4>Drop me a line, maybe?</h4>
+         <h4>Message me here:</h4>
          <form id="contact-form" class="contact-form form" method="post" action="https://formspree.io/{{ . }}">
            <div class="controls">
              <div class="form-group">

@@ -54,9 +54,7 @@ knitr::include_graphics("images/all_animals.png")
 
 ```
 
-Only about **5 - 10%** of my time was spent working with animals. My professional experience (in time spent performing a single activity) breaks down like this:
-
-
+Only about **5 - 10%** of my time was spent working with animals. The rest was spent designing experiments and working with data. 
 
 When a co-worker introduced me by saying "This is Amber, she does data analysis", I realized that, indeed, I was a data analyst (who happened to work with marine data).
 
