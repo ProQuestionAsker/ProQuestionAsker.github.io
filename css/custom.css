@@ -1,1 +1,11 @@
-/* your styles go here */
+#amber-btn {
+  font-weight: 700;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  border-radius: 0;
+  border: 1px solid #e01557;
+}
