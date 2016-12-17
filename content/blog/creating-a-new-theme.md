@@ -1,15 +1,16 @@
 +++
-author = "Theme author"
-categories = ["Hugo"]
-date = "2014-09-28"
-description = "Learn how to create a theme on Hugo"
-featured = "pic01.jpg"
-featuredalt = ""
-featuredpath = "date"
-linktitle = ""
-title = "Creating a New Theme"
+showonlyimage = true
+draft = false
+image = "portfolio/Bicycle_Sharing_2_files/Bicycle_Graph.jpg"
+date = "2016-11-09"
+title = "Ghosts, Goblins, and Ghouls"
+weight = 0
 type = "post"
-
+author = "Amber Thomas"
+tags = [
+ "machine learning",
+ "data viz"
+]
 +++
 
 ## Introduction

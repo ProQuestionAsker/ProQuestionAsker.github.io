@@ -28,7 +28,7 @@
                       <div class="clearfix">
                           <p class="author-category">
                             {{ if isset .Params "author" }}
-                            By <a href="#">{{ .Params.author }}</a>
+                            By <a href="../about/">{{ .Params.author }}</a>
                             {{ end }}
                             {{ if isset .Params "categories" }}
                             {{ if gt (len .Params.categories) 0 }}
