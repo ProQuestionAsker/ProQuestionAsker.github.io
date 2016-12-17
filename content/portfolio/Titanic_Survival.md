@@ -7,6 +7,7 @@ title = "Kaggle - Machine Learning from Disaster"
 weight = 1
 type = "post"
 author = "Amber Thomas"
+tags = ["machine learning"]
 +++
 
 Data exploration and machine learning in RMarkdown.

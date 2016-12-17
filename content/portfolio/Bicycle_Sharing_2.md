@@ -7,6 +7,10 @@ title = "Pronto! Bicycle Sharing in Seattle"
 weight = 0
 type = "post"
 author = "Amber Thomas"
+tags = [
+ "maps",
+ "data viz"
+]
 +++
 
 Data exploration, mapping, and data viz in RMarkdown.

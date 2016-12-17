@@ -7,6 +7,11 @@ title = "Dog Ownership in Seattle"
 weight = 0
 type = "post"
 author = "Amber Thomas"
+tags = [
+"cleaning",
+"data viz",
+"maps"
+]
 +++
 
 Data cleaning, exploration, mapping, and data viz in RMarkdown.

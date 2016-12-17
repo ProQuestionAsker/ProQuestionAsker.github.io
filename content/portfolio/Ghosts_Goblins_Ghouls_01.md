@@ -7,6 +7,9 @@ title = "Kaggle - Ghosts, Goblins, and Ghouls"
 weight = 0
 type = "post"
 author = "Amber Thomas"
+tags = [
+ "machine learning"
+]
 +++
 
 Data exploration and machine learning in RMarkdown.
