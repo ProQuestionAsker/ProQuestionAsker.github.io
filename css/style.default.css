@@ -2196,7 +2196,7 @@ address {
 }
 .panel {
   margin-bottom: 24px;
-  background-color: #ffffff;
+  background-color: #f4f4f4;
   border: 1px solid transparent;
   border-radius: 0;
   -webkit-box-shadow: 0 0 0;
@@ -2207,7 +2207,7 @@ address {
 }
 .panel-default > .panel-heading {
   color: #333333;
-  background-color: #ffffff;
+  background-color: #f4f4f4;
   border-color: #666666;
 }
 .panel-default > .panel-heading + .panel-collapse .panel-body {
