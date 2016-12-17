@@ -18,9 +18,30 @@ Data exploration and machine learning in RMarkdown.
 Introduction
 ------------
 
-This is my first project on Kaggle and my first attempt at machine learning. 
+-   [Introduction](#introduction)
+    -   [Loading Necessary Packages](#loading-necessary-packages)
+    -   [Importing Data](#importing-data)
+-   [Feature Engineering](#feature-engineering)
+    -   [Names and Titles](#names-and-titles)
+    -   [SibSp and Parch for Family Size](#sibsp-and-parch-for-family-size)
+    -   [Ticket Numbers and Travel Groups](#ticket-numbers-and-travel-groups)
+-   [Missing Data](#missing-data)
+    -   [Missing Fare](#missing-fare)
+    -   [Missing Embarkment](#missing-embarkment)
+    -   [Missing Age](#missing-age)
+-   [Modeling for Survival](#modeling-for-survival)
+    -   [Creating trainControl](#creating-traincontrol)
+    -   [Fitting a random forest model](#fitting-a-random-forest-model)
+    -   [Fitting a glmnet model](#fitting-a-glmnet-model)
+    -   [Comparing model fit](#comparing-model-fit)
+-   [Predicting Survival](#predicting-survival)
+    -   [Preparing the prediction for Kaggle](#preparing-the-prediction-for-kaggle)
+    -   [Testing with Kaggle](#testing-with-kaggle)
 
-I'll do my best to illustrate what I've down and the logic behind my actions, but feedback is very much welcome and appreciated!
+Introduction
+------------
+
+This is my first project on Kaggle and my first attempt at machine learning. I'll do my best to illustrate what I've down and the logic behind my actions, but feedback is very much welcome and appreciated!
 
 ### Loading Necessary Packages
 
@@ -76,7 +97,8 @@ str(full)
 It appears that several of these variables should be represented as factors and thus should be reclassified.
 
 ``` r
-factor_variables <- c('PassengerId', 'Survived', 'Pclass', 'Sex', 'Embarked', 'Dataset')
+factor_variables <- c("PassengerId", "Survived", "Pclass", "Sex", 
+    "Embarked", "Dataset")
 full[factor_variables] <- lapply(full[factor_variables], function(x) as.factor(x))
 ```
 
@@ -118,7 +140,7 @@ At first glance, the "Name" column doesn't help too much as there are 1307 uniqu
 ``` r
 names <- full$Name
 
-titles <-  gsub("^.*, (.*?)\\..*$", "\\1", names)
+titles <- gsub("^.*, (.*?)\\..*$", "\\1", names)
 
 full$Titles <- titles
 
@@ -176,7 +198,8 @@ table(full$Pclass, full$Titles)
 Since Don, Jonkheer, and Sir are all of similar usage, and each represent only one first-class man, I combined them into the category "Sir". Dona, Lady, Madame, and the Countess each only represent one first-class woman, so I combined them into the category "Lady". These values were substituted using the `gsub` function.
 
 ``` r
-full$Titles <- gsub("Dona|Lady|Madame|the Countess", "Lady", full$Titles)
+full$Titles <- gsub("Dona|Lady|Madame|the Countess", "Lady", 
+    full$Titles)
 full$Titles <- gsub("Don|Jonkheer|Sir", "Sir", full$Titles)
 
 unique(full$Titles)
@@ -207,7 +230,7 @@ full <- mutate(full, FamilySize = SibSp + Parch + 1)
 
 Let's visualize family size
 
-![](Titanic_Survival_R_Markdown_3_files/figure-markdown_github/unnamed-chunk-11-1.png)
+![](../Titanic_md_files/figure-markdown_github/unnamed-chunk-11-1.png)
 
 Wow! Lots of people without immediate family with them. Perhaps these people were traveling with other family members/friends that weren't captured in the SibSp / Parch variables.
 
@@ -278,15 +301,13 @@ This generates 929 unique Travel Groups, which is the same number of unique Tick
 It may also be of interest to look at group size. We can generate this using the `group_by()` and `mutate` functions in `dplyr`.
 
 ``` r
-full3 <- full2 %>% 
-            group_by(TravelGroup) %>% 
-            mutate(GroupSize = n()) %>%
-            ungroup()
+full3 <- full2 %>% group_by(TravelGroup) %>% mutate(GroupSize = n()) %>% 
+    ungroup()
 ```
 
 How does Travel Group Size compare to Family Group Size that we calculated earlier?
 
-![](Titanic_Survival_R_Markdown_3_files/figure-markdown_github/unnamed-chunk-17-1.png)![](Titanic_Survival_R_Markdown_3_files/figure-markdown_github/unnamed-chunk-17-2.png)
+![](../Titanic_md_files/figure-markdown_github/unnamed-chunk-17-1.png)![](../Titanic_md_files/figure-markdown_github/unnamed-chunk-17-2.png)
 
 They look pretty close, again showing that most people were potentially travelling alone.
 
@@ -295,7 +316,8 @@ Now to check if those with the unique Ticket IDs were really travelling alone:
 ``` r
 filtered <- filter(full3, GroupSize == 1)
 
-# How many were listed as being onboard with siblings or spouses?
+# How many were listed as being onboard with siblings or
+# spouses?
 fSibSp <- filtered[filtered$SibSp > 0, ]
 nrow(fSibSp)
 ```
@@ -303,7 +325,8 @@ nrow(fSibSp)
     ## [1] 42
 
 ``` r
-# How many were listed as being onboard with parents or children?
+# How many were listed as being onboard with parents or
+# children?
 fParch <- filtered[filtered$Parch > 0, ]
 nrow(fParch)
 ```
@@ -370,7 +393,7 @@ Looks like we are missing values in the "Survived" variable (which is to be expe
 Which passenger has no fare information?
 
 ``` r
-full3[(which(is.na(full3$Fare))) , 1]
+full3[(which(is.na(full3$Fare))), 1]
 ```
 
     ## # A tibble: 1 × 1
@@ -395,12 +418,11 @@ full4[1044, c(3, 12)]
 
 Looks like he left from 'S' (Southampton) as a 3rd class passenger. Let's see what other people of the same class and embarkment port paid for their tickets.
 
-![](Titanic_Survival_R_Markdown_3_files/figure-markdown_github/unnamed-chunk-22-1.png)
+![](../Titanic_md_files/figure-markdown_github/unnamed-chunk-22-1.png)
 
 ``` r
-full4 %>%
-  filter(Pclass == '3' & Embarked == 'S') %>%
-  summarise(missing_fare = median(Fare, na.rm = TRUE))
+full4 %>% filter(Pclass == "3" & Embarked == "S") %>% summarise(missing_fare = median(Fare, 
+    na.rm = TRUE))
 ```
 
     ## # A tibble: 1 × 1
@@ -442,7 +464,7 @@ full4[(which(is.na(full4$Embarked))), 1]
 Ok, so Passenger numbers 62 and 830 are each missing their embarkment ports. Let's look at their class of ticket and their fare.
 
 ``` r
-full4[c(62, 830), c(1,3,10)]
+full4[c(62, 830), c(1, 3, 10)]
 ```
 
     ## # A tibble: 2 × 3
@@ -454,11 +476,8 @@ full4[c(62, 830), c(1,3,10)]
 Both passengers had first class tickets that they spent 80 (pounds?) on. Let's see the embarkment ports of others who bought similar kinds of tickets.
 
 ``` r
-full4 %>%
-  group_by(Embarked, Pclass) %>%
-  filter(Pclass == "1") %>%
-  summarise(mfare = median(Fare),
-            n = n())
+full4 %>% group_by(Embarked, Pclass) %>% filter(Pclass == "1") %>% 
+    summarise(mfare = median(Fare), n = n())
 ```
 
     ## Source: local data frame [4 x 4]
@@ -477,7 +496,7 @@ Now to replace their NA values with 'C'. And drop any unused levels.
 
 ``` r
 # Assign empty embark ports to 'C'
-full4$Embarked[c(62,830)] <- 'C'
+full4$Embarked[c(62, 830)] <- "C"
 
 # Drop unused levels (since there should be no more blanks)
 full4$Embarked <- droplevels(full4$Embarked)
@@ -499,39 +518,35 @@ I've decided to use the `caret` package for predicting age.
 Generate a random forest model on the full dataset (minus the age values that are NA)
 
 ``` r
-predicted_age <- train(
-  Age ~ Pclass + Sex + SibSp + Parch + Fare + Embarked + Titles + FamilySize + GroupSize,
-  tuneGrid = data.frame(mtry = c(2, 3, 7)),
-  data = full4[!is.na(full4$Age), ],
-  method = "ranger",
-  trControl = trainControl(
-      method = "cv", number = 10,
-      repeats = 10, verboseIter = TRUE),
-  importance = 'impurity'
-  )
+predicted_age <- train(Age ~ Pclass + Sex + SibSp + Parch + Fare + 
+    Embarked + Titles + FamilySize + GroupSize, tuneGrid = data.frame(mtry = c(2, 
+    3, 7)), data = full4[!is.na(full4$Age), ], method = "ranger", 
+    trControl = trainControl(method = "cv", number = 10, repeats = 10, 
+        verboseIter = TRUE), importance = "impurity")
 ```
 
 Let's look at what factors were the most important in modeling age:
 
-![](Titanic_Survival_R_Markdown_3_files/figure-markdown_github/unnamed-chunk-30-1.png)
+![](../Titanic_md_files/figure-markdown_github/unnamed-chunk-30-1.png)
 
 Wow! Looks like it was a good idea to split out Titles!
 
 Now to use this information to predict the ages of passengers with missing ages and filling in their NA values.
 
 ``` r
-full4$Age[is.na(full4$Age)] <- predict(predicted_age, full4[is.na(full4$Age),])
+full4$Age[is.na(full4$Age)] <- predict(predicted_age, full4[is.na(full4$Age), 
+    ])
 
 # Check the summary to make sure there are no more NA values
 summary(full4$Age)
 ```
 
     ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-    ##    0.17   22.00   28.44   29.74   37.00   80.00
+    ##    0.17   22.00   28.50   29.72   37.00   80.00
 
 Let's take a quick look at the age distribution of passengers with originally known ages, and the age distribution of the entire group (known and predicted ages) to make sure we didn't terribly skew the distribution.
 
-![](Titanic_Survival_R_Markdown_3_files/figure-markdown_github/unnamed-chunk-32-1.png)![](Titanic_Survival_R_Markdown_3_files/figure-markdown_github/unnamed-chunk-32-2.png)
+![](../Titanic_md_files/figure-markdown_github/unnamed-chunk-32-1.png)![](../Titanic_md_files/figure-markdown_github/unnamed-chunk-32-2.png)
 
 Hmm, seems to have shifted a bit, but that could be due to a greater lack of age information collected for middle-aged passengers.
 
@@ -541,8 +556,8 @@ Modeling for Survival
 First things first, I need to split out the test and training data back into separate data sets, now called `train_complete` and `test_complete`.
 
 ``` r
-train_complete <- full4[full4$Dataset == 'train', ]
-test_complete <- full4[full4$Dataset == 'test', ]
+train_complete <- full4[full4$Dataset == "train", ]
+test_complete <- full4[full4$Dataset == "test", ]
 ```
 
 Because I plan on using the `caret` package for all of my modeling, I'm going to generate a standard `trainControl` so that those tuning parameters remain consistent throughout the various models.
@@ -552,12 +567,8 @@ Because I plan on using the `caret` package for all of my modeling, I'm going to
 I will create a system that will perform 10 repeats of a 10-Fold cross-validation of the data.
 
 ``` r
-myControl <- trainControl(
-      method = "cv", 
-      number = 10,
-      repeats = 10, 
-      verboseIter = TRUE
-  )
+myControl <- trainControl(method = "cv", number = 10, repeats = 10, 
+    verboseIter = TRUE)
 ```
 
 ### Fitting a random forest model
@@ -565,15 +576,10 @@ myControl <- trainControl(
 The first type of model I'd like to use is a random forest model (using the `ranger` and `caret` packages).
 
 ``` r
-rf_model <- train(
-    Survived ~ Age + Pclass + Sex + SibSp + Parch + Fare + Embarked + Titles + FamilySize + 
-      TravelGroup + GroupSize,
-    tuneGrid = data.frame(mtry = c(2, 5, 8, 10, 15)),
-    data = train_complete, 
-    method = "ranger", 
-    trControl = myControl,
-    importance = 'impurity'
-)
+rf_model <- train(Survived ~ Age + Pclass + Sex + SibSp + Parch + 
+    Fare + Embarked + Titles + FamilySize + TravelGroup + GroupSize, 
+    tuneGrid = data.frame(mtry = c(2, 5, 8, 10, 15)), data = train_complete, 
+    method = "ranger", trControl = myControl, importance = "impurity")
 ```
 
 ### Fitting a glmnet model
@@ -581,15 +587,10 @@ rf_model <- train(
 Next, we'll try a glmnet model, also from the `caret` package.
 
 ``` r
-glm_model <- train(
-    Survived ~ Age + Pclass + Sex + SibSp + Parch + Fare + Embarked + Titles + FamilySize + 
-      TravelGroup + GroupSize, 
-    method = "glmnet",
-    tuneGrid = expand.grid(alpha = 0:1,
-      lambda = seq(0.0001, 1, length = 20)),
-    data = train_complete,
-    trControl = myControl
-)
+glm_model <- train(Survived ~ Age + Pclass + Sex + SibSp + Parch + 
+    Fare + Embarked + Titles + FamilySize + TravelGroup + GroupSize, 
+    method = "glmnet", tuneGrid = expand.grid(alpha = 0:1, lambda = seq(1e-04, 
+        1, length = 20)), data = train_complete, trControl = myControl)
 ```
 
 ### Comparing model fit
@@ -616,20 +617,20 @@ summary(resampled)
     ## 
     ## Accuracy 
     ##          Min. 1st Qu. Median   Mean 3rd Qu.   Max. NA's
-    ## rf     0.7865  0.8022 0.8146 0.8249  0.8507 0.8667    0
-    ## glmnet 0.8090  0.8357 0.8492 0.8486  0.8624 0.8977    0
+    ## rf     0.7667  0.7893 0.8146 0.8250  0.8669 0.8889    0
+    ## glmnet 0.7889  0.8118 0.8531 0.8418  0.8624 0.9101    0
     ## 
     ## Kappa 
     ##          Min. 1st Qu. Median   Mean 3rd Qu.   Max. NA's
-    ## rf     0.5348  0.5860 0.6041 0.6237  0.6699 0.7165    0
-    ## glmnet 0.5838  0.6435 0.6761 0.6753  0.7056 0.7807    0
+    ## rf     0.5215  0.5375 0.6083 0.6239  0.7092 0.7613    0
+    ## glmnet 0.5535  0.6026 0.6842 0.6617  0.7027 0.8117    0
 
 ``` r
 # Plot the differences between model fits
 dotplot(resampled, metric = "Accuracy")
 ```
 
-![](Titanic_Survival_R_Markdown_3_files/figure-markdown_github/unnamed-chunk-37-1.png)
+![](../Titanic_md_files/figure-markdown_github/unnamed-chunk-37-1.png)
 
 Looks like the glmnet model is slightly more accurate than the random forest model, so we'll use that to predict the survival rate.
 
@@ -642,8 +643,7 @@ Although I generated two models above, the glmnet model provided higher accuracy
 
 ``` r
 # Reorder the data by Passenger ID number
-test_complete <- test_complete %>%
-                  arrange(PassengerId)
+test_complete <- test_complete %>% arrange(PassengerId)
 
 # Make predicted survival values
 my_prediction <- predict(glm_model, test_complete)
@@ -654,10 +654,11 @@ my_prediction <- predict(glm_model, test_complete)
 The instructions on Kaggle indicate that they are expecting a csv file with 2 columns: Passenger ID and Survived. I need to make sure that my data are arranged properly.
 
 ``` r
-# Create a data frame with two columns: PassengerId & Survived where Survived contains my predictions.
+# Create a data frame with two columns: PassengerId &
+# Survived where Survived contains my predictions.
 my_solution_5 <- data.frame(PassengerID = test$PassengerId, Survived = my_prediction)
 
-# Write the solution to a csv file 
+# Write the solution to a csv file
 write.csv(my_solution_5, file = "my_solution_5.csv", row.names = FALSE)
 ```
 

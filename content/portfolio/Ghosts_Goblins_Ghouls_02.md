@@ -19,6 +19,29 @@ Data exploration and machine learning in RMarkdown.
 Introduction
 ------------
 
+-   [Introduction](#introduction)
+    -   [Loading Necessary Packages](#loading-necessary-packages)
+    -   [Importing Data](#importing-data)
+-   [Data Exploration](#data-exploration)
+    -   [Distribution of Continuous Variables by Creature Type](#distribution-of-continuous-variables-by-creature-type)
+    -   [Distribution of Color by Creature Type](#distribution-of-color-by-creature-type)
+    -   [Distinguishing Features?](#distinguishing-features)
+-   [Feature Engineering](#feature-engineering)
+-   [Cleaning Data](#cleaning-data)
+-   [Clustering data](#clustering-data)
+    -   [Cluster Without Categorical Variables](#cluster-without-categorical-variables)
+    -   [Modeling for Creature Identity](#modeling-for-creature-identity)
+    -   [Creating trainControl](#creating-traincontrol)
+    -   [Random Forest Modeling](#random-forest-modeling)
+    -   [GLMnet Modeling](#glmnet-modeling)
+    -   [Comparing model fit](#comparing-model-fit)
+-   [Predicting Creature Identity](#predicting-creature-identity)
+    -   [Preparing the prediction for Kaggle](#preparing-the-prediction-for-kaggle)
+    -   [Testing with Kaggle](#testing-with-kaggle)
+
+Introduction
+------------
+
 This is my second-ever Kaggle competition (looking for the [first](https://www.kaggle.com/amberthomas/titanic/predicting-survival-on-the-titanic)?) I'll do my best to walk through my thought-process here and welcome any comments on my work. Let's get started!
 
 ### Loading Necessary Packages
@@ -104,7 +127,7 @@ We have 8 variables currently:
 It seems like a few of these variables would serve better as factors, rather than character strings, so I'll take care of that.
 
 ``` r
-factor_variables <- c('id', 'color', 'type', 'Dataset')
+factor_variables <- c("id", "color", "type", "Dataset")
 full[factor_variables] <- lapply(full[factor_variables], function(x) as.factor(x))
 ```
 
@@ -116,40 +139,40 @@ Let's take a look at what we've got here so far. What's the distribution of each
 Let's first temporarily remove the "test" rows.
 
 ``` r
-train_2 <- full[full$Dataset == 'train', ]
+train_2 <- full[full$Dataset == "train", ]
 ```
 
 ### Distribution of Continuous Variables by Creature Type
 
 #### Bone Length
 
-![](Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-6-1.png)
+![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-6-1.png)
 
 #### Rotting Flesh
 
-![](Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-7-1.png)
+![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-7-1.png)
 
 #### Hair Length
 
-![](Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-8-1.png)
 
 #### Soul
 
-![](Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-9-1.png)
+![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-9-1.png)
 
 ### Distribution of Color by Creature Type
 
 #### Ghost
 
-![](Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-10-1.png)
+![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
 #### Ghoul
 
-![](Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-11-1.png)
+![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-11-1.png)
 
 #### Goblin
 
-![](Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-12-1.png)
+![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-12-1.png)
 
 ### Distinguishing Features?
 
@@ -163,31 +186,27 @@ Normally here I would try to come up with additional ways to look at these data,
 Maybe I'm missing some interesting connection between variables?
 
 ``` r
-pairs(full[,2:5], 
-      col = full$type, 
-      labels = c("Bone Length", "Rotting Flesh", "Hair Length", "Soul"))
+pairs(full[, 2:5], col = full$type, labels = c("Bone Length", 
+    "Rotting Flesh", "Hair Length", "Soul"))
 ```
 
-![](Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-13-1.png)
+![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-13-1.png)
 
 Nope. But perhaps we can take advantage of a combination of characteristics that do seem to show some promise: most notably "Hair Length" and "Soul". Do we get any better separation among creatures if we combine these variables into one?
 
 ``` r
-full <- full %>%
-          mutate(hair_soul = hair_length * has_soul)
+full <- full %>% mutate(hair_soul = hair_length * has_soul)
 ```
 
-![](Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-15-1.png)
+![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-15-1.png)
 
 That may have separated Ghosts a little further from the other two... Let's try a few more variable interactions.
 
 ``` r
-full <- full %>%
-          mutate(bone_flesh = bone_length * rotting_flesh,
-                 bone_hair = bone_length * hair_length,
-                 bone_soul = bone_length * has_soul,
-                 flesh_hair = rotting_flesh * hair_length,
-                 flesh_soul = rotting_flesh * has_soul)
+full <- full %>% mutate(bone_flesh = bone_length * rotting_flesh, 
+    bone_hair = bone_length * hair_length, bone_soul = bone_length * 
+        has_soul, flesh_hair = rotting_flesh * hair_length, flesh_soul = rotting_flesh * 
+        has_soul)
 ```
 
 Time to check for ways to tidy up.
@@ -263,7 +282,8 @@ creature_labels <- full$type
 full2 <- full
 full2$type <- NULL
 
-# Remove categorical variables (id, color, and dataset) from dataset
+# Remove categorical variables (id, color, and dataset) from
+# dataset
 full2$id <- NULL
 full2$color <- NULL
 full2$Dataset <- NULL
@@ -274,7 +294,7 @@ creature_km_1 <- kmeans(full2, 3, nstart = 30)
 
 Ok, so now we have clusters, time to see how well they did. Let's look at them graphically first. This was created using the `plotcluster()` function from the `fpc` package.
 
-![](Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-19-1.png)
+![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-19-1.png)
 
 Hmm, those clusters don't look very discrete. Let's look at [Dunn's Index](https://en.wikipedia.org/wiki/Dunn_index) mathematically to see if we're missing something visually. This calculation comes from the `dunn` function in the `clValid` package.
 
@@ -312,8 +332,8 @@ Clustering was not particularly helpful in discerning creature identity, so perh
 First things first, I need to split out the test and training data back into separate datasets.
 
 ``` r
-train_complete <- full[full$Dataset == 'train', ]
-test_complete <- full[full$Dataset == 'test', ]
+train_complete <- full[full$Dataset == "train", ]
+test_complete <- full[full$Dataset == "test", ]
 ```
 
 Because I plan on using the `caret` package for all of my modeling, I'm going to generate a standard `trainControl` so that those tuning parameters remain consistent throughout the various models.
@@ -323,12 +343,8 @@ Because I plan on using the `caret` package for all of my modeling, I'm going to
 I will create a system that will perform 20 repeats of a 10-Fold cross-validation of the data.
 
 ``` r
-myControl <- trainControl(
-      method = "cv", 
-      number = 10,
-      repeats = 20, 
-      verboseIter = TRUE
-  )
+myControl <- trainControl(method = "cv", number = 10, repeats = 20, 
+    verboseIter = TRUE)
 ```
 
 ### Random Forest Modeling
@@ -338,35 +354,25 @@ Let's start with a random forest model, generated using the `ranger` and `caret`
 ``` r
 set.seed(10)
 
-rf_model <- train(
-    type ~ bone_length + rotting_flesh + hair_length + has_soul + color + hair_soul + bone_flesh + bone_hair + 
-        bone_soul + flesh_hair + flesh_soul,
-    tuneLength = 3,
-    data = train_complete, 
-    method = "ranger", 
-    trControl = myControl,
-    importance = 'impurity'
-)
+rf_model <- train(type ~ bone_length + rotting_flesh + hair_length + 
+    has_soul + color + hair_soul + bone_flesh + bone_hair + bone_soul + 
+    flesh_hair + flesh_soul, tuneLength = 3, data = train_complete, 
+    method = "ranger", trControl = myControl, importance = "impurity")
 ```
 
 Let's look at the levels of importance of each factor in this model.
 
-![](Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-25-1.png)
+![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-25-1.png)
 
 Huh. Our "hair\_soul" variable seems to be the most important to this model and our other interactions rank pretty highly. I suppose we can hold on to them for now. Color, on the other hand, hardly plays into this. Let's try removing it from a second random forest model.
 
 ``` r
 set.seed(10)
 
-rf_model_2 <- train(
-    type ~ bone_length + rotting_flesh + hair_length + has_soul + hair_soul + bone_flesh + bone_hair + 
-        bone_soul + flesh_hair + flesh_soul,
-    tuneLength = 3,
-    data = train_complete, 
-    method = "ranger", 
-    trControl = myControl,
-    importance = 'impurity'
-)
+rf_model_2 <- train(type ~ bone_length + rotting_flesh + hair_length + 
+    has_soul + hair_soul + bone_flesh + bone_hair + bone_soul + 
+    flesh_hair + flesh_soul, tuneLength = 3, data = train_complete, 
+    method = "ranger", trControl = myControl, importance = "impurity")
 ```
 
 ### GLMnet Modeling
@@ -376,15 +382,11 @@ I'm going to follow the random forest model up with a glmnet model, also from th
 ``` r
 set.seed(10)
 
-glm_model <- train(
-    type ~ bone_length + rotting_flesh + hair_length + has_soul + color + hair_soul + bone_flesh + bone_hair + 
-        bone_soul + flesh_hair + flesh_soul, 
-    method = "glmnet",
-    tuneGrid = expand.grid(alpha = 0:1,
-      lambda = seq(0.0001, 1, length = 20)),
-    data = train_complete,
-    trControl = myControl
-)
+glm_model <- train(type ~ bone_length + rotting_flesh + hair_length + 
+    has_soul + color + hair_soul + bone_flesh + bone_hair + bone_soul + 
+    flesh_hair + flesh_soul, method = "glmnet", tuneGrid = expand.grid(alpha = 0:1, 
+    lambda = seq(1e-04, 1, length = 20)), data = train_complete, 
+    trControl = myControl)
 ```
 
 Once again, we'll try without "color".
@@ -392,15 +394,11 @@ Once again, we'll try without "color".
 ``` r
 set.seed(10)
 
-glm_model_2 <- train(
-    type ~ bone_length + rotting_flesh + hair_length + has_soul + hair_soul + bone_flesh + bone_hair + 
-        bone_soul + flesh_hair + flesh_soul, 
-    method = "glmnet",
-    tuneGrid = expand.grid(alpha = 0:1,
-      lambda = seq(0.0001, 1, length = 20)),
-    data = train_complete,
-    trControl = myControl
-)
+glm_model_2 <- train(type ~ bone_length + rotting_flesh + hair_length + 
+    has_soul + hair_soul + bone_flesh + bone_hair + bone_soul + 
+    flesh_hair + flesh_soul, method = "glmnet", tuneGrid = expand.grid(alpha = 0:1, 
+    lambda = seq(1e-04, 1, length = 20)), data = train_complete, 
+    trControl = myControl)
 ```
 
 ### Comparing model fit
@@ -409,7 +407,8 @@ Now that we have two random forest models and two glmnet models, it's time to co
 
 ``` r
 # Create a list of models
-models <- list(rf = rf_model, rf2 = rf_model_2, glmnet = glm_model, glmnet2 = glm_model_2)
+models <- list(rf = rf_model, rf2 = rf_model_2, glmnet = glm_model, 
+    glmnet2 = glm_model_2)
 
 # Resample the models
 resampled <- resamples(models)
@@ -444,7 +443,7 @@ summary(resampled)
 dotplot(resampled, metric = "Accuracy")
 ```
 
-![](Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-29-1.png)
+![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-29-1.png)
 
 Predicting Creature Identity
 ----------------------------
@@ -453,8 +452,7 @@ Although I generated four models above, the second glmnet model (all interaction
 
 ``` r
 # Reorder the data by creature ID number
-test_complete <- test_complete %>%
-                  arrange(id)
+test_complete <- test_complete %>% arrange(id)
 
 # Make predicted survival values
 my_prediction <- predict(glm_model_2, test_complete)
@@ -468,8 +466,9 @@ The instructions on Kaggle indicate that they are expecting a csv file with 2 co
 # Create a data frame with two columns
 my_solution_GGG_03 <- data.frame(id = test_complete$id, Type = my_prediction)
 
-# Write the solution to a csv file 
-write.csv(my_solution_GGG_03, file = "my_solution_GGG_03.csv", row.names = FALSE)
+# Write the solution to a csv file
+write.csv(my_solution_GGG_03, file = "my_solution_GGG_03.csv", 
+    row.names = FALSE)
 ```
 
 ### Testing with Kaggle
