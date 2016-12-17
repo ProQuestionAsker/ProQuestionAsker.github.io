@@ -3,14 +3,16 @@ showonlyimage = true
 draft = false
 image = "portfolio/GGG_Boxplot.jpg"
 date = "2016-11-09"
-title = "Kaggle - Ghosts, Goblins, and Ghouls"
+title = "Ghosts, Goblins, and Ghouls"
 weight = 0
 type = "post"
 author = "Amber Thomas"
 tags = [
- "machine learning"
+ "machine learning",
+ "data viz"
 ]
 +++
+Kaggle Playground Competition
 
 Data exploration and machine learning in RMarkdown.
 <!--more-->

@@ -3,12 +3,15 @@ showonlyimage = false
 draft = false
 image = "portfolio/Titanic.jpg"
 date = "2016-11-05T18:25:22+05:30"
-title = "Kaggle - Machine Learning from Disaster"
+title = "Machine Learning from Disaster"
 weight = 1
 type = "post"
 author = "Amber Thomas"
-tags = ["machine learning"]
+tags = [
+"machine learning",
+"data viz"]
 +++
+Kaggle Playground Competition 
 
 Data exploration and machine learning in RMarkdown.
 <!--more-->

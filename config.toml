@@ -60,6 +60,6 @@ googleAnalytics = "UA-89036876-1"
   
   #Adding widgets to the sidebar
   [params.widgets]
-    categories = true
-    tags = true
-    search = true
+    categories = false
+    tags = false
+    search = false

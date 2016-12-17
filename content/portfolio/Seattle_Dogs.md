@@ -41,11 +41,11 @@ This report investigates licensed dog ownership in Seattle, WA (USA).
 
 I'm curious about a few things here:
 
--   People estimate that there are 160,000 dogs in Seattle. Where are they?
+* People estimate that there are 160,000 dogs in Seattle. Where are they?
 
--   Seattle is a relatively densely-populated area. Are small, apartment-friendly dogs preferred?
+* Seattle is a relatively densely-populated area. Are small, apartment-friendly dogs preferred?
 
--   Using this information, what recommendations could be made to aspiring dog sitters and walkers in Seattle?
+* Using this information, what recommendations could be made to aspiring dog sitters and walkers in Seattle?
 
 I will annotate each step of data analysis as I go.
 
@@ -633,10 +633,10 @@ dogs_5 <- dogs_5 %>% mutate(weight = ifelse(Gender == "Female",
 
 Perfect. Now we can make an estimate of how they would be categorized on "[Rover.com](www.rover.com)", a Seattle-based website aimed at helping dog-owners find reliable dog-sitters and walkers. Their website lists the following size cutoffs (in lbs):
 
--   Small = 0 - 15
--   Medium = 16 - 40
--   Large = 41 - 100
--   Giant = 100 +
+* Small = 0 - 15
+* Medium = 16 - 40
+* Large = 41 - 100
+* Giant = 100 +
 
 Let's add those classifications to our dataset.
 
@@ -830,14 +830,14 @@ There are 6 licensed dogs in Seattle named Rover!
 Conclusions
 -----------
 
--   Dogs are basically everywhere in Seattle, but are most highly concentrated closer to the center of the city rather than on bordering neighborhoods.
+* Dogs are basically everywhere in Seattle, but are most highly concentrated closer to the center of the city rather than on bordering neighborhoods.
 
--   Regardless of apartment-living, Seattle-ites are big fans of big dogs throughout the city.
+* Regardless of apartment-living, Seattle-ites are big fans of big dogs throughout the city.
 
--   The highest dog to human ratio is found in the Ballard to Crown Hill area, with nearly 1 dog per 10 people.
+* The highest dog to human ratio is found in the Ballard to Crown Hill area, with nearly 1 dog per 10 people.
 
--   Generally, Seattle would be a great place to be a dog sitter or walker. To increase the likelihood of finding customers, I'd suggest being open to walking or pet-sitting large dogs where possible.
+* Generally, Seattle would be a great place to be a dog sitter or walker. To increase the likelihood of finding customers, I'd suggest being open to walking or pet-sitting large dogs where possible.
 
--   For a company like Rover.com which aims to connect dog-parents to dog sitters and walkers, I'd recommend providing this type of city-wide breakdown to potential sitters. I'd also suggest reaching out to large-dog owners to investigate their interest in becoming a sitter of other large dogs.
+* For a company like Rover.com which aims to connect dog-parents to dog sitters and walkers, I'd recommend providing this type of city-wide breakdown to potential sitters. I'd also suggest reaching out to large-dog owners to investigate their interest in becoming a sitter of other large dogs.
 
 *Without both sitter and user data from Rover.com, I am unable to make recommendations regarding the best neighborhood to become a dog sitter.*
