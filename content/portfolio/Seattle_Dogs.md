@@ -1,7 +1,7 @@
 +++
-showonlyimage = false
+showonlyimage = true
 draft = false
-image = "img/portfolio/map.png"
+image = "portfolio/Seattle_Dogs_files/Dog-Graph.jpg"
 date = "2016-11-16"
 title = "Dog Ownership in Seattle"
 weight = 0
