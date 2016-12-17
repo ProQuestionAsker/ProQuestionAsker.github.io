@@ -1,6 +1,7 @@
 <script>
-jQuery(document).ready(function() {
  
+$(document).ready(function() {
+
 var offset = 250;
  
 var duration = 300;
@@ -32,4 +33,7 @@ return false;
 })
  
 });
+ 
 </script>
+
+

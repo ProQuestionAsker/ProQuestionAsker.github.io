@@ -12,22 +12,40 @@
 
 
 
+
+
+
+
  .back-to-top {
- background: none;
- position: fixed;
- margin: 0;
- bottom: 0;
- right: 0;
- width: 70px;
- height: 70px;
- z-index: 100;
- display: none;
- text-decoration: none;
- color: #e01557;
+   position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
  }
+ 
   
  .back-to-top i {
- 
- font-size: 60px;
+   font-size: 60px;
  }
+
+
+ 
+
+
+
+
+
+
  
