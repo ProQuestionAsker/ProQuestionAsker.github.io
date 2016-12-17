@@ -1,6 +1,5 @@
-<script>
- 
 $(document).ready(function() {
+
 
 var offset = 250;
  
@@ -34,6 +33,6 @@ return false;
  
 });
  
-</script>
+
 
 

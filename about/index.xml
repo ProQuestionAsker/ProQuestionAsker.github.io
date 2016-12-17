@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About-rsses on Amber Thomas</title>
-    <link>https://proquestionasker.github.io/about/index.xml</link>
+    <link>/about/index.xml</link>
     <description>Recent content in About-rsses on Amber Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Amber Thomas</copyright>
-    <atom:link href="https://proquestionasker.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About Me</title>
-      <link>https://proquestionasker.github.io/about/</link>
+      <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://proquestionasker.github.io/about/</guid>
+      <guid>/about/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
@@ -29,8 +29,6 @@
 &lt;p&gt;And while I &lt;em&gt;did&lt;/em&gt; get to work with some amazing animals over the years…&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;images/all_animals.png&#34; width=&#34;90%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Only about &lt;strong&gt;5 - 10%&lt;/strong&gt; of my time was spent working with animals. My professional experience (in time spent performing a single activity) breaks down like this:&lt;/p&gt;
-&lt;div id=&#34;htmlwidget-a1366e36b5937712e17b&#34; style=&#34;width:100%;height:500px;&#34; class=&#34;highchart html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-a1366e36b5937712e17b&#34;&gt;{&#34;x&#34;:{&#34;hc_opts&#34;:{&#34;title&#34;:{&#34;text&#34;:null},&#34;yAxis&#34;:{&#34;title&#34;:{&#34;text&#34;:&#34;Percentage of Time&#34;}},&#34;credits&#34;:{&#34;enabled&#34;:false},&#34;exporting&#34;:{&#34;enabled&#34;:false},&#34;plotOptions&#34;:{&#34;series&#34;:{&#34;turboThreshold&#34;:0},&#34;bar&#34;:{&#34;dataLabels&#34;:{&#34;enabled&#34;:false},&#34;stacking&#34;:&#34;percent&#34;}},&#34;chart&#34;:{&#34;type&#34;:&#34;bar&#34;},&#34;series&#34;:[{&#34;name&#34;:&#34;Animal Care&#34;,&#34;data&#34;:[10]},{&#34;name&#34;:&#34;Experimental Design&#34;,&#34;data&#34;:[20]},{&#34;name&#34;:&#34;Data Collection&#34;,&#34;data&#34;:[30]},{&#34;name&#34;:&#34;Data Analysis&#34;,&#34;data&#34;:[40]},{&#34;name&#34;:&#34;Project Communication&#34;,&#34;data&#34;:[20]}]},&#34;theme&#34;:{&#34;chart&#34;:{&#34;backgroundColor&#34;:&#34;transparent&#34;}},&#34;conf_opts&#34;:{&#34;global&#34;:{&#34;Date&#34;:null,&#34;VMLRadialGradientURL&#34;:&#34;http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png&#34;,&#34;canvasToolsURL&#34;:&#34;http =//code.highcharts.com/list(version)/modules/canvas-tools.js&#34;,&#34;getTimezoneOffset&#34;:null,&#34;timezoneOffset&#34;:0,&#34;useUTC&#34;:true},&#34;lang&#34;:{&#34;contextButtonTitle&#34;:&#34;Chart context menu&#34;,&#34;decimalPoint&#34;:&#34;.&#34;,&#34;downloadJPEG&#34;:&#34;Download JPEG image&#34;,&#34;downloadPDF&#34;:&#34;Download PDF document&#34;,&#34;downloadPNG&#34;:&#34;Download PNG image&#34;,&#34;downloadSVG&#34;:&#34;Download SVG vector image&#34;,&#34;drillUpText&#34;:&#34;Back to {series.name}&#34;,&#34;invalidDate&#34;:null,&#34;loading&#34;:&#34;Loading...&#34;,&#34;months&#34;:[&#34;January&#34;,&#34;February&#34;,&#34;March&#34;,&#34;April&#34;,&#34;May&#34;,&#34;June&#34;,&#34;July&#34;,&#34;August&#34;,&#34;September&#34;,&#34;October&#34;,&#34;November&#34;,&#34;December&#34;],&#34;noData&#34;:&#34;No data to display&#34;,&#34;numericSymbols&#34;:[&#34;k&#34;,&#34;M&#34;,&#34;G&#34;,&#34;T&#34;,&#34;P&#34;,&#34;E&#34;],&#34;printChart&#34;:&#34;Print chart&#34;,&#34;resetZoom&#34;:&#34;Reset zoom&#34;,&#34;resetZoomTitle&#34;:&#34;Reset zoom level 1:1&#34;,&#34;shortMonths&#34;:[&#34;Jan&#34;,&#34;Feb&#34;,&#34;Mar&#34;,&#34;Apr&#34;,&#34;May&#34;,&#34;Jun&#34;,&#34;Jul&#34;,&#34;Aug&#34;,&#34;Sep&#34;,&#34;Oct&#34;,&#34;Nov&#34;,&#34;Dec&#34;],&#34;thousandsSep&#34;:&#34; &#34;,&#34;weekdays&#34;:[&#34;Sunday&#34;,&#34;Monday&#34;,&#34;Tuesday&#34;,&#34;Wednesday&#34;,&#34;Thursday&#34;,&#34;Friday&#34;,&#34;Saturday&#34;]}},&#34;type&#34;:&#34;chart&#34;,&#34;fonts&#34;:[],&#34;debug&#34;:false},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;p&gt;When a co-worker introduced me by saying “This is Amber, she does data analysis”, I realized that, indeed, I was a data analyst (who happened to work with marine data).&lt;/p&gt;
 &lt;p&gt;So, I decided to pursue the analytical side of my work and enter the world of data science. I’ve been taking lots of classes, working on lots of personal projects, joining local Meetups, and looking for work in the field.&lt;/p&gt;
 &lt;p&gt;I’m always looking for new people to chat with and new problems to solve, so feel free to reach out to me!&lt;/p&gt;
@@ -40,31 +38,6 @@
 
 &lt;!-- BLOGDOWN-HEAD
 
-&lt;script src=&#34;#####../content/about/index_files/htmlwidgets-0.8/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/jquery-1.11.1/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/underscore-1.8.3/underscore-min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;#####../content/about/index_files/highcharts-4.2.4/css/motion.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/highstock.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/highcharts-more.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/highcharts-3d.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/exporting.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/drilldown.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/data.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/heatmap.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/map.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/treemap.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/funnel.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/solid-gauge.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/modules/reset.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/annotations.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/motion.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/draggable-points.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/pattern-fill-v2.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/text-symbols.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;#####../content/about/index_files/highcharts-4.2.4/plugins/symbols-extra.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;#####../content/about/index_files/fontawesome-4.5.0/font-awesome.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;link href=&#34;#####../content/about/index_files/htmlwdgtgrid-1/htmlwdgtgrid.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;#####../content/about/index_files/highchart-binding-0.4.0/highchart.js&#34;&gt;&lt;/script&gt;
 
 
 
