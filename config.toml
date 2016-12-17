@@ -57,3 +57,9 @@ googleAnalytics = "UA-89036876-1"
   twitter      = "https://twitter.com/ProQuesAsker"
   linkedin     = "https://www.linkedin.com/in/amberrthomas"
   github       = "https://www.github.com/ProQuestionAsker"
+  
+  #Adding widgets to the sidebar
+  [params.widgets]
+    categories = true
+    tags = true
+    search = true
