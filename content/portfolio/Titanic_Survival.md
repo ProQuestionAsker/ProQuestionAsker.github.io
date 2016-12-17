@@ -1,7 +1,7 @@
 +++
 showonlyimage = false
 draft = false
-image = "img/portfolio/vimp.svg"
+image = "portfolio/Titanic.jpg"
 date = "2016-11-05T18:25:22+05:30"
 title = "Kaggle - Machine Learning from Disaster"
 weight = 1

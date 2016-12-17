@@ -1,7 +1,7 @@
 +++
 showonlyimage = false
 draft = false
-image = "img/portfolio/GGGboxplot.svg"
+image = "portfolio/GGG_Boxplot.jpg"
 date = "2016-11-09"
 title = "Kaggle - Ghosts, Goblins, and Ghouls"
 weight = 0
