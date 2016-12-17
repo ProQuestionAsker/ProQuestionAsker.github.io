@@ -2,65 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://proquestionasker.github.io/</loc>
+    <loc>/</loc>
     <lastmod>2016-11-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://proquestionasker.github.io/portfolio/Seattle_Dogs/</loc>
+    <loc>/portfolio/Seattle_Dogs/</loc>
     <lastmod>2016-11-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://proquestionasker.github.io/portfolio/Bicycle_Sharing_2/</loc>
+    <loc>/portfolio/Bicycle_Sharing_2/</loc>
     <lastmod>2016-11-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://proquestionasker.github.io/portfolio/Ghosts_Goblins_Ghouls_01/</loc>
+    <loc>/portfolio/Ghosts_Goblins_Ghouls_01/</loc>
     <lastmod>2016-11-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://proquestionasker.github.io/contact/</loc>
+    <loc>/contact/</loc>
     <lastmod>2016-11-06T13:00:25+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://proquestionasker.github.io/post/hello-world/</loc>
+    <loc>/post/hello-world/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://proquestionasker.github.io/blog/creating-a-new-theme/</loc>
+    <loc>/blog/creating-a-new-theme/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://proquestionasker.github.io/blog/goisforlovers/</loc>
+    <loc>/blog/goisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://proquestionasker.github.io/blog/hugoisforlovers/</loc>
+    <loc>/blog/hugoisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://proquestionasker.github.io/blog/migrate-from-jekyll/</loc>
+    <loc>/blog/migrate-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://proquestionasker.github.io/about/</loc>
+    <loc>/about/</loc>
   </url>
   
   <url>
-    <loc>https://proquestionasker.github.io/portfolio/</loc>
-  </url>
-  
-  <url>
-    <loc>https://proquestionasker.github.io/portfolio/Titanic_Survival/</loc>
+    <loc>/portfolio/Titanic_Survival/</loc>
     <lastmod>2016-11-05T18:25:22+05:30</lastmod>
   </url>
   
