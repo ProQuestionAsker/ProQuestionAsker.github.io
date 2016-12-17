@@ -1,7 +1,7 @@
 +++
 showonlyimage = false
 draft = false
-image = "img/portfolio/Bike_Season_DOW.png"
+image = "portfolio/Bicycle_Sharing_2_files/Bicycle_Graph.jpg"
 date = "2016-11-10"
 title = "Pronto! Bicycle Sharing in Seattle"
 weight = 0
