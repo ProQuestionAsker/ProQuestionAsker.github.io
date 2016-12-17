@@ -109,6 +109,21 @@ ELEPHANT IMPORT
 }
 
 
+ /*
+=====================
+FIXED POSITION - ADDED BY PARKER
+=====================
+
+*/
+
+@media (min-width:768px) {
+  .col-sb-fixedpos {
+    position: fixed;
+  }
+  .col-main-fixedpos {
+    float: right;
+  }
+}
 
 /*
 
