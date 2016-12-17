@@ -5,6 +5,8 @@ image = "portfolio/Titanic.jpg"
 date = "2016-11-05T18:25:22+05:30"
 title = "Kaggle - Machine Learning from Disaster"
 weight = 1
+type = "post"
+author = "Amber Thomas"
 +++
 
 Data exploration and machine learning in RMarkdown.

@@ -15,8 +15,8 @@
                   <div class="col-md-4">
                     <div class="image">
                         <a href="{{ .Permalink }}">
-                            {{ if .Params.banner }}
-                            <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" class="img-responsive" alt="">
+                            {{ if .Params.image }}
+                            <img src="{{ .Site.BaseURL}}{{ .Params.image }}" class="img-responsive" alt="">
                             {{ else }}
                             <img src="{{ .Site.BaseURL}}img/placeholder.png" class="img-responsive" alt="">
                             {{ end }}

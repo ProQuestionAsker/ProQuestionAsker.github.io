@@ -5,6 +5,8 @@ image = "portfolio/Seattle_Dogs_files/Dog-Graph.jpg"
 date = "2016-11-16"
 title = "Dog Ownership in Seattle"
 weight = 0
+type = "post"
+author = "Amber Thomas"
 +++
 
 Data cleaning, exploration, mapping, and data viz in RMarkdown.
