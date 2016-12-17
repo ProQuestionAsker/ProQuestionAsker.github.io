@@ -40,4 +40,52 @@
    font-size: 60px;
  }
 
+
+.panel.sidebar-menu h3 {
+  padding: 5px 0;
+  margin: 0;
+}
+.panel.sidebar-menu {
+  background: #f4f4f4
+  margin: 0 0 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.panel.sidebar-menu .panel-heading {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  padding: 0;
+  letter-spacing: 0.08em;
+  border-bottom: none;
+}
+.panel.sidebar-menu .panel-heading h1,
+.panel.sidebar-menu .panel-heading h2,
+.panel.sidebar-menu .panel-heading h3,
+.panel.sidebar-menu .panel-heading h4,
+.panel.sidebar-menu .panel-heading h5 {
+  display: inline-block;
+  border-bottom: solid 5px #e01557;
+  line-height: 1.1;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid transparent;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+}
+
+/* FOR FIXING ARROWS ON SEATTLE DOGS PAGE
+.content-column-content ul li p {
+  display: inline-block;
+}
+*/
+
  

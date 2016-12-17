@@ -9,6 +9,13 @@
       {{ range .Site.Params.navlinks }}
         <li><a href="{{ $url }}{{ .url }}">{{ .name }}</a></li>
       {{ end }}
+
+     <!--  {{ partial "widgets/search.html" . }} 
+
+      {{ partial "widgets/categories.html" . }} 
+
+      {{ partial "widgets/tags.html" . }} -->
+
     </ul>
     {{ partial "socialButtonsInSideBar.html" . }}
 
