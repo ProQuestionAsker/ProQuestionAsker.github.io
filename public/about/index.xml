@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About-rsses on Amber Thomas</title>
-    <link>https://proquestionasker.github.io/about/index.xml</link>
+    <link>/about/index.xml</link>
     <description>Recent content in About-rsses on Amber Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Amber Thomas</copyright>
-    <atom:link href="https://proquestionasker.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About Me</title>
-      <link>https://proquestionasker.github.io/about/</link>
+      <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://proquestionasker.github.io/about/</guid>
+      <guid>/about/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
@@ -29,7 +29,6 @@
 &lt;p&gt;And while I &lt;em&gt;did&lt;/em&gt; get to work with some amazing animals over the years…&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;images/all_animals.png&#34; width=&#34;90%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Only about &lt;strong&gt;5 - 10%&lt;/strong&gt; of my time was spent working with animals. The rest was spent designing experiments and working with data.&lt;/p&gt;
-
 &lt;p&gt;When a co-worker introduced me by saying “This is Amber, she does data analysis”, I realized that, indeed, I was a data analyst (who happened to work with marine data).&lt;/p&gt;
 &lt;p&gt;So, I decided to pursue the analytical side of my work and enter the world of data science. I’ve been taking &lt;a href=&#34;https://proquestionasker.github.io/blog/ds_courses/&#34;&gt;lots of classes&lt;/a&gt;, working on &lt;a href=&#34;../portfolio/&#34;&gt;lots of personal projects&lt;/a&gt;, joining local Meetups, and looking for work in the field.&lt;/p&gt;
 &lt;p&gt;I’m always looking for new people to chat with and new problems to solve, so feel free to reach out to me!&lt;/p&gt;
