@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About-rsses on Amber Thomas</title>
-    <link>https://proquestionasker.github.io/about/index.xml</link>
+    <link>/about/index.xml</link>
     <description>Recent content in About-rsses on Amber Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Amber Thomas</copyright>
-    <atom:link href="https://proquestionasker.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About Me</title>
-      <link>https://proquestionasker.github.io/about/</link>
+      <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://proquestionasker.github.io/about/</guid>
+      <guid>/about/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
