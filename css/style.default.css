@@ -998,6 +998,7 @@ a:active {
   font-size: 14px;
 }
 .box-masonry .box-masonry-hover-text-header {
+  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
