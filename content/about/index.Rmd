@@ -58,6 +58,6 @@ Only about **5 - 10%** of my time was spent working with animals. The rest was s
 
 When a co-worker introduced me by saying "This is Amber, she does data analysis", I realized that, indeed, I was a data analyst (who happened to work with marine data).
 
-So, I decided to pursue the analytical side of my work and enter the world of data science.  I've been taking lots of classes, working on lots of personal projects, joining local Meetups, and looking for work in the field. 
+So, I decided to pursue the analytical side of my work and enter the world of data science.  I've been taking [lots of classes](https://proquestionasker.github.io/blog/ds_courses/), working on [lots of personal projects](../portfolio/), joining local Meetups, and looking for work in the field. 
 
 I'm always looking for new people to chat with and new problems to solve, so feel free to reach out to me!
