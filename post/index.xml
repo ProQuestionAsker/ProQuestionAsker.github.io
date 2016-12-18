@@ -7,63 +7,249 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Amber Thomas</copyright>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 17 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Hello World</title>
-      <link>/post/hello-world/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>Online Data Science Classes in R</title>
+      <link>/post/data_science_r/data_science_r/</link>
+      <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>/post/hello-world/</guid>
+      <guid>/post/data_science_r/data_science_r/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
 
-&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;R Markdown&lt;/h1&gt;
-&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit &amp;lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Summary: A list of the data science courses I’ve taken, my ratings on them, and comments for future learners.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prerequisites&#34;&gt;Prerequisites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#courses-ive-taken&#34;&gt;Courses I’ve Taken&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#getting-started-in-data-science&#34;&gt;Getting Started in Data Science&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#getting-started-in-r&#34;&gt;Getting Started in R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#r-studio-courses&#34;&gt;R Studio Courses&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#machine-learning-courses&#34;&gt;Machine Learning Courses&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sql-database&#34;&gt;SQL Databases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#other-courses&#34;&gt;Other Courses&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#wrap-up&#34;&gt;Wrap-Up&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;While working as a marine biologist, I decided to switch career tracks slightly and pursue data science. I already had experience in mathematics, R programming and data visualization but filling in other knowledge gaps led me to searching the internet for the best places to learn these skills.&lt;/p&gt;
+&lt;p&gt;With the price tags on both formal education and data science bootcamps ranging from $15,000 - $40,000 (after I’ve already completed both a Bachelors and Masters degree) I wanted to look for a more cost-effective solution.&lt;/p&gt;
+&lt;p&gt;Enter the &lt;a href=&#34;http://datasciencemasters.org/&#34;&gt;Open Source Data Science Master’s Program&lt;/a&gt;. This fantastic resource lists several books, websites, and free (or low-cost) online courses to help you become a data scientist. While the main project is focused on using python tools and resources, a repository for R tools is &lt;a href=&#34;https://github.com/datasciencemasters/go/blob/master/r-resources.md&#34;&gt;also available&lt;/a&gt;. You can find &lt;a href=&#34;http://davidventuri.com/data-science-masters/&#34;&gt;other collections&lt;/a&gt; like this aimed at helping data-scientists-to-be find the resources most likely to help them succeed in the field.&lt;/p&gt;
+&lt;p&gt;I am not planning to re-invent the wheel or develop my own data science curriculum, but finding a comprehensive list of places to look for good information has been invaluable for me so far in learning data science and I want to pay it forward.&lt;/p&gt;
+&lt;p&gt;So here we go. A list (and my comments) on the classes I have taken so far.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Including Plots&lt;/h1&gt;
-&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
-  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
-  init.angle = -50, border = NA
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;#####../content/post/hello-world_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 1: A fancy pie chart.
-&lt;/p&gt;
+&lt;div id=&#34;prerequisites&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Prerequisites&lt;/h1&gt;
+&lt;p&gt;Anyone is welcome to use this list as they wish (&lt;strong&gt;obviously&lt;/strong&gt;), but a few notes about my level of baseline knowledge before starting this journey.&lt;/p&gt;
+&lt;p&gt;I already had a solid background in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Statistics&lt;/li&gt;
+&lt;li&gt;Calculus&lt;/li&gt;
+&lt;li&gt;Mathematics&lt;/li&gt;
+&lt;li&gt;General programming knowledge&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and experience in using R for specific purposes. If you don’t have these background skills yet (particularly statistics), I’d highly recommend starting there.&lt;/p&gt;
+&lt;p&gt;I’d suggest looking for courses offered at &lt;a href=&#34;https://www.coursera.org&#34;&gt;Coursera&lt;/a&gt;, &lt;a href=&#34;https://www.datacamp.com&#34;&gt;DataCamp&lt;/a&gt;, &lt;a href=&#34;https://www.udemy.com/&#34;&gt;Udemy&lt;/a&gt;, and &lt;a href=&#34;https://www.khanacademy.org/&#34;&gt;Khan Academy&lt;/a&gt; to fill in those gaps.&lt;/p&gt;
 &lt;/div&gt;
+&lt;div id=&#34;courses-ive-taken&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Courses I’ve Taken&lt;/h1&gt;
+&lt;div id=&#34;getting-started-in-data-science&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Getting Started in Data Science&lt;/h2&gt;
+&lt;p&gt;Looking for a general “introduction to the field” class? I took:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.coursera.org/learn/data-scientists-tools&#34;&gt;Data Scientist’s Toolbox&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.coursera.org&#34;&gt;Coursera&lt;/a&gt; and Johns Hopkins University
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star-o&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Beginner&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: $29 (for certificate / free to audit)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: Suggested 4 weeks&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: If you’re brand new to the field, take this course. If you’re already familiar with R and general data science topics, you can skip this one.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;getting-started-in-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Getting Started in R&lt;/h2&gt;
+&lt;p&gt;While I’ve been programming and conducting analysis in R for years, I had only been using it for specific purposes and decided to fill in any knowledge gaps I had with the statistical language. Here’s what I took:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.coursera.org/learn/r-programming&#34;&gt;R Programming&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.coursera.org&#34;&gt;Coursera&lt;/a&gt; and Johns Hopkins University
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star-o&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star-o&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Intermediate&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: $49 (for certificate / free to audit)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: Suggested 4 weeks&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: The lectures do a good job of familiarizing you with the basics of R programming, but the assignments often felt far too advanced given the basic subject matter of the course.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.datacamp.com/courses/free-introduction-to-r&#34;&gt;Introduction to R&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.datacamp.com&#34;&gt;DataCamp&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Beginner&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: FREE&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: 4 Hours&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: This interactive platform is excellent for teaching you the very basics.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.datacamp.com/courses/intermediate-r&#34;&gt;Intermediate R&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.datacamp.com&#34;&gt;DataCamp&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Intermediate&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: $29/month for unlimited access to DataCamp’s entire course library&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: 6 Hours&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: Video courses mixed in with interactive exercises help make these more complicated concepts easier. Also has option of a 2nd &lt;a href=&#34;https://www.datacamp.com/courses/intermediate-r-practice&#34;&gt;practice course&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.datacamp.com/courses/importing-data-in-r-part-1&#34;&gt;Importing and Cleaning Data&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.datacamp.com&#34;&gt;DataCamp&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star-o&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Beginner&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: $29/month for unlimited access to DataCamp’s entire course library&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: 3 Hours (Total 10 for both parts and case studies)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: Great overview course to importing any kind of data into R. Also has a &lt;a href=&#34;https://www.datacamp.com/courses/importing-data-in-r-part-2&#34;&gt;Part 2 course&lt;/a&gt; and a course with &lt;a href=&#34;https://www.datacamp.com/courses/importing-cleaning-data-in-r-case-studies&#34;&gt;case studies&lt;/a&gt; for practice.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.datacamp.com/courses/cleaning-data-in-r&#34;&gt;Cleaning Data in R&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.datacamp.com&#34;&gt;DataCamp&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Beginner&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: $29/month for unlimited access to DataCamp’s entire course library&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: 4 Hours&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: If you need help turning a messy dataset into a clean one, this course will do the trick. The focus is primarily on the &lt;code&gt;tidyr&lt;/code&gt; package.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.datacamp.com/courses/writing-functions-in-r&#34;&gt;Writing Functions in R&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.datacamp.com&#34;&gt;DataCamp&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Intermediate&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: $29/month for unlimited access to DataCamp’s entire course library&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: 4 Hours&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: This course is taught by &lt;a href=&#34;http://cwick.co.nz/&#34;&gt;Charlotte&lt;/a&gt; and &lt;a href=&#34;http://hadley.nz/&#34;&gt;Hadley&lt;/a&gt; Wickham and is wonderful. Functions are challenging to write but this course made it seem simple.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial&#34;&gt;Data Manipulation in R with dplyr&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.datacamp.com&#34;&gt;DataCamp&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Intermediate&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: $29/month for unlimited access to DataCamp’s entire course library&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: 4 Hours&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: If I could give this class 6 stars, I would. It’s well taught and it certainly kicked off my love of the &lt;code&gt;dplyr&lt;/code&gt; package.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rstudio-courses&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;RStudio Courses&lt;/h2&gt;
+&lt;p&gt;Until recently, I only ever used R in the command interface, but after these courses on using RStudio and RMarkdown, I’m never looking back. &lt;strong&gt;Fun fact&lt;/strong&gt;: This website was written using RStudio!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1&#34;&gt;Working with RStudio IDE&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.datacamp.com&#34;&gt;DataCamp&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Beginner&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: $29/month for unlimited access to DataCamp’s entire course library&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: 3 Hours&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: The class was simple and helpful in orienting me to some of the basic features of RStudio.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.datacamp.com/courses/reporting-with-r-markdown&#34;&gt;Reporting with RMarkdown&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.datacamp.com&#34;&gt;DataCamp&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Beginner&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: $29/month for unlimited access to DataCamp’s entire course library&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: 3 Hours&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: I had no idea how simple RMarkdown could be before this course. Each of my &lt;a href=&#34;../blog&#34;&gt;blog posts&lt;/a&gt; and &lt;a href=&#34;../portfolio&#34;&gt;projects&lt;/a&gt; were written using RMarkdown, making report-writing simple.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;machine-learning-courses&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Machine Learning Courses&lt;/h2&gt;
+&lt;p&gt;As I’m sure you’ve read by now, machine learning is an often sought after for data scientists, so having a good foundation is key. I’ve taken:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.datacamp.com/courses/introduction-to-machine-learning-with-r&#34;&gt;Introduction to Machine Learning&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.datacamp.com&#34;&gt;DataCamp&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star-o&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Intermediate - Advanced&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: $29/month for unlimited access to DataCamp’s entire course library&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: 6 Hours&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: This class gave me a good foundation of &lt;em&gt;how&lt;/em&gt; to do some machine learning, but some of the theory behind it seemed to be missing.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.datacamp.com/courses/machine-learning-toolbox&#34;&gt;Machine Learning Toolbox&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.datacamp.com&#34;&gt;DataCamp&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star-o&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star-o&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Intermediate - Advanced&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: $29/month for unlimited access to DataCamp’s entire course library&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: 4 Hours&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: Honestly, I got through this course and didn’t feel like I understood &lt;em&gt;why&lt;/em&gt; I was being asked to do any of the specific tasks. It was only after completing the course that I realized that the &lt;code&gt;caret&lt;/code&gt; package (which they focus on throughout the course) is super useful.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://lagunita.stanford.edu/courses/HumanitiesSciences/StatLearning/Winter2016/info&#34;&gt;Statistical Learning&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://lagunita.stanford.edu/dashboard&#34;&gt;Stanford University Lagunita&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star-o&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Intermediate - Advanced&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: FREE&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: 15+ Hours&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: While you can complete assignments for credit in this course, I’ve been enjoying it as a YouTube playlist of videos that accompanies the book &lt;a href=&#34;http://www-bcf.usc.edu/~gareth/ISL/&#34;&gt;Introduction to Statistical Learning&lt;/a&gt;. The material is thorough and has helped clear up some misconceptions for me, but the pace is a bit slow for my taste.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.datacamp.com/community/open-courses/kaggle-r-tutorial-on-machine-learning&#34;&gt;Kaggle R Tutorial for Machine Learning&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.datacamp.com&#34;&gt;DataCamp&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star-o&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Intermediate&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: FREE&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: 1 Hour&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: This course helps walk you through submitting your first entry to a &lt;a href=&#34;https://www.kaggle.com&#34;&gt;Kaggle&lt;/a&gt; competition. It is fun and very helpful for submitting an entry, but probably not worth your time if you aren’t planning on using Kaggle.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sql-database&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;SQL Database&lt;/h2&gt;
+&lt;p&gt;While the &lt;a href=&#34;https://www.datacamp.com/courses/importing-data-in-r-part-1&#34;&gt;Importing and Cleaning Data&lt;/a&gt; class from &lt;a href=&#34;https://www.datacamp.com&#34;&gt;DataCamp&lt;/a&gt; covers how to import data from a SQL database into R, most job postings require that you have experience with SQL queries. Here are the courses I’ve taken:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.codecademy.com/learn/learn-sql&#34;&gt;Learn SQL&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.codeacademy.com&#34;&gt;CodeAcademy&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Beginner&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: FREE&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: 1-2 Hours&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: This quick interactive course introduces the most basic topics needed for querying SQL databases. If you’ve been using &lt;code&gt;dplyr&lt;/code&gt; in R, this should be an easy transition.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.codecademy.com/learn/sql-table-transformation&#34;&gt;SQL Table Transformation&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.codeacademy.com&#34;&gt;CodeAcademy&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star-o&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Intermediate&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: FREE&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: 1-2 Hours&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: The course builds on the learnings from the Learn SQL course. It’s still relatively simple and interactive.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.codecademy.com/learn/sql-analyzing-business-metrics&#34;&gt;SQL Analyzing Business Metrics&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.codeacademy.com&#34;&gt;CodeAcademy&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star-o&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Intermediate&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: FREE&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: 1-2 Hours&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: The course also builds on the learnings from the Learn SQL course. It’s still relatively simple and interactive. The material included covers more advanced aggregates.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;other-courses&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Other Courses&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.datacamp.com/courses/manipulating-time-series-data-in-r-with-xts-zoo&#34;&gt;Manipulating Time Series Data in R with xts and zoo&lt;/a&gt;&lt;/strong&gt; by &lt;a href=&#34;https://www.datacamp.com&#34;&gt;DataCamp&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;My Rating&lt;/em&gt;: &lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star-half-o&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star-o&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fa fa-star-o&#34;&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Difficulty Level&lt;/em&gt;: Intermediate&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Cost&lt;/em&gt;: $29/month for unlimited access to DataCamp’s entire course library&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Time to Complete&lt;/em&gt;: 4 Hours&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Comments&lt;/em&gt;: While this course does an OK job of explaining how to use the &lt;code&gt;xts&lt;/code&gt; package to analyze time series, the &lt;em&gt;why&lt;/em&gt; of it isn’t necessarily explained well.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;wrap-up&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Wrap-Up&lt;/h1&gt;
+&lt;p&gt;As I said, this is by no means a total list of every course that you should take to become a data scientist, and I plan to make add new courses to this list as I continue learning. Feel free to comment below about some of your favorite (or least favorite) online courses or &lt;a href=&#34;../contact&#34;&gt;reach out&lt;/a&gt; to me with questions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Happy learning!&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 
 
 
 &lt;!-- BLOGDOWN-HEAD
 
+&lt;link href=&#34;#####../content/blog/data_science_r_files/font-awesome-4.5.0/css/font-awesome.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 
 
