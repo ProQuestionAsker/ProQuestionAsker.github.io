@@ -1,6 +1,6 @@
 +++
 showonlyimage = true
-draft = false
+draft = true
 image = "portfolio/Bicycle_Sharing_2_files/Bicycle_Graph.jpg"
 date = "2016-11-09"
 title = "Ghosts, Goblins, and Ghouls"

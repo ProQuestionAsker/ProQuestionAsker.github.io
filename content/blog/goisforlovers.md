@@ -9,6 +9,7 @@ featuredpath = "date"
 linktitle = ""
 title = "(Hu)go Template Primer"
 type = "post"
+draft = true
 
 +++
 
