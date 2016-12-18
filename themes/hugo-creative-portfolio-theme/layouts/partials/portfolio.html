@@ -4,6 +4,7 @@
         <div class="row">
           {{ range first 8 (where .Data.Pages "Type" "post") }}
               <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+                  <a href="{{ .Permalink }}">
                   <div class="box-masonry">
                       {{ if and (isset .Params "image") .Params.image }}
                         {{ if eq .Params.showonlyimage true }}
@@ -26,6 +27,7 @@
                       </div>
                   </div>
               </div>
+            </a>
           {{ end }}
         </div>
     </div>
