@@ -662,7 +662,7 @@ dogs_5$size_class &amp;lt;- as.factor(dogs_5$size_class)
 
 &lt;p&gt;Now let&amp;rsquo;s look at some visualizations. We&amp;rsquo;ll start with the popularity of each dog breed within Seattle. This figure shows the top 24 most popular breeds in the city.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-23-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-23-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow! Looks like labrador retrievers are by far the most popular breed of dog in Seattle.&lt;/p&gt;
 
@@ -670,7 +670,7 @@ dogs_5$size_class &amp;lt;- as.factor(dogs_5$size_class)
 
 &lt;p&gt;How do the numbers of dogs break down by dog size?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-24-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-24-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For a city filled with apartment buildings, Seattle-ites really love large dogs (almost as much as medium and small dogs combined!).&lt;/p&gt;
 
@@ -700,7 +700,7 @@ sum(is.na(dogs_5$zip))
 
 &lt;p&gt;&lt;em&gt;It looks like several of the zipcodes listed are &amp;ldquo;industrial&amp;rdquo; zip codes. We&amp;rsquo;ll replace the zip code with the residential zip code that each industrial one falls within.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-26-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-26-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Looks like the highest populations of licensed dogs are found in zipcodes 98115, 98103, and 98117. That corresponds roughly to Northeast Seattle, the area between Fremont and Greenwood, and the Ballard to Crown Hill area. It is certainly possible that the high dog populations in those areas could be correlated with the human population in the same areas. Let&amp;rsquo;s see how many licensed dogs there are per person in these areas.&lt;/p&gt;
 
@@ -731,7 +731,7 @@ zip_choropleth(pop_zip_2, zip_zoom = (pop_zip_2$region), legend = &amp;quot;Dog:
     reference_map = TRUE, num_colors = 1)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-27-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-27-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Generally speaking, central Seattle has a higher &amp;ldquo;Licensed Dogs : People&amp;rdquo; Ratio than the neighborhoods along the north and south edges. The highest proportion is found in zipcode 98117 or the Ballard to Crown Hill area with roughly 1 licensed dog for every 10 people. That is a residential area with lots of homes and fewer apartment buildings than the downtown-area.&lt;/p&gt;
 
@@ -743,19 +743,19 @@ zip_choropleth(pop_zip_2, zip_zoom = (pop_zip_2$region), legend = &amp;quot;Dog:
 
 &lt;h4 id=&#34;small&#34;&gt;Small&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-28-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-28-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;medium&#34;&gt;Medium&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-29-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-29-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;large&#34;&gt;Large&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-30-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-30-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;giant&#34;&gt;Giant&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-31-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-31-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;caveats-of-dog-size-by-zipcode&#34;&gt;Caveats of Dog Size by Zipcode&lt;/h3&gt;
 
@@ -787,7 +787,7 @@ wordcloud(names, scale = c(5, 0.2), max.words = 150, random.order = FALSE,
         &amp;quot;Greens&amp;quot;)[c(4, 5, 6, 7, 8, 9)])
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Oops! Looks like a few of those are probably not real names. We&amp;rsquo;ll go ahead and remove &amp;ldquo;dog&amp;rdquo;, &amp;ldquo;null&amp;rdquo;, &amp;ldquo;altered&amp;rdquo;, &amp;ldquo;female&amp;rdquo;, &amp;ldquo;male&amp;rdquo;, &amp;ldquo;labrador&amp;rdquo;, &amp;ldquo;retriever&amp;rdquo;, &amp;ldquo;year&amp;rdquo;, and &amp;ldquo;seattle&amp;rdquo; from the wordcloud.&lt;/p&gt;
 
@@ -801,7 +801,7 @@ wordcloud(names_2, scale = c(5, 0.2), max.words = 150, random.order = FALSE,
         &amp;quot;Greens&amp;quot;)[c(4, 5, 6, 7, 8, 9)])
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-33-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-33-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow! Lucy looks like the clear winner here!&lt;/p&gt;
 

@@ -159,33 +159,33 @@ full[factor_variables] &amp;lt;- lapply(full[factor_variables], function(x) as.f
 
 &lt;h4 id=&#34;bone-length&#34;&gt;Bone Length&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-6-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-6-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;rotting-flesh&#34;&gt;Rotting Flesh&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-7-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-7-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;hair-length&#34;&gt;Hair Length&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-8-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-8-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;soul&#34;&gt;Soul&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-9-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-9-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;distribution-of-color-by-creature-type&#34;&gt;Distribution of Color by Creature Type&lt;/h3&gt;
 
 &lt;h4 id=&#34;ghost&#34;&gt;Ghost&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-10-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-10-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;ghoul&#34;&gt;Ghoul&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-11-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-11-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;goblin&#34;&gt;Goblin&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-12-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-12-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;distinguishing-features&#34;&gt;Distinguishing Features?&lt;/h3&gt;
 
@@ -201,14 +201,14 @@ full[factor_variables] &amp;lt;- lapply(full[factor_variables], function(x) as.f
     &amp;quot;Rotting Flesh&amp;quot;, &amp;quot;Hair Length&amp;quot;, &amp;quot;Soul&amp;quot;))
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-13-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-13-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Nope. But perhaps we can take advantage of a combination of characteristics that do seem to show some promise: most notably &amp;ldquo;Hair Length&amp;rdquo; and &amp;ldquo;Soul&amp;rdquo;. Do we get any better separation among creatures if we combine these variables into one?&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full &amp;lt;- full %&amp;gt;% mutate(hair_soul = hair_length * has_soul)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-15-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-15-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;That may have separated Ghosts a little further from the other two&amp;hellip; Let&amp;rsquo;s try a few more variable interactions.&lt;/p&gt;
 
@@ -324,7 +324,7 @@ creature_km_1 &amp;lt;- kmeans(full2, 3, nstart = 30)
 
 &lt;p&gt;Ok, so now we have clusters, time to see how well they did. Let&amp;rsquo;s look at them graphically first. This was created using the &lt;code&gt;plotcluster()&lt;/code&gt; function from the &lt;code&gt;fpc&lt;/code&gt; package.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-19-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-19-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hmm, those clusters don&amp;rsquo;t look very discrete. Let&amp;rsquo;s look at &lt;a href=&#34;https://en.wikipedia.org/wiki/Dunn_index&#34;&gt;Dunn&amp;rsquo;s Index&lt;/a&gt; mathematically to see if we&amp;rsquo;re missing something visually. This calculation comes from the &lt;code&gt;dunn&lt;/code&gt; function in the &lt;code&gt;clValid&lt;/code&gt; package.&lt;/p&gt;
 
@@ -389,7 +389,7 @@ rf_model &amp;lt;- train(type ~ bone_length + rotting_flesh + hair_length +
 
 &lt;p&gt;Let&amp;rsquo;s look at the levels of importance of each factor in this model.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-25-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-25-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Huh. Our &amp;ldquo;hair_soul&amp;rdquo; variable seems to be the most important to this model and our other interactions rank pretty highly. I suppose we can hold on to them for now. Color, on the other hand, hardly plays into this. Let&amp;rsquo;s try removing it from a second random forest model.&lt;/p&gt;
 
@@ -466,7 +466,7 @@ summary(resampled)
 dotplot(resampled, metric = &amp;quot;Accuracy&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-29-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-29-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;predicting-creature-identity&#34;&gt;Predicting Creature Identity&lt;/h2&gt;
 
@@ -737,7 +737,7 @@ unique(full$Titles)
 
 &lt;p&gt;Let&amp;rsquo;s visualize family size&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-11-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-11-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow! Lots of people without immediate family with them. Perhaps these people were traveling with other family members/friends that weren&amp;rsquo;t captured in the SibSp / Parch variables.&lt;/p&gt;
 
@@ -810,7 +810,7 @@ full2$TravelGroup &amp;lt;- as.factor(full2$TravelGroup)
 
 &lt;p&gt;How does Travel Group Size compare to Family Group Size that we calculated earlier?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-17-1.png&#34; alt=&#34;&#34; /&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-17-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-17-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-17-2.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;They look pretty close, again showing that most people were potentially travelling alone.&lt;/p&gt;
 
@@ -920,7 +920,7 @@ full4[1044, c(3, 12)]
 
 &lt;p&gt;Looks like he left from &amp;rsquo;S&amp;rsquo; (Southampton) as a 3rd class passenger. Let&amp;rsquo;s see what other people of the same class and embarkment port paid for their tickets.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-22-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-22-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full4 %&amp;gt;% filter(Pclass == &amp;quot;3&amp;quot; &amp;amp; Embarked == &amp;quot;S&amp;quot;) %&amp;gt;% summarise(missing_fare = median(Fare, 
     na.rm = TRUE))
@@ -1028,7 +1028,7 @@ levels(full4$Embarked)
 
 &lt;p&gt;Let&amp;rsquo;s look at what factors were the most important in modeling age:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-30-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-30-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow! Looks like it was a good idea to split out Titles!&lt;/p&gt;
 
@@ -1047,7 +1047,7 @@ summary(full4$Age)
 
 &lt;p&gt;Let&amp;rsquo;s take a quick look at the age distribution of passengers with originally known ages, and the age distribution of the entire group (known and predicted ages) to make sure we didn&amp;rsquo;t terribly skew the distribution.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; alt=&#34;&#34; /&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-32-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-32-2.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hmm, seems to have shifted a bit, but that could be due to a greater lack of age information collected for middle-aged passengers.&lt;/p&gt;
 
@@ -1125,7 +1125,7 @@ summary(resampled)
 dotplot(resampled, metric = &amp;quot;Accuracy&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-37-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-37-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Looks like the glmnet model is slightly more accurate than the random forest model, so we&amp;rsquo;ll use that to predict the survival rate.&lt;/p&gt;
 

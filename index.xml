@@ -663,7 +663,7 @@ dogs_5$size_class &amp;lt;- as.factor(dogs_5$size_class)
 
 &lt;p&gt;Now let&amp;rsquo;s look at some visualizations. We&amp;rsquo;ll start with the popularity of each dog breed within Seattle. This figure shows the top 24 most popular breeds in the city.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-23-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-23-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow! Looks like labrador retrievers are by far the most popular breed of dog in Seattle.&lt;/p&gt;
 
@@ -671,7 +671,7 @@ dogs_5$size_class &amp;lt;- as.factor(dogs_5$size_class)
 
 &lt;p&gt;How do the numbers of dogs break down by dog size?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-24-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-24-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For a city filled with apartment buildings, Seattle-ites really love large dogs (almost as much as medium and small dogs combined!).&lt;/p&gt;
 
@@ -701,7 +701,7 @@ sum(is.na(dogs_5$zip))
 
 &lt;p&gt;&lt;em&gt;It looks like several of the zipcodes listed are &amp;ldquo;industrial&amp;rdquo; zip codes. We&amp;rsquo;ll replace the zip code with the residential zip code that each industrial one falls within.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-26-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-26-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Looks like the highest populations of licensed dogs are found in zipcodes 98115, 98103, and 98117. That corresponds roughly to Northeast Seattle, the area between Fremont and Greenwood, and the Ballard to Crown Hill area. It is certainly possible that the high dog populations in those areas could be correlated with the human population in the same areas. Let&amp;rsquo;s see how many licensed dogs there are per person in these areas.&lt;/p&gt;
 
@@ -732,7 +732,7 @@ zip_choropleth(pop_zip_2, zip_zoom = (pop_zip_2$region), legend = &amp;quot;Dog:
     reference_map = TRUE, num_colors = 1)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-27-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-27-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Generally speaking, central Seattle has a higher &amp;ldquo;Licensed Dogs : People&amp;rdquo; Ratio than the neighborhoods along the north and south edges. The highest proportion is found in zipcode 98117 or the Ballard to Crown Hill area with roughly 1 licensed dog for every 10 people. That is a residential area with lots of homes and fewer apartment buildings than the downtown-area.&lt;/p&gt;
 
@@ -744,19 +744,19 @@ zip_choropleth(pop_zip_2, zip_zoom = (pop_zip_2$region), legend = &amp;quot;Dog:
 
 &lt;h4 id=&#34;small&#34;&gt;Small&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-28-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-28-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;medium&#34;&gt;Medium&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-29-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-29-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;large&#34;&gt;Large&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-30-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-30-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;giant&#34;&gt;Giant&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-31-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-31-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;caveats-of-dog-size-by-zipcode&#34;&gt;Caveats of Dog Size by Zipcode&lt;/h3&gt;
 
@@ -788,7 +788,7 @@ wordcloud(names, scale = c(5, 0.2), max.words = 150, random.order = FALSE,
         &amp;quot;Greens&amp;quot;)[c(4, 5, 6, 7, 8, 9)])
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Oops! Looks like a few of those are probably not real names. We&amp;rsquo;ll go ahead and remove &amp;ldquo;dog&amp;rdquo;, &amp;ldquo;null&amp;rdquo;, &amp;ldquo;altered&amp;rdquo;, &amp;ldquo;female&amp;rdquo;, &amp;ldquo;male&amp;rdquo;, &amp;ldquo;labrador&amp;rdquo;, &amp;ldquo;retriever&amp;rdquo;, &amp;ldquo;year&amp;rdquo;, and &amp;ldquo;seattle&amp;rdquo; from the wordcloud.&lt;/p&gt;
 
@@ -802,7 +802,7 @@ wordcloud(names_2, scale = c(5, 0.2), max.words = 150, random.order = FALSE,
         &amp;quot;Greens&amp;quot;)[c(4, 5, 6, 7, 8, 9)])
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-33-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-33-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow! Lucy looks like the clear winner here!&lt;/p&gt;
 
@@ -1092,11 +1092,11 @@ ggmap(mymap) + geom_point(aes(x = long, y = lat), data = station_locs,
     alpha = 0.7, color = &amp;quot;darkred&amp;quot;, size = 2)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-8-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-8-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So it looks like all of the stations are located near the Lower Queen Anne, Belltown, International District, Capitol Hill and University of Washington areas. Let&amp;rsquo;s take a more zoomed-in look.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-9-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-9-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Great! So the locations are pretty well clustered. I wonder what order they were added in.&lt;/p&gt;
 
@@ -1142,7 +1142,7 @@ station %&amp;gt;% group_by(install_date) %&amp;gt;% summarise(count = n()) %&am
 
 &lt;p&gt;Now, I wonder how many bikes can be parked at each station (as of August 31,2016)?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-13-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-13-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Well that&amp;rsquo;s weird, some of the stations have a dock count of 0. I&amp;rsquo;m assuming they didn&amp;rsquo;t start that way. Let&amp;rsquo;s calculate the change in dock count from station installation to August 31, 2016 and plot it on a map.&lt;/p&gt;
 
@@ -1153,13 +1153,13 @@ station %&amp;gt;% group_by(install_date) %&amp;gt;% summarise(count = n()) %&am
 
 &lt;h5 id=&#34;change-in-number-of-bike-docks-per-station&#34;&gt;Change in Number of Bike Docks Per Station&lt;/h5&gt;
 
-&lt;p&gt;Any stations with no change in number of docks are not shown here. &lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-15-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Any stations with no change in number of docks are not shown here. &lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-15-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow! Looks like quite a few stations took away bike docks and none gained any. Perhaps those stations weren&amp;rsquo;t being used very frequently. We&amp;rsquo;ll have to look at that a bit later.&lt;/p&gt;
 
 &lt;h4 id=&#34;current-station-size&#34;&gt;Current Station Size&lt;/h4&gt;
 
-&lt;p&gt;I&amp;rsquo;m going to take one quick look at the current size of each station before moving on to the next dataset. &lt;em&gt;Note: I did not include any stations that were closed as of August 31, 2016 in this map&lt;/em&gt; &lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-16-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m going to take one quick look at the current size of each station before moving on to the next dataset. &lt;em&gt;Note: I did not include any stations that were closed as of August 31, 2016 in this map&lt;/em&gt; &lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-16-1.png&#34;  class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So it looks like the biggest stations tend to be on the outskirts of the rest. Where there are several stations in close proximity, there tend to be fewer bike docks at each station. That makes sense, logically speaking. If you go to a station and there is no bike to rent, you can easily go to another nearby, assuming there is another nearby. In areas where the stations are more secluded, it&amp;rsquo;s more important that there be bikes and open spaces readily available for users.&lt;/p&gt;
 
@@ -1202,7 +1202,7 @@ trip_2$stop_date &amp;lt;- mdy(trip_2$stop_date)
 
 &lt;p&gt;Great! Time to visualize the number of rides per day.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-19-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-19-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hmm, grouping by day is a little noisy. Perhaps we should try by month?&lt;/p&gt;
 
@@ -1216,7 +1216,7 @@ trip_2$stop_date &amp;lt;- mdy(trip_2$stop_date)
 
 &lt;p&gt;Now plot. I think I&amp;rsquo;ll plot this by month but color it by season (where December, January, and February are &amp;ldquo;winter&amp;rdquo;, March, April, and May are &amp;ldquo;spring&amp;rdquo;, June, July, August are &amp;ldquo;summer&amp;rdquo;, and September, October, November are &amp;ldquo;autumn&amp;rdquo;)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-21-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-21-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Well that intuitively makes sense. The number of trips taken per month increases in the spring, reaches a maximum in the summer, declines through the fall, remains fairly stable in the winter and then repeats.&lt;/p&gt;
 
@@ -1232,7 +1232,7 @@ Trip_Duration_Month &amp;lt;- start_date_ym %&amp;gt;% mutate(trip_duration_min 
 
 &lt;p&gt;Now to plot the average trip duration (in minutes) (plus or minus standard error), with colors indicating season.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-23-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-23-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There&amp;rsquo;s surprisingly not a huge range in trip durations here.&lt;/p&gt;
 
@@ -1253,7 +1253,7 @@ Trip_Duration_Month &amp;lt;- start_date_ym %&amp;gt;% mutate(trip_duration_min 
 
 &lt;p&gt;Ok, so there are definitely more trips during the week than on the weekends. I wonder if this varies by season too.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-26-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-26-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So it looks like usage is relatively consistent across seasons, at least as far as the number of trips are concerned.&lt;/p&gt;
 
@@ -1261,7 +1261,7 @@ Trip_Duration_Month &amp;lt;- start_date_ym %&amp;gt;% mutate(trip_duration_min 
 
 &lt;p&gt;How about time of day? Are people using these around commuting times during the week and later on weekends?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-27-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-27-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow, looks like regardless of the season, people are commuting to/from work using this service (there&amp;rsquo;s a spike between 8 and 10 AM and another between 4 and 7 PM Monday through Friday). But the weekends seem to be popular between 10 AM and 10 PM.&lt;/p&gt;
 
@@ -1271,7 +1271,7 @@ Trip_Duration_Month &amp;lt;- start_date_ym %&amp;gt;% mutate(trip_duration_min 
 
 &lt;p&gt;If I were to guess, I&amp;rsquo;d think the short-term passes would be ideal for tourists or people looking for a quick weekend trip, whereas members may be more likely to continue using the service year-round. Let&amp;rsquo;s check out my assumptions by plotting, once again colored by season.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-28-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-28-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Surprisingly (to me, at least), different types of users seem to follow similar patterns of usage. Spring and Summer are definitely the most popular times for anyone to ride a bike in the Seattle area.&lt;/p&gt;
 
@@ -1298,7 +1298,7 @@ Trip_Duration_Month &amp;lt;- start_date_ym %&amp;gt;% mutate(trip_duration_min 
 
 &lt;p&gt;That was a complicated nested if/else statement! Let&amp;rsquo;s see how much these folks are paying in additional fees!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-31-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-31-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Looks like short-term pass holders (who are already paying a higher price per day of biking), are also paying lots of extra fees. This could be because they are unfamiliar with the pricing structure and don&amp;rsquo;t realize they need to return their bike to a station within 30 minutes without getting charged. It is also possible that short-term users may be tourists who don&amp;rsquo;t know their way around as easily, and thus can&amp;rsquo;t find their way to a station within the time limit.&lt;/p&gt;
 
@@ -1315,7 +1315,7 @@ hist(trip_age$age, main = &amp;quot;Member Age&amp;quot;, xlab = &amp;quot;Numbe
     col = &amp;quot;#56B4E9&amp;quot;, breaks = 25)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;My first instinct here is to say &amp;ldquo;Wow! There&amp;rsquo;s a lot of 20 and 30-somethings that use this service!&amp;rdquo; But this figure (and these data) may be a little misleading. You see, we don&amp;rsquo;t have any sort of Rider ID number, meaning we can&amp;rsquo;t take &amp;ldquo;individual activity level&amp;rdquo; into account. So we can&amp;rsquo;t tell if the tallest spike is because 5 very athletic 28-year-olds went on 4,000 trips each, or if 100 people went on 200 trips each, or if there were 20,000 28-year-olds who each only used the service once.&lt;/p&gt;
 
@@ -1384,7 +1384,7 @@ trip_route[1, &amp;quot;tripduration&amp;quot;]
 
 &lt;p&gt;Perhaps this, being the first trip, was a demo of some sort. Let&amp;rsquo;s check out the last trip that was recorded and see if we still run into the same time disconnect.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-37-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt; Well this was certainly a longer ride than the first one we looked at!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-37-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt; Well this was certainly a longer ride than the first one we looked at!&lt;/p&gt;
 
 &lt;p&gt;How long did this trip take?&lt;/p&gt;
 
@@ -1417,7 +1417,7 @@ trip_route[1, &amp;quot;tripduration&amp;quot;]
 
 &lt;h5 id=&#34;trip-departure&#34;&gt;Trip Departure&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-40-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-40-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Great, so it looks like the station that sends the highest number of bikes out and takes the highest number of bikes in is located at Pier 69 / Alaskan Way &amp;amp; Clay Street. Looks like this is pretty close to a few parks and several big tourist attractions.&lt;/p&gt;
 
@@ -1425,7 +1425,7 @@ trip_route[1, &amp;quot;tripduration&amp;quot;]
 
 &lt;h5 id=&#34;trip-arrival&#34;&gt;Trip Arrival&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-41-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-41-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Great, so it looks like the station that sends the highest number of bikes out and takes the highest number of bikes in is located at Pier 69 / Alaskan Way &amp;amp; Clay Street. Looks like this is pretty close to a few parks and several big tourist attractions.&lt;/p&gt;
 
@@ -1599,19 +1599,19 @@ weather$Events &amp;lt;- as.factor(weather$Events)
 
 &lt;h5 id=&#34;minimum&#34;&gt;Minimum&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-51-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-51-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h5 id=&#34;mean&#34;&gt;Mean&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-52-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-52-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h5 id=&#34;maximum&#34;&gt;Maximum&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-53-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-53-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;events&#34;&gt;Events&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-54-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-54-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;combining-weather-and-trip-datasets&#34;&gt;Combining Weather and Trip Datasets&lt;/h4&gt;
 
@@ -1631,11 +1631,11 @@ trip_weather &amp;lt;- left_join(trip_3, weather, by = &amp;quot;Date&amp;quot;)
 
 &lt;p&gt;Ok. Now let&amp;rsquo;s see how the number of trips per day is influenced by weather (mean temperature, rounded to the nearest 5 degrees F)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-56-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-56-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So, as expected, there are more trips when the weather is mild but not too warm (over 70F) or too cold (below 50F). However, this figure may be influenced by the overall number of days that exhibited each mean temperature. Let&amp;rsquo;s try to standardize that.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-57-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-57-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So when we standardize our measurements, correcting for the number of days that actually reached each temperature, we see a steady increase in the number of trips until around 75F where the trend levels off. People are more likely to ride a bike when it&amp;rsquo;s warm outside.&lt;/p&gt;
 
@@ -1643,7 +1643,7 @@ trip_weather &amp;lt;- left_join(trip_3, weather, by = &amp;quot;Date&amp;quot;)
 
 &lt;p&gt;If you&amp;rsquo;ve ever heard of Seattle, you probably hear that it rains all the time there. Let&amp;rsquo;s see if that has an impact on the number of trips taken in a day.&lt;/p&gt;
 
-&lt;p&gt;We&amp;rsquo;ll start with a figure standardized for number of days at a precipitation level, rounded to the nearest 0.2 inches. &lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-58-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ll start with a figure standardized for number of days at a precipitation level, rounded to the nearest 0.2 inches. &lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-58-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Looks like even Seattleites have a limit when it comes to riding a bike in the rain. The more it rained, the fewer trips were taken per day.&lt;/p&gt;
 
@@ -1822,33 +1822,33 @@ full[factor_variables] &amp;lt;- lapply(full[factor_variables], function(x) as.f
 
 &lt;h4 id=&#34;bone-length&#34;&gt;Bone Length&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-6-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-6-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;rotting-flesh&#34;&gt;Rotting Flesh&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-7-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-7-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;hair-length&#34;&gt;Hair Length&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-8-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-8-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;soul&#34;&gt;Soul&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-9-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-9-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;distribution-of-color-by-creature-type&#34;&gt;Distribution of Color by Creature Type&lt;/h3&gt;
 
 &lt;h4 id=&#34;ghost&#34;&gt;Ghost&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-10-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-10-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;ghoul&#34;&gt;Ghoul&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-11-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-11-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;goblin&#34;&gt;Goblin&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-12-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-12-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;distinguishing-features&#34;&gt;Distinguishing Features?&lt;/h3&gt;
 
@@ -1864,14 +1864,14 @@ full[factor_variables] &amp;lt;- lapply(full[factor_variables], function(x) as.f
     &amp;quot;Rotting Flesh&amp;quot;, &amp;quot;Hair Length&amp;quot;, &amp;quot;Soul&amp;quot;))
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-13-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-13-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Nope. But perhaps we can take advantage of a combination of characteristics that do seem to show some promise: most notably &amp;ldquo;Hair Length&amp;rdquo; and &amp;ldquo;Soul&amp;rdquo;. Do we get any better separation among creatures if we combine these variables into one?&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full &amp;lt;- full %&amp;gt;% mutate(hair_soul = hair_length * has_soul)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-15-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-15-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;That may have separated Ghosts a little further from the other two&amp;hellip; Let&amp;rsquo;s try a few more variable interactions.&lt;/p&gt;
 
@@ -1987,7 +1987,7 @@ creature_km_1 &amp;lt;- kmeans(full2, 3, nstart = 30)
 
 &lt;p&gt;Ok, so now we have clusters, time to see how well they did. Let&amp;rsquo;s look at them graphically first. This was created using the &lt;code&gt;plotcluster()&lt;/code&gt; function from the &lt;code&gt;fpc&lt;/code&gt; package.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-19-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-19-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hmm, those clusters don&amp;rsquo;t look very discrete. Let&amp;rsquo;s look at &lt;a href=&#34;https://en.wikipedia.org/wiki/Dunn_index&#34;&gt;Dunn&amp;rsquo;s Index&lt;/a&gt; mathematically to see if we&amp;rsquo;re missing something visually. This calculation comes from the &lt;code&gt;dunn&lt;/code&gt; function in the &lt;code&gt;clValid&lt;/code&gt; package.&lt;/p&gt;
 
@@ -2052,7 +2052,7 @@ rf_model &amp;lt;- train(type ~ bone_length + rotting_flesh + hair_length +
 
 &lt;p&gt;Let&amp;rsquo;s look at the levels of importance of each factor in this model.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-25-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-25-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Huh. Our &amp;ldquo;hair_soul&amp;rdquo; variable seems to be the most important to this model and our other interactions rank pretty highly. I suppose we can hold on to them for now. Color, on the other hand, hardly plays into this. Let&amp;rsquo;s try removing it from a second random forest model.&lt;/p&gt;
 
@@ -2129,7 +2129,7 @@ summary(resampled)
 dotplot(resampled, metric = &amp;quot;Accuracy&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-29-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-29-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;predicting-creature-identity&#34;&gt;Predicting Creature Identity&lt;/h2&gt;
 
@@ -2696,7 +2696,7 @@ unique(full$Titles)
 
 &lt;p&gt;Let&amp;rsquo;s visualize family size&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-11-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-11-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow! Lots of people without immediate family with them. Perhaps these people were traveling with other family members/friends that weren&amp;rsquo;t captured in the SibSp / Parch variables.&lt;/p&gt;
 
@@ -2769,7 +2769,7 @@ full2$TravelGroup &amp;lt;- as.factor(full2$TravelGroup)
 
 &lt;p&gt;How does Travel Group Size compare to Family Group Size that we calculated earlier?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-17-1.png&#34; alt=&#34;&#34; /&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-17-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-17-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-17-2.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;They look pretty close, again showing that most people were potentially travelling alone.&lt;/p&gt;
 
@@ -2879,7 +2879,7 @@ full4[1044, c(3, 12)]
 
 &lt;p&gt;Looks like he left from &amp;rsquo;S&amp;rsquo; (Southampton) as a 3rd class passenger. Let&amp;rsquo;s see what other people of the same class and embarkment port paid for their tickets.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-22-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-22-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full4 %&amp;gt;% filter(Pclass == &amp;quot;3&amp;quot; &amp;amp; Embarked == &amp;quot;S&amp;quot;) %&amp;gt;% summarise(missing_fare = median(Fare, 
     na.rm = TRUE))
@@ -2987,7 +2987,7 @@ levels(full4$Embarked)
 
 &lt;p&gt;Let&amp;rsquo;s look at what factors were the most important in modeling age:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-30-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-30-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow! Looks like it was a good idea to split out Titles!&lt;/p&gt;
 
@@ -3006,7 +3006,7 @@ summary(full4$Age)
 
 &lt;p&gt;Let&amp;rsquo;s take a quick look at the age distribution of passengers with originally known ages, and the age distribution of the entire group (known and predicted ages) to make sure we didn&amp;rsquo;t terribly skew the distribution.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; alt=&#34;&#34; /&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-32-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-32-2.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hmm, seems to have shifted a bit, but that could be due to a greater lack of age information collected for middle-aged passengers.&lt;/p&gt;
 
@@ -3084,7 +3084,7 @@ summary(resampled)
 dotplot(resampled, metric = &amp;quot;Accuracy&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-37-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-37-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Looks like the glmnet model is slightly more accurate than the random forest model, so we&amp;rsquo;ll use that to predict the survival rate.&lt;/p&gt;
 
