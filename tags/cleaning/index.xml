@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Amber Thomas</title>
-    <link>/tags/cleaning/index.xml</link>
+    <link>https://proquestionasker.github.io/tags/cleaning/index.xml</link>
     <description>Recent content on Amber Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Amber Thomas</copyright>
-    <atom:link href="/tags/cleaning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://proquestionasker.github.io/tags/cleaning/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Dog Ownership in Seattle</title>
-      <link>/portfolio/Seattle_Dogs/</link>
+      <link>https://proquestionasker.github.io/portfolio/Seattle_Dogs/</link>
       <pubDate>Wed, 16 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/portfolio/Seattle_Dogs/</guid>
+      <guid>https://proquestionasker.github.io/portfolio/Seattle_Dogs/</guid>
       <description>&lt;p&gt;Data cleaning, exploration, mapping, and data viz in RMarkdown.
 &lt;/p&gt;
 
