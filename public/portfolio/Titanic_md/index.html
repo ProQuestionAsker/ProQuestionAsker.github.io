@@ -351,7 +351,7 @@ unique(full$Titles)
 
 <p>Let&rsquo;s visualize family size</p>
 
-<p><img src="../Titanic_md_files/figure-markdown_github/unnamed-chunk-11-1.png" alt="" /></p>
+<p><img src="../Titanic_md_files/figure-markdown_github/unnamed-chunk-11-1.png" class="img-responsive" style="display: block; margin: auto;" /></p>
 
 <p>Wow! Lots of people without immediate family with them. Perhaps these people were traveling with other family members/friends that weren&rsquo;t captured in the SibSp / Parch variables.</p>
 
@@ -424,7 +424,7 @@ full2$TravelGroup &lt;- as.factor(full2$TravelGroup)
 
 <p>How does Travel Group Size compare to Family Group Size that we calculated earlier?</p>
 
-<p><img src="../Titanic_md_files/figure-markdown_github/unnamed-chunk-17-1.png" alt="" /><img src="../Titanic_md_files/figure-markdown_github/unnamed-chunk-17-2.png" alt="" /></p>
+<p><img src="../Titanic_md_files/figure-markdown_github/unnamed-chunk-17-1.png" class="img-responsive" style="display: block; margin: auto;" /><img src="../Titanic_md_files/figure-markdown_github/unnamed-chunk-17-2.png" class="img-responsive" style="display: block; margin: auto;" /></p>
 
 <p>They look pretty close, again showing that most people were potentially travelling alone.</p>
 
@@ -534,7 +534,7 @@ full4[1044, c(3, 12)]
 
 <p>Looks like he left from &rsquo;S&rsquo; (Southampton) as a 3rd class passenger. Let&rsquo;s see what other people of the same class and embarkment port paid for their tickets.</p>
 
-<p><img src="../Titanic_md_files/figure-markdown_github/unnamed-chunk-22-1.png" alt="" /></p>
+<p><img src="../Titanic_md_files/figure-markdown_github/unnamed-chunk-22-1.png" class="img-responsive" style="display: block; margin: auto;" /></p>
 
 <pre><code class="language-r">full4 %&gt;% filter(Pclass == &quot;3&quot; &amp; Embarked == &quot;S&quot;) %&gt;% summarise(missing_fare = median(Fare, 
     na.rm = TRUE))
@@ -642,7 +642,7 @@ levels(full4$Embarked)
 
 <p>Let&rsquo;s look at what factors were the most important in modeling age:</p>
 
-<p><img src="../Titanic_md_files/figure-markdown_github/unnamed-chunk-30-1.png" alt="" /></p>
+<p><img src="../Titanic_md_files/figure-markdown_github/unnamed-chunk-30-1.png" class="img-responsive" style="display: block; margin: auto;" /></p>
 
 <p>Wow! Looks like it was a good idea to split out Titles!</p>
 
@@ -661,7 +661,7 @@ summary(full4$Age)
 
 <p>Let&rsquo;s take a quick look at the age distribution of passengers with originally known ages, and the age distribution of the entire group (known and predicted ages) to make sure we didn&rsquo;t terribly skew the distribution.</p>
 
-<p><img src="../Titanic_md_files/figure-markdown_github/unnamed-chunk-32-1.png" alt="" /><img src="../Titanic_md_files/figure-markdown_github/unnamed-chunk-32-2.png" alt="" /></p>
+<p><img src="../Titanic_md_files/figure-markdown_github/unnamed-chunk-32-1.png" class="img-responsive" style="display: block; margin: auto;" /><img src="../Titanic_md_files/figure-markdown_github/unnamed-chunk-32-2.png" class="img-responsive" style="display: block; margin: auto;" /></p>
 
 <p>Hmm, seems to have shifted a bit, but that could be due to a greater lack of age information collected for middle-aged passengers.</p>
 
@@ -739,7 +739,7 @@ summary(resampled)
 dotplot(resampled, metric = &quot;Accuracy&quot;)
 </code></pre>
 
-<p><img src="../Titanic_md_files/figure-markdown_github/unnamed-chunk-37-1.png" alt="" /></p>
+<p><img src="../Titanic_md_files/figure-markdown_github/unnamed-chunk-37-1.png" class="img-responsive" style="display: block; margin: auto;" /></p>
 
 <p>Looks like the glmnet model is slightly more accurate than the random forest model, so we&rsquo;ll use that to predict the survival rate.</p>
 
