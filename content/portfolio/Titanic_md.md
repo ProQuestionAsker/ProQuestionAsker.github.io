@@ -1,7 +1,7 @@
 +++
 showonlyimage = false
 draft = false
-image = "Titanic_md_files/portfolio/Titanic.jpg"
+image = "portfolio/Titanic_md_files/Titanic.jpg"
 date = "2016-11-05T18:25:22+05:30"
 title = "Machine Learning from Disaster"
 weight = 1
