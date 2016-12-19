@@ -2,6 +2,7 @@ baseurl = "https://proquestionasker.github.io/"
 title = "Amber Thomas"
 theme = "hugo-creative-portfolio-theme"
 languageCode = "en-us"
+pluralizeListTitles = false
 # Enable comments by entering your Disqus shortname
 disqusShortname = "amberthomas"
 # Enable Google Analytics by entering your tracking code
@@ -14,8 +15,8 @@ googleAnalytics = "UA-89036876-1"
   description = "Describe your website"
   copyright = "&copy;2016 Amber Thomas"
   sidebarAbout = [
-    "I am a researcher, communicator, and aspiring data scientist. This site is home to my data projects as well as blogs and tutorials about R, data science, and data viz.",
-    "I'm currently based in Seattle and I'm looking for a new problem to solve."
+    "I am a researcher, communicator, and aspiring data scientist. This site is home to my data projects, blogs and tutorials.",
+    "I'm currently looking for data science work. Hiring? I'd love to hear from you. "
   ]
   # Contact page
      # Since this template is static, the contact form uses www.formspree.io as a
@@ -42,7 +43,7 @@ googleAnalytics = "UA-89036876-1"
   
   [[params.navlinks]]
   name = "Projects"
-  url = "portfolio/"
+  url = "projects/"
   
   [[params.navlinks]]
   name = "Blog"

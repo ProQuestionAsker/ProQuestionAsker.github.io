@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Amber Thomas</title>
-    <link>https://proquestionasker.github.io/tags/maps/index.xml</link>
+    <link>/tags/maps/index.xml</link>
     <description>Recent content on Amber Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Amber Thomas</copyright>
-    <atom:link href="https://proquestionasker.github.io/tags/maps/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/maps/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Dog Ownership in Seattle</title>
-      <link>https://proquestionasker.github.io/portfolio/Seattle_Dogs/</link>
+      <link>/projects/Seattle_Dogs/</link>
       <pubDate>Wed, 16 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://proquestionasker.github.io/portfolio/Seattle_Dogs/</guid>
-      <description>&lt;p&gt;Data cleaning, exploration, mapping, and data viz in RMarkdown.
+      <guid>/projects/Seattle_Dogs/</guid>
+      <description>&lt;p&gt;Data cleaning, exploration, mapping, and data visualizations in RMarkdown.
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -847,11 +847,11 @@ wordcloud(names_2, scale = c(5, 0.2), max.words = 150, random.order = FALSE,
     
     <item>
       <title>Bicycle Sharing in Seattle</title>
-      <link>https://proquestionasker.github.io/portfolio/Bicycle_Sharing_2/</link>
+      <link>/projects/Bicycle_Sharing_2/</link>
       <pubDate>Thu, 10 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://proquestionasker.github.io/portfolio/Bicycle_Sharing_2/</guid>
-      <description>&lt;p&gt;Data exploration, mapping, and data viz in RMarkdown.
+      <guid>/projects/Bicycle_Sharing_2/</guid>
+      <description>&lt;p&gt;Data exploration, mapping, and data visualizations in RMarkdown.
 &lt;/p&gt;
 
 &lt;ul&gt;

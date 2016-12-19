@@ -27,7 +27,7 @@ ELEPHANT IMPORT
   color: #555555;
 }
 #blog-listing-medium .post h2 a:hover {
-  color: #38a7bb;
+  color: #e01557;
 }
 #blog-listing-medium .post .author-category {
   float: left;
@@ -49,7 +49,7 @@ ELEPHANT IMPORT
   margin-right: 20px;
 }
 #blog-listing-medium .post .date-comments a:hover {
-  color: #38a7bb;
+  color: #e01557;
 }
 @media (min-width: 768px) {
   #blog-listing-medium .post .date-comments {

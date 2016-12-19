@@ -1,7 +1,7 @@
 +++
 showonlyimage = true
 draft = false
-image = "portfolio/Seattle_Dogs_files/Dog-Graph.jpg"
+image = "projects/Seattle_Dogs_files/Dog-Graph.jpg"
 date = "2016-11-16"
 title = "Dog Ownership in Seattle"
 weight = 0
@@ -15,7 +15,7 @@ tags = [
 +++
 
 
-Data cleaning, exploration, mapping, and data viz in RMarkdown.
+Data cleaning, exploration, mapping, and data visualizations in RMarkdown.
 <!--more-->
 
 

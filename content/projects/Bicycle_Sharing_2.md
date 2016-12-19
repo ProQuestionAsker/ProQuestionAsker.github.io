@@ -1,7 +1,7 @@
 +++
 showonlyimage = false
 draft = false
-image = "portfolio/Bicycle_Sharing_2_files/Bicycle_Graph.jpg"
+image = "projects/Bicycle_Sharing_2_files/Bicycle_Graph.jpg"
 date = "2016-11-10"
 title = "Bicycle Sharing in Seattle"
 weight = 0
@@ -13,7 +13,7 @@ tags = [
 ]
 +++
 
-Data exploration, mapping, and data viz in RMarkdown.
+Data exploration, mapping, and data visualizations in RMarkdown.
 <!--more-->
 
 -   [Introduction](#introduction)

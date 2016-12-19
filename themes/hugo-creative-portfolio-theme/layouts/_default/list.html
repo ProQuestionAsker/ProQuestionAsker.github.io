@@ -7,6 +7,15 @@
       <div class="content-column-content" id="blog-listing-medium">
          <h1>{{ .Title }}</h1>
 
+         {{if eq .Title "Projects"}}
+         <p class="author-category"> Each project in this portfolio includes links to data sources, the code I used for analysis, data visualizations, and my conclusions.</p>
+         {{end}}
+
+
+         {{if eq .Title "Blog"}}
+         <p class="author-category"> I've been lucky enough to have found some amazing R blogs to help me through my programming difficulties. I hope that I can pay it forward and help other R learners as well. </p>
+         {{end}}
+
 
           {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
           {{ range $paginator.Pages }}

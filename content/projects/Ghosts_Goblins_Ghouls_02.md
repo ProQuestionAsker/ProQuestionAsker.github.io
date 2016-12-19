@@ -1,7 +1,7 @@
 +++
 showonlyimage = true
 draft = false
-image = "portfolio/Ghosts_Goblins_Ghouls_02_files/GGG_Boxplot.jpg"
+image = "projects/Ghosts_Goblins_Ghouls_02_files/GGG_Boxplot.jpg"
 date = "2016-11-09"
 title = "Ghosts, Goblins, and Ghouls"
 weight = 0

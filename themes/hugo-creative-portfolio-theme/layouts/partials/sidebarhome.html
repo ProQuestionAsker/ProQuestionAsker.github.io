@@ -4,6 +4,10 @@
     {{ range .Site.Params.sidebarAbout }}
       <p class="sidebar-p">{{ . | safeHTML }}</p>
     {{ end }}
+
+      <p class="sidebar-p">
+        <i class="fa fa-map-marker" aria-hidden="true"></i> Seattle, WA</p>
+    
     <ul class="sidebar-menu">
       {{ $url := .Site.BaseURL }}
       {{ range .Site.Params.navlinks }}
