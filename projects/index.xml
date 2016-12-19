@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects-rsses on Amber Thomas</title>
+    <title>Projects-rss on Amber Thomas</title>
     <link>/projects/index.xml</link>
-    <description>Recent content in Projects-rsses on Amber Thomas</description>
+    <description>Recent content in Projects-rss on Amber Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Amber Thomas</copyright>
@@ -16,7 +16,7 @@
       <pubDate>Wed, 16 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>/projects/Seattle_Dogs/</guid>
-      <description>&lt;p&gt;Data cleaning, exploration, mapping, and data viz in RMarkdown.
+      <description>&lt;p&gt;Data cleaning, exploration, mapping, and data visualizations in RMarkdown.
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -663,7 +663,7 @@ dogs_5$size_class &amp;lt;- as.factor(dogs_5$size_class)
 
 &lt;p&gt;Now let&amp;rsquo;s look at some visualizations. We&amp;rsquo;ll start with the popularity of each dog breed within Seattle. This figure shows the top 24 most popular breeds in the city.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-23-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-23-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow! Looks like labrador retrievers are by far the most popular breed of dog in Seattle.&lt;/p&gt;
 
@@ -671,7 +671,7 @@ dogs_5$size_class &amp;lt;- as.factor(dogs_5$size_class)
 
 &lt;p&gt;How do the numbers of dogs break down by dog size?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-24-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-24-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For a city filled with apartment buildings, Seattle-ites really love large dogs (almost as much as medium and small dogs combined!).&lt;/p&gt;
 
@@ -701,7 +701,7 @@ sum(is.na(dogs_5$zip))
 
 &lt;p&gt;&lt;em&gt;It looks like several of the zipcodes listed are &amp;ldquo;industrial&amp;rdquo; zip codes. We&amp;rsquo;ll replace the zip code with the residential zip code that each industrial one falls within.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-26-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-26-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Looks like the highest populations of licensed dogs are found in zipcodes 98115, 98103, and 98117. That corresponds roughly to Northeast Seattle, the area between Fremont and Greenwood, and the Ballard to Crown Hill area. It is certainly possible that the high dog populations in those areas could be correlated with the human population in the same areas. Let&amp;rsquo;s see how many licensed dogs there are per person in these areas.&lt;/p&gt;
 
@@ -732,7 +732,7 @@ zip_choropleth(pop_zip_2, zip_zoom = (pop_zip_2$region), legend = &amp;quot;Dog:
     reference_map = TRUE, num_colors = 1)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-27-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-27-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Generally speaking, central Seattle has a higher &amp;ldquo;Licensed Dogs : People&amp;rdquo; Ratio than the neighborhoods along the north and south edges. The highest proportion is found in zipcode 98117 or the Ballard to Crown Hill area with roughly 1 licensed dog for every 10 people. That is a residential area with lots of homes and fewer apartment buildings than the downtown-area.&lt;/p&gt;
 
@@ -744,19 +744,19 @@ zip_choropleth(pop_zip_2, zip_zoom = (pop_zip_2$region), legend = &amp;quot;Dog:
 
 &lt;h4 id=&#34;small&#34;&gt;Small&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-28-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-28-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;medium&#34;&gt;Medium&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-29-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-29-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;large&#34;&gt;Large&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-30-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-30-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;giant&#34;&gt;Giant&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-31-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-31-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;caveats-of-dog-size-by-zipcode&#34;&gt;Caveats of Dog Size by Zipcode&lt;/h3&gt;
 
@@ -788,7 +788,7 @@ wordcloud(names, scale = c(5, 0.2), max.words = 150, random.order = FALSE,
         &amp;quot;Greens&amp;quot;)[c(4, 5, 6, 7, 8, 9)])
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Oops! Looks like a few of those are probably not real names. We&amp;rsquo;ll go ahead and remove &amp;ldquo;dog&amp;rdquo;, &amp;ldquo;null&amp;rdquo;, &amp;ldquo;altered&amp;rdquo;, &amp;ldquo;female&amp;rdquo;, &amp;ldquo;male&amp;rdquo;, &amp;ldquo;labrador&amp;rdquo;, &amp;ldquo;retriever&amp;rdquo;, &amp;ldquo;year&amp;rdquo;, and &amp;ldquo;seattle&amp;rdquo; from the wordcloud.&lt;/p&gt;
 
@@ -802,7 +802,7 @@ wordcloud(names_2, scale = c(5, 0.2), max.words = 150, random.order = FALSE,
         &amp;quot;Greens&amp;quot;)[c(4, 5, 6, 7, 8, 9)])
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-33-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-33-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow! Lucy looks like the clear winner here!&lt;/p&gt;
 
@@ -847,12 +847,12 @@ wordcloud(names_2, scale = c(5, 0.2), max.words = 150, random.order = FALSE,
     </item>
     
     <item>
-      <title>Pronto! Bicycle Sharing in Seattle</title>
+      <title>Bicycle Sharing in Seattle</title>
       <link>/projects/Bicycle_Sharing_2/</link>
       <pubDate>Thu, 10 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>/projects/Bicycle_Sharing_2/</guid>
-      <description>&lt;p&gt;Data exploration, mapping, and data viz in RMarkdown.
+      <description>&lt;p&gt;Data exploration, mapping, and data visualizations in RMarkdown.
 &lt;/p&gt;
 
 &lt;ul&gt;
@@ -1092,11 +1092,11 @@ ggmap(mymap) + geom_point(aes(x = long, y = lat), data = station_locs,
     alpha = 0.7, color = &amp;quot;darkred&amp;quot;, size = 2)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-8-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-8-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So it looks like all of the stations are located near the Lower Queen Anne, Belltown, International District, Capitol Hill and University of Washington areas. Let&amp;rsquo;s take a more zoomed-in look.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-9-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-9-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Great! So the locations are pretty well clustered. I wonder what order they were added in.&lt;/p&gt;
 
@@ -1142,7 +1142,7 @@ station %&amp;gt;% group_by(install_date) %&amp;gt;% summarise(count = n()) %&am
 
 &lt;p&gt;Now, I wonder how many bikes can be parked at each station (as of August 31,2016)?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-13-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-13-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Well that&amp;rsquo;s weird, some of the stations have a dock count of 0. I&amp;rsquo;m assuming they didn&amp;rsquo;t start that way. Let&amp;rsquo;s calculate the change in dock count from station installation to August 31, 2016 and plot it on a map.&lt;/p&gt;
 
@@ -1153,13 +1153,13 @@ station %&amp;gt;% group_by(install_date) %&amp;gt;% summarise(count = n()) %&am
 
 &lt;h5 id=&#34;change-in-number-of-bike-docks-per-station&#34;&gt;Change in Number of Bike Docks Per Station&lt;/h5&gt;
 
-&lt;p&gt;Any stations with no change in number of docks are not shown here. &lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-15-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Any stations with no change in number of docks are not shown here. &lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-15-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow! Looks like quite a few stations took away bike docks and none gained any. Perhaps those stations weren&amp;rsquo;t being used very frequently. We&amp;rsquo;ll have to look at that a bit later.&lt;/p&gt;
 
 &lt;h4 id=&#34;current-station-size&#34;&gt;Current Station Size&lt;/h4&gt;
 
-&lt;p&gt;I&amp;rsquo;m going to take one quick look at the current size of each station before moving on to the next dataset. &lt;em&gt;Note: I did not include any stations that were closed as of August 31, 2016 in this map&lt;/em&gt; &lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-16-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m going to take one quick look at the current size of each station before moving on to the next dataset. &lt;em&gt;Note: I did not include any stations that were closed as of August 31, 2016 in this map&lt;/em&gt; &lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-16-1.png&#34;  class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So it looks like the biggest stations tend to be on the outskirts of the rest. Where there are several stations in close proximity, there tend to be fewer bike docks at each station. That makes sense, logically speaking. If you go to a station and there is no bike to rent, you can easily go to another nearby, assuming there is another nearby. In areas where the stations are more secluded, it&amp;rsquo;s more important that there be bikes and open spaces readily available for users.&lt;/p&gt;
 
@@ -1202,7 +1202,7 @@ trip_2$stop_date &amp;lt;- mdy(trip_2$stop_date)
 
 &lt;p&gt;Great! Time to visualize the number of rides per day.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-19-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-19-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hmm, grouping by day is a little noisy. Perhaps we should try by month?&lt;/p&gt;
 
@@ -1216,7 +1216,7 @@ trip_2$stop_date &amp;lt;- mdy(trip_2$stop_date)
 
 &lt;p&gt;Now plot. I think I&amp;rsquo;ll plot this by month but color it by season (where December, January, and February are &amp;ldquo;winter&amp;rdquo;, March, April, and May are &amp;ldquo;spring&amp;rdquo;, June, July, August are &amp;ldquo;summer&amp;rdquo;, and September, October, November are &amp;ldquo;autumn&amp;rdquo;)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-21-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-21-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Well that intuitively makes sense. The number of trips taken per month increases in the spring, reaches a maximum in the summer, declines through the fall, remains fairly stable in the winter and then repeats.&lt;/p&gt;
 
@@ -1232,7 +1232,7 @@ Trip_Duration_Month &amp;lt;- start_date_ym %&amp;gt;% mutate(trip_duration_min 
 
 &lt;p&gt;Now to plot the average trip duration (in minutes) (plus or minus standard error), with colors indicating season.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-23-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-23-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There&amp;rsquo;s surprisingly not a huge range in trip durations here.&lt;/p&gt;
 
@@ -1253,7 +1253,7 @@ Trip_Duration_Month &amp;lt;- start_date_ym %&amp;gt;% mutate(trip_duration_min 
 
 &lt;p&gt;Ok, so there are definitely more trips during the week than on the weekends. I wonder if this varies by season too.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-26-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-26-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So it looks like usage is relatively consistent across seasons, at least as far as the number of trips are concerned.&lt;/p&gt;
 
@@ -1261,7 +1261,7 @@ Trip_Duration_Month &amp;lt;- start_date_ym %&amp;gt;% mutate(trip_duration_min 
 
 &lt;p&gt;How about time of day? Are people using these around commuting times during the week and later on weekends?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-27-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-27-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow, looks like regardless of the season, people are commuting to/from work using this service (there&amp;rsquo;s a spike between 8 and 10 AM and another between 4 and 7 PM Monday through Friday). But the weekends seem to be popular between 10 AM and 10 PM.&lt;/p&gt;
 
@@ -1271,7 +1271,7 @@ Trip_Duration_Month &amp;lt;- start_date_ym %&amp;gt;% mutate(trip_duration_min 
 
 &lt;p&gt;If I were to guess, I&amp;rsquo;d think the short-term passes would be ideal for tourists or people looking for a quick weekend trip, whereas members may be more likely to continue using the service year-round. Let&amp;rsquo;s check out my assumptions by plotting, once again colored by season.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-28-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-28-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Surprisingly (to me, at least), different types of users seem to follow similar patterns of usage. Spring and Summer are definitely the most popular times for anyone to ride a bike in the Seattle area.&lt;/p&gt;
 
@@ -1298,7 +1298,7 @@ Trip_Duration_Month &amp;lt;- start_date_ym %&amp;gt;% mutate(trip_duration_min 
 
 &lt;p&gt;That was a complicated nested if/else statement! Let&amp;rsquo;s see how much these folks are paying in additional fees!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-31-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-31-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Looks like short-term pass holders (who are already paying a higher price per day of biking), are also paying lots of extra fees. This could be because they are unfamiliar with the pricing structure and don&amp;rsquo;t realize they need to return their bike to a station within 30 minutes without getting charged. It is also possible that short-term users may be tourists who don&amp;rsquo;t know their way around as easily, and thus can&amp;rsquo;t find their way to a station within the time limit.&lt;/p&gt;
 
@@ -1315,7 +1315,7 @@ hist(trip_age$age, main = &amp;quot;Member Age&amp;quot;, xlab = &amp;quot;Numbe
     col = &amp;quot;#56B4E9&amp;quot;, breaks = 25)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;My first instinct here is to say &amp;ldquo;Wow! There&amp;rsquo;s a lot of 20 and 30-somethings that use this service!&amp;rdquo; But this figure (and these data) may be a little misleading. You see, we don&amp;rsquo;t have any sort of Rider ID number, meaning we can&amp;rsquo;t take &amp;ldquo;individual activity level&amp;rdquo; into account. So we can&amp;rsquo;t tell if the tallest spike is because 5 very athletic 28-year-olds went on 4,000 trips each, or if 100 people went on 200 trips each, or if there were 20,000 28-year-olds who each only used the service once.&lt;/p&gt;
 
@@ -1384,7 +1384,7 @@ trip_route[1, &amp;quot;tripduration&amp;quot;]
 
 &lt;p&gt;Perhaps this, being the first trip, was a demo of some sort. Let&amp;rsquo;s check out the last trip that was recorded and see if we still run into the same time disconnect.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-37-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt; Well this was certainly a longer ride than the first one we looked at!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-37-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt; Well this was certainly a longer ride than the first one we looked at!&lt;/p&gt;
 
 &lt;p&gt;How long did this trip take?&lt;/p&gt;
 
@@ -1417,7 +1417,7 @@ trip_route[1, &amp;quot;tripduration&amp;quot;]
 
 &lt;h5 id=&#34;trip-departure&#34;&gt;Trip Departure&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-40-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-40-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Great, so it looks like the station that sends the highest number of bikes out and takes the highest number of bikes in is located at Pier 69 / Alaskan Way &amp;amp; Clay Street. Looks like this is pretty close to a few parks and several big tourist attractions.&lt;/p&gt;
 
@@ -1425,7 +1425,7 @@ trip_route[1, &amp;quot;tripduration&amp;quot;]
 
 &lt;h5 id=&#34;trip-arrival&#34;&gt;Trip Arrival&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-41-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-41-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Great, so it looks like the station that sends the highest number of bikes out and takes the highest number of bikes in is located at Pier 69 / Alaskan Way &amp;amp; Clay Street. Looks like this is pretty close to a few parks and several big tourist attractions.&lt;/p&gt;
 
@@ -1599,19 +1599,19 @@ weather$Events &amp;lt;- as.factor(weather$Events)
 
 &lt;h5 id=&#34;minimum&#34;&gt;Minimum&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-51-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-51-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h5 id=&#34;mean&#34;&gt;Mean&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-52-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-52-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h5 id=&#34;maximum&#34;&gt;Maximum&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-53-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-53-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;events&#34;&gt;Events&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-54-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-54-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;combining-weather-and-trip-datasets&#34;&gt;Combining Weather and Trip Datasets&lt;/h4&gt;
 
@@ -1631,11 +1631,11 @@ trip_weather &amp;lt;- left_join(trip_3, weather, by = &amp;quot;Date&amp;quot;)
 
 &lt;p&gt;Ok. Now let&amp;rsquo;s see how the number of trips per day is influenced by weather (mean temperature, rounded to the nearest 5 degrees F)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-56-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-56-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So, as expected, there are more trips when the weather is mild but not too warm (over 70F) or too cold (below 50F). However, this figure may be influenced by the overall number of days that exhibited each mean temperature. Let&amp;rsquo;s try to standardize that.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-57-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-57-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So when we standardize our measurements, correcting for the number of days that actually reached each temperature, we see a steady increase in the number of trips until around 75F where the trend levels off. People are more likely to ride a bike when it&amp;rsquo;s warm outside.&lt;/p&gt;
 
@@ -1643,7 +1643,7 @@ trip_weather &amp;lt;- left_join(trip_3, weather, by = &amp;quot;Date&amp;quot;)
 
 &lt;p&gt;If you&amp;rsquo;ve ever heard of Seattle, you probably hear that it rains all the time there. Let&amp;rsquo;s see if that has an impact on the number of trips taken in a day.&lt;/p&gt;
 
-&lt;p&gt;We&amp;rsquo;ll start with a figure standardized for number of days at a precipitation level, rounded to the nearest 0.2 inches. &lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-58-1.png&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ll start with a figure standardized for number of days at a precipitation level, rounded to the nearest 0.2 inches. &lt;img src=&#34;../Bicycle_Sharing_2_files/figure-markdown_github/unnamed-chunk-58-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Looks like even Seattleites have a limit when it comes to riding a bike in the rain. The more it rained, the fewer trips were taken per day.&lt;/p&gt;
 
@@ -1673,15 +1673,53 @@ trip_weather &amp;lt;- left_join(trip_3, weather, by = &amp;quot;Date&amp;quot;)
     </item>
     
     <item>
-      <title>Kaggle - Ghosts, Goblins, and Ghouls</title>
-      <link>/projects/Ghosts_Goblins_Ghouls_01/</link>
+      <title>Ghosts, Goblins, and Ghouls</title>
+      <link>/projects/Ghosts_Goblins_Ghouls_02/</link>
       <pubDate>Wed, 09 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/projects/Ghosts_Goblins_Ghouls_01/</guid>
-      <description>&lt;p&gt;Data exploration and machine learning in RMarkdown.
+      <guid>/projects/Ghosts_Goblins_Ghouls_02/</guid>
+      <description>&lt;p&gt;Kaggle Playground Competition&lt;/p&gt;
+
+&lt;p&gt;Data exploration and machine learning in RMarkdown.
 &lt;/p&gt;
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#loading-necessary-packages&#34;&gt;Loading Necessary Packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#importing-data&#34;&gt;Importing Data&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-exploration&#34;&gt;Data Exploration&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#distribution-of-continuous-variables-by-creature-type&#34;&gt;Distribution of Continuous Variables by Creature Type&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#distribution-of-color-by-creature-type&#34;&gt;Distribution of Color by Creature Type&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#distinguishing-features&#34;&gt;Distinguishing Features?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#feature-engineering&#34;&gt;Feature Engineering&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cleaning-data&#34;&gt;Cleaning Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clustering-data&#34;&gt;Clustering data&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#cluster-without-categorical-variables&#34;&gt;Cluster Without Categorical Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#modeling-for-creature-identity&#34;&gt;Modeling for Creature Identity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#creating-traincontrol&#34;&gt;Creating trainControl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#random-forest-modeling&#34;&gt;Random Forest Modeling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#glmnet-modeling&#34;&gt;GLMnet Modeling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#comparing-model-fit&#34;&gt;Comparing model fit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#predicting-creature-identity&#34;&gt;Predicting Creature Identity&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#preparing-the-prediction-for-kaggle&#34;&gt;Preparing the prediction for Kaggle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#testing-with-kaggle&#34;&gt;Testing with Kaggle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;introduction-1&#34;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;This is my second-ever Kaggle competition (looking for the &lt;a href=&#34;https://www.kaggle.com/amberthomas/titanic/predicting-survival-on-the-titanic&#34;&gt;first&lt;/a&gt;?) I&amp;rsquo;ll do my best to walk through my thought-process here and welcome any comments on my work. Let&amp;rsquo;s get started!&lt;/p&gt;
 
@@ -1767,7 +1805,7 @@ full &amp;lt;- bind_rows(train, test)
 
 &lt;p&gt;It seems like a few of these variables would serve better as factors, rather than character strings, so I&amp;rsquo;ll take care of that.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;factor_variables &amp;lt;- c(&#39;id&#39;, &#39;color&#39;, &#39;type&#39;, &#39;Dataset&#39;)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;factor_variables &amp;lt;- c(&amp;quot;id&amp;quot;, &amp;quot;color&amp;quot;, &amp;quot;type&amp;quot;, &amp;quot;Dataset&amp;quot;)
 full[factor_variables] &amp;lt;- lapply(full[factor_variables], function(x) as.factor(x))
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -1777,40 +1815,40 @@ full[factor_variables] &amp;lt;- lapply(full[factor_variables], function(x) as.f
 
 &lt;p&gt;Let&amp;rsquo;s first temporarily remove the &amp;ldquo;test&amp;rdquo; rows.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;train_2 &amp;lt;- full[full$Dataset == &#39;train&#39;, ]
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;train_2 &amp;lt;- full[full$Dataset == &amp;quot;train&amp;quot;, ]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;distribution-of-continuous-variables-by-creature-type&#34;&gt;Distribution of Continuous Variables by Creature Type&lt;/h3&gt;
 
 &lt;h4 id=&#34;bone-length&#34;&gt;Bone Length&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-6-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-6-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;rotting-flesh&#34;&gt;Rotting Flesh&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-7-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-7-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;hair-length&#34;&gt;Hair Length&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-8-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-8-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;soul&#34;&gt;Soul&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-9-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-9-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;distribution-of-color-by-creature-type&#34;&gt;Distribution of Color by Creature Type&lt;/h3&gt;
 
 &lt;h4 id=&#34;ghost&#34;&gt;Ghost&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-10-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-10-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;ghoul&#34;&gt;Ghoul&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-11-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-11-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;goblin&#34;&gt;Goblin&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-12-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-12-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;distinguishing-features&#34;&gt;Distinguishing Features?&lt;/h3&gt;
 
@@ -1822,29 +1860,25 @@ full[factor_variables] &amp;lt;- lapply(full[factor_variables], function(x) as.f
 
 &lt;p&gt;Maybe I&amp;rsquo;m missing some interesting connection between variables?&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;pairs(full[,2:5], 
-      col = full$type, 
-      labels = c(&amp;quot;Bone Length&amp;quot;, &amp;quot;Rotting Flesh&amp;quot;, &amp;quot;Hair Length&amp;quot;, &amp;quot;Soul&amp;quot;))
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;pairs(full[, 2:5], col = full$type, labels = c(&amp;quot;Bone Length&amp;quot;, 
+    &amp;quot;Rotting Flesh&amp;quot;, &amp;quot;Hair Length&amp;quot;, &amp;quot;Soul&amp;quot;))
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-13-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-13-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Nope. But perhaps we can take advantage of a combination of characteristics that do seem to show some promise: most notably &amp;ldquo;Hair Length&amp;rdquo; and &amp;ldquo;Soul&amp;rdquo;. Do we get any better separation among creatures if we combine these variables into one?&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full &amp;lt;- full %&amp;gt;%
-          mutate(hair_soul = hair_length * has_soul)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full &amp;lt;- full %&amp;gt;% mutate(hair_soul = hair_length * has_soul)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-15-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-15-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;That may have separated Ghosts a little further from the other two&amp;hellip; Let&amp;rsquo;s try a few more variable interactions.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full &amp;lt;- full %&amp;gt;%
-          mutate(bone_flesh = bone_length * rotting_flesh,
-                 bone_hair = bone_length * hair_length,
-                 bone_soul = bone_length * has_soul,
-                 flesh_hair = rotting_flesh * hair_length,
-                 flesh_soul = rotting_flesh * has_soul)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full &amp;lt;- full %&amp;gt;% mutate(bone_flesh = bone_length * rotting_flesh, 
+    bone_hair = bone_length * hair_length, bone_soul = bone_length * 
+        has_soul, flesh_hair = rotting_flesh * hair_length, flesh_soul = rotting_flesh * 
+        has_soul)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Time to check for ways to tidy up.&lt;/p&gt;
@@ -1941,7 +1975,8 @@ creature_labels &amp;lt;- full$type
 full2 &amp;lt;- full
 full2$type &amp;lt;- NULL
 
-# Remove categorical variables (id, color, and dataset) from dataset
+# Remove categorical variables (id, color, and dataset) from
+# dataset
 full2$id &amp;lt;- NULL
 full2$color &amp;lt;- NULL
 full2$Dataset &amp;lt;- NULL
@@ -1952,7 +1987,7 @@ creature_km_1 &amp;lt;- kmeans(full2, 3, nstart = 30)
 
 &lt;p&gt;Ok, so now we have clusters, time to see how well they did. Let&amp;rsquo;s look at them graphically first. This was created using the &lt;code&gt;plotcluster()&lt;/code&gt; function from the &lt;code&gt;fpc&lt;/code&gt; package.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-19-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-19-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hmm, those clusters don&amp;rsquo;t look very discrete. Let&amp;rsquo;s look at &lt;a href=&#34;https://en.wikipedia.org/wiki/Dunn_index&#34;&gt;Dunn&amp;rsquo;s Index&lt;/a&gt; mathematically to see if we&amp;rsquo;re missing something visually. This calculation comes from the &lt;code&gt;dunn&lt;/code&gt; function in the &lt;code&gt;clValid&lt;/code&gt; package.&lt;/p&gt;
 
@@ -1989,8 +2024,8 @@ dunn_ckm_1
 
 &lt;p&gt;First things first, I need to split out the test and training data back into separate datasets.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;train_complete &amp;lt;- full[full$Dataset == &#39;train&#39;, ]
-test_complete &amp;lt;- full[full$Dataset == &#39;test&#39;, ]
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;train_complete &amp;lt;- full[full$Dataset == &amp;quot;train&amp;quot;, ]
+test_complete &amp;lt;- full[full$Dataset == &amp;quot;test&amp;quot;, ]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Because I plan on using the &lt;code&gt;caret&lt;/code&gt; package for all of my modeling, I&amp;rsquo;m going to generate a standard &lt;code&gt;trainControl&lt;/code&gt; so that those tuning parameters remain consistent throughout the various models.&lt;/p&gt;
@@ -1999,12 +2034,8 @@ test_complete &amp;lt;- full[full$Dataset == &#39;test&#39;, ]
 
 &lt;p&gt;I will create a system that will perform 20 repeats of a 10-Fold cross-validation of the data.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;myControl &amp;lt;- trainControl(
-      method = &amp;quot;cv&amp;quot;, 
-      number = 10,
-      repeats = 20, 
-      verboseIter = TRUE
-  )
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;myControl &amp;lt;- trainControl(method = &amp;quot;cv&amp;quot;, number = 10, repeats = 20, 
+    verboseIter = TRUE)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;random-forest-modeling&#34;&gt;Random Forest Modeling&lt;/h3&gt;
@@ -2013,34 +2044,24 @@ test_complete &amp;lt;- full[full$Dataset == &#39;test&#39;, ]
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(10)
 
-rf_model &amp;lt;- train(
-    type ~ bone_length + rotting_flesh + hair_length + has_soul + color + hair_soul + bone_flesh + bone_hair + 
-        bone_soul + flesh_hair + flesh_soul,
-    tuneLength = 3,
-    data = train_complete, 
-    method = &amp;quot;ranger&amp;quot;, 
-    trControl = myControl,
-    importance = &#39;impurity&#39;
-)
+rf_model &amp;lt;- train(type ~ bone_length + rotting_flesh + hair_length + 
+    has_soul + color + hair_soul + bone_flesh + bone_hair + bone_soul + 
+    flesh_hair + flesh_soul, tuneLength = 3, data = train_complete, 
+    method = &amp;quot;ranger&amp;quot;, trControl = myControl, importance = &amp;quot;impurity&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Let&amp;rsquo;s look at the levels of importance of each factor in this model.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-25-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-25-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Huh. Our &amp;ldquo;hair_soul&amp;rdquo; variable seems to be the most important to this model and our other interactions rank pretty highly. I suppose we can hold on to them for now. Color, on the other hand, hardly plays into this. Let&amp;rsquo;s try removing it from a second random forest model.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(10)
 
-rf_model_2 &amp;lt;- train(
-    type ~ bone_length + rotting_flesh + hair_length + has_soul + hair_soul + bone_flesh + bone_hair + 
-        bone_soul + flesh_hair + flesh_soul,
-    tuneLength = 3,
-    data = train_complete, 
-    method = &amp;quot;ranger&amp;quot;, 
-    trControl = myControl,
-    importance = &#39;impurity&#39;
-)
+rf_model_2 &amp;lt;- train(type ~ bone_length + rotting_flesh + hair_length + 
+    has_soul + hair_soul + bone_flesh + bone_hair + bone_soul + 
+    flesh_hair + flesh_soul, tuneLength = 3, data = train_complete, 
+    method = &amp;quot;ranger&amp;quot;, trControl = myControl, importance = &amp;quot;impurity&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;glmnet-modeling&#34;&gt;GLMnet Modeling&lt;/h3&gt;
@@ -2049,30 +2070,22 @@ rf_model_2 &amp;lt;- train(
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(10)
 
-glm_model &amp;lt;- train(
-    type ~ bone_length + rotting_flesh + hair_length + has_soul + color + hair_soul + bone_flesh + bone_hair + 
-        bone_soul + flesh_hair + flesh_soul, 
-    method = &amp;quot;glmnet&amp;quot;,
-    tuneGrid = expand.grid(alpha = 0:1,
-      lambda = seq(0.0001, 1, length = 20)),
-    data = train_complete,
-    trControl = myControl
-)
+glm_model &amp;lt;- train(type ~ bone_length + rotting_flesh + hair_length + 
+    has_soul + color + hair_soul + bone_flesh + bone_hair + bone_soul + 
+    flesh_hair + flesh_soul, method = &amp;quot;glmnet&amp;quot;, tuneGrid = expand.grid(alpha = 0:1, 
+    lambda = seq(1e-04, 1, length = 20)), data = train_complete, 
+    trControl = myControl)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Once again, we&amp;rsquo;ll try without &amp;ldquo;color&amp;rdquo;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(10)
 
-glm_model_2 &amp;lt;- train(
-    type ~ bone_length + rotting_flesh + hair_length + has_soul + hair_soul + bone_flesh + bone_hair + 
-        bone_soul + flesh_hair + flesh_soul, 
-    method = &amp;quot;glmnet&amp;quot;,
-    tuneGrid = expand.grid(alpha = 0:1,
-      lambda = seq(0.0001, 1, length = 20)),
-    data = train_complete,
-    trControl = myControl
-)
+glm_model_2 &amp;lt;- train(type ~ bone_length + rotting_flesh + hair_length + 
+    has_soul + hair_soul + bone_flesh + bone_hair + bone_soul + 
+    flesh_hair + flesh_soul, method = &amp;quot;glmnet&amp;quot;, tuneGrid = expand.grid(alpha = 0:1, 
+    lambda = seq(1e-04, 1, length = 20)), data = train_complete, 
+    trControl = myControl)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;comparing-model-fit&#34;&gt;Comparing model fit&lt;/h3&gt;
@@ -2080,7 +2093,8 @@ glm_model_2 &amp;lt;- train(
 &lt;p&gt;Now that we have two random forest models and two glmnet models, it&amp;rsquo;s time to compare their fit.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Create a list of models
-models &amp;lt;- list(rf = rf_model, rf2 = rf_model_2, glmnet = glm_model, glmnet2 = glm_model_2)
+models &amp;lt;- list(rf = rf_model, rf2 = rf_model_2, glmnet = glm_model, 
+    glmnet2 = glm_model_2)
 
 # Resample the models
 resampled &amp;lt;- resamples(models)
@@ -2115,15 +2129,14 @@ summary(resampled)
 dotplot(resampled, metric = &amp;quot;Accuracy&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;Ghosts_Goblins_Ghouls_01_files/figure-markdown_github/unnamed-chunk-29-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-29-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;predicting-creature-identity&#34;&gt;Predicting Creature Identity&lt;/h2&gt;
 
 &lt;p&gt;Although I generated four models above, the second glmnet model (all interactions but without color) provided the highest accuracy, so I&amp;rsquo;ll use that model to predict survival in the test set.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Reorder the data by creature ID number
-test_complete &amp;lt;- test_complete %&amp;gt;%
-                  arrange(id)
+test_complete &amp;lt;- test_complete %&amp;gt;% arrange(id)
 
 # Make predicted survival values
 my_prediction &amp;lt;- predict(glm_model_2, test_complete)
@@ -2136,8 +2149,9 @@ my_prediction &amp;lt;- predict(glm_model_2, test_complete)
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Create a data frame with two columns
 my_solution_GGG_03 &amp;lt;- data.frame(id = test_complete$id, Type = my_prediction)
 
-# Write the solution to a csv file 
-write.csv(my_solution_GGG_03, file = &amp;quot;my_solution_GGG_03.csv&amp;quot;, row.names = FALSE)
+# Write the solution to a csv file
+write.csv(my_solution_GGG_03, file = &amp;quot;my_solution_GGG_03.csv&amp;quot;, 
+    row.names = FALSE)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;testing-with-kaggle&#34;&gt;Testing with Kaggle&lt;/h3&gt;
@@ -2148,19 +2162,58 @@ write.csv(my_solution_GGG_03, file = &amp;quot;my_solution_GGG_03.csv&amp;quot;,
     </item>
     
     <item>
-      <title>Kaggle - Machine Learning from Disaster</title>
-      <link>/projects/Titanic_Survival/</link>
+      <title>Machine Learning from Disaster</title>
+      <link>/projects/Titanic_md/</link>
       <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
       
-      <guid>/projects/Titanic_Survival/</guid>
-      <description>&lt;p&gt;Data exploration and machine learning in RMarkdown.
+      <guid>/projects/Titanic_md/</guid>
+      <description>&lt;p&gt;Kaggle Playground Competition&lt;/p&gt;
+
+&lt;p&gt;Data exploration and machine learning in RMarkdown.
 &lt;/p&gt;
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 
-&lt;p&gt;This is my first project on Kaggle and my first attempt at machine learning.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;
 
-&lt;p&gt;I&amp;rsquo;ll do my best to illustrate what I&amp;rsquo;ve down and the logic behind my actions, but feedback is very much welcome and appreciated!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#loading-necessary-packages&#34;&gt;Loading Necessary Packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#importing-data&#34;&gt;Importing Data&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#feature-engineering&#34;&gt;Feature Engineering&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#names-and-titles&#34;&gt;Names and Titles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sibsp-and-parch-for-family-size&#34;&gt;SibSp and Parch for Family Size&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ticket-numbers-and-travel-groups&#34;&gt;Ticket Numbers and Travel Groups&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#missing-data&#34;&gt;Missing Data&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#missing-fare&#34;&gt;Missing Fare&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#missing-embarkment&#34;&gt;Missing Embarkment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#missing-age&#34;&gt;Missing Age&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#modeling-for-survival&#34;&gt;Modeling for Survival&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#creating-traincontrol&#34;&gt;Creating trainControl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#fitting-a-random-forest-model&#34;&gt;Fitting a random forest model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#fitting-a-glmnet-model&#34;&gt;Fitting a glmnet model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#comparing-model-fit&#34;&gt;Comparing model fit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#predicting-survival&#34;&gt;Predicting Survival&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#preparing-the-prediction-for-kaggle&#34;&gt;Preparing the prediction for Kaggle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#testing-with-kaggle&#34;&gt;Testing with Kaggle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;introduction-1&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;This is my first project on Kaggle and my first attempt at machine learning. I&amp;rsquo;ll do my best to illustrate what I&amp;rsquo;ve down and the logic behind my actions, but feedback is very much welcome and appreciated!&lt;/p&gt;
 
 &lt;h3 id=&#34;loading-necessary-packages&#34;&gt;Loading Necessary Packages&lt;/h3&gt;
 
@@ -2213,7 +2266,8 @@ full &amp;lt;- bind_rows(train, test)
 
 &lt;p&gt;It appears that several of these variables should be represented as factors and thus should be reclassified.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;factor_variables &amp;lt;- c(&#39;PassengerId&#39;, &#39;Survived&#39;, &#39;Pclass&#39;, &#39;Sex&#39;, &#39;Embarked&#39;, &#39;Dataset&#39;)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;factor_variables &amp;lt;- c(&amp;quot;PassengerId&amp;quot;, &amp;quot;Survived&amp;quot;, &amp;quot;Pclass&amp;quot;, &amp;quot;Sex&amp;quot;, 
+    &amp;quot;Embarked&amp;quot;, &amp;quot;Dataset&amp;quot;)
 full[factor_variables] &amp;lt;- lapply(full[factor_variables], function(x) as.factor(x))
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -2255,7 +2309,7 @@ full[factor_variables] &amp;lt;- lapply(full[factor_variables], function(x) as.f
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;names &amp;lt;- full$Name
 
-titles &amp;lt;-  gsub(&amp;quot;^.*, (.*?)\\..*$&amp;quot;, &amp;quot;\\1&amp;quot;, names)
+titles &amp;lt;- gsub(&amp;quot;^.*, (.*?)\\..*$&amp;quot;, &amp;quot;\\1&amp;quot;, names)
 
 full$Titles &amp;lt;- titles
 
@@ -2315,7 +2369,8 @@ unique(full$Titles)
 
 &lt;p&gt;Since Don, Jonkheer, and Sir are all of similar usage, and each represent only one first-class man, I combined them into the category &amp;ldquo;Sir&amp;rdquo;. Dona, Lady, Madame, and the Countess each only represent one first-class woman, so I combined them into the category &amp;ldquo;Lady&amp;rdquo;. These values were substituted using the &lt;code&gt;gsub&lt;/code&gt; function.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full$Titles &amp;lt;- gsub(&amp;quot;Dona|Lady|Madame|the Countess&amp;quot;, &amp;quot;Lady&amp;quot;, full$Titles)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full$Titles &amp;lt;- gsub(&amp;quot;Dona|Lady|Madame|the Countess&amp;quot;, &amp;quot;Lady&amp;quot;, 
+    full$Titles)
 full$Titles &amp;lt;- gsub(&amp;quot;Don|Jonkheer|Sir&amp;quot;, &amp;quot;Sir&amp;quot;, full$Titles)
 
 unique(full$Titles)
@@ -2345,7 +2400,7 @@ unique(full$Titles)
 
 &lt;p&gt;Let&amp;rsquo;s visualize family size&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Titanic_Survival_R_Markdown_3_files/figure-markdown_github/unnamed-chunk-11-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-11-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow! Lots of people without immediate family with them. Perhaps these people were traveling with other family members/friends that weren&amp;rsquo;t captured in the SibSp / Parch variables.&lt;/p&gt;
 
@@ -2412,15 +2467,13 @@ full2$TravelGroup &amp;lt;- as.factor(full2$TravelGroup)
 
 &lt;p&gt;It may also be of interest to look at group size. We can generate this using the &lt;code&gt;group_by()&lt;/code&gt; and &lt;code&gt;mutate&lt;/code&gt; functions in &lt;code&gt;dplyr&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full3 &amp;lt;- full2 %&amp;gt;% 
-            group_by(TravelGroup) %&amp;gt;% 
-            mutate(GroupSize = n()) %&amp;gt;%
-            ungroup()
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full3 &amp;lt;- full2 %&amp;gt;% group_by(TravelGroup) %&amp;gt;% mutate(GroupSize = n()) %&amp;gt;% 
+    ungroup()
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;How does Travel Group Size compare to Family Group Size that we calculated earlier?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Titanic_Survival_R_Markdown_3_files/figure-markdown_github/unnamed-chunk-17-1.png&#34; alt=&#34;&#34; /&gt;&lt;img src=&#34;Titanic_Survival_R_Markdown_3_files/figure-markdown_github/unnamed-chunk-17-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-17-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-17-2.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;They look pretty close, again showing that most people were potentially travelling alone.&lt;/p&gt;
 
@@ -2428,7 +2481,8 @@ full2$TravelGroup &amp;lt;- as.factor(full2$TravelGroup)
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;filtered &amp;lt;- filter(full3, GroupSize == 1)
 
-# How many were listed as being onboard with siblings or spouses?
+# How many were listed as being onboard with siblings or
+# spouses?
 fSibSp &amp;lt;- filtered[filtered$SibSp &amp;gt; 0, ]
 nrow(fSibSp)
 &lt;/code&gt;&lt;/pre&gt;
@@ -2436,7 +2490,8 @@ nrow(fSibSp)
 &lt;pre&gt;&lt;code&gt;## [1] 42
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# How many were listed as being onboard with parents or children?
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# How many were listed as being onboard with parents or
+# children?
 fParch &amp;lt;- filtered[filtered$Parch &amp;gt; 0, ]
 nrow(fParch)
 &lt;/code&gt;&lt;/pre&gt;
@@ -2502,7 +2557,7 @@ sum(fSibSp$PassengerId %in% fParch$PassengerId)
 
 &lt;p&gt;Which passenger has no fare information?&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full3[(which(is.na(full3$Fare))) , 1]
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full3[(which(is.na(full3$Fare))), 1]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;pre&gt;&lt;code&gt;## # A tibble: 1 × 1
@@ -2528,11 +2583,10 @@ full4[1044, c(3, 12)]
 
 &lt;p&gt;Looks like he left from &amp;rsquo;S&amp;rsquo; (Southampton) as a 3rd class passenger. Let&amp;rsquo;s see what other people of the same class and embarkment port paid for their tickets.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Titanic_Survival_R_Markdown_3_files/figure-markdown_github/unnamed-chunk-22-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-22-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full4 %&amp;gt;%
-  filter(Pclass == &#39;3&#39; &amp;amp; Embarked == &#39;S&#39;) %&amp;gt;%
-  summarise(missing_fare = median(Fare, na.rm = TRUE))
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full4 %&amp;gt;% filter(Pclass == &amp;quot;3&amp;quot; &amp;amp; Embarked == &amp;quot;S&amp;quot;) %&amp;gt;% summarise(missing_fare = median(Fare, 
+    na.rm = TRUE))
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;pre&gt;&lt;code&gt;## # A tibble: 1 × 1
@@ -2574,7 +2628,7 @@ full4[(which(is.na(full4$Embarked))), 1]
 
 &lt;p&gt;Ok, so Passenger numbers 62 and 830 are each missing their embarkment ports. Let&amp;rsquo;s look at their class of ticket and their fare.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full4[c(62, 830), c(1,3,10)]
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full4[c(62, 830), c(1, 3, 10)]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;pre&gt;&lt;code&gt;## # A tibble: 2 × 3
@@ -2586,11 +2640,8 @@ full4[(which(is.na(full4$Embarked))), 1]
 
 &lt;p&gt;Both passengers had first class tickets that they spent 80 (pounds?) on. Let&amp;rsquo;s see the embarkment ports of others who bought similar kinds of tickets.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full4 %&amp;gt;%
-  group_by(Embarked, Pclass) %&amp;gt;%
-  filter(Pclass == &amp;quot;1&amp;quot;) %&amp;gt;%
-  summarise(mfare = median(Fare),
-            n = n())
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full4 %&amp;gt;% group_by(Embarked, Pclass) %&amp;gt;% filter(Pclass == &amp;quot;1&amp;quot;) %&amp;gt;% 
+    summarise(mfare = median(Fare), n = n())
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;pre&gt;&lt;code&gt;## Source: local data frame [4 x 4]
@@ -2609,7 +2660,7 @@ full4[(which(is.na(full4$Embarked))), 1]
 &lt;p&gt;Now to replace their NA values with &amp;lsquo;C&amp;rsquo;. And drop any unused levels.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Assign empty embark ports to &#39;C&#39;
-full4$Embarked[c(62,830)] &amp;lt;- &#39;C&#39;
+full4$Embarked[c(62, 830)] &amp;lt;- &amp;quot;C&amp;quot;
 
 # Drop unused levels (since there should be no more blanks)
 full4$Embarked &amp;lt;- droplevels(full4$Embarked)
@@ -2631,39 +2682,35 @@ levels(full4$Embarked)
 
 &lt;p&gt;Generate a random forest model on the full dataset (minus the age values that are NA)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;predicted_age &amp;lt;- train(
-  Age ~ Pclass + Sex + SibSp + Parch + Fare + Embarked + Titles + FamilySize + GroupSize,
-  tuneGrid = data.frame(mtry = c(2, 3, 7)),
-  data = full4[!is.na(full4$Age), ],
-  method = &amp;quot;ranger&amp;quot;,
-  trControl = trainControl(
-      method = &amp;quot;cv&amp;quot;, number = 10,
-      repeats = 10, verboseIter = TRUE),
-  importance = &#39;impurity&#39;
-  )
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;predicted_age &amp;lt;- train(Age ~ Pclass + Sex + SibSp + Parch + Fare + 
+    Embarked + Titles + FamilySize + GroupSize, tuneGrid = data.frame(mtry = c(2, 
+    3, 7)), data = full4[!is.na(full4$Age), ], method = &amp;quot;ranger&amp;quot;, 
+    trControl = trainControl(method = &amp;quot;cv&amp;quot;, number = 10, repeats = 10, 
+        verboseIter = TRUE), importance = &amp;quot;impurity&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Let&amp;rsquo;s look at what factors were the most important in modeling age:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Titanic_Survival_R_Markdown_3_files/figure-markdown_github/unnamed-chunk-30-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-30-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wow! Looks like it was a good idea to split out Titles!&lt;/p&gt;
 
 &lt;p&gt;Now to use this information to predict the ages of passengers with missing ages and filling in their NA values.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full4$Age[is.na(full4$Age)] &amp;lt;- predict(predicted_age, full4[is.na(full4$Age),])
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;full4$Age[is.na(full4$Age)] &amp;lt;- predict(predicted_age, full4[is.na(full4$Age), 
+    ])
 
 # Check the summary to make sure there are no more NA values
 summary(full4$Age)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;pre&gt;&lt;code&gt;##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##    0.17   22.00   28.44   29.74   37.00   80.00
+##    0.17   22.00   28.50   29.72   37.00   80.00
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Let&amp;rsquo;s take a quick look at the age distribution of passengers with originally known ages, and the age distribution of the entire group (known and predicted ages) to make sure we didn&amp;rsquo;t terribly skew the distribution.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;Titanic_Survival_R_Markdown_3_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; alt=&#34;&#34; /&gt;&lt;img src=&#34;Titanic_Survival_R_Markdown_3_files/figure-markdown_github/unnamed-chunk-32-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-32-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-32-2.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hmm, seems to have shifted a bit, but that could be due to a greater lack of age information collected for middle-aged passengers.&lt;/p&gt;
 
@@ -2671,8 +2718,8 @@ summary(full4$Age)
 
 &lt;p&gt;First things first, I need to split out the test and training data back into separate data sets, now called &lt;code&gt;train_complete&lt;/code&gt; and &lt;code&gt;test_complete&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;train_complete &amp;lt;- full4[full4$Dataset == &#39;train&#39;, ]
-test_complete &amp;lt;- full4[full4$Dataset == &#39;test&#39;, ]
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;train_complete &amp;lt;- full4[full4$Dataset == &amp;quot;train&amp;quot;, ]
+test_complete &amp;lt;- full4[full4$Dataset == &amp;quot;test&amp;quot;, ]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Because I plan on using the &lt;code&gt;caret&lt;/code&gt; package for all of my modeling, I&amp;rsquo;m going to generate a standard &lt;code&gt;trainControl&lt;/code&gt; so that those tuning parameters remain consistent throughout the various models.&lt;/p&gt;
@@ -2681,42 +2728,28 @@ test_complete &amp;lt;- full4[full4$Dataset == &#39;test&#39;, ]
 
 &lt;p&gt;I will create a system that will perform 10 repeats of a 10-Fold cross-validation of the data.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;myControl &amp;lt;- trainControl(
-      method = &amp;quot;cv&amp;quot;, 
-      number = 10,
-      repeats = 10, 
-      verboseIter = TRUE
-  )
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;myControl &amp;lt;- trainControl(method = &amp;quot;cv&amp;quot;, number = 10, repeats = 10, 
+    verboseIter = TRUE)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;fitting-a-random-forest-model&#34;&gt;Fitting a random forest model&lt;/h3&gt;
 
 &lt;p&gt;The first type of model I&amp;rsquo;d like to use is a random forest model (using the &lt;code&gt;ranger&lt;/code&gt; and &lt;code&gt;caret&lt;/code&gt; packages).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rf_model &amp;lt;- train(
-    Survived ~ Age + Pclass + Sex + SibSp + Parch + Fare + Embarked + Titles + FamilySize + 
-      TravelGroup + GroupSize,
-    tuneGrid = data.frame(mtry = c(2, 5, 8, 10, 15)),
-    data = train_complete, 
-    method = &amp;quot;ranger&amp;quot;, 
-    trControl = myControl,
-    importance = &#39;impurity&#39;
-)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rf_model &amp;lt;- train(Survived ~ Age + Pclass + Sex + SibSp + Parch + 
+    Fare + Embarked + Titles + FamilySize + TravelGroup + GroupSize, 
+    tuneGrid = data.frame(mtry = c(2, 5, 8, 10, 15)), data = train_complete, 
+    method = &amp;quot;ranger&amp;quot;, trControl = myControl, importance = &amp;quot;impurity&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;fitting-a-glmnet-model&#34;&gt;Fitting a glmnet model&lt;/h3&gt;
 
 &lt;p&gt;Next, we&amp;rsquo;ll try a glmnet model, also from the &lt;code&gt;caret&lt;/code&gt; package.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;glm_model &amp;lt;- train(
-    Survived ~ Age + Pclass + Sex + SibSp + Parch + Fare + Embarked + Titles + FamilySize + 
-      TravelGroup + GroupSize, 
-    method = &amp;quot;glmnet&amp;quot;,
-    tuneGrid = expand.grid(alpha = 0:1,
-      lambda = seq(0.0001, 1, length = 20)),
-    data = train_complete,
-    trControl = myControl
-)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;glm_model &amp;lt;- train(Survived ~ Age + Pclass + Sex + SibSp + Parch + 
+    Fare + Embarked + Titles + FamilySize + TravelGroup + GroupSize, 
+    method = &amp;quot;glmnet&amp;quot;, tuneGrid = expand.grid(alpha = 0:1, lambda = seq(1e-04, 
+        1, length = 20)), data = train_complete, trControl = myControl)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;comparing-model-fit&#34;&gt;Comparing model fit&lt;/h3&gt;
@@ -2742,20 +2775,20 @@ summary(resampled)
 ## 
 ## Accuracy 
 ##          Min. 1st Qu. Median   Mean 3rd Qu.   Max. NA&#39;s
-## rf     0.7865  0.8022 0.8146 0.8249  0.8507 0.8667    0
-## glmnet 0.8090  0.8357 0.8492 0.8486  0.8624 0.8977    0
+## rf     0.7667  0.7893 0.8146 0.8250  0.8669 0.8889    0
+## glmnet 0.7889  0.8118 0.8531 0.8418  0.8624 0.9101    0
 ## 
 ## Kappa 
 ##          Min. 1st Qu. Median   Mean 3rd Qu.   Max. NA&#39;s
-## rf     0.5348  0.5860 0.6041 0.6237  0.6699 0.7165    0
-## glmnet 0.5838  0.6435 0.6761 0.6753  0.7056 0.7807    0
+## rf     0.5215  0.5375 0.6083 0.6239  0.7092 0.7613    0
+## glmnet 0.5535  0.6026 0.6842 0.6617  0.7027 0.8117    0
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Plot the differences between model fits
 dotplot(resampled, metric = &amp;quot;Accuracy&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;Titanic_Survival_R_Markdown_3_files/figure-markdown_github/unnamed-chunk-37-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../Titanic_md_files/figure-markdown_github/unnamed-chunk-37-1.png&#34; class=&#34;img-responsive&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Looks like the glmnet model is slightly more accurate than the random forest model, so we&amp;rsquo;ll use that to predict the survival rate.&lt;/p&gt;
 
@@ -2766,8 +2799,7 @@ dotplot(resampled, metric = &amp;quot;Accuracy&amp;quot;)
 &lt;p&gt;Although I generated two models above, the glmnet model provided higher accuracy, so I&amp;rsquo;ll use that model to predict survival in the test set.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Reorder the data by Passenger ID number
-test_complete &amp;lt;- test_complete %&amp;gt;%
-                  arrange(PassengerId)
+test_complete &amp;lt;- test_complete %&amp;gt;% arrange(PassengerId)
 
 # Make predicted survival values
 my_prediction &amp;lt;- predict(glm_model, test_complete)
@@ -2777,10 +2809,11 @@ my_prediction &amp;lt;- predict(glm_model, test_complete)
 
 &lt;p&gt;The instructions on Kaggle indicate that they are expecting a csv file with 2 columns: Passenger ID and Survived. I need to make sure that my data are arranged properly.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Create a data frame with two columns: PassengerId &amp;amp; Survived where Survived contains my predictions.
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Create a data frame with two columns: PassengerId &amp;amp;
+# Survived where Survived contains my predictions.
 my_solution_5 &amp;lt;- data.frame(PassengerID = test$PassengerId, Survived = my_prediction)
 
-# Write the solution to a csv file 
+# Write the solution to a csv file
 write.csv(my_solution_5, file = &amp;quot;my_solution_5.csv&amp;quot;, row.names = FALSE)
 &lt;/code&gt;&lt;/pre&gt;
 
