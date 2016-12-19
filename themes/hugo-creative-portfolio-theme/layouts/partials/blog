@@ -19,10 +19,6 @@
                           <p class="date-comments">
                           <i class="fa fa-calendar-o"></i> {{ .Date.Format "January 2, 2006" }}
                           </p>
-
-                          {{if eq .Section "portfolio"}}
-                          <p class="author-category"><b>{{ .Summary }}</b></p>
-                          {{end}}
                   
                       </div>
                     </div>
