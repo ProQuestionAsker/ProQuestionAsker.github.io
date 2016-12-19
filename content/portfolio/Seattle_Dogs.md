@@ -658,7 +658,7 @@ Data Visualizations
 
 Now let's look at some visualizations. We'll start with the popularity of each dog breed within Seattle. This figure shows the top 24 most popular breeds in the city.
 
-<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-23-1.png" style="display: block; margin: auto;" />
+<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-23-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 Wow! Looks like labrador retrievers are by far the most popular breed of dog in Seattle.
 
@@ -666,7 +666,7 @@ Wow! Looks like labrador retrievers are by far the most popular breed of dog in 
 
 How do the numbers of dogs break down by dog size?
 
-<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-24-1.png" style="display: block; margin: auto;" />
+<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-24-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 For a city filled with apartment buildings, Seattle-ites really love large dogs (almost as much as medium and small dogs combined!).
 
@@ -696,7 +696,7 @@ Ok, so there were 365 dog licenses that didn't list appropriate zip codes. That'
 
 *It looks like several of the zipcodes listed are "industrial" zip codes. We'll replace the zip code with the residential zip code that each industrial one falls within.*
 
-<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-26-1.png" style="display: block; margin: auto;" />
+<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-26-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 Looks like the highest populations of licensed dogs are found in zipcodes 98115, 98103, and 98117. That corresponds roughly to Northeast Seattle, the area between Fremont and Greenwood, and the Ballard to Crown Hill area. It is certainly possible that the high dog populations in those areas could be correlated with the human population in the same areas. Let's see how many licensed dogs there are per person in these areas.
 
@@ -728,7 +728,7 @@ zip_choropleth(pop_zip_2, zip_zoom = (pop_zip_2$region), legend = "Dog:Human Rat
     reference_map = TRUE, num_colors = 1)
 ```
 
-<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-27-1.png" style="display: block; margin: auto;" />
+<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-27-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 Generally speaking, central Seattle has a higher "Licensed Dogs : People" Ratio than the neighborhoods along the north and south edges. The highest proportion is found in zipcode 98117 or the Ballard to Crown Hill area with roughly 1 licensed dog for every 10 people. That is a residential area with lots of homes and fewer apartment buildings than the downtown-area.
 
@@ -740,19 +740,19 @@ These figures will be proportions of small, medium, large and giant dogs in prop
 
 #### Small
 
-<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-28-1.png" style="display: block; margin: auto;" />
+<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-28-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 #### Medium
 
-<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-29-1.png" style="display: block; margin: auto;" />
+<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-29-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 #### Large
 
-<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-30-1.png" style="display: block; margin: auto;" />
+<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-30-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 #### Giant
 
-<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-31-1.png" style="display: block; margin: auto;" />
+<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-31-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 ### Caveats of Dog Size by Zipcode
 
@@ -785,7 +785,7 @@ wordcloud(names, scale = c(5, 0.2), max.words = 150, random.order = FALSE,
         "Greens")[c(4, 5, 6, 7, 8, 9)])
 ```
 
-<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-32-1.png" style="display: block; margin: auto;" />
+<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-32-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 Oops! Looks like a few of those are probably not real names. We'll go ahead and remove "dog", "null", "altered", "female", "male", "labrador", "retriever", "year", and "seattle" from the wordcloud.
 
@@ -800,7 +800,7 @@ wordcloud(names_2, scale = c(5, 0.2), max.words = 150, random.order = FALSE,
         "Greens")[c(4, 5, 6, 7, 8, 9)])
 ```
 
-<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-33-1.png" style="display: block; margin: auto;" />
+<img src="../Seattle_Dogs_files/figure-markdown_github/unnamed-chunk-33-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 Wow! Lucy looks like the clear winner here!
 

@@ -146,33 +146,33 @@ train_2 <- full[full$Dataset == "train", ]
 
 #### Bone Length
 
-![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-6-1.png)
+<img src="../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-6-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 #### Rotting Flesh
 
-![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-7-1.png)
+<img src="../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-7-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 #### Hair Length
 
-![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-8-1.png)
+<img src="../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-8-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 #### Soul
 
-![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-9-1.png)
+<img src="../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-9-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 ### Distribution of Color by Creature Type
 
 #### Ghost
 
-![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-10-1.png)
+<img src="../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-10-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 #### Ghoul
 
-![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-11-1.png)
+<img src="../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-11-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 #### Goblin
 
-![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-12-1.png)
+<img src="../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-12-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 ### Distinguishing Features?
 
@@ -190,7 +190,7 @@ pairs(full[, 2:5], col = full$type, labels = c("Bone Length",
     "Rotting Flesh", "Hair Length", "Soul"))
 ```
 
-![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-13-1.png)
+<img src="../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-13-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 Nope. But perhaps we can take advantage of a combination of characteristics that do seem to show some promise: most notably "Hair Length" and "Soul". Do we get any better separation among creatures if we combine these variables into one?
 
@@ -198,7 +198,7 @@ Nope. But perhaps we can take advantage of a combination of characteristics that
 full <- full %>% mutate(hair_soul = hair_length * has_soul)
 ```
 
-![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-15-1.png)
+<img src="../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-15-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 That may have separated Ghosts a little further from the other two... Let's try a few more variable interactions.
 
@@ -294,7 +294,7 @@ creature_km_1 <- kmeans(full2, 3, nstart = 30)
 
 Ok, so now we have clusters, time to see how well they did. Let's look at them graphically first. This was created using the `plotcluster()` function from the `fpc` package.
 
-![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-19-1.png)
+<img src="./Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-19-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 Hmm, those clusters don't look very discrete. Let's look at [Dunn's Index](https://en.wikipedia.org/wiki/Dunn_index) mathematically to see if we're missing something visually. This calculation comes from the `dunn` function in the `clValid` package.
 
@@ -362,7 +362,7 @@ rf_model <- train(type ~ bone_length + rotting_flesh + hair_length +
 
 Let's look at the levels of importance of each factor in this model.
 
-![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-25-1.png)
+<img src="../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-25-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 Huh. Our "hair\_soul" variable seems to be the most important to this model and our other interactions rank pretty highly. I suppose we can hold on to them for now. Color, on the other hand, hardly plays into this. Let's try removing it from a second random forest model.
 
@@ -443,7 +443,7 @@ summary(resampled)
 dotplot(resampled, metric = "Accuracy")
 ```
 
-![](../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-29-1.png)
+<img src="../Ghosts_Goblins_Ghouls_02_files/figure-markdown_github/unnamed-chunk-29-1.png" class="img-responsive" style="display: block; margin: auto;" />
 
 Predicting Creature Identity
 ----------------------------
