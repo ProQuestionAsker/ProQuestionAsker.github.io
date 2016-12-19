@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog-rss on Amber Thomas</title>
-    <link>https://proquestionasker.github.io/blog/index.xml</link>
+    <link>/blog/index.xml</link>
     <description>Recent content in Blog-rss on Amber Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Amber Thomas</copyright>
     <lastBuildDate>Sat, 17 Dec 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://proquestionasker.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Online Data Science Classes in R</title>
-      <link>https://proquestionasker.github.io/blog/ds_courses/</link>
+      <link>/blog/ds_courses/</link>
       <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://proquestionasker.github.io/blog/ds_courses/</guid>
+      <guid>/blog/ds_courses/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
@@ -153,7 +153,7 @@
 &lt;li&gt;&lt;strong&gt;Difficulty Level&lt;/strong&gt;: Beginner&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Cost&lt;/strong&gt;: $29/month for unlimited access to DataCamp’s entire course library&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Time to Complete&lt;/strong&gt;: 3 Hours&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Comments&lt;/strong&gt;: I had no idea how simple RMarkdown could be before this course. Now I use RMarkdown all the time. In fact, each of my &lt;a href=&#34;https://proquestionasker.github.io/blog&#34;&gt;blog posts&lt;/a&gt; and &lt;a href=&#34;https://proquestionasker.github.io/portfolio&#34;&gt;projects&lt;/a&gt; were written using RMarkdown, making report-writing simple.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Comments&lt;/strong&gt;: I had no idea how simple RMarkdown could be before this course. Now I use RMarkdown all the time. In fact, each of my &lt;a href=&#34;../blog&#34;&gt;blog posts&lt;/a&gt; and &lt;a href=&#34;../portfolio&#34;&gt;projects&lt;/a&gt; were written using RMarkdown, making report-writing simple.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -241,7 +241,7 @@
 &lt;/div&gt;
 &lt;div id=&#34;wrap-up&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Wrap-Up&lt;/h1&gt;
-&lt;p&gt;As I said, this is by no means a total list of every course that you should take to become a data scientist, and I plan to make add new courses to this list as I continue learning. Feel free to comment below about some of your favorite (or least favorite) online courses or &lt;a href=&#34;https://proquestionasker.github.io/contact&#34;&gt;reach out&lt;/a&gt; to me with questions.&lt;/p&gt;
+&lt;p&gt;As I said, this is by no means a total list of every course that you should take to become a data scientist, and I plan to make add new courses to this list as I continue learning. Feel free to comment below about some of your favorite (or least favorite) online courses or &lt;a href=&#34;../contact&#34;&gt;reach out&lt;/a&gt; to me with questions.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Happy learning!&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 
