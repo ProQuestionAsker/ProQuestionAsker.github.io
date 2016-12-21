@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Amber Thomas</title>
-    <link>/index.xml</link>
+    <link>https://proquestionasker.github.io/index.xml</link>
     <description>Recent content on Amber Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Amber Thomas</copyright>
     <lastBuildDate>Mon, 19 Dec 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://proquestionasker.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Making a Website Using Blogdown, Hugo, and GitHub pages.</title>
-      <link>/blog/Making_Site/</link>
+      <link>https://proquestionasker.github.io/blog/Making_Site/</link>
       <pubDate>Mon, 19 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>/blog/Making_Site/</guid>
+      <guid>https://proquestionasker.github.io/blog/Making_Site/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
@@ -460,10 +460,10 @@ git subtree push --prefix=public \
     
     <item>
       <title>Dog Ownership in Seattle</title>
-      <link>/projects/Seattle_Dogs/</link>
+      <link>https://proquestionasker.github.io/projects/Seattle_Dogs/</link>
       <pubDate>Wed, 16 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/projects/Seattle_Dogs/</guid>
+      <guid>https://proquestionasker.github.io/projects/Seattle_Dogs/</guid>
       <description>&lt;p&gt;Data cleaning, exploration, mapping, and data visualizations in RMarkdown.
 &lt;/p&gt;
 
@@ -1296,10 +1296,10 @@ wordcloud(names_2, scale = c(5, 0.2), max.words = 150, random.order = FALSE,
     
     <item>
       <title>Bicycle Sharing in Seattle</title>
-      <link>/projects/Bicycle_Sharing_2/</link>
+      <link>https://proquestionasker.github.io/projects/Bicycle_Sharing_2/</link>
       <pubDate>Thu, 10 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/projects/Bicycle_Sharing_2/</guid>
+      <guid>https://proquestionasker.github.io/projects/Bicycle_Sharing_2/</guid>
       <description>&lt;p&gt;Data exploration, mapping, and data visualizations in RMarkdown.
 &lt;/p&gt;
 
@@ -2122,10 +2122,10 @@ trip_weather &amp;lt;- left_join(trip_3, weather, by = &amp;quot;Date&amp;quot;)
     
     <item>
       <title>Ghosts, Goblins, and Ghouls</title>
-      <link>/projects/Ghosts_Goblins_Ghouls_02/</link>
+      <link>https://proquestionasker.github.io/projects/Ghosts_Goblins_Ghouls_02/</link>
       <pubDate>Wed, 09 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/projects/Ghosts_Goblins_Ghouls_02/</guid>
+      <guid>https://proquestionasker.github.io/projects/Ghosts_Goblins_Ghouls_02/</guid>
       <description>&lt;p&gt;Kaggle Playground Competition&lt;/p&gt;
 
 &lt;p&gt;Data exploration and machine learning in RMarkdown.
@@ -2611,19 +2611,19 @@ write.csv(my_solution_GGG_03, file = &amp;quot;my_solution_GGG_03.csv&amp;quot;,
     
     <item>
       <title>Get in touch</title>
-      <link>/contact/</link>
+      <link>https://proquestionasker.github.io/contact/</link>
       <pubDate>Sun, 06 Nov 2016 13:00:25 +0530</pubDate>
       
-      <guid>/contact/</guid>
+      <guid>https://proquestionasker.github.io/contact/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Machine Learning from Disaster</title>
-      <link>/projects/Titanic_md/</link>
+      <link>https://proquestionasker.github.io/projects/Titanic_md/</link>
       <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
       
-      <guid>/projects/Titanic_md/</guid>
+      <guid>https://proquestionasker.github.io/projects/Titanic_md/</guid>
       <description>&lt;p&gt;Kaggle Playground Competition&lt;/p&gt;
 
 &lt;p&gt;Data exploration and machine learning in RMarkdown.
@@ -3283,10 +3283,10 @@ write.csv(my_solution_5, file = &amp;quot;my_solution_5.csv&amp;quot;, row.names
     
     <item>
       <title>About Me</title>
-      <link>/about/</link>
+      <link>https://proquestionasker.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/about/</guid>
+      <guid>https://proquestionasker.github.io/about/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
@@ -3321,10 +3321,10 @@ write.csv(my_solution_5, file = &amp;quot;my_solution_5.csv&amp;quot;, row.names
     
     <item>
       <title>Online Data Science Classes in R</title>
-      <link>/blog/ds_courses/</link>
+      <link>https://proquestionasker.github.io/blog/ds_courses/</link>
       <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>/blog/ds_courses/</guid>
+      <guid>https://proquestionasker.github.io/blog/ds_courses/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
@@ -3462,7 +3462,7 @@ write.csv(my_solution_5, file = &amp;quot;my_solution_5.csv&amp;quot;, row.names
 &lt;li&gt;&lt;strong&gt;Difficulty Level&lt;/strong&gt;: Beginner&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Cost&lt;/strong&gt;: $29/month for unlimited access to DataCamp’s entire course library&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Time to Complete&lt;/strong&gt;: 3 Hours&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Comments&lt;/strong&gt;: I had no idea how simple RMarkdown could be before this course. Now I use RMarkdown all the time. In fact, each of my &lt;a href=&#34;./blog&#34;&gt;blog posts&lt;/a&gt; and &lt;a href=&#34;./portfolio&#34;&gt;projects&lt;/a&gt; were written using RMarkdown, making report-writing simple.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Comments&lt;/strong&gt;: I had no idea how simple RMarkdown could be before this course. Now I use RMarkdown all the time. In fact, each of my &lt;a href=&#34;https://proquestionasker.github.io/blog&#34;&gt;blog posts&lt;/a&gt; and &lt;a href=&#34;https://proquestionasker.github.io/portfolio&#34;&gt;projects&lt;/a&gt; were written using RMarkdown, making report-writing simple.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -3550,7 +3550,7 @@ write.csv(my_solution_5, file = &amp;quot;my_solution_5.csv&amp;quot;, row.names
 &lt;/div&gt;
 &lt;div id=&#34;wrap-up&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Wrap-Up&lt;/h1&gt;
-&lt;p&gt;As I said, this is by no means a total list of every course that you should take to become a data scientist, and I plan to make add new courses to this list as I continue learning. Feel free to comment below about some of your favorite (or least favorite) online courses or &lt;a href=&#34;./contact&#34;&gt;reach out&lt;/a&gt; to me with questions.&lt;/p&gt;
+&lt;p&gt;As I said, this is by no means a total list of every course that you should take to become a data scientist, and I plan to make add new courses to this list as I continue learning. Feel free to comment below about some of your favorite (or least favorite) online courses or &lt;a href=&#34;https://proquestionasker.github.io/contact&#34;&gt;reach out&lt;/a&gt; to me with questions.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Happy learning!&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 
