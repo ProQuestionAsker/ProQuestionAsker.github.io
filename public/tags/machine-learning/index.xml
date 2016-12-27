@@ -2,19 +2,1751 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Amber Thomas</title>
-    <link>https://proquestionasker.github.io/tags/machine-learning/index.xml</link>
+    <link>/tags/machine-learning/index.xml</link>
     <description>Recent content on Amber Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Amber Thomas</copyright>
-    <atom:link href="https://proquestionasker.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Mapping Student Course Activity</title>
+      <link>/projects/fcc_courses3/</link>
+      <pubDate>Mon, 19 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/fcc_courses3/</guid>
+      <description>&lt;p&gt;Cleaning, exploration, interactive visualizations, and machine learning with Free Code Camp&amp;rsquo;s student course completion dataset.
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#importing-necessary-packages&#34;&gt;Importing Necessary Packages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-exploration&#34;&gt;Data Exploration&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#importing-dataset&#34;&gt;Importing Dataset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-structure-and-variables&#34;&gt;Data Structure and Variables&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#feature-engineering&#34;&gt;Feature Engineering&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#using-original-dataset&#34;&gt;Using Original Dataset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#web-scraping-new-data&#34;&gt;Web Scraping New Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#engineered-variables&#34;&gt;Engineered Variables&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-visualizations&#34;&gt;Data Visualizations&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#what-class-do-fcc-students-start-with&#34;&gt;What class do FCC students start with?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#which-classes-are-the-most-popular&#34;&gt;Which classes are the most popular?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#how-do-students-flow-through-the-courses&#34;&gt;How do students flow through the courses?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#how-many-courses-do-students-take&#34;&gt;How many courses do students take?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#can-you-group-students-based-on-the-number-of-classes-they-take-vs.-the-amount-of-time-they-spend-per-class&#34;&gt;Can you group students based on the number of classes they take vs. the amount of time they spend per class?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#does-taking-a-2-week-break-help-or-hurt-course-completion&#34;&gt;Does taking a 2 week break help or hurt course completion?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#which-courses-tend-to-be-repeated-by-students&#34;&gt;Which courses tend to be repeated by students?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#can-we-predict-the-number-of-courses-a-student-will-complete-using-machine-learning&#34;&gt;Can we predict the number of courses a student will complete using machine learning?&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#fitting-a-baseline-model&#34;&gt;Fitting a baseline model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#creating-traincontrol&#34;&gt;Creating trainControl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#fitting-a-random-forest-model&#34;&gt;Fitting a random forest model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#fitting-a-glmnet-model&#34;&gt;Fitting a glmnet model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#comparing-model-fit&#34;&gt;Comparing Model Fit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#conclusions&#34;&gt;Conclusions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#my-suggestions&#34;&gt;My Suggestions:&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.freecodecamp.com/&#34;&gt;Free Code Camp&lt;/a&gt; (FCC) is an online, self-paced, collection of massive open online courses (MOOCs) aimed at teaching users to code. Campers can log onto the service, complete coding challenges and projects, and earn certificates commemorating their completion. The topics covered include HTML5, CSS3, JavaScript, Databases, Git &amp;amp; Github, Node.js, React.js, and D3.js.&lt;/p&gt;
+
+&lt;p&gt;In December of 2015, FCC released &lt;a href=&#34;https://medium.freecodecamp.com/free-code-camp-christmas-special-giving-the-gift-of-data-6ecbf0313d62#.ibujuvlhc&#34;&gt;lots of data&lt;/a&gt; regarding the progress and solutions of their users throughout the courses. When I say lots, I mean there are data for over 100,000 students here!&lt;/p&gt;
+
+&lt;p&gt;Without having first looked at the dataset, the first questions I may consider are those posed by FCC itself:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Can our campers be broken down into cohort groups based on challenge completion behavior?&lt;/li&gt;
+&lt;li&gt;Is there a challenge completion tempo that typifies high-achieving campers? One that typifies slow-and-steady campers?&lt;/li&gt;
+&lt;li&gt;Many campers will leave Free Code Camp for several months due to burnout, or life getting in the way, then return a few months later. Are there any meaningful patterns here?&lt;/li&gt;
+&lt;li&gt;What proportion of campers complete challenges mostly in order, as opposed to skipping around?&lt;/li&gt;
+&lt;li&gt;What proportion of campers dive directly into harder challenges, then work backward until they are able to start successfully completing challenges?&lt;/li&gt;
+&lt;li&gt;Are there any challenges that seem excessively hard, and require significantly more time investment than adjacent challenges?&lt;/li&gt;
+&lt;li&gt;Are there any challenges that are disproportionately popular, considering their later position within our curriculum?&lt;/li&gt;
+&lt;li&gt;Which challenges support the most diverse solutions?&lt;/li&gt;
+&lt;li&gt;Are campers more likely to use Object Oriented Programming solutions or Functional Programming solutions?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That&amp;rsquo;s certainly a good place to start. I don&amp;rsquo;t think I&amp;rsquo;ll get to answer all of those in this project, but I&amp;rsquo;ll answer some.&lt;/p&gt;
+
+&lt;p&gt;Time to look at the data!&lt;/p&gt;
+
+&lt;h3 id=&#34;importing-necessary-packages&#34;&gt;Importing Necessary Packages&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# For importing JSON data
+library(tidyjson)
+library(jsonlite)
+library(data.table)
+
+# For data manipulation and tidying
+library(dplyr)
+library(tidyr)
+library(Hmisc)
+
+# For data visualizations
+library(ggplot2)
+library(highcharter)
+library(igraph)
+library(networkD3)
+library(htmlwidgets)
+
+# For web scraping
+library(rvest)
+library(curl)
+
+# For machine learning
+library(caret)
+library(ranger)
+library(e1071)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;data-exploration&#34;&gt;Data Exploration&lt;/h2&gt;
+
+&lt;h3 id=&#34;importing-dataset&#34;&gt;Importing Dataset&lt;/h3&gt;
+
+&lt;p&gt;The data are freely available from FCC and can be downloaded &lt;a href=&#34;http://academictorrents.com/details/030b10dad0846b5aecc3905692890fb02404adbf&#34;&gt;here&lt;/a&gt;. I&amp;rsquo;m going to import the data using the&lt;code&gt;jsonlite&lt;/code&gt;, &lt;code&gt;tidyjson&lt;/code&gt; and &lt;code&gt;data.table&lt;/code&gt; packages.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note: my poor little laptop couldn&amp;rsquo;t handle importing/binding these files. I am lucky enough that &lt;a href=&#34;http://www.animoplex.com&#34;&gt;Parker&lt;/a&gt; let me use his animation rendering machine (i.e. work-horse in computer form) to complete this project.&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Import JSON using the jsonlite package
+fcc &amp;lt;- fromJSON(&amp;quot;output.json&amp;quot;, flatten = TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we have a list of data frames. Time to bind them into a giant data frame using the &lt;code&gt;data.table&lt;/code&gt; package.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;fcc_df &amp;lt;- rbindlist(fcc, fill = TRUE, idcol = TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Last thing is to convert the data.table to a data.frame (this one is in base R).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;fcc_df2 &amp;lt;- as.data.frame(fcc_df)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;data-structure-and-variables&#34;&gt;Data Structure and Variables&lt;/h3&gt;
+
+&lt;p&gt;Great! Now that our data is imported, we can get a look at it. I&amp;rsquo;ll start by looking at it&amp;rsquo;s structure.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(fcc_df2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## &#39;data.frame&#39;:    7236580 obs. of  4 variables:
+##  $ .id          : int  1 1 1 1 1 1 1 1 1 1 ...
+##  $ name         : chr  &amp;quot;Waypoint: Learn how Free Code Camp Works&amp;quot; &amp;quot;Waypoint: Learn how Free Code Camp Works&amp;quot; &amp;quot;Waypoint: Preview our Challenge Map&amp;quot; &amp;quot;Waypoint: Browse our Field Guide&amp;quot; ...
+##  $ completedDate: chr  &amp;quot;1434650566196&amp;quot; &amp;quot;1434650582665&amp;quot; &amp;quot;1434651100007&amp;quot; &amp;quot;1434651311734&amp;quot; ...
+##  $ solution     : chr  NA NA NA NA ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ok, so as expected, we are working with a data frame with 4 variables and &lt;strong&gt;7,236,580&lt;/strong&gt; observations! No wonder my laptop couldn&amp;rsquo;t handle it.&lt;/p&gt;
+
+&lt;p&gt;Our 4 variables are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;.id&lt;/strong&gt; : The ID number created when binding our list of data frames into a single data frame. In this case, it corresponds to FCC user number.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt; : The FCC course completed&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;completedDate&lt;/strong&gt; : The date the course was completed (as a Unix timestamp in milliseconds)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;solution&lt;/strong&gt; :The user&amp;rsquo;s solution to the course challenge.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While a character string is fine for the &amp;ldquo;solution&amp;rdquo; column, I&amp;rsquo;m going to change the data type of the name, id, and completedDate columns. Name and id should both be factors.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;fcc_df2$name &amp;lt;- as.factor(fcc_df2$name)
+fcc_df2$.id &amp;lt;- as.factor(fcc_df2$.id)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;How many users are we dealing with?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;fcc_df2 %&amp;gt;% summarise(n_distinct(.id))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##   n_distinct(.id)
+## 1          103091
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;103,091 different users!&lt;/p&gt;
+
+&lt;p&gt;How many challenges are there? And do we have any duplicates?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;levels(fcc_df2$name)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##   [1] &amp;quot;&amp;quot;                                                                          
+##   [2] &amp;quot;: Use the Javascript Console&amp;quot;                                              
+##   [3] &amp;quot;: Using typeof&amp;quot;                                                            
+##   [4] &amp;quot;Apply Angular.js Directives&amp;quot;                                               
+##   [5] &amp;quot;Arguments Optional&amp;quot;                                                        
+##   [6] &amp;quot;Basejump: Build a Nightlife Coordination App&amp;quot;                              
+##   [7] &amp;quot;Basejump: Build a Pinterest Clone&amp;quot;                                         
+##   [8] &amp;quot;Basejump: Build a Pintrest Clone&amp;quot;                                          
+##   [9] &amp;quot;Basejump: Build a Voting App&amp;quot;                                              
+##  [10] &amp;quot;Basejump: Chart the Stock Market&amp;quot;                                          
+##  [11] &amp;quot;Basejump: Manage a Book Trading Club&amp;quot;                                      
+##  [12] &amp;quot;Basejumps: Build a Nightlife Coordination App&amp;quot;                             
+##  [13] &amp;quot;Basejumps: Build a Pinterest Clone&amp;quot;                                        
+##  [14] &amp;quot;Basejumps: Build a Voting App&amp;quot;                                             
+##  [15] &amp;quot;Basejumps: Chart the Stock Market&amp;quot;                                         
+##  [16] &amp;quot;Basejumps: Manage a Book Trading Club&amp;quot;                                     
+##  [17] &amp;quot;Binary Agents&amp;quot;                                                             
+##  [18] &amp;quot;Bonfire: Arguments Optional&amp;quot;                                               
+##  [19] &amp;quot;Bonfire: Binary Agents&amp;quot;                                                    
+##  [20] &amp;quot;Bonfire: Boo who&amp;quot;                                                          
+##  [21] &amp;quot;Bonfire: Check for Palindromes&amp;quot;                                            
+##  [22] &amp;quot;Bonfire: Chunky Monkey&amp;quot;                                                    
+##  [23] &amp;quot;Bonfire: Confirm the Ending&amp;quot;                                               
+##  [24] &amp;quot;Bonfire: Convert HTML Entities&amp;quot;                                            
+##  [25] &amp;quot;Bonfire: Diff Two Arrays&amp;quot;                                                  
+##  [26] &amp;quot;Bonfire: DNA Pairing&amp;quot;                                                      
+##  [27] &amp;quot;Bonfire: Drop it&amp;quot;                                                          
+##  [28] &amp;quot;Bonfire: Everything Be True&amp;quot;                                               
+##  [29] &amp;quot;Bonfire: Exact Change&amp;quot;                                                     
+##  [30] &amp;quot;Bonfire: Factorialize a Number&amp;quot;                                            
+##  [31] &amp;quot;Bonfire: Falsey Bouncer&amp;quot;                                                   
+##  [32] &amp;quot;Bonfire: Falsy Bouncer&amp;quot;                                                    
+##  [33] &amp;quot;Bonfire: Find the Longest Word in a String&amp;quot;                                
+##  [34] &amp;quot;Bonfire: Finders Keepers&amp;quot;                                                  
+##  [35] &amp;quot;Bonfire: Friendly Date Ranges&amp;quot;                                             
+##  [36] &amp;quot;Bonfire: Inventory Update&amp;quot;                                                 
+##  [37] &amp;quot;Bonfire: Make a Person&amp;quot;                                                    
+##  [38] &amp;quot;Bonfire: Map the Debris&amp;quot;                                                   
+##  [39] &amp;quot;Bonfire: Meet Bonfire&amp;quot;                                                     
+##  [40] &amp;quot;Bonfire: Missing letters&amp;quot;                                                  
+##  [41] &amp;quot;Bonfire: Mutations&amp;quot;                                                        
+##  [42] &amp;quot;Bonfire: No repeats please&amp;quot;                                                
+##  [43] &amp;quot;Bonfire: Pairwise&amp;quot;                                                         
+##  [44] &amp;quot;Bonfire: Pig Latin&amp;quot;                                                        
+##  [45] &amp;quot;Bonfire: Repeat a string repeat a string&amp;quot;                                  
+##  [46] &amp;quot;Bonfire: Return Largest Numbers in Arrays&amp;quot;                                 
+##  [47] &amp;quot;Bonfire: Reverse a String&amp;quot;                                                 
+##  [48] &amp;quot;Bonfire: Roman Numeral Converter&amp;quot;                                          
+##  [49] &amp;quot;Bonfire: Search and Replace&amp;quot;                                               
+##  [50] &amp;quot;Bonfire: Seek and Destroy&amp;quot;                                                 
+##  [51] &amp;quot;Bonfire: Slasher Flick&amp;quot;                                                    
+##  [52] &amp;quot;Bonfire: Smallest Common Multiple&amp;quot;                                         
+##  [53] &amp;quot;Bonfire: Sorted Union&amp;quot;                                                     
+##  [54] &amp;quot;Bonfire: Spinal Tap Case&amp;quot;                                                  
+##  [55] &amp;quot;Bonfire: Steamroller&amp;quot;                                                      
+##  [56] &amp;quot;Bonfire: Sum All Numbers in a Range&amp;quot;                                       
+##  [57] &amp;quot;Bonfire: Sum All Odd Fibonacci Numbers&amp;quot;                                    
+##  [58] &amp;quot;Bonfire: Sum All Primes&amp;quot;                                                   
+##  [59] &amp;quot;Bonfire: Symmetric Difference&amp;quot;                                             
+##  [60] &amp;quot;Bonfire: Title Case a Sentence&amp;quot;                                            
+##  [61] &amp;quot;Bonfire: Truncate a string&amp;quot;                                                
+##  [62] &amp;quot;Bonfire: Validate US Telephone Numbers&amp;quot;                                    
+##  [63] &amp;quot;Bonfire: Where art thou&amp;quot;                                                   
+##  [64] &amp;quot;Bonfire: Where do I belong&amp;quot;                                                
+##  [65] &amp;quot;Boo who&amp;quot;                                                                   
+##  [66] &amp;quot;Browse our Field Guide&amp;quot;                                                    
+##  [67] &amp;quot;Build a Cash Register&amp;quot;                                                     
+##  [68] &amp;quot;Build a Contact List&amp;quot;                                                      
+##  [69] &amp;quot;Build a Geolocation Angular App&amp;quot;                                           
+##  [70] &amp;quot;Build a Landing Page with HTML&amp;quot;                                            
+##  [71] &amp;quot;Build an Address Book&amp;quot;                                                     
+##  [72] &amp;quot;Build an Adventure Game&amp;quot;                                                   
+##  [73] &amp;quot;Build Rock Paper Scissors&amp;quot;                                                 
+##  [74] &amp;quot;Build Web Apps with Express.js&amp;quot;                                            
+##  [75] &amp;quot;Cash Register&amp;quot;                                                             
+##  [76] &amp;quot;Check for Palindromes&amp;quot;                                                     
+##  [77] &amp;quot;Chunky Monkey&amp;quot;                                                             
+##  [78] &amp;quot;Confirm the Ending&amp;quot;                                                        
+##  [79] &amp;quot;Convert HTML Entities&amp;quot;                                                     
+##  [80] &amp;quot;Create Angular.js Services&amp;quot;                                                
+##  [81] &amp;quot;Customize Angular.js Directives&amp;quot;                                           
+##  [82] &amp;quot;Customize your Porfolio Page&amp;quot;                                              
+##  [83] &amp;quot;Customize your Portfolio Page&amp;quot;                                             
+##  [84] &amp;quot;Design a Layout with HTML&amp;quot;                                                 
+##  [85] &amp;quot;Design Responsively with Bootstrap&amp;quot;                                        
+##  [86] &amp;quot;Diff Two Arrays&amp;quot;                                                           
+##  [87] &amp;quot;Discover Chrome&#39;s DevTools&amp;quot;                                                
+##  [88] &amp;quot;DNA Pairing&amp;quot;                                                               
+##  [89] &amp;quot;Drop it like it&#39;s hot&amp;quot;                                                     
+##  [90] &amp;quot;Everything Be True&amp;quot;                                                        
+##  [91] &amp;quot;Factorialize a Number&amp;quot;                                                     
+##  [92] &amp;quot;Falsey Bouncer&amp;quot;                                                            
+##  [93] &amp;quot;Find the Longest Word in a String&amp;quot;                                         
+##  [94] &amp;quot;Finders Keepers&amp;quot;                                                           
+##  [95] &amp;quot;Friendly Date Ranges&amp;quot;                                                      
+##  [96] &amp;quot;Get Help the Hacker Way with RSAP&amp;quot;                                         
+##  [97] &amp;quot;Get Set for Basejumps&amp;quot;                                                     
+##  [98] &amp;quot;Get Set for Ziplines&amp;quot;                                                      
+##  [99] &amp;quot;Get Started with Angular.js&amp;quot;                                               
+## [100] &amp;quot;Get Started with jQuery&amp;quot;                                                   
+## [101] &amp;quot;Harness Dynamic HTML&amp;quot;                                                      
+## [102] &amp;quot;Inventory Update&amp;quot;                                                          
+## [103] &amp;quot;Join Our Chat Room&amp;quot;                                                        
+## [104] &amp;quot;Learn Basic Computer Science&amp;quot;                                              
+## [105] &amp;quot;Learn Boolean Logic&amp;quot;                                                       
+## [106] &amp;quot;Learn Computer Hardware&amp;quot;                                                   
+## [107] &amp;quot;Learn Computer Networking&amp;quot;                                                 
+## [108] &amp;quot;Learn Computer Security&amp;quot;                                                   
+## [109] &amp;quot;Learn Control Flow&amp;quot;                                                        
+## [110] &amp;quot;Learn how Free Code Camp Works&amp;quot;                                            
+## [111] &amp;quot;Learn JavaScript For Loops&amp;quot;                                                
+## [112] &amp;quot;Learn JavaScript While Loops&amp;quot;                                              
+## [113] &amp;quot;Learn Loops&amp;quot;                                                               
+## [114] &amp;quot;Learn Regular Expressions&amp;quot;                                                 
+## [115] &amp;quot;Listen for jQuery Events&amp;quot;                                                  
+## [116] &amp;quot;Make a Person&amp;quot;                                                             
+## [117] &amp;quot;Manage Packages with NPM&amp;quot;                                                  
+## [118] &amp;quot;Manage Source Code with Git&amp;quot;                                               
+## [119] &amp;quot;Map the Debris&amp;quot;                                                            
+## [120] &amp;quot;Meet Bonfire&amp;quot;                                                              
+## [121] &amp;quot;Meet Other Campers in your City&amp;quot;                                           
+## [122] &amp;quot;Missing letters&amp;quot;                                                           
+## [123] &amp;quot;Mutations&amp;quot;                                                                 
+## [124] &amp;quot;No repeats please&amp;quot;                                                         
+## [125] &amp;quot;Pair Program on Bonfires&amp;quot;                                                  
+## [126] &amp;quot;Pairwise&amp;quot;                                                                  
+## [127] &amp;quot;Pig Latin&amp;quot;                                                                 
+## [128] &amp;quot;Power Forms with Angular.js&amp;quot;                                               
+## [129] &amp;quot;Preview our Challenge Map&amp;quot;                                                 
+## [130] &amp;quot;Repeat a string repeat a string&amp;quot;                                           
+## [131] &amp;quot;Return Largest Numbers in Arrays&amp;quot;                                          
+## [132] &amp;quot;Reverse a String&amp;quot;                                                          
+## [133] &amp;quot;Roman Numeral Converter&amp;quot;                                                   
+## [134] &amp;quot;Search and Replace&amp;quot;                                                        
+## [135] &amp;quot;Seek and Destroy&amp;quot;                                                          
+## [136] &amp;quot;Slasher Flick&amp;quot;                                                             
+## [137] &amp;quot;Smallest Common Multiple&amp;quot;                                                  
+## [138] &amp;quot;Sorted Union&amp;quot;                                                              
+## [139] &amp;quot;Space Out with CSS&amp;quot;                                                        
+## [140] &amp;quot;Spinal Tap Case&amp;quot;                                                           
+## [141] &amp;quot;Start a Node.js Server&amp;quot;                                                    
+## [142] &amp;quot;Steamroller&amp;quot;                                                               
+## [143] &amp;quot;Structure Angular.js Routes&amp;quot;                                               
+## [144] &amp;quot;Style Text with CSS&amp;quot;                                                       
+## [145] &amp;quot;Sum All Numbers in a Range&amp;quot;                                                
+## [146] &amp;quot;Sum All Odd Fibonacci Numbers&amp;quot;                                             
+## [147] &amp;quot;Sum All Primes&amp;quot;                                                            
+## [148] &amp;quot;Symmetric Difference&amp;quot;                                                      
+## [149] &amp;quot;Title Case a Sentence&amp;quot;                                                     
+## [150] &amp;quot;Trigger jQuery Effects&amp;quot;                                                    
+## [151] &amp;quot;Truncate a string&amp;quot;                                                         
+## [152] &amp;quot;Try Camper News&amp;quot;                                                           
+## [153] &amp;quot;Validate US Telephone Numbers&amp;quot;                                             
+## [154] &amp;quot;Waypoint: Access Array Data with Indexes&amp;quot;                                  
+## [155] &amp;quot;Waypoint: Add a Negative Margin to an Element&amp;quot;                             
+## [156] &amp;quot;Waypoint: Add a Submit Button to a Form&amp;quot;                                   
+## [157] &amp;quot;Waypoint: Add Alt Text to an Image for Accessibility&amp;quot;                      
+## [158] &amp;quot;Waypoint: Add Borders Around your Elements&amp;quot;                                
+## [159] &amp;quot;Waypoint: Add Different a Margin to Each Side of an Element&amp;quot;               
+## [160] &amp;quot;Waypoint: Add Different Margins to Each Side of an Element&amp;quot;                
+## [161] &amp;quot;Waypoint: Add Different Padding to Each Side of an Element&amp;quot;                
+## [162] &amp;quot;Waypoint: Add Elements within your Bootstrap Wells&amp;quot;                        
+## [163] &amp;quot;Waypoint: Add Font Awesome Icons all of our Buttons&amp;quot;                       
+## [164] &amp;quot;Waypoint: Add Font Awesome Icons to all of our Buttons&amp;quot;                    
+## [165] &amp;quot;Waypoint: Add Font Awesome Icons to our Buttons&amp;quot;                           
+## [166] &amp;quot;Waypoint: Add Free Code Camp to your LinkedIn Profile&amp;quot;                     
+## [167] &amp;quot;Waypoint: Add ID Attributes to Bootstrap Elements&amp;quot;                         
+## [168] &amp;quot;Waypoint: Add Images to your Website&amp;quot;                                      
+## [169] &amp;quot;Waypoint: Add New Properties to a JavaScript Object&amp;quot;                       
+## [170] &amp;quot;Waypoint: Add Placeholder Text to a Text Field&amp;quot;                            
+## [171] &amp;quot;Waypoint: Add Rounded Corners with a Border Radius&amp;quot;                        
+## [172] &amp;quot;Waypoint: Add Two Numbers with JavaScript&amp;quot;                                 
+## [173] &amp;quot;Waypoint: Add your JavaScript Slot Machine Slots&amp;quot;                          
+## [174] &amp;quot;Waypoint: Adjust the Margin of an Element&amp;quot;                                 
+## [175] &amp;quot;Waypoint: Adjusting the Padding of an Element&amp;quot;                             
+## [176] &amp;quot;Waypoint: Apply Angular.js Directives&amp;quot;                                     
+## [177] &amp;quot;Waypoint: Apply Angularjs Directives&amp;quot;                                      
+## [178] &amp;quot;Waypoint: Apply the Default Bootstrap Button Style&amp;quot;                        
+## [179] &amp;quot;Waypoint: Bring your JavaScript Slot Machine to Life&amp;quot;                      
+## [180] &amp;quot;Waypoint: Browse Camper News&amp;quot;                                              
+## [181] &amp;quot;Waypoint: Browse our Field Guide&amp;quot;                                          
+## [182] &amp;quot;Waypoint: Build a Cash Register&amp;quot;                                           
+## [183] &amp;quot;Waypoint: Build a Contact List&amp;quot;                                            
+## [184] &amp;quot;Waypoint: Build an Address Book&amp;quot;                                           
+## [185] &amp;quot;Waypoint: Build an Adventure Game&amp;quot;                                         
+## [186] &amp;quot;Waypoint: Build JavaScript Objects&amp;quot;                                        
+## [187] &amp;quot;Waypoint: Build Objects with Functional Classes&amp;quot;                           
+## [188] &amp;quot;Waypoint: Build Objects with Prototypal Classes&amp;quot;                           
+## [189] &amp;quot;Waypoint: Build Rock Paper Scissors&amp;quot;                                       
+## [190] &amp;quot;Waypoint: Build Web Apps with Express.js&amp;quot;                                  
+## [191] &amp;quot;Waypoint: Build Web Apps with Expressjs&amp;quot;                                   
+## [192] &amp;quot;Waypoint: Call out Optional Actions with Button Info&amp;quot;                      
+## [193] &amp;quot;Waypoint: Center Text with Bootstrap&amp;quot;                                      
+## [194] &amp;quot;Waypoint: Change Text Inside an Element Using jQuery&amp;quot;                      
+## [195] &amp;quot;Waypoint: Change Text with Click Events&amp;quot;                                   
+## [196] &amp;quot;Waypoint: Change the Color of Text&amp;quot;                                        
+## [197] &amp;quot;Waypoint: Change the CSS of an Element Using jQuery&amp;quot;                       
+## [198] &amp;quot;Waypoint: Change the Font Size of an Element&amp;quot;                              
+## [199] &amp;quot;Waypoint: Check Radio Buttons and Checkboxes by Default&amp;quot;                   
+## [200] &amp;quot;Waypoint: Check the Length Property of a String Variable&amp;quot;                  
+## [201] &amp;quot;Waypoint: Claim Your Back End Development Certificate&amp;quot;                     
+## [202] &amp;quot;Waypoint: Claim Your Front End Development Certificate&amp;quot;                    
+## [203] &amp;quot;Waypoint: Claim Your Full Stack Development Certificate&amp;quot;                   
+## [204] &amp;quot;Waypoint: Clean up your form using Linebreaks&amp;quot;                             
+## [205] &amp;quot;Waypoint: Clone an Element Using jQuery&amp;quot;                                   
+## [206] &amp;quot;Waypoint: Comment out HTML&amp;quot;                                                
+## [207] &amp;quot;Waypoint: Comment your JavaScript Code&amp;quot;                                    
+## [208] &amp;quot;Waypoint: Commit to a Goal and a Nonprofit&amp;quot;                                
+## [209] &amp;quot;Waypoint: Concatenate Arrays with concat&amp;quot;                                  
+## [210] &amp;quot;Waypoint: Concatenate Strings with concat&amp;quot;                                 
+## [211] &amp;quot;Waypoint: Condense arrays with reduce&amp;quot;                                     
+## [212] &amp;quot;Waypoint: Configure your Code Portfolio&amp;quot;                                   
+## [213] &amp;quot;Waypoint: Configure your Public Profile&amp;quot;                                   
+## [214] &amp;quot;Waypoint: Construct JavaScript Objects with Functions&amp;quot;                     
+## [215] &amp;quot;Waypoint: Constructing JavaScript Objects with Functions&amp;quot;                  
+## [216] &amp;quot;Waypoint: Continue working with Node.js Servers&amp;quot;                           
+## [217] &amp;quot;Waypoint: Continue working with Nodejs Servers&amp;quot;                            
+## [218] &amp;quot;Waypoint: Convert JSON Data to HTML&amp;quot;                                       
+## [219] &amp;quot;Waypoint: Count Backwards With a For Loop&amp;quot;                                 
+## [220] &amp;quot;Waypoint: Create a Block Element Bootstrap Button&amp;quot;                         
+## [221] &amp;quot;Waypoint: Create a Bootstrap Button&amp;quot;                                       
+## [222] &amp;quot;Waypoint: Create a Bootstrap Headline&amp;quot;                                     
+## [223] &amp;quot;Waypoint: Create a Bootstrap Row&amp;quot;                                          
+## [224] &amp;quot;Waypoint: Create a Bulleted Unordered List&amp;quot;                                
+## [225] &amp;quot;Waypoint: Create a Class to Target with jQuery Selectors&amp;quot;                  
+## [226] &amp;quot;Waypoint: Create a Custom Heading&amp;quot;                                         
+## [227] &amp;quot;Waypoint: Create a Form Element&amp;quot;                                           
+## [228] &amp;quot;Waypoint: Create a GitHub Account and Join our Chat Rooms&amp;quot;                 
+## [229] &amp;quot;Waypoint: Create a JavaScript Slot Machine&amp;quot;                                
+## [230] &amp;quot;Waypoint: Create a Set of Checkboxes&amp;quot;                                      
+## [231] &amp;quot;Waypoint: Create a Set of Radio Buttons&amp;quot;                                   
+## [232] &amp;quot;Waypoint: Create a Text Field&amp;quot;                                             
+## [233] &amp;quot;Waypoint: Create an Ordered List&amp;quot;                                          
+## [234] &amp;quot;Waypoint: Create Angular.js Services&amp;quot;                                      
+## [235] &amp;quot;Waypoint: Create Angularjs Services&amp;quot;                                       
+## [236] &amp;quot;Waypoint: Create Bootstrap Wells&amp;quot;                                          
+## [237] &amp;quot;Waypoint: Create Decimal Numbers with JavaScript&amp;quot;                          
+## [238] &amp;quot;Waypoint: Customize Angular.js Directives&amp;quot;                                 
+## [239] &amp;quot;Waypoint: Customize Angularjs Directives&amp;quot;                                  
+## [240] &amp;quot;Waypoint: Customize your Portfolio Page&amp;quot;                                   
+## [241] &amp;quot;Waypoint: Declare JavaScript Objects as Variables&amp;quot;                         
+## [242] &amp;quot;Waypoint: Declare JavaScript Variables&amp;quot;                                    
+## [243] &amp;quot;Waypoint: Declare String Variables&amp;quot;                                        
+## [244] &amp;quot;Waypoint: Declaring JavaScript Objects as Variables&amp;quot;                       
+## [245] &amp;quot;Waypoint: Delete HTML Elements&amp;quot;                                            
+## [246] &amp;quot;Waypoint: Delete Properties from a JavaScript Object&amp;quot;                      
+## [247] &amp;quot;Waypoint: Delete your jQuery Functions&amp;quot;                                    
+## [248] &amp;quot;Waypoint: Disable an Element Using jQuery&amp;quot;                                 
+## [249] &amp;quot;Waypoint: Discover Chrome DevTools&amp;quot;                                        
+## [250] &amp;quot;Waypoint: Ditch Custom CSS for Bootstrap&amp;quot;                                  
+## [251] &amp;quot;Waypoint: Divide one Decimal by Another with JavaScript&amp;quot;                   
+## [252] &amp;quot;Waypoint: Divide One Number by Another with JavaScript&amp;quot;                    
+## [253] &amp;quot;Waypoint: Duplicate Instances of Objects from a Constructor Function&amp;quot;      
+## [254] &amp;quot;Waypoint: Fill in the Blank with Placeholder Text&amp;quot;                         
+## [255] &amp;quot;Waypoint: Filter Arrays with filter&amp;quot;                                       
+## [256] &amp;quot;Waypoint: Find Numbers with Regular Expressions&amp;quot;                           
+## [257] &amp;quot;Waypoint: Find White Space with Regular Expressions&amp;quot;                       
+## [258] &amp;quot;Waypoint: Find Whitespace with Regular Expressions&amp;quot;                        
+## [259] &amp;quot;Waypoint: Finish working with Node.js Servers&amp;quot;                             
+## [260] &amp;quot;Waypoint: Finish working with Nodejs Servers&amp;quot;                              
+## [261] &amp;quot;Waypoint: Generate Random Fractions with JavaScript&amp;quot;                       
+## [262] &amp;quot;Waypoint: Generate Random Whole Numbers with JavaScript&amp;quot;                   
+## [263] &amp;quot;Waypoint: Generate Random Whole Numbers within a Range&amp;quot;                    
+## [264] &amp;quot;Waypoint: Get Geolocation Data&amp;quot;                                            
+## [265] &amp;quot;Waypoint: Get Help the Hacker Way with RSAP&amp;quot;                               
+## [266] &amp;quot;Waypoint: Get JSON with the jQuery getJSON Method&amp;quot;                         
+## [267] &amp;quot;Waypoint: Get Set for Basejumps&amp;quot;                                           
+## [268] &amp;quot;Waypoint: Get Set for Bonfires&amp;quot;                                            
+## [269] &amp;quot;Waypoint: Get Set for Ziplines&amp;quot;                                            
+## [270] &amp;quot;Waypoint: Get Started with Angular.js&amp;quot;                                     
+## [271] &amp;quot;Waypoint: Get Started with Angularjs&amp;quot;                                      
+## [272] &amp;quot;Waypoint: Get Started with jQuery&amp;quot;                                         
+## [273] &amp;quot;Waypoint: Give a Background Color to a Div Element&amp;quot;                        
+## [274] &amp;quot;Waypoint: Give Each Element a Unique ID&amp;quot;                                   
+## [275] &amp;quot;Waypoint: Give your JavaScript Slot Machine some stylish images&amp;quot;           
+## [276] &amp;quot;Waypoint: Give your JavaScript Slot Machine some Stylish Images&amp;quot;           
+## [277] &amp;quot;Waypoint: Harness Dynamic HTML&amp;quot;                                            
+## [278] &amp;quot;Waypoint: Headline with the h2 Element&amp;quot;                                    
+## [279] &amp;quot;Waypoint: House our page within a Bootstrap Container Fluid Div&amp;quot;           
+## [280] &amp;quot;Waypoint: Import a Google Font&amp;quot;                                            
+## [281] &amp;quot;Waypoint: Inform with the Paragraph Element&amp;quot;                               
+## [282] &amp;quot;Waypoint: Inherit Styles from the Body Element&amp;quot;                            
+## [283] &amp;quot;Waypoint: Invert Regular Expression Matches with JavaScript&amp;quot;               
+## [284] &amp;quot;Waypoint: Iterate Odd Numbers With a For Loop&amp;quot;                             
+## [285] &amp;quot;Waypoint: Iterate over Arrays with map&amp;quot;                                    
+## [286] &amp;quot;Waypoint: Iterate with JavaScript For Loops&amp;quot;                               
+## [287] &amp;quot;Waypoint: Iterate with JavaScript While Loops&amp;quot;                             
+## [288] &amp;quot;Waypoint: Join a Campsite in Your City&amp;quot;                                    
+## [289] &amp;quot;Waypoint: Join our Alumni Network and Commit to Your Goal&amp;quot;                 
+## [290] &amp;quot;Waypoint: Join Our Chat Room&amp;quot;                                              
+## [291] &amp;quot;Waypoint: Join our LinkedIn Alumni Network&amp;quot;                                
+## [292] &amp;quot;Waypoint: Join Strings with join&amp;quot;                                          
+## [293] &amp;quot;Waypoint: Label Bootstrap Buttons&amp;quot;                                         
+## [294] &amp;quot;Waypoint: Label Bootstrap Wells&amp;quot;                                           
+## [295] &amp;quot;Waypoint: Learn Basic Computer Science&amp;quot;                                    
+## [296] &amp;quot;Waypoint: Learn Boolean Logic&amp;quot;                                             
+## [297] &amp;quot;Waypoint: Learn Computer Hardware&amp;quot;                                         
+## [298] &amp;quot;Waypoint: Learn Computer Networking&amp;quot;                                       
+## [299] &amp;quot;Waypoint: Learn Computer Security&amp;quot;                                         
+## [300] &amp;quot;Waypoint: Learn Control Flow&amp;quot;                                              
+## [301] &amp;quot;Waypoint: Learn how Free Code Camp Works&amp;quot;                                  
+## [302] &amp;quot;Waypoint: Learn how Script Tags and Document Ready Work&amp;quot;                   
+## [303] &amp;quot;Waypoint: Learn JavaScript For Loops&amp;quot;                                      
+## [304] &amp;quot;Waypoint: Learn JavaScript While Loops&amp;quot;                                    
+## [305] &amp;quot;Waypoint: Learn Loops&amp;quot;                                                     
+## [306] &amp;quot;Waypoint: Learn Regular Expressions&amp;quot;                                       
+## [307] &amp;quot;Waypoint: Learn What to Do If You Get Stuck&amp;quot;                               
+## [308] &amp;quot;Waypoint: Line up Form Elements Responsively with Bootstrap&amp;quot;               
+## [309] &amp;quot;Waypoint: Link to External Pages with Anchor Elements&amp;quot;                     
+## [310] &amp;quot;Waypoint: Listen for jQuery Events&amp;quot;                                        
+## [311] &amp;quot;Waypoint: Make Circular Images with a Border Radius&amp;quot;                       
+## [312] &amp;quot;Waypoint: Make Dead Links using the Hash Symbol&amp;quot;                           
+## [313] &amp;quot;Waypoint: Make Images Mobile Responsive&amp;quot;                                   
+## [314] &amp;quot;Waypoint: Make Instances of Objects with a Constructor Function&amp;quot;           
+## [315] &amp;quot;Waypoint: Make Object Properties Private&amp;quot;                                  
+## [316] &amp;quot;Waypoint: Make Unique Objects by Passing Parameters to our Constructor&amp;quot;    
+## [317] &amp;quot;Waypoint: Manage Packages with NPM&amp;quot;                                        
+## [318] &amp;quot;Waypoint: Manage Source Code with Git&amp;quot;                                     
+## [319] &amp;quot;Waypoint: Manipulate Arrays With pop&amp;quot;                                      
+## [320] &amp;quot;Waypoint: Manipulate Arrays With push&amp;quot;                                     
+## [321] &amp;quot;Waypoint: Manipulate Arrays With shift&amp;quot;                                    
+## [322] &amp;quot;Waypoint: Manipulate Arrays With unshift&amp;quot;                                  
+## [323] &amp;quot;Waypoint: Manipulate JavaScript Objects&amp;quot;                                   
+## [324] &amp;quot;Waypoint: Meet Other Campers in your City&amp;quot;                                 
+## [325] &amp;quot;Waypoint: Mobile Responsive Images&amp;quot;                                        
+## [326] &amp;quot;Waypoint: Modify Array Data With Indexes&amp;quot;                                  
+## [327] &amp;quot;Waypoint: Multiply Two Decimals with JavaScript&amp;quot;                           
+## [328] &amp;quot;Waypoint: Multiply Two Numbers with JavaScript&amp;quot;                            
+## [329] &amp;quot;Waypoint: Nest an Anchor Element within a Paragraph&amp;quot;                       
+## [330] &amp;quot;Waypoint: Nest Many Elements within a Single Div Element&amp;quot;                  
+## [331] &amp;quot;Waypoint: Nest one Array within Another Array&amp;quot;                             
+## [332] &amp;quot;Waypoint: Override All Other Styles by using Important&amp;quot;                    
+## [333] &amp;quot;Waypoint: Override Class Declarations by Styling ID Attributes&amp;quot;            
+## [334] &amp;quot;Waypoint: Override Class Declarations with Inline Styles&amp;quot;                  
+## [335] &amp;quot;Waypoint: Override Styles in Subsequent CSS&amp;quot;                               
+## [336] &amp;quot;Waypoint: Override Styles with Important&amp;quot;                                  
+## [337] &amp;quot;Waypoint: Pair Program on Bonfires&amp;quot;                                        
+## [338] &amp;quot;Waypoint: Perform Arithmetic Operations on Decimals with JavaScript&amp;quot;       
+## [339] &amp;quot;Waypoint: Power Forms with Angular.js&amp;quot;                                     
+## [340] &amp;quot;Waypoint: Power Forms with Angularjs&amp;quot;                                      
+## [341] &amp;quot;Waypoint: Practice Functional Programming&amp;quot;                                 
+## [342] &amp;quot;Waypoint: Prefilter JSON&amp;quot;                                                  
+## [343] &amp;quot;Waypoint: Preview our Challenge Map&amp;quot;                                       
+## [344] &amp;quot;Waypoint: Prioritize One Style Over Another&amp;quot;                               
+## [345] &amp;quot;Waypoint: Reference our Wiki&amp;quot;                                              
+## [346] &amp;quot;Waypoint: Reference your Current Object with This&amp;quot;                         
+## [347] &amp;quot;Waypoint: Remove an Element Using jQuery&amp;quot;                                  
+## [348] &amp;quot;Waypoint: Remove Classes from an element with jQuery&amp;quot;                      
+## [349] &amp;quot;Waypoint: Render Images from Data Sources&amp;quot;                                 
+## [350] &amp;quot;Waypoint: Responsively Style a Radio Buttons&amp;quot;                              
+## [351] &amp;quot;Waypoint: Responsively Style Checkboxes&amp;quot;                                   
+## [352] &amp;quot;Waypoint: Responsively Style Radio Buttons&amp;quot;                                
+## [353] &amp;quot;Waypoint: Reuse Code with Decorators&amp;quot;                                      
+## [354] &amp;quot;Waypoint: Reverse Arrays with reverse&amp;quot;                                     
+## [355] &amp;quot;Waypoint: Save your Code Revisions Forever with Git&amp;quot;                       
+## [356] &amp;quot;Waypoint: Say Hello to HTML Elements&amp;quot;                                      
+## [357] &amp;quot;Waypoint: Scope Your Variables&amp;quot;                                            
+## [358] &amp;quot;Waypoint: Set the Font Family of an Element&amp;quot;                               
+## [359] &amp;quot;Waypoint: Set the ID of an Element&amp;quot;                                        
+## [360] &amp;quot;Waypoint: Sift through Text with Regular Expressions&amp;quot;                      
+## [361] &amp;quot;Waypoint: Size your Images&amp;quot;                                                
+## [362] &amp;quot;Waypoint: Sort Arrays with sort&amp;quot;                                           
+## [363] &amp;quot;Waypoint: Specify How Fonts Should Degrade&amp;quot;                                
+## [364] &amp;quot;Waypoint: Split Strings with split&amp;quot;                                        
+## [365] &amp;quot;Waypoint: Split your Bootstrap Row&amp;quot;                                        
+## [366] &amp;quot;Waypoint: Start a Node.js Server&amp;quot;                                          
+## [367] &amp;quot;Waypoint: Start a Nodejs Server&amp;quot;                                           
+## [368] &amp;quot;Waypoint: Store Data in MongoDB&amp;quot;                                           
+## [369] &amp;quot;Waypoint: Store Multiple Values in one Variable using JavaScript Arrays&amp;quot;   
+## [370] &amp;quot;Waypoint: Style Multiple Elements with a CSS Class&amp;quot;                        
+## [371] &amp;quot;Waypoint: Style Multiple Elements with a CSS Classes&amp;quot;                      
+## [372] &amp;quot;Waypoint: Style Text Inputs as Form Controls&amp;quot;                              
+## [373] &amp;quot;Waypoint: Style the HTML Body Element&amp;quot;                                     
+## [374] &amp;quot;Waypoint: Subclass one Object to Another&amp;quot;                                  
+## [375] &amp;quot;Waypoint: Subtract One Number from Another with JavaScript&amp;quot;                
+## [376] &amp;quot;Waypoint: Target a Specific Child of an Element Using jQuery&amp;quot;              
+## [377] &amp;quot;Waypoint: Target Elements by Class Using jQuery&amp;quot;                           
+## [378] &amp;quot;Waypoint: Target Elements by ID Using jQuery&amp;quot;                              
+## [379] &amp;quot;Waypoint: Target Even Numbered Elements Using jQuery&amp;quot;                      
+## [380] &amp;quot;Waypoint: Target HTML Elements with Selectors Using jQuery&amp;quot;                
+## [381] &amp;quot;Waypoint: Target the Children of an Element Using jQuery&amp;quot;                  
+## [382] &amp;quot;Waypoint: Target the Parent of an Element Using jQuery&amp;quot;                    
+## [383] &amp;quot;Waypoint: Target the same element with multiple jQuery Selectors&amp;quot;          
+## [384] &amp;quot;Waypoint: Taste the Bootstrap Button Color Rainbow&amp;quot;                        
+## [385] &amp;quot;Waypoint: Traverse the Prototype Chain&amp;quot;                                    
+## [386] &amp;quot;Waypoint: Trigger Click Events with jQuery&amp;quot;                                
+## [387] &amp;quot;Waypoint: Trigger jQuery Effects&amp;quot;                                          
+## [388] &amp;quot;Waypoint: Trigger on click Events with jQuery&amp;quot;                             
+## [389] &amp;quot;Waypoint: Try Camper News&amp;quot;                                                 
+## [390] &amp;quot;Waypoint: Turn an Image into a Link&amp;quot;                                       
+## [391] &amp;quot;Waypoint: Uncomment HTML&amp;quot;                                                  
+## [392] &amp;quot;Waypoint: Understand Boolean Values&amp;quot;                                       
+## [393] &amp;quot;Waypoint: Understand Pseudoclassical Patterns&amp;quot;                             
+## [394] &amp;quot;Waypoint: Understanding Public and Private Properties&amp;quot;                     
+## [395] &amp;quot;Waypoint: Update the Properties of a JavaScript Object&amp;quot;                    
+## [396] &amp;quot;Waypoint: Use a CSS Class to Style an Element&amp;quot;                             
+## [397] &amp;quot;Waypoint: Use Abbreviated Hex Code&amp;quot;                                        
+## [398] &amp;quot;Waypoint: Use an ID Attribute to Style an Element&amp;quot;                         
+## [399] &amp;quot;Waypoint: Use appendTo to Move Elements with jQuery&amp;quot;                       
+## [400] &amp;quot;Waypoint: Use Bracket Notation to Find the First Character in a String&amp;quot;    
+## [401] &amp;quot;Waypoint: Use Bracket Notation to Find the Last Character in a String&amp;quot;     
+## [402] &amp;quot;Waypoint: Use Bracket Notation to Find the Nth Character in a String&amp;quot;      
+## [403] &amp;quot;Waypoint: Use Bracket Notation to Find the NthtoLast Character in a String&amp;quot;
+## [404] &amp;quot;Waypoint: Use Clockwise Notation to Specify the Margin of an Element&amp;quot;      
+## [405] &amp;quot;Waypoint: Use Clockwise Notation to Specify the Padding of an Element&amp;quot;     
+## [406] &amp;quot;Waypoint: Use Comments to Clarify Code&amp;quot;                                    
+## [407] &amp;quot;Waypoint: Use Conditional Logic with If and Else Statements&amp;quot;               
+## [408] &amp;quot;Waypoint: Use Conditional Logic with IfElse Statements&amp;quot;                    
+## [409] &amp;quot;Waypoint: Use CSS Selectors to Style Elements&amp;quot;                             
+## [410] &amp;quot;Waypoint: Use Hex Code for Specific Colors&amp;quot;                                
+## [411] &amp;quot;Waypoint: Use Hex Code for Specific Shades of Gray&amp;quot;                        
+## [412] &amp;quot;Waypoint: Use Hex Code to Color Elements Blue&amp;quot;                             
+## [413] &amp;quot;Waypoint: Use Hex Code to Color Elements Gray&amp;quot;                             
+## [414] &amp;quot;Waypoint: Use Hex Code to Color Elements Green&amp;quot;                            
+## [415] &amp;quot;Waypoint: Use Hex Code to Color Elements Red&amp;quot;                              
+## [416] &amp;quot;Waypoint: Use Hex Code to Color Elements White&amp;quot;                            
+## [417] &amp;quot;Waypoint: Use Hex Code to Mix Colors&amp;quot;                                      
+## [418] &amp;quot;Waypoint: Use HTML5 to Require a Field&amp;quot;                                    
+## [419] &amp;quot;Waypoint: Use jQuery to Modify the Entire Page&amp;quot;                            
+## [420] &amp;quot;Waypoint: Use Pseudoclassical Subclasses&amp;quot;                                  
+## [421] &amp;quot;Waypoint: Use Responsive Design with Bootstrap Fluid Containers&amp;quot;           
+## [422] &amp;quot;Waypoint: Use RGB to Color Elements Blue&amp;quot;                                  
+## [423] &amp;quot;Waypoint: Use RGB to Color Elements Gray&amp;quot;                                  
+## [424] &amp;quot;Waypoint: Use RGB to Color Elements Green&amp;quot;                                 
+## [425] &amp;quot;Waypoint: Use RGB to Color Elements Red&amp;quot;                                   
+## [426] &amp;quot;Waypoint: Use RGB to Color Elements White&amp;quot;                                 
+## [427] &amp;quot;Waypoint: Use RGB to Mix Colors&amp;quot;                                           
+## [428] &amp;quot;Waypoint: Use RGB values to Color Elements&amp;quot;                                
+## [429] &amp;quot;Waypoint: Use Spans for Inline Elements&amp;quot;                                   
+## [430] &amp;quot;Waypoint: Use the Bootstrap Grid to Put Elements Side By Side&amp;quot;             
+## [431] &amp;quot;Waypoint: Use the Javascript Console&amp;quot;                                      
+## [432] &amp;quot;Waypoint: Using concat&amp;quot;                                                    
+## [433] &amp;quot;Waypoint: Using filter&amp;quot;                                                    
+## [434] &amp;quot;Waypoint: Using join&amp;quot;                                                      
+## [435] &amp;quot;Waypoint: Using map&amp;quot;                                                       
+## [436] &amp;quot;Waypoint: Using reduce&amp;quot;                                                    
+## [437] &amp;quot;Waypoint: Using reverse&amp;quot;                                                   
+## [438] &amp;quot;Waypoint: Using sort&amp;quot;                                                      
+## [439] &amp;quot;Waypoint: Using split&amp;quot;                                                     
+## [440] &amp;quot;Waypoint: Using typeof&amp;quot;                                                    
+## [441] &amp;quot;Waypoint: Visually Separate Elements with Line Breaks&amp;quot;                     
+## [442] &amp;quot;Waypoint: Warn your Users of a Dangerous Action&amp;quot;                           
+## [443] &amp;quot;Waypoint: Wrap an Anchor Element within a Paragraph&amp;quot;                       
+## [444] &amp;quot;Waypoint: Wrap Many Elements within a Div Element&amp;quot;                         
+## [445] &amp;quot;Waypoint: Wrap Many Elements within a Single Div Element&amp;quot;                  
+## [446] &amp;quot;Waypoint: Write Functions with jQuery&amp;quot;                                     
+## [447] &amp;quot;Waypoint: Write Reusable JavaScript with Functions&amp;quot;                        
+## [448] &amp;quot;Where art thou&amp;quot;                                                            
+## [449] &amp;quot;Where do I belong&amp;quot;                                                         
+## [450] &amp;quot;Write Functions with jQuery&amp;quot;                                               
+## [451] &amp;quot;Zipline: Build a JavaScript Calculator&amp;quot;                                    
+## [452] &amp;quot;Zipline: Build a Personal Portfolio Webpage&amp;quot;                               
+## [453] &amp;quot;Zipline: Build a Pomodoro Clock&amp;quot;                                           
+## [454] &amp;quot;Zipline: Build a Random Quote Machine&amp;quot;                                     
+## [455] &amp;quot;Zipline: Build a Simon Game&amp;quot;                                               
+## [456] &amp;quot;Zipline: Build a Tic Tac Toe Game&amp;quot;                                         
+## [457] &amp;quot;Zipline: Build a Wikipedia Viewer&amp;quot;                                         
+## [458] &amp;quot;Zipline: Show the Local Weather&amp;quot;                                           
+## [459] &amp;quot;Zipline: Stylize Stories on Camper News&amp;quot;                                   
+## [460] &amp;quot;Zipline: Use the Twitch.tv JSON API&amp;quot;                                       
+## [461] &amp;quot;Zipline: Use the Twitchtv JSON API&amp;quot;                                        
+## [462] &amp;quot;Zipline: Wikipedia Viewer&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Wow! So 462 challenges. A quick skim of the levels indicate that these data are pretty clean but it&amp;rsquo;s hard to tell if there are duplicates. There are definitely some NA values, and some labelled as &amp;ldquo;&amp;rdquo;. I&amp;rsquo;m going to remove those from this dataset.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;fcc_df3 &amp;lt;- fcc_df2 %&amp;gt;% filter(!is.na(name)) %&amp;gt;% filter(!name == 
+    &amp;quot;&amp;quot;) %&amp;gt;% droplevels()
+
+# Validate that there are no more NA course names
+sum(is.na(fcc_df3$name))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I&amp;rsquo;ll deal more with the course names a bit later. One more thing before moving on; I&amp;rsquo;d like to separate the &amp;ldquo;name&amp;rdquo; column into &amp;ldquo;type&amp;rdquo; and course, splitting the course name at the &amp;ldquo;:&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Subset data frame to only include student entries where the
+# course name has a &#39;:&#39; and separate course name into 2
+# columns: type and course
+fcc_sub1 &amp;lt;- fcc_df3 %&amp;gt;% filter(grepl(&amp;quot;\\:\\s&amp;quot;, name)) %&amp;gt;% separate(col = name, 
+    into = c(&amp;quot;type&amp;quot;, &amp;quot;course&amp;quot;), sep = &amp;quot;: &amp;quot;)
+
+# Subset data frame to only include student entries where
+# course name does not have a &#39;:&#39;. Add a new &#39;type&#39; column
+# filled with NA
+fcc_sub2 &amp;lt;- fcc_df3 %&amp;gt;% filter(!grepl(&amp;quot;\\:\\s&amp;quot;, name)) %&amp;gt;% mutate(type = NA)
+
+# Rename the &#39;name&#39; variable in the second subset to &#39;course&#39;
+# (to match first subset)
+fcc_sub2 &amp;lt;- rename(fcc_sub2, course = name)
+
+# Bind subsets together
+fcc_all &amp;lt;- rbind(fcc_sub1, fcc_sub2)
+
+# Make both &#39;course&#39; and &#39;type&#39; factors
+fcc_all$course &amp;lt;- as.factor(fcc_all$course)
+fcc_all$type &amp;lt;- as.factor(fcc_all$type)
+
+# Check structure of &#39;course&#39;
+str(fcc_all$course)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  Factor w/ 370 levels &amp;quot;Access Array Data with Indexes&amp;quot;,..: 187 187 238 31 110 306 214 150 255 163 ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perfect! That will make dealing with course names easier in the future, and it looks like it trimmed us down to 370 courses (some of them must have had duplicate names).&lt;/p&gt;
+
+&lt;p&gt;While we&amp;rsquo;re at it, let&amp;rsquo;s clean up our completedDate variable; it should be a POSIXct object.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Convert characters to numeric
+fcc_all$completedDate &amp;lt;- as.numeric(fcc_all$completedDate)
+
+# Divide by 1000 to account for the numbers being in
+# milliseconds
+fcc_all$completedDate &amp;lt;- fcc_all[, &amp;quot;completedDate&amp;quot;]/1000
+
+# Convert to POSIXct object
+fcc_all$completedDate &amp;lt;- as.POSIXct((fcc_all$completedDate), 
+    origin = &amp;quot;1970-01-01&amp;quot;, tz = &amp;quot;GMT&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perfect. Were all the dates coded correctly?&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s see if any entries are recorded as being completed before FCC launched in October 2014.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;wrong_dates &amp;lt;- fcc_all %&amp;gt;% 
+			filter(completedDate &amp;lt; &amp;quot;2014-10-01&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Oops! 19 of our entries have incorrectly coded dates. We&amp;rsquo;ll remove those from the dataset.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;fcc_all &amp;lt;- fcc_all %&amp;gt;% 
+	       filter(completedDate &amp;gt; &amp;quot;2014-10-01&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Do we have any NA values in our completedDate column? If so, we&amp;rsquo;ll remove those as well.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Count NA
+sum(is.na(fcc_all$completedDate))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Remove NA
+fcc_all &amp;lt;- fcc_all %&amp;gt;% 
+	       filter(!is.na(completedDate))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ok, so far so good. Let&amp;rsquo;s take another quick look at our structure.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(fcc_all)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## &#39;data.frame&#39;:    7216723 obs. of  5 variables:
+##  $ .id          : Factor w/ 102882 levels &amp;quot;1&amp;quot;,&amp;quot;2&amp;quot;,&amp;quot;3&amp;quot;,&amp;quot;4&amp;quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ type         : Factor w/ 6 levels &amp;quot;&amp;quot;,&amp;quot;Basejump&amp;quot;,..: 5 5 5 5 5 5 5 5 5 5 ...
+##  $ course       : Factor w/ 370 levels &amp;quot;Access Array Data with Indexes&amp;quot;,..: 187 187 238 31 110 306 214 150 255 163 ...
+##  $ completedDate: POSIXct, format: &amp;quot;2015-06-18 18:02:46&amp;quot; &amp;quot;2015-06-18 18:03:02&amp;quot; ...
+##  $ solution     : chr  NA NA NA NA ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That looks much better!&lt;/p&gt;
+
+&lt;h2 id=&#34;feature-engineering&#34;&gt;Feature Engineering&lt;/h2&gt;
+
+&lt;h3 id=&#34;using-original-dataset&#34;&gt;Using Original Dataset&lt;/h3&gt;
+
+&lt;p&gt;There are a few things that I&amp;rsquo;m interested in that aren&amp;rsquo;t readily available from this dataset.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What order did each student complete the courses in?&lt;/li&gt;
+&lt;li&gt;How long did it take for each student to finish one course and then complete another?&lt;/li&gt;
+&lt;li&gt;Which class did each student take &lt;em&gt;before&lt;/em&gt; the current course and which did they take &lt;em&gt;after&lt;/em&gt;?&lt;/li&gt;
+&lt;li&gt;Did students generally take FCC classes in the order that they are offered?&lt;/li&gt;
+&lt;li&gt;Are the most frequently completed courses the ones offered at the beginning?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We&amp;rsquo;ll look at one student first:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I chose the second student because that student only completed 25 courses, a much more reasonable starting-point than the 226 completed by student #1&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;second_student &amp;lt;- fcc_all %&amp;gt;% 
+			     filter(.id == &amp;quot;2&amp;quot;)
+
+second_student
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##    .id type                             course       completedDate
+## 1    2 &amp;lt;NA&amp;gt;     Learn how Free Code Camp Works 2015-05-21 17:44:57
+## 2    2 &amp;lt;NA&amp;gt;                 Join Our Chat Room 2015-05-21 17:58:10
+## 3    2 &amp;lt;NA&amp;gt;          Preview our Challenge Map 2015-05-21 18:45:44
+## 4    2 &amp;lt;NA&amp;gt;             Browse our Field Guide 2015-05-21 18:49:15
+## 5    2 &amp;lt;NA&amp;gt;      Customize your Portfolio Page 2015-05-21 19:06:19
+## 6    2 &amp;lt;NA&amp;gt;                    Try Camper News 2015-05-21 19:22:35
+## 7    2 &amp;lt;NA&amp;gt;    Meet Other Campers in your City 2015-05-21 19:45:10
+## 8    2 &amp;lt;NA&amp;gt;  Get Help the Hacker Way with RSAP 2015-05-21 19:46:43
+## 9    2 &amp;lt;NA&amp;gt;     Build a Landing Page with HTML 2015-05-22 14:40:57
+## 10   2 &amp;lt;NA&amp;gt;                Style Text with CSS 2015-05-22 14:41:30
+## 11   2 &amp;lt;NA&amp;gt;                 Space Out with CSS 2015-05-22 14:47:10
+## 12   2 &amp;lt;NA&amp;gt;          Design a Layout with HTML 2015-05-22 14:49:57
+## 13   2 &amp;lt;NA&amp;gt; Design Responsively with Bootstrap 2015-05-22 14:56:51
+## 14   2 &amp;lt;NA&amp;gt;            Get Started with jQuery 2015-05-22 14:57:21
+## 15   2 &amp;lt;NA&amp;gt;        Write Functions with jQuery 2015-05-22 15:10:05
+## 16   2 &amp;lt;NA&amp;gt;               Harness Dynamic HTML 2015-05-22 15:31:01
+## 17   2 &amp;lt;NA&amp;gt;           Listen for jQuery Events 2015-05-22 15:31:32
+## 18   2 &amp;lt;NA&amp;gt;             Trigger jQuery Effects 2015-05-22 16:02:40
+## 19   2 &amp;lt;NA&amp;gt;       Learn Basic Computer Science 2015-05-22 17:37:14
+## 20   2 &amp;lt;NA&amp;gt;                        Learn Loops 2015-05-22 17:37:28
+## 21   2 &amp;lt;NA&amp;gt;            Learn Computer Hardware 2015-05-24 22:20:35
+## 22   2 &amp;lt;NA&amp;gt;          Learn Computer Networking 2015-05-25 22:03:14
+## 23   2 &amp;lt;NA&amp;gt;                Learn Boolean Logic 2015-05-26 01:48:40
+## 24   2 &amp;lt;NA&amp;gt;            Learn Computer Security 2015-05-26 02:07:25
+## 25   2 &amp;lt;NA&amp;gt;                       Meet Bonfire 2015-05-22 00:15:04
+##                                                                                                                                                                                                    solution
+## 1                                                                                                                                                                                                      &amp;lt;NA&amp;gt;
+## 2                                                                                                                                                                                                      &amp;lt;NA&amp;gt;
+## 3                                                                                                                                                                                                      &amp;lt;NA&amp;gt;
+## 4                                                                                                                                                                                                      &amp;lt;NA&amp;gt;
+## 5                                                                                                                                                                                                      &amp;lt;NA&amp;gt;
+## 6                                                                                                                                                                                                      &amp;lt;NA&amp;gt;
+## 7                                                                                                                                                                                                      &amp;lt;NA&amp;gt;
+## 8                                                                                                                                                                                                      &amp;lt;NA&amp;gt;
+## 9                                                                                                                                                                                                      &amp;lt;NA&amp;gt;
+## 10                                                                                                                                                                                                     &amp;lt;NA&amp;gt;
+## 11                                                                                                                                                                                                     &amp;lt;NA&amp;gt;
+## 12                                                                                                                                                                                                     &amp;lt;NA&amp;gt;
+## 13                                                                                                                                                                                                     &amp;lt;NA&amp;gt;
+## 14                                                                                                                                                                                                     &amp;lt;NA&amp;gt;
+## 15                                                                                                                                                                                                     &amp;lt;NA&amp;gt;
+## 16                                                                                                                                                                                                     &amp;lt;NA&amp;gt;
+## 17                                                                                                                                                                                                     &amp;lt;NA&amp;gt;
+## 18                                                                                                                                                                                                     &amp;lt;NA&amp;gt;
+## 19                                                                                                                                                                                                     &amp;lt;NA&amp;gt;
+## 20                                                                                                                                                                                                     &amp;lt;NA&amp;gt;
+## 21                                                                                                                                                                                                     &amp;lt;NA&amp;gt;
+## 22                                                                                                                                                                                                     &amp;lt;NA&amp;gt;
+## 23                                                                                                                                                                                                     &amp;lt;NA&amp;gt;
+## 24                                                                                                                                                                                                     &amp;lt;NA&amp;gt;
+## 25 function meetBonfire(argument) {\n  // Good luck!\n  console.log(&amp;quot;you can read this function&#39;s argument in the developer tools&amp;quot;, argument);\n\n  return true;\n}\n\n\n\nmeetBonfire(&amp;quot;You can do this!&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So the second student in our list completed 25 courses. I&amp;rsquo;m going to try extracting the information I want on this sub-sample first to ensure that it&amp;rsquo;s behaving the way I&amp;rsquo;d expect before using it to generate information for 102,000 students.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;second_student_2 &amp;lt;- second_student %&amp;gt;% 
+		group_by(.id) %&amp;gt;% 
+		arrange(completedDate) %&amp;gt;% 
+    		mutate(st_cour_num = rank(completedDate), 
+			    time_since_last = completedDate - lag(completedDate), 
+			    from_type = lag(type), 
+			    from_course = lag(course), 
+        			    to_type = lead(type), 
+			    to_course = lead(course))
+
+head(second_student_2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Source: local data frame [6 x 11]
+## Groups: .id [1]
+## 
+##      .id   type                         course       completedDate
+##   &amp;lt;fctr&amp;gt; &amp;lt;fctr&amp;gt;                         &amp;lt;fctr&amp;gt;              &amp;lt;dttm&amp;gt;
+## 1      2     NA Learn how Free Code Camp Works 2015-05-21 17:44:57
+## 2      2     NA             Join Our Chat Room 2015-05-21 17:58:10
+## 3      2     NA      Preview our Challenge Map 2015-05-21 18:45:44
+## 4      2     NA         Browse our Field Guide 2015-05-21 18:49:15
+## 5      2     NA  Customize your Portfolio Page 2015-05-21 19:06:19
+## 6      2     NA                Try Camper News 2015-05-21 19:22:35
+## # ... with 7 more variables: solution &amp;lt;chr&amp;gt;, st_cour_num &amp;lt;dbl&amp;gt;,
+## #   time_since_last &amp;lt;time&amp;gt;, from_type &amp;lt;fctr&amp;gt;, from_course &amp;lt;fctr&amp;gt;,
+## #   to_type &amp;lt;fctr&amp;gt;, to_course &amp;lt;fctr&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Great! That works just as we&amp;rsquo;d expect. Let&amp;rsquo;s make sure it doesn&amp;rsquo;t do anything strange when there are more than one student.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;second_third &amp;lt;- fcc_all %&amp;gt;% 
+			 filter(.id %in% c(&amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;)) %&amp;gt;% 
+    			 group_by(.id) %&amp;gt;% 
+			 arrange(completedDate) %&amp;gt;% 
+			 mutate(st_cour_num = rank(completedDate, ties.method = &amp;quot;first&amp;quot;), 
+			 	     time_since_last = completedDate - lag(completedDate), 
+				     from_type = lag(type), 
+				     from_course = lag(course), 
+				     to_type = lead(type), 
+				     to_course = lead(course))
+
+second_third &amp;lt;- second_third %&amp;gt;% 
+			 arrange(.id, st_cour_num)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So far so good. Let&amp;rsquo;s check rows 25 - 27 to make sure our counts started over again with a new student.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;second_third[25:27, c(&amp;quot;.id&amp;quot;, &amp;quot;st_cour_num&amp;quot;)]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Source: local data frame [3 x 2]
+## Groups: .id [2]
+## 
+##      .id st_cour_num
+##   &amp;lt;fctr&amp;gt;       &amp;lt;int&amp;gt;
+## 1      2          25
+## 2      3           1
+## 3      3           2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Perfect! We will apply this to the entire data structure, but I want to modify a few more things first.&lt;/p&gt;
+
+&lt;h3 id=&#34;web-scraping-new-data&#34;&gt;Web Scraping New Data&lt;/h3&gt;
+
+&lt;p&gt;I wonder if the most commonly taken courses are the ones offered at the beginning of the Free Code Camp program. To find out, I&amp;rsquo;m going to scrape the information from an archived version of the FCC course map from January 2016 (approximately 2 weeks after this dataset was released). I&amp;rsquo;ll use the &lt;code&gt;rvest&lt;/code&gt; package for this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;url &amp;lt;- &amp;quot;https://web.archive.org/web/20160101182240/http://www.freecodecamp.com/map#getting-started&amp;quot;
+webpage &amp;lt;- read_html(curl(url, handle = curl::new_handle(useragent = &amp;quot;Chrome&amp;quot;)))
+
+course_table &amp;lt;- html_nodes(webpage, &amp;quot;.col-md-offset-2 &amp;gt; .row .col-md-9&amp;quot;)
+course_table2 &amp;lt;- html_text(course_table)
+course_table2 &amp;lt;- as.data.frame(course_table2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we have a list of the courses in the order that FCC has them on their map. I&amp;rsquo;m going to add a few columns to this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What section of the FCC course map did this course come from?&lt;/li&gt;
+&lt;li&gt;What number course is this inside each section and inside the entire map?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;course_table3 &amp;lt;- course_table2 %&amp;gt;% 
+	mutate(section = ifelse(row_number() %in% 1:5, &amp;quot;Getting Started&amp;quot;, 
+ifelse(row_number() %in% 6:73, &amp;quot;HTML5 and CSS&amp;quot;, 
+    ifelse(row_number() %in% 74:104, &amp;quot;Responsive Design with Bootstrap&amp;quot;, 
+        ifelse(row_number() %in% 105:108, &amp;quot;Gear up for Success&amp;quot;, 
+            ifelse(row_number() %in% 109:126, &amp;quot;jQuery&amp;quot;, ifelse(row_number() %in% 127:230, &amp;quot;Basic JavaScript&amp;quot;, 
+            ifelse(row_number() %in% 231:243, &amp;quot;Object Oriented and Functional Programming&amp;quot;, 
+                ifelse(row_number() %in% 244:260, &amp;quot;Basic Algorithm Scripting&amp;quot;, 
+                  ifelse(row_number() %in% 261:265, &amp;quot;Basic Front End Development Projects&amp;quot;, 
+                    ifelse(row_number() %in% 266:286, &amp;quot;Intermediate Algorithm Scripting&amp;quot;, 
+                      ifelse(row_number() %in% 287:293, &amp;quot;JSON APIs and Ajax&amp;quot;, 
+                        ifelse(row_number() %in% 294:299, &amp;quot;Intermediate Front End Development Projects&amp;quot;, 
+                          ifelse(row_number() == 300, &amp;quot;Claim Your Front End Development Certificate&amp;quot;, 
+                            ifelse(row_number() == 301, &amp;quot;Sass&amp;quot;, 
+                              ifelse(row_number() == 302, &amp;quot;React&amp;quot;, 
+                                ifelse(row_number() %in% 303:307, &amp;quot;React Projects&amp;quot;, 
+                                ifelse(row_number() == 308, &amp;quot;D3&amp;quot;, 
+                                 ifelse(row_number() %in% 309:313, &amp;quot;Data Visualization Projects&amp;quot;, 
+                                    ifelse(row_number() == 314, &amp;quot;Claim Your Data Visualization Certificate&amp;quot;, 
+                                      ifelse(row_number() %in% 315:317, &amp;quot;Upper Intermediate Algorithm Scripting&amp;quot;, 
+                                        ifelse(row_number() %in% 318:319, &amp;quot;Automated Testing and Debugging&amp;quot;, 
+                                          ifelse(row_number() %in%  320:325, &amp;quot;Advanced Algorithm Scripting&amp;quot;, 
+                                            ifelse(row_number() %in% 326:330, &amp;quot;Node.js and Express.js&amp;quot;, 
+                                              ifelse(row_number() ==  331, &amp;quot;Git&amp;quot;, 
+                                              ifelse(row_number() == 332, &amp;quot;MongoDB&amp;quot;,  
+                                              ifelse(row_number() %in% 333:338, &amp;quot;API Projects&amp;quot;, 
+                                                  ifelse(row_number() %in%  339:343,  &amp;quot;Dynamic Web Applications&amp;quot;, 
+                                                    ifelse(row_number() ==  344, &amp;quot;Claim Your Back End Development Certificate&amp;quot;, 
+                                                      NA))))))))))))))))))))))))))))) %&amp;gt;% 
+    group_by(section) %&amp;gt;% mutate(coursenum = row_number()) %&amp;gt;% 
+    ungroup %&amp;gt;% mutate(overallnum = row_number())
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I do plan to join this data table with the student data that we already have, but currently, the names won&amp;rsquo;t match. Let&amp;rsquo;s clean it up a bit.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Rename column
+course_table3 &amp;lt;- rename(course_table3, course = course_table2)
+
+# Remove everything after (and including) the phrase &amp;quot;incomplete&amp;quot; from course column
+course_table3$course &amp;lt;- gsub(&amp;quot;(.*?)Incomplete.*&amp;quot;, &amp;quot;\\1&amp;quot;, course_table3$course)
+
+# Separate the course column into Type and Course columns. 
+course_table3 &amp;lt;- separate(course_table3, col = course, into = c(&amp;quot;type&amp;quot;, &amp;quot;course&amp;quot;), sep = &amp;quot;: &amp;quot;)
+
+# Capitalize the first letter of type column
+course_table3$type &amp;lt;- capitalize(course_table3$type) 
+
+# Remove trailing space from course column
+course_table3$course &amp;lt;- gsub(&amp;quot;\\s$&amp;quot;, &amp;quot;&amp;quot;, course_table3$course)
+
+# Recode words that are entered differently in the original dataset
+course_table4 &amp;lt;- course_table3 %&amp;gt;% 
+                  mutate(course = gsub(&amp;quot;(.*?)\\.(.*?)&amp;quot;, &amp;quot;\\1\\2&amp;quot;, course),       # Removing the &amp;quot;.&amp;quot; at beginning of words
+                         course = gsub(&amp;quot;(.*?)\\(\\).*&amp;quot;, &amp;quot;\\1&amp;quot;, course),          # Removing () at the end of pop(), shift() etc.
+                         course = gsub(&amp;quot;Nth\\-to\\-Last&amp;quot;, &amp;quot;NthtoLast&amp;quot;, course),  # Removing hyphens     
+                         course = gsub(&amp;quot;Geo-location&amp;quot;, &amp;quot;Geolocation&amp;quot;, course),   # Remove hyphen from Geo-location
+                         course = gsub(&amp;quot;Node(\\s)js|Nodejs&amp;quot;, &amp;quot;Node\\.js&amp;quot;, course),
+                         course = gsub(&amp;quot;Expressjs|Express js&amp;quot;, &amp;quot;Express\\.js&amp;quot;, course))       
+
+# Remove trailing space from course column
+course_table4$course &amp;lt;- gsub(&amp;quot;\\s$&amp;quot;, &amp;quot;&amp;quot;, course_table4$course)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ok, any other non-matches come from errors in our original dataset or courses whose name was different (or that no longer existed) when this dataset was published.&lt;/p&gt;
+
+&lt;p&gt;Here are a few quick fixes to the original dataset.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;fcc_all2 &amp;lt;- fcc_all %&amp;gt;% 
+		mutate(course = recode(course, `Add Font Awesome Icons all of our Buttons` = &amp;quot;Add Font Awesome Icons to all of our Buttons&amp;quot;), 
+    course = gsub(&amp;quot;Pintrest&amp;quot;, &amp;quot;Pinterest&amp;quot;, course), course = gsub(&amp;quot;Node(\\s)js|Nodejs&amp;quot;, 
+        &amp;quot;Node\\.js&amp;quot;, course), course = gsub(&amp;quot;Build Web Apps with Expressjs|Build Web Apps with Express\\.js|Build Web Apps with Express js&amp;quot;, 
+        &amp;quot;Build Web Apps with Express\\.js&amp;quot;, course), course = recode(course, 
+        `Add Free Code Camp to your LinkedIn Profile` = &amp;quot;Join our LinkedIn Alumni Network&amp;quot;), 
+    course = recode(course, `Add Different a Margin to Each Side of an Element` = &amp;quot;Add Different Margins to Each Side of an Element&amp;quot;), 
+    course = recode(course, `Check the Length Property of a String Variable` = &amp;quot;Find the Length of a String&amp;quot;), 
+    course = gsub(&amp;quot;\\.concat&amp;quot;, &amp;quot;concat&amp;quot;, course), course = gsub(&amp;quot;White Space&amp;quot;, 
+        &amp;quot;Whitespace&amp;quot;, course), course = recode(course, `Learn JavaScript For Loops` = &amp;quot;Iterate with JavaScript For Loops&amp;quot;), 
+    course = recode(course, `Learn JavaScript While Loops` = &amp;quot;Iterate with JavaScript While Loops&amp;quot;), 
+    course = recode(course, `Mobile Responsive Images` = &amp;quot;Make Images Mobile Responsive&amp;quot;), 
+    course = recode(course, `Override Styles with Important` = &amp;quot;Override All Other Styles by using Important&amp;quot;), 
+    course = recode(course, `Style Multiple Elements with a CSS Classes` = &amp;quot;Style Multiple Elements with a CSS Class&amp;quot;), 
+    course = recode(course, `Trigger jQuery Effects` = &amp;quot;Trigger Click Events with jQuery&amp;quot;), 
+    course = recode(course, `Trigger on click Events with jQuery` = &amp;quot;Trigger Click Events with jQuery&amp;quot;), 
+    course = recode(course, `Try Camper News` = &amp;quot;Browse Camper News&amp;quot;), 
+    course = recode(course, `Update the Properties of a JavaScript Object` = &amp;quot;Updating Object Properties&amp;quot;), 
+    course = recode(course, `Use Conditional Logic with If and Else Statements` = &amp;quot;Use Conditional Logic with If Statements&amp;quot;), 
+    course = recode(course, `Use Conditional Logic with IfElse Statements` = &amp;quot;Use Conditional Logic with If Statements&amp;quot;), 
+    course = gsub(&amp;quot;twitch\\.tv&amp;quot;, &amp;quot;twitchtv&amp;quot;, course), course = recode(course, 
+        `Wikipedia Viewer` = &amp;quot;Build a Wikipedia Viewer&amp;quot;), course = recode(course, 
+        `Wrap an Anchor Element within a Paragraph` = &amp;quot;Nest an Anchor Element within a Paragraph&amp;quot;), 
+    course = recode(course, `Wrap Many Elements within a Div Element` = &amp;quot;Nest Many Elements within a Single Div Element&amp;quot;), 
+    course = recode(course, `Wrap Many Elements within a Single Div Element` = &amp;quot;Nest Many Elements within a Single Div Element&amp;quot;))
+
+# Remove trailing space from course column
+fcc_all2$course &amp;lt;- gsub(&amp;quot;\\s$&amp;quot;, &amp;quot;&amp;quot;, fcc_all2$course)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now to join the two dataframes based on the &amp;ldquo;course&amp;rdquo; column.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sc_full &amp;lt;- left_join(fcc_all2, course_table4, by = &amp;quot;course&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;How many of our entries are still missing a &amp;ldquo;section&amp;rdquo; label?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sum(is.na(sc_full$section))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 539128
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That&amp;rsquo;s 539,128 entries (or about 7.5% of our entire dataset). I checked the following subset of data (only focused on entries with an &amp;ldquo;NA&amp;rdquo; in &lt;code&gt;section&lt;/code&gt;), and then returned to code above to adjust the names of courses as necessary. Any remaining unmatched courses at this point were not on the FCC course map at the end of 2015, and thus will be removed from this dataset.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Filter only entries with NA sections
+sub_na &amp;lt;- sc_full %&amp;gt;% filter(is.na(section)) %&amp;gt;% group_by(course) %&amp;gt;% 
+    summarise(count = n())
+
+# Remove anything that still has missing section values
+sc_full2 &amp;lt;- sc_full %&amp;gt;% filter(!is.na(section))
+
+# Remove the original dataset&#39;s &#39;Type&#39; column in exchange for
+# the amended &#39;Type column&#39;
+sc_full3 &amp;lt;- sc_full2 %&amp;gt;% select(-2)
+
+sc_full3 &amp;lt;- rename(sc_full3, type = type.y)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;engineered-variables&#34;&gt;Engineered Variables&lt;/h3&gt;
+
+&lt;p&gt;Perfect! Now our data frame is all set to add other variables.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sc_full4 &amp;lt;- sc_full3 %&amp;gt;% group_by(.id) %&amp;gt;% arrange(completedDate) %&amp;gt;% 
+    mutate(st_cour_num = rank(completedDate, ties.method = &amp;quot;first&amp;quot;), 
+        time_since_last = completedDate - lag(completedDate), 
+        from_type = lag(type), from_course = lag(course), from_section = lag(section), 
+        to_type = lead(type), to_course = lead(course), to_section = lead(section)) %&amp;gt;% 
+    ungroup()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let&amp;rsquo;s look at the top few data entries.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;head(sc_full4)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 × 17
+##      .id       course       completedDate
+##   &amp;lt;fctr&amp;gt;        &amp;lt;chr&amp;gt;              &amp;lt;dttm&amp;gt;
+## 1    954 Meet Bonfire 2015-01-28 06:41:03
+## 2    954 Meet Bonfire 2015-01-28 06:41:03
+## 3    954 Meet Bonfire 2015-01-28 06:41:03
+## 4    954 Meet Bonfire 2015-01-28 06:41:03
+## 5    954 Meet Bonfire 2015-01-28 06:41:03
+## 6    954 Meet Bonfire 2015-01-28 06:41:03
+## # ... with 14 more variables: solution &amp;lt;chr&amp;gt;, X &amp;lt;int&amp;gt;, type &amp;lt;chr&amp;gt;,
+## #   section &amp;lt;chr&amp;gt;, coursenum &amp;lt;int&amp;gt;, overallnum &amp;lt;int&amp;gt;, st_cour_num &amp;lt;int&amp;gt;,
+## #   time_since_last &amp;lt;time&amp;gt;, from_type &amp;lt;chr&amp;gt;, from_course &amp;lt;chr&amp;gt;,
+## #   from_section &amp;lt;chr&amp;gt;, to_type &amp;lt;chr&amp;gt;, to_course &amp;lt;chr&amp;gt;, to_section &amp;lt;chr&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Great! Now that I have the following variables to work with:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;.id&lt;/strong&gt; : Individual student ID number (generated from JSON)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;course&lt;/strong&gt; : Course name (cleaned to match course map from Jan 2016)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;completedDate&lt;/strong&gt; : The POSIXct date and time that a course was completed by a student&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;solution&lt;/strong&gt; : The student&amp;rsquo;s solution to a given problem&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type&lt;/strong&gt; : The type of course (Basejump, Bonfire, Waypoint, Zipline)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;section&lt;/strong&gt; :The specific section that each course falls into on the course map (&amp;ldquo;Getting Started&amp;rdquo;, &amp;ldquo;HTML5 and CSS&amp;rdquo;, etc.)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;coursenum&lt;/strong&gt; : The number of the course within each section&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;overallnum&lt;/strong&gt; :The number of the course within the entire curriculum&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;st_cour_num&lt;/strong&gt; : The number of the course within each student&amp;rsquo;s specific journey (i.e., a student&amp;rsquo;s first completed class would be 1, 2nd completed class would be 2, etc.)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;time_since_last&lt;/strong&gt; : The time between the completion of the current course and the completion of the last course (in seconds)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;from_type&lt;/strong&gt; : The type of class that was taken immediately before the present class (Basejump, Bonfire, Waypoint, Zipline)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;from_course&lt;/strong&gt; : The name of the class that was taken immediately before the present class&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;from_section&lt;/strong&gt; : The section of the course curriculum that the last class taken was in&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;to_type&lt;/strong&gt; : The type of class that was taken immediately after the present class (Basejump, Bonfire, Waypoint, Zipline)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;to_course&lt;/strong&gt; : The name of the class that was taken immediately after the present class&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;to_section&lt;/strong&gt; : The section of the course curriculum that the next class is in&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;data-visualizations&#34;&gt;Data Visualizations&lt;/h2&gt;
+
+&lt;p&gt;Now that I have my variables sorted and my data cleaned, let&amp;rsquo;s try to answer a few simple questions.&lt;/p&gt;
+
+&lt;h3 id=&#34;what-class-do-fcc-students-start-with&#34;&gt;What class do FCC students start with?&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Does every student start with the same class?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Separate out first courses
+first &amp;lt;- sc_full4 %&amp;gt;% 
+	   filter(st_cour_num == 1) %&amp;gt;% 
+	   droplevels()
+
+# How many different courses were the first ones taken?
+length(unique(sc_full4))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 17
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It looks like most users start in the same place. Let&amp;rsquo;s see how the popularity of first courses breaks down.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Count number of students for each course first
+first_2 &amp;lt;- first %&amp;gt;% group_by(course) %&amp;gt;% summarise(n = n()) %&amp;gt;% 
+    ungroup() %&amp;gt;% mutate(rank = dense_rank(desc(n))) %&amp;gt;% filter(rank &amp;lt;= 
+    10) %&amp;gt;% arrange(rank)
+
+fig1 &amp;lt;- hchart(first_2, &amp;quot;column&amp;quot;, x = course, y = n, zoomType = &amp;quot;x&amp;quot;) %&amp;gt;% 
+    hc_xAxis(title = list(text = &amp;quot;First Completed Course on FCC&amp;quot;)) %&amp;gt;% 
+    hc_yAxis(title = list(text = &amp;quot;Number of Students&amp;quot;), max = 50000) %&amp;gt;% 
+    hc_chart(zoomType = &amp;quot;x&amp;quot;)
+
+fig1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;iframe seamless src=&#34;../FCC_Courses_files/figure-markdown_github/fig1/index.html&#34; width = &#34;100%&#34; height=&#34;500&#34; id=&#34;iframe_container&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;So about 48% of users start with the very first course in the curriculum &amp;ldquo;Learn How Free Code Camp Works&amp;rdquo;, another 10% skip straight to the first course in the &amp;ldquo;HTML5 and CSS&amp;rdquo; section to start their FCC journey. The remaining 42% of users started their first class on random courses throughout the curriculum.&lt;/p&gt;
+
+&lt;h3 id=&#34;which-classes-are-the-most-popular&#34;&gt;Which classes are the most popular?&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How many students completed each course at some point?
+
+&lt;ul&gt;
+&lt;li&gt;Note: This figure is zoom-able!&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;pop_fig &amp;lt;- sc_full4 %&amp;gt;% 
+		group_by(overallnum, section, course) %&amp;gt;% 
+    		summarise(count = n()) %&amp;gt;% 
+		arrange(overallnum) %&amp;gt;% ungroup()
+
+
+# Plot
+fig2 &amp;lt;- hchart(pop_fig, &amp;quot;column&amp;quot;, x = course, y = count, color = section) %&amp;gt;% 
+    hc_title(text = &amp;quot;Course Completion in Curriculum Order&amp;quot;) %&amp;gt;% 
+    hc_xAxis(title = list(text = &amp;quot;Completed Course on FCC (in order of FCC course curriculum)&amp;quot;)) %&amp;gt;% 
+    hc_yAxis(title = list(text = &amp;quot;Number of Students&amp;quot;), max = 1e+05) %&amp;gt;% 
+    hc_chart(zoomType = &amp;quot;xy&amp;quot;) %&amp;gt;% 
+    hc_tooltip(headerFormat = &amp;quot;&amp;quot;, 
+    	pointFormat = &amp;quot;&amp;lt;b&amp;gt;Class: {point.course}&amp;lt;/b&amp;gt; &amp;lt;br&amp;gt;
+    	Section: {point.section}&amp;lt;br&amp;gt;
+    	Number of Students: {point.y}&amp;quot;)
+
+fig2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;iframe seamless src=&#34;../FCC_Courses_files/figure-markdown_github/fig2/index.html&#34; width = &#34;100%&#34; height=&#34;500&#34; id=&#34;iframe_container&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;It definitely seems like the courses offered earlier in the curriculum are completed more frequently than courses offered later in the curriculum. There is also a spike in course completion at the beginning of the &amp;ldquo;HTML5 and CSS&amp;rdquo; and &amp;ldquo;Responsive Design with Boostrap&amp;rdquo; sections that declines throughout the course section. In the latter, that drop-off seems to happen sharply after the course &amp;ldquo;Line up Form Elements Responsively with Bootstrap&amp;rdquo; where almost 11,000 did not complete the next course.&lt;/p&gt;
+
+&lt;p&gt;I wonder how the amount of time spent on courses changes throughout the curriculum, as courses (theoretically) get more difficult.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;For this figure, I eliminated all course completion times that were over 1,210,000 seconds (14 days).&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;time_spent &amp;lt;- sc_full4 %&amp;gt;% 
+			group_by(overallnum, section, course) %&amp;gt;% 
+    			filter(!is.na(time_since_last)) %&amp;gt;% 
+			filter(time_since_last &amp;lt; 1210000) %&amp;gt;% 
+			mutate(time_since_last_m = time_since_last/60) %&amp;gt;% 
+    			summarise(median = median(time_since_last_m), 
+					  mean = mean(time_since_last_m), 
+        					  sd = sd(time_since_last_m))
+
+fig3 &amp;lt;- hchart(time_spent, &amp;quot;column&amp;quot;, x = course, y = mean, color = section) %&amp;gt;% 
+    hc_title(text = &amp;quot;Average Time for Course Completion&amp;quot;) %&amp;gt;% 
+    hc_subtitle(text = &amp;quot;&amp;lt;i&amp;gt;Does not contain course completion for students&#39; first class&amp;lt;/i&amp;gt;&amp;quot;) %&amp;gt;% 
+    hc_xAxis(title = list(text = &amp;quot;Completed Course on FCC (in order of FCC course curriculum)&amp;quot;)) %&amp;gt;% 
+    hc_yAxis(title = list(text = &amp;quot;Mean Time to Course Completion (minutes)&amp;quot;), 
+        max = 6800) %&amp;gt;% hc_chart(zoomType = &amp;quot;xy&amp;quot;) %&amp;gt;% hc_tooltip(headerFormat = &amp;quot;&amp;quot;, 
+    pointFormat = &amp;quot;&amp;lt;b&amp;gt;Class: {point.course}&amp;lt;/b&amp;gt; &amp;lt;br&amp;gt;Section: {point.section}&amp;lt;br&amp;gt;Mean time to completion: {point.y} minutes&amp;quot;, 
+    valueDecimals = 2)
+
+fig3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;iframe seamless src=&#34;../FCC_Courses_files/figure-markdown_github/fig3/index.html&#34; width = &#34;100%&#34; height=&#34;500&#34; id=&#34;iframe_container&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The class that took the longest to complete (&amp;ldquo;Claim Your Backend Development Certificate&amp;rdquo; with average 6845 minutes or 4.75 days) is the last and one of the least popular courses in the curriculum. It is possible that students completed all of the other courses and returned to FCC days later to claim their certificate.&lt;/p&gt;
+
+&lt;p&gt;The next courses that took the longest to complete were:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Build a Voting App (6675 minutes or 4.6 days)&lt;/li&gt;
+&lt;li&gt;Build a Nightlife Coordination App (4861 minutes or 3.4 days)&lt;/li&gt;
+&lt;li&gt;Use the Twitchtv JSON API (4289 minutes or 3 days)&lt;/li&gt;
+&lt;li&gt;Build a Simon Game (4280 minutes or 3 days)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These courses either came immediately after a break (that was less than two weeks in duration) for many students or took students longer on these courses than others in the curriculum.  It may be worth investigating how long each of these projects is projected to take.&lt;/p&gt;
+
+&lt;h3 id=&#34;how-do-students-flow-through-the-courses&#34;&gt;How do students flow through the courses?&lt;/h3&gt;
+
+&lt;p&gt;Originally, I planned to depict student flow through the various FCC courses using a &lt;a href=&#34;https://en.wikipedia.org/wiki/Sankey_diagram&#34;&gt;Sankey plot&lt;/a&gt;, but with so many courses in the curriculum this did not seem like a good option. I decided to visualize student course map as a network using the &lt;code&gt;igraph&lt;/code&gt; and &lt;code&gt;highcharter&lt;/code&gt; packages. Below, color indicates the section of each course, connections indicate flow of students from one course to another and the thickness of each connection indicates how many students followed that path. The size of each circle indicates how many students have taken each course.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Hover over any point for more information and zoom in on sections for clearer detail&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;nodes &amp;lt;- sc_full4 %&amp;gt;% 
+		group_by(course, section, overallnum) %&amp;gt;% 
+    		summarise(count = n()) %&amp;gt;% 
+		ungroup()
+
+edges &amp;lt;- sc_full4 %&amp;gt;% 
+		group_by(from_course, to_course) %&amp;gt;% 
+		summarise(weight = n()) %&amp;gt;% 
+    		filter(!is.na(to_course), !is.na(from_course)) %&amp;gt;% 
+		ungroup() %&amp;gt;% 
+    		filter(weight &amp;gt; 200)
+        
+
+# Make graph object
+net &amp;lt;- graph.data.frame(edges, nodes, directed = FALSE)
+
+V(net)$color &amp;lt;- colorize(V(net)$section)
+V(net)$size &amp;lt;- V(net)$count
+E(net)$width &amp;lt;- E(net)$weight/4000
+V(net)$Course_Number &amp;lt;- nodes$overallnum
+
+# Plot graph using highcharter
+set.seed(10)
+fig4 &amp;lt;- hchart(net, minSize = 3, maxSize = 20, layout = layout_nicely)
+
+fig4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;iframe seamless src=&#34;../FCC_Courses_files/figure-markdown_github/fig4/index.html&#34; width = &#34;100%&#34; height=&#34;500&#34; id=&#34;iframe_container&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;There are several notable things about this figure:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The &amp;ldquo;Getting Started&amp;rdquo; section is the &amp;ldquo;jumping off point&amp;rdquo; for many different tracks&lt;/li&gt;
+&lt;li&gt;One of the most frequently used tracks runs through the HTML5 and CSS section&lt;/li&gt;
+&lt;li&gt;Certain parts of the HTML5 and CSS section (i.e., the parts all about changing colors) are taken in order, while others skip entire chunks of the section (See the heavily followed path from class #8 (Inform with the Paragraph Element) and class #40 (Check radio buttons and checkboxes by default)).&lt;/li&gt;
+&lt;li&gt;Users tend to flow straight from the jQuery section into Basic JavaScript following classes mostly in the recommended order&lt;/li&gt;
+&lt;li&gt;Fewer users flow through the Intermediate and Advanced algorithm scripting sections than the Basic algorithm scripting section&lt;/li&gt;
+&lt;li&gt;Several courses don&amp;rsquo;t follow any typical flow with the rest of the course curriculum. These courses seem to be treated as &amp;ldquo;stand-alone&amp;rdquo; courses instead of integrated parts of the map, but are also infrequently taken in general. These courses are:
+
+&lt;ul&gt;
+&lt;li&gt;Courses in the Node.js and Express.js section&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Get Set for Basejumps&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Save your code revisions forever with Git&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Courses in the Dynamic Web application section&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;how-many-courses-do-students-take&#34;&gt;How many courses do students take?&lt;/h3&gt;
+
+&lt;p&gt;Given that there are 344 courses in the curriculum map that match the courses that these students have taken, how many does each student generally take?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;student_courses &amp;lt;- sc_full4 %&amp;gt;% 
+		group_by(.id) %&amp;gt;% 
+		mutate(time = as.numeric(time_since_last, units = &amp;quot;mins&amp;quot;)) %&amp;gt;% 
+		summarise(count = n(), 
+			total_time = sum(time, na.rm = TRUE), 
+			median_time = median(time, na.rm = TRUE), 
+    			average_time = mean(time, na.rm = TRUE)) %&amp;gt;% 
+			mutate(time_per_class = (total_time/count)) %&amp;gt;% 
+    			filter(count &amp;gt; 0)
+
+fig5 &amp;lt;- hchart(student_courses$count) %&amp;gt;% 
+	hc_title(text = &amp;quot;Number of Courses Completed&amp;quot;) %&amp;gt;% 
+	hc_chart(zoomType = &amp;quot;xy&amp;quot;) %&amp;gt;% 
+	hc_xAxis(title = list(text = &amp;quot;Number of Completed Courses&amp;quot;)) %&amp;gt;% 
+   	hc_yAxis(title = list(text = &amp;quot;Number of Students&amp;quot;), max = 35000) %&amp;gt;% 
+   	hc_legend(enabled = FALSE)
+
+fig5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;iframe seamless src=&#34;../FCC_Courses_files/figure-markdown_github/fig5/index.html&#34; width = &#34;100%&#34; height=&#34;500&#34; id=&#34;iframe_container&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Wow! There&amp;rsquo;s a few things to point out here:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The highest number of students (33,563 or 33% of students) completed only between 1 and 5 courses.&lt;/li&gt;
+&lt;li&gt;The highest number of courses completed is 775! Since we&amp;rsquo;re only looking at 344 courses here, that&amp;rsquo;s a bit surprising. That student would have needed to complete almost every course twice! Is that the only student who has taken courses more than once?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;multi_class &amp;lt;- student_courses %&amp;gt;% 
+			filter(count &amp;gt; 344)
+
+nrow(multi_class)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 219
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;219 students have taken more than the offered 344 courses and thus must have repeated some! It&amp;rsquo;s possible that the other students have repeated some courses too. I&amp;rsquo;ll come back to &lt;a href=&#34;#which-courses-tend-to-be-repeated-by-students&#34;&gt;that&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;can-you-group-students-based-on-the-number-of-classes-they-take-vs-the-amount-of-time-they-spend-per-class&#34;&gt;Can you group students based on the number of classes they take vs. the amount of time they spend per class?&lt;/h3&gt;
+
+&lt;p&gt;The FCC folks who released this dataset seem interested in ways to group their students. I&amp;rsquo;m curious if this can be done by looking at the number of courses students have completed in comparison to the amount of time spent per course. Do students who complete classes more quickly tend to burn out quickly and ultimately take fewer courses?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;student_courses2 &amp;lt;- student_courses %&amp;gt;% 
+		filter(count &amp;gt; 1)
+
+
+ggplot(student_courses2, aes(x = count, y = median_time)) + geom_point(alpha = 1/4) + 
+    labs(x = &amp;quot;Number of Completed Courses&amp;quot;, y = &amp;quot;Average time per Course (minutes)&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;../FCC_Courses_files/figure-markdown_github/unnamed-chunk-44-1.png&#34; class = &#34;img-responsive&#34; style = &#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This figure is a little overwhelmed with outliers who spent a very long time completing few courses.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;d like to see what this looks like if students don&amp;rsquo;t take breaks between classes, so I&amp;rsquo;m going to remove any entries where the time to complete the course was greater than 14 days.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;student_no_break &amp;lt;- sc_full4 %&amp;gt;% 
+		filter(overallnum &amp;gt; 5) %&amp;gt;% group_by(.id) %&amp;gt;% 
+    		mutate(time = as.numeric(time_since_last, units = &amp;quot;mins&amp;quot;)) %&amp;gt;% 
+    		summarise(count = n(), total_time = sum(time, na.rm = TRUE), 
+        			median_time = median(time, na.rm = TRUE), 
+			average_time = mean(time, na.rm = TRUE), 
+			max_time = max(time, na.rm = TRUE)) %&amp;gt;% 
+    		filter(count &amp;gt; 1, max_time &amp;lt; 20160) %&amp;gt;% 
+		mutate(time_per_class = (total_time/count))
+
+ggplot(student_no_break, aes(x = count, y = average_time)) + 
+    geom_point(alpha = 1/4) + labs(x = &amp;quot;Number of Completed Courses&amp;quot;, 
+    y = &amp;quot;Average time per Course (minutes)&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;../FCC_Courses_files/figure-markdown_github/unnamed-chunk-45-1.png&#34; class = &#34;img-responsive&#34; style = &#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Generally speaking, it looks like students who complete courses quickly (not including any breaks) complete the most courses overall. But what if we take breaks into account?&lt;/p&gt;
+
+&lt;h3 id=&#34;does-taking-a-2-week-break-help-or-hurt-course-completion&#34;&gt;Does taking a 2 week break help or hurt course completion?&lt;/h3&gt;
+
+&lt;p&gt;I wanted to look at a box plot of course completion depending on the number of breaks students completed.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;total_breaks &amp;lt;- sc_full4 %&amp;gt;% 
+		group_by(.id) %&amp;gt;% 
+		mutate(time = as.numeric(time_since_last, units = &amp;quot;mins&amp;quot;)) %&amp;gt;% 
+		summarise(breaks = length(.id[time &amp;gt; 20160])) %&amp;gt;% 
+		mutate(breaks = breaks - 1) %&amp;gt;% 
+		ungroup()
+
+breaks &amp;lt;- left_join(total_breaks, student_courses, by = &amp;quot;.id&amp;quot;)
+
+multi_class_breaks &amp;lt;- breaks %&amp;gt;% 
+		filter(count &amp;gt; 1)
+
+
+fig6 &amp;lt;- highchart() %&amp;gt;% 
+		hc_add_series_boxplot(multi_class_breaks$count, multi_class_breaks$breaks) %&amp;gt;% 	
+		hc_xAxis(title = list(text = &amp;quot;Number of &amp;gt; 14 Day Breaks&amp;quot;)) %&amp;gt;% 
+    		hc_yAxis(title = list(text = &amp;quot;Number of Completed Courses&amp;quot;), 
+        			max = 500)
+
+fig6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;iframe seamless src=&#34;../FCC_Courses_files/figure-markdown_github/fig6/index.html&#34; width = &#34;100%&#34; height=&#34;500&#34; id=&#34;iframe_container&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;It seems possible that taking one or more 2 week breaks from the FCC program may actually have a positive impact on the number of courses completed. However, it is unclear at this time if any of those courses are repeats. Let&amp;rsquo;s try to take out repeat courses.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;no_repeats &amp;lt;- sc_full4 %&amp;gt;% 
+	group_by(.id) %&amp;gt;% 
+	distinct(course) %&amp;gt;% 
+    	summarise(nr_count = n()) %&amp;gt;% 
+	ungroup()
+
+
+
+no_repeat_join &amp;lt;- left_join(no_repeats, breaks, by = &amp;quot;.id&amp;quot;)
+
+nr_multi &amp;lt;- no_repeat_join %&amp;gt;% filter(nr_count &amp;gt; 1)
+
+
+fig7 &amp;lt;- highchart() %&amp;gt;% 
+	hc_add_series_boxplot(nr_multi$nr_count, nr_multi$breaks) %&amp;gt;% 
+	hc_xAxis(title = list(text = &amp;quot;Number of &amp;gt; 14 Day Breaks&amp;quot;)) %&amp;gt;% 
+    	hc_yAxis(title = list(text = &amp;quot;Number of Completed Courses (Without Repeats)&amp;quot;), 
+        			max = 300, 
+			min = 0)
+
+fig7
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;iframe seamless src=&#34;../FCC_Courses_files/figure-markdown_github/fig7/index.html&#34; width = &#34;100%&#34; height=&#34;500&#34; id=&#34;iframe_container&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Even taking repeated courses out of the dataset seems to indicate that of students who completed more than one course, the presence of one or more 2 week breaks actually increases the median number of courses that will be completed. It may be worth encouraging students to take short breaks between classes if they feel they need to.&lt;/p&gt;
+
+&lt;h3 id=&#34;which-courses-tend-to-be-repeated-by-students&#34;&gt;Which courses tend to be repeated by students?&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;repeats &amp;lt;- sc_full4 %&amp;gt;% 
+	group_by(.id, section, overallnum, course) %&amp;gt;% 
+    	summarise(course_count = n()) %&amp;gt;% 
+	ungroup() %&amp;gt;% 
+	group_by(overallnum, section, course) %&amp;gt;% 
+	summarise(student_repeats = n(), 
+		avg_repeats = mean(course_count)) %&amp;gt;% 
+    	arrange(overallnum)
+
+
+fig8 &amp;lt;- hchart(repeats, &amp;quot;column&amp;quot;, x = course, y = avg_repeats, color = section) %&amp;gt;% 
+	hc_title(text = &amp;quot;Average Number of Times a Single Student Completed Each Course&amp;quot;) %&amp;gt;% 
+    	hc_subtitle(text = &amp;quot;&amp;lt;i&amp;gt;In course curriculum order&amp;lt;/i&amp;gt;&amp;quot;) %&amp;gt;% 
+    	hc_xAxis(title = list(text = &amp;quot;FCC Course (in order of FCC course curriculum)&amp;quot;)) %&amp;gt;% 
+    	hc_yAxis(title = list(text = &amp;quot;Mean # Times Single Student Completed Each Course&amp;quot;), 
+       		max = 1.5, min = 1) %&amp;gt;% 
+	hc_chart(zoomType = &amp;quot;xy&amp;quot;) %&amp;gt;% 
+    	hc_tooltip(headerFormat = &amp;quot;&amp;quot;, pointFormat = &amp;quot;&amp;lt;b&amp;gt;Class: {point.course}&amp;lt;/b&amp;gt; &amp;lt;br&amp;gt;
+		Section: {point.section}&amp;lt;br&amp;gt;
+		Mean times course taken by single student: {point.y} times&amp;quot;, 
+        		valueDecimals = 2)
+
+fig8
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;iframe seamless src=&#34;../FCC_Courses_files/figure-markdown_github/fig8/index.html&#34; width = &#34;100%&#34; height=&#34;500&#34; id=&#34;iframe_container&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The courses closest to 1 in this figure were repeated the fewest number of times by students. The most commonly repeated course in the entire curriculum was &amp;ldquo;Where art thou&amp;rdquo;, a course near the beginning of the &amp;ldquo;Intermediate Algorithm Scripting&amp;rdquo; Section.&lt;/p&gt;
+
+&lt;p&gt;Generally speaking, sections with the most repeated courses were:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Basic JavaScript&lt;/li&gt;
+&lt;li&gt;Basic Algorithm Scripting&lt;/li&gt;
+&lt;li&gt;Intermediate Algorithm Scripting&lt;/li&gt;
+&lt;li&gt;Automated Testing and Debugging&lt;/li&gt;
+&lt;li&gt;Advanced Algorithm Scripting&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This could indicate that the courses in these sections are simply more difficult than other sections or that the material in these courses needs to be viewed more than once to completely comprehend the material. Either way, the content in these course sections should be assessed.&lt;/p&gt;
+
+&lt;h3 id=&#34;can-we-predict-the-number-of-courses-a-student-will-complete-using-machine-learning&#34;&gt;Can we predict the number of courses a student will complete using machine learning?&lt;/h3&gt;
+
+&lt;p&gt;I&amp;rsquo;m going to use some simple machine learning to see if I can predict the number of courses a student will complete (not counting repeated courses). I&amp;rsquo;m going to include 4 variables in this model:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;First completed course&lt;/li&gt;
+&lt;li&gt;Number of repeated courses&lt;/li&gt;
+&lt;li&gt;Number of 14 day breaks&lt;/li&gt;
+&lt;li&gt;Median course completion time (not including &amp;gt; 14 day breaks)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;First, I need to transform my dataset to fit into a frame with the needed variables. To remain consistent, I&amp;rsquo;ll once again use &lt;code&gt;dplyr&lt;/code&gt; functions for this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;repeat_students &amp;lt;- sc_full4 %&amp;gt;% 
+	group_by(.id) %&amp;gt;% 
+	summarise(total_count = n()) %&amp;gt;% 
+    	ungroup() %&amp;gt;% 
+	filter(total_count &amp;gt; 1)
+
+first_course &amp;lt;- sc_full4 %&amp;gt;% 
+	group_by(.id) %&amp;gt;% 
+	filter(st_cour_num == 1) %&amp;gt;% 
+	select(1:2) %&amp;gt;% 
+	ungroup()
+
+repeated_courses &amp;lt;- sc_full4 %&amp;gt;% 
+	group_by(.id, course) %&amp;gt;% 
+	summarise(course_count = n()) %&amp;gt;% 
+    	filter(course_count &amp;gt; 1) %&amp;gt;% 
+	summarise(repeat_count = n()) %&amp;gt;% 
+   	ungroup()
+
+breaks_courses &amp;lt;- sc_full4 %&amp;gt;% 
+	group_by(.id) %&amp;gt;% 
+	mutate(time = as.numeric(time_since_last, units = &amp;quot;mins&amp;quot;)) %&amp;gt;% 
+	summarise(breaks = length(.id[time &amp;gt; 20160])) %&amp;gt;% 
+	mutate(breaks = breaks - 1) %&amp;gt;% 
+	ungroup()
+
+median_courses &amp;lt;- sc_full4 %&amp;gt;% 
+	group_by(.id) %&amp;gt;% 
+	mutate(time = as.numeric(time_since_last, units = &amp;quot;mins&amp;quot;)) %&amp;gt;% 
+	filter(time &amp;lt; 20160) %&amp;gt;% 
+	summarise(median_time = median(time, na.rm = TRUE)) %&amp;gt;% 
+	ungroup()
+
+completed_courses &amp;lt;- sc_full4 %&amp;gt;% 
+	group_by(.id) %&amp;gt;% 
+	distinct(course) %&amp;gt;% 
+   	summarise(nr_count = n()) %&amp;gt;% 
+	ungroup()
+
+mlset &amp;lt;- left_join(repeat_students, first_course, by = &amp;quot;.id&amp;quot;)
+mlset &amp;lt;- left_join(mlset, repeated_courses, by = &amp;quot;.id&amp;quot;)
+mlset &amp;lt;- left_join(mlset, breaks_courses, by = &amp;quot;.id&amp;quot;)
+mlset &amp;lt;- left_join(mlset, median_courses, by = &amp;quot;.id&amp;quot;)
+mlset &amp;lt;- left_join(mlset, completed_courses, by = &amp;quot;.id&amp;quot;)
+
+# Replacing NA in repeat_count column with 0
+mlset$repeat_count[is.na(mlset$repeat_count)] &amp;lt;- 0
+
+# Making course into a factor
+mlset$course &amp;lt;- as.factor(mlset$course)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that the dataframe is set up the way I want (a single row per student and only the variables I&amp;rsquo;m interested in), I&amp;rsquo;m going to randomize the dataset and extract a test set.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Set random seed
+set.seed(1)
+
+# Shuffle rows of data set
+n &amp;lt;- nrow(mlset)
+shuffled &amp;lt;- mlset[sample(n), ]
+
+# Perform 70/30 split (70% to training set, 30% to test set)
+train_indices &amp;lt;- 1:round(0.7 * n)
+train &amp;lt;- shuffled[train_indices, ]
+
+test_indices &amp;lt;- (round(0.7 * n) + 1):n
+test &amp;lt;- shuffled[test_indices, ]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;fitting-a-baseline-model&#34;&gt;Fitting a baseline model&lt;/h4&gt;
+
+&lt;p&gt;Without adding any extra variables, how well can we predict the number of courses that a student will complete? Without any additional variables, my best guess is that the mean number of courses taken (without replication) would help us predict the number of courses completed. This will give us a baseline to compare our more complex models with. Wow a RMSE of 73.17!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Creating baseline model
+baseline &amp;lt;- mean(train$nr_count)
+
+# Evaluate RMSE on the test set
+base_test &amp;lt;- sqrt(mean((baseline - test$nr_count)^2))
+base_test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 73.17323
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;creating-traincontrol&#34;&gt;Creating trainControl&lt;/h4&gt;
+
+&lt;p&gt;Since I plan to use the &lt;code&gt;caret&lt;/code&gt; package to test two different models for these data, I will create a system that will perform a 10-fold cross-validation of the training dataset.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;myControl &amp;lt;- trainControl(method = &amp;quot;cv&amp;quot;, number = 10, verboseIter = TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;fitting-a-random-forest-model&#34;&gt;Fitting a random forest model&lt;/h4&gt;
+
+&lt;p&gt;The first type of model I&amp;rsquo;d like to use is a random forest model (using the &lt;code&gt;ranger&lt;/code&gt; and &lt;code&gt;caret&lt;/code&gt; packages and the trainControl object I just created).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rf_model &amp;lt;- train(nr_count ~ course + repeat_count + breaks + 
+    median_time, data = train, tuneLength = 3, method = &amp;quot;ranger&amp;quot;, 
+    trControl = myControl, importance = &amp;quot;impurity&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rf_model
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Random Forest 
+## 
+## 55502 samples
+##     4 predictor
+## 
+## No pre-processing
+## Resampling: Cross-Validated (10 fold) 
+## Summary of sample sizes: 49951, 49952, 49952, 49952, 49953, 49951, ... 
+## Resampling results across tuning parameters:
+## 
+##   mtry  RMSE      Rsquared 
+##     2   69.16746  0.2839369
+##   122   58.47552  0.3601910
+##   243   66.00565  0.2475999
+## 
+## RMSE was used to select the optimal model using  the smallest value.
+## The final value used for the model was mtry = 122.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Our model is an OK fit, explaining about 55% of the variation in our model with a RMSE of 49.&lt;/p&gt;
+
+&lt;h4 id=&#34;fitting-a-glmnet-model&#34;&gt;Fitting a glmnet model&lt;/h4&gt;
+
+&lt;p&gt;I&amp;rsquo;m also going to try to fit a glmnet model to these data.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;glm_model &amp;lt;- train(nr_count ~ course + repeat_count + breaks + 
+    median_time, data = train, tuneLength = 3, method = &amp;quot;glmnet&amp;quot;, 
+    trControl = myControl)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Loading required package: glmnet
+
+## Loading required package: Matrix
+
+## 
+## Attaching package: &#39;Matrix&#39;
+
+## The following object is masked from &#39;package:tidyr&#39;:
+## 
+##     expand
+
+## Loading required package: foreach
+
+## Loaded glmnet 2.0-5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;glm_model
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## glmnet 
+## 
+## 55502 samples
+##     4 predictor
+## 
+## No pre-processing
+## Resampling: Cross-Validated (10 fold) 
+## Summary of sample sizes: 49952, 49950, 49952, 49952, 49951, 49952, ... 
+## Resampling results across tuning parameters:
+## 
+##   alpha  lambda      RMSE      Rsquared 
+##   0.10   0.05861448  64.27342  0.2272597
+##   0.10   0.58614484  64.23881  0.2280560
+##   0.10   5.86144844  64.26716  0.2287188
+##   0.55   0.05861448  64.25864  0.2276078
+##   0.55   0.58614484  64.17347  0.2297203
+##   0.55   5.86144844  64.84995  0.2170755
+##   1.00   0.05861448  64.23882  0.2280713
+##   1.00   0.58614484  64.21272  0.2288975
+##   1.00   5.86144844  65.07230  0.2166004
+## 
+## RMSE was used to select the optimal model using  the smallest value.
+## The final values used for the model were alpha = 0.55 and lambda
+##  = 0.5861448.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The best glmnet model explained about 48% of the variance in our dataset with a RMSE of about 53.&lt;/p&gt;
+
+&lt;h4 id=&#34;comparing-model-fit&#34;&gt;Comparing Model Fit&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Create a list of models
+models &amp;lt;- list(rf = rf_model, glmnet = glm_model)
+
+# Resample the models
+resampled &amp;lt;- resamples(models)
+
+# Generate a summary
+summary(resampled)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## summary.resamples(object = resampled)
+## 
+## Models: rf, glmnet 
+## Number of resamples: 10 
+## 
+## RMSE 
+##         Min. 1st Qu. Median  Mean 3rd Qu.  Max. NA&#39;s
+## rf     57.79   57.91  58.52 58.48   58.85 59.50    0
+## glmnet 63.36   64.06  64.27 64.17   64.34 64.75    0
+## 
+## Rsquared 
+##          Min. 1st Qu. Median   Mean 3rd Qu.   Max. NA&#39;s
+## rf     0.3312  0.3510 0.3629 0.3602  0.3724 0.3781    0
+## glmnet 0.2204  0.2258 0.2268 0.2297  0.2317 0.2487    0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Plot the differences between model fits
+dotplot(resampled, metric = &amp;quot;RMSE&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src =&#34;../FCC_Courses_files/figure-markdown_github/unnamed-chunk-60-1.png&#34; class = &#34;img-responsive&#34; style = &#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dotplot(resampled, metric = &amp;quot;Rsquared&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src =&#34;../FCC_Courses_files/figure-markdown_github/unnamed-chunk-60-2.png&#34; class = &#34;img-responsive&#34; style = &#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So our Random Forest model has a better fit and a lower error than the glmnet model. Let&amp;rsquo;s see which predictors were the most important to that model.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Creating a Variable Importance variable
+vimp &amp;lt;- varImp(rf_model)
+
+# Plotting &#39;vimp&#39;
+ggplot(vimp, top = 20[1])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;../FCC_Courses_files/figure-markdown_github/unnamed-chunk-61-1.png&#34; class = &#34;img-responsive&#34; style = &#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The median time spent on each class is the most important variable in our current model, followed by the first course in the series, and the number of courses that were repeated.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;While I didn&amp;rsquo;t answer every one of the questions that FCC was interested in, I was able to answer a few, and here&amp;rsquo;s what I found:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Starting Location&lt;/strong&gt; : While users start their FCC journey at a few different places, most begin at either &amp;ldquo;Learn how Free Code Camp works&amp;rdquo; and &amp;ldquo;Say Hello to HTML Elements&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Most Popular Courses&lt;/strong&gt; : The courses offered early in the curriculum were completed mre frequently, and course completion drops off throughout the &amp;ldquo;HTML5 and CSS&amp;rdquo; and &amp;ldquo;Responsive Design with Bootstrap&amp;rdquo; sections.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Longest Courses to Complete&lt;/strong&gt; : The courses that took the longest (on average) to complete were:
+
+&lt;ul&gt;
+&lt;li&gt;Claim Your Backend Development Certificate (6845 minutes or 4.75 days)&lt;/li&gt;
+&lt;li&gt;Build a Voting App (6675 minutes or 4.6 days)&lt;/li&gt;
+&lt;li&gt;Build a Nightlife Coordination App (4861 minutes or 3.4 days)&lt;/li&gt;
+&lt;li&gt;Use the Twitchtv JSON API (4289 minutes or 3 days)&lt;/li&gt;
+&lt;li&gt;Build a Simon Game (4280 minutes or 3 days)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Course Completion&lt;/strong&gt; : About &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; of students only complete between 1 and 5 courses.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Repeated Course Completion&lt;/strong&gt; : Many students complete the same course more than once. The most commonly repeated courses are:
+
+&lt;ul&gt;
+&lt;li&gt;Basic JavaScript&lt;/li&gt;
+&lt;li&gt;Basic Algorithm Scripting&lt;/li&gt;
+&lt;li&gt;Intermediate Algorithm Scripting&lt;/li&gt;
+&lt;li&gt;Automated Testing and Debugging&lt;/li&gt;
+&lt;li&gt;Advanced Algorithm Scripting&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Taking Two Week Breaks&lt;/strong&gt; : Taking one or more two week breaks actually appears to lead to a higher median number of completed courses.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Student Flow Through Course Map&lt;/strong&gt; : Users tend to take many of the completed courses in the recommended order, but some suggested pathways are ignored in favor of more user-preferred pathways. Several courses don&amp;rsquo;t appear to fit into the typical flow of the course curriculum. These courses seem to be treated as stand-alone courses:
+
+&lt;ul&gt;
+&lt;li&gt;Courses in the Node.js and Express.js section&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Get Set for Basejumps&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Save your code revisions forever with Git&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Courses in the Dynamic Web application section&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Predicting Course Completion&lt;/strong&gt; : While a model could be fit, more information is needed to properly predict course completion for FCC students.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;my-suggestions&#34;&gt;My Suggestions&lt;/h2&gt;
+
+&lt;p&gt;While I can only offer suggestions based on the data I am given, I suggest that FCC:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Investigate &amp;ldquo;Line up Form Elements Responsively with Bootstrap&amp;rdquo; course. Almost 11,000 students complete this course but don&amp;rsquo;t continue to the next courses in the section.&lt;/li&gt;
+&lt;li&gt;Determine why the longest courses to complete take so long. Are these courses just unlikely to be completed in one sitting? Are they significantly more difficult than other courses in the curriculum?&lt;/li&gt;
+&lt;li&gt;Suggest to students that it is OK (and even sometimes helpful) to take a break and then come back. Though, it may be helpful to remind them to come back if they&amp;rsquo;ve been gone for more than 2 weeks.&lt;/li&gt;
+&lt;li&gt;Determine why some courses were taken repeatedly by the same students. Is the course material in these courses harder and thus needed to be taken multiple times to comprehend?&lt;/li&gt;
+&lt;li&gt;Integrate the &amp;ldquo;stand-alone&amp;rdquo; courses into the curriculum map in a more cohesive way.&lt;/li&gt;
+&lt;li&gt;Offer different maps based on students&amp;rsquo; end-goal. All courses may not be necessary for each type of student.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As always, I appreciate any and all feedback on my work, so feel free to let me know what you think!&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Ghosts, Goblins, and Ghouls</title>
-      <link>https://proquestionasker.github.io/projects/Ghosts_Goblins_Ghouls_02/</link>
+      <link>/projects/Ghosts_Goblins_Ghouls_02/</link>
       <pubDate>Wed, 09 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://proquestionasker.github.io/projects/Ghosts_Goblins_Ghouls_02/</guid>
+      <guid>/projects/Ghosts_Goblins_Ghouls_02/</guid>
       <description>&lt;p&gt;Kaggle Playground Competition&lt;/p&gt;
 
 &lt;p&gt;Data exploration and machine learning in RMarkdown.
@@ -500,10 +2232,10 @@ write.csv(my_solution_GGG_03, file = &amp;quot;my_solution_GGG_03.csv&amp;quot;,
     
     <item>
       <title>Machine Learning from Disaster</title>
-      <link>https://proquestionasker.github.io/projects/Titanic_md/</link>
+      <link>/projects/Titanic_md/</link>
       <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
       
-      <guid>https://proquestionasker.github.io/projects/Titanic_md/</guid>
+      <guid>/projects/Titanic_md/</guid>
       <description>&lt;p&gt;Kaggle Playground Competition&lt;/p&gt;
 
 &lt;p&gt;Data exploration and machine learning in RMarkdown.
