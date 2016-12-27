@@ -190,5 +190,5 @@
  pre code, pre, code {
   white-space: pre !important;
   overflow-y: scroll !important;
-  max-height: 80vh !important;
+  max-height: 75vh !important;
  }
