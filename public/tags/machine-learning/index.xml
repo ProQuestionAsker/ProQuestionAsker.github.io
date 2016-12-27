@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Amber Thomas</title>
-    <link>/tags/machine-learning/index.xml</link>
+    <link>https://proquestionasker.github.io/tags/machine-learning/index.xml</link>
     <description>Recent content on Amber Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2016 Amber Thomas</copyright>
-    <atom:link href="/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://proquestionasker.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Mapping Student Course Activity</title>
-      <link>/projects/fcc_courses3/</link>
+      <link>https://proquestionasker.github.io/projects/fcc_courses3/</link>
       <pubDate>Mon, 19 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>/projects/fcc_courses3/</guid>
+      <guid>https://proquestionasker.github.io/projects/fcc_courses3/</guid>
       <description>&lt;p&gt;Cleaning, exploration, interactive visualizations, and machine learning with Free Code Camp&amp;rsquo;s student course completion dataset.
 &lt;/p&gt;
 
@@ -1743,10 +1743,10 @@ ggplot(vimp, top = 20[1])
     
     <item>
       <title>Ghosts, Goblins, and Ghouls</title>
-      <link>/projects/Ghosts_Goblins_Ghouls_02/</link>
+      <link>https://proquestionasker.github.io/projects/Ghosts_Goblins_Ghouls_02/</link>
       <pubDate>Wed, 09 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>/projects/Ghosts_Goblins_Ghouls_02/</guid>
+      <guid>https://proquestionasker.github.io/projects/Ghosts_Goblins_Ghouls_02/</guid>
       <description>&lt;p&gt;Kaggle Playground Competition&lt;/p&gt;
 
 &lt;p&gt;Data exploration and machine learning in RMarkdown.
@@ -2232,10 +2232,10 @@ write.csv(my_solution_GGG_03, file = &amp;quot;my_solution_GGG_03.csv&amp;quot;,
     
     <item>
       <title>Machine Learning from Disaster</title>
-      <link>/projects/Titanic_md/</link>
+      <link>https://proquestionasker.github.io/projects/Titanic_md/</link>
       <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
       
-      <guid>/projects/Titanic_md/</guid>
+      <guid>https://proquestionasker.github.io/projects/Titanic_md/</guid>
       <description>&lt;p&gt;Kaggle Playground Competition&lt;/p&gt;
 
 &lt;p&gt;Data exploration and machine learning in RMarkdown.
