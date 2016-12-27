@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta name="generator" content="Hugo 0.17" /><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Amber Thomas</title>
+<meta name="description" content="Describe your website">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="./css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/owl.carousel.css">
+<link rel="stylesheet" href="./css/owl.theme.css">
+
+
+  <link href="./css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+
+<link href="./css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="./img/favicon.png">
+
+  <link href="./index.xml" rel="alternate" type="application/rss+xml" title="Amber Thomas" />
+  <link href="./index.xml" rel="feed" type="application/rss+xml" title="Amber Thomas" />
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-89036876-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              
+<div id="sidebar" class="col-sb-fixedpos col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="./">Amber Thomas</a></h1>
+    
+      <p class="sidebar-p">I am a researcher, communicator, and aspiring data scientist. This site is home to my data projects, blogs and tutorials.</p>
+    
+      <p class="sidebar-p">I'm currently looking for data science work. Hiring? I'd love to hear from you. </p>
+    
+
+      <p class="sidebar-p">
+        <i class="fa fa-map-marker" aria-hidden="true"></i> Seattle, WA</p>
+    
+    <ul class="sidebar-menu">
+      
+      
+        <li><a href="./">Home</a></li>
+      
+        <li><a href="./about/">About</a></li>
+      
+        <li><a href="./projects/">Projects</a></li>
+      
+        <li><a href="./blog/">Blog</a></li>
+      
+        <li><a href="./contact/">Get in touch</a></li>
+      
+    </ul>
+    <p class="social">
+  
+  
+  
+  <a href="https://twitter.com/ProQuesAsker" data-animate-hover="pulse" class="external twitter">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  
+  <a href="mailto:AmberThomasMSc@gmail.com" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  <a href="https://www.linkedin.com/in/amberrthomas" data-animate-hover="pulse">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  
+  
+  
+<a href="https://www.github.com/ProQuestionAsker">
+  <i class="fa fa-github"></i>
+</a>
+
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2016 Amber Thomas
+        
+        | Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+  <div class="col-xs-12 col-sm-8 col-md-9 content-column col-main-fixedpos">
+    <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="./">Amber Thomas</a></h1>
+</div>
+
+    <div class="grid">
+        <div class="row">
+          
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+                  <a href="./blog/Making_Site/">
+                  <div class="box-masonry">
+                      
+                        
+                        <a href="./blog/Making_Site/" title="" class="box-masonry-image with-hover-overlay">
+                        
+                            <img src="blog/img/SiteTutorial.jpg" alt="" class="img-responsive">
+                        </a>
+                      
+                      
+                      <div class="box-masonry-hover-text-header">
+                      
+
+                          <h4><a href="./blog/Making_Site/">Making a Website Using Blogdown, Hugo, and GitHub pages.</a></h4>
+                          <div class="box-masonry-desription">
+
+                          
+                          <p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Blog Post</p>
+                          
+
+                           
+                          
+                              <p>Wonder how I set up this website using just GitHub pages, Hugo, and RStudio package blogdown? This tutorial walks you through every step.
+ Introduction  Blogdown Hugo GitHub  Building the Page  Installing Necessary Packages and Software  Setting Up GitHub RStudio and Blogdown  Initializing GitHub pages to work with Hugo and Blogdown  Adding Content  Site Configuration Adding a Page Page Templates and Fixing Blank Pages Adding a Blog Post or Portfolio Piece Adding images  Troubleshooting  Page is Blank Images Aren’t Showing Up Page Has No Formatting My Post Won’t Show Up   Introduction As I transitioned into the data science world, I kept hearing one piece of advice over and over: build a portfolio.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </a>
+          
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+                  <a href="./projects/fcc_courses3/">
+                  <div class="box-masonry">
+                      
+                        
+                        <a href="./projects/fcc_courses3/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
+                        
+                            <img src="projects/FCC_Courses_files/FCC_courses.jpg" alt="" class="img-responsive">
+                        </a>
+                      
+                      
+                      <div class="box-masonry-text">
+                      
+
+                          <h4><a href="./projects/fcc_courses3/">Mapping Student Course Activity</a></h4>
+                          <div class="box-masonry-desription">
+
+                          
+
+                           
+                          <p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Personal Project</p>
+                          
+                          
+                              <p><p>Cleaning, exploration, interactive visualizations, and machine learning with Free Code Camp&rsquo;s student course completion dataset.
+</p></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </a>
+          
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+                  <a href="./projects/Seattle_Dogs/">
+                  <div class="box-masonry">
+                      
+                        
+                        <a href="./projects/Seattle_Dogs/" title="" class="box-masonry-image with-hover-overlay">
+                        
+                            <img src="projects/Seattle_Dogs_files/Dog-Graph.jpg" alt="" class="img-responsive">
+                        </a>
+                      
+                      
+                      <div class="box-masonry-hover-text-header">
+                      
+
+                          <h4><a href="./projects/Seattle_Dogs/">Dog Ownership in Seattle</a></h4>
+                          <div class="box-masonry-desription">
+
+                          
+
+                           
+                          <p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Personal Project</p>
+                          
+                          
+                              <p><p>Data cleaning, exploration, mapping, and data visualizations in RMarkdown.
+</p></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </a>
+          
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+                  <a href="./projects/Bicycle_Sharing_2/">
+                  <div class="box-masonry">
+                      
+                        
+                        <a href="./projects/Bicycle_Sharing_2/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
+                        
+                            <img src="projects/Bicycle_Sharing_2_files/Bicycle_Graph.jpg" alt="" class="img-responsive">
+                        </a>
+                      
+                      
+                      <div class="box-masonry-text">
+                      
+
+                          <h4><a href="./projects/Bicycle_Sharing_2/">Bicycle Sharing in Seattle</a></h4>
+                          <div class="box-masonry-desription">
+
+                          
+
+                           
+                          <p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Personal Project</p>
+                          
+                          
+                              <p><p>Data exploration, mapping, and data visualizations in RMarkdown.
+</p></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </a>
+          
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+                  <a href="./projects/Ghosts_Goblins_Ghouls_02/">
+                  <div class="box-masonry">
+                      
+                        
+                        <a href="./projects/Ghosts_Goblins_Ghouls_02/" title="" class="box-masonry-image with-hover-overlay">
+                        
+                            <img src="projects/Ghosts_Goblins_Ghouls_02_files/GGG_Boxplot.jpg" alt="" class="img-responsive">
+                        </a>
+                      
+                      
+                      <div class="box-masonry-hover-text-header">
+                      
+
+                          <h4><a href="./projects/Ghosts_Goblins_Ghouls_02/">Ghosts, Goblins, and Ghouls</a></h4>
+                          <div class="box-masonry-desription">
+
+                          
+
+                           
+                          <p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Personal Project</p>
+                          
+                          
+                              <p><p>Kaggle Playground Competition</p>
+
+<p>Data exploration and machine learning in RMarkdown.
+</p></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </a>
+          
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+                  <a href="./projects/Titanic_md/">
+                  <div class="box-masonry">
+                      
+                        
+                        <a href="./projects/Titanic_md/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
+                        
+                            <img src="projects/Titanic_md_files/Titanic.jpg" alt="" class="img-responsive">
+                        </a>
+                      
+                      
+                      <div class="box-masonry-text">
+                      
+
+                          <h4><a href="./projects/Titanic_md/">Machine Learning from Disaster</a></h4>
+                          <div class="box-masonry-desription">
+
+                          
+
+                           
+                          <p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Personal Project</p>
+                          
+                          
+                              <p><p>Kaggle Playground Competition</p>
+
+<p>Data exploration and machine learning in RMarkdown.
+</p></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </a>
+          
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+                  <a href="./blog/ds_courses/">
+                  <div class="box-masonry">
+                      
+                        
+                        <a href="./blog/ds_courses/" title="" class="box-masonry-image with-hover-overlay">
+                        
+                            <img src="blog/img/DataSci_Classes.jpg" alt="" class="img-responsive">
+                        </a>
+                      
+                      
+                      <div class="box-masonry-hover-text-header">
+                      
+
+                          <h4><a href="./blog/ds_courses/">Online Data Science Classes in R</a></h4>
+                          <div class="box-masonry-desription">
+
+                          
+                          <p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Blog Post</p>
+                          
+
+                           
+                          
+                              <p>Summary: A list of the data science courses I’ve taken, my ratings on them, and comments for future learners.
+  Introduction Prerequisites Courses I’ve Taken  Getting Started in Data Science Getting Started in R R Studio Courses Machine Learning Courses SQL Databases Other Courses  Wrap-Up  Introduction While working as a marine biologist, I decided to switch career tracks slightly and pursue data science. I already had experience in mathematics, R programming and data visualization but filling in other knowledge gaps led me to searching the internet for the best places to learn these skills.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </a>
+          
+        </div>
+    </div>
+</div>
+
+
+          </div>
+      </div>
+  </div>
+  <script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/jquery.cookie.js"> </script>
+<script src="./js/ekko-lightbox.js"></script>
+<script src="./js/jquery.scrollTo.min.js"></script>
+<script src="./js/masonry.pkgd.min.js"></script>
+<script src="./js/imagesloaded.pkgd.min.js"></script>
+<script src="./js/owl.carousel.min.js"></script>
+<script src="./js/front.js"></script>
+<script src="./js/backtotop.js"></script> 
+
+</body>
+</html>

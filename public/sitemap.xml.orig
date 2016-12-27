@@ -2,73 +2,84 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://proquestionasker.github.io/</loc>
+    <loc>/</loc>
+    <lastmod>2016-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/Making_Site/</loc>
+    <lastmod>2016-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/fcc_courses3/</loc>
+    <lastmod>2016-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/Seattle_Dogs/</loc>
     <lastmod>2016-11-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://proquestionasker.github.io/portfolio/Seattle_Dogs/</loc>
-    <lastmod>2016-11-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://proquestionasker.github.io/portfolio/Bicycle_Sharing_2/</loc>
+    <loc>/projects/Bicycle_Sharing_2/</loc>
     <lastmod>2016-11-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://proquestionasker.github.io/portfolio/Ghosts_Goblins_Ghouls_01/</loc>
+    <loc>/projects/Ghosts_Goblins_Ghouls_02/</loc>
     <lastmod>2016-11-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://proquestionasker.github.io/contact/</loc>
+    <loc>/contact/</loc>
     <lastmod>2016-11-06T13:00:25+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://proquestionasker.github.io/post/hello-world/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://proquestionasker.github.io/blog/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://proquestionasker.github.io/blog/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://proquestionasker.github.io/blog/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://proquestionasker.github.io/blog/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://proquestionasker.github.io/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://proquestionasker.github.io/blog/</loc>
-  </url>
-  
-  <url>
-<<<<<<< HEAD
-    <loc>https://proquestionasker.github.io/portfolio/</loc>
-  </url>
-  
-  <url>
-=======
->>>>>>> 4adabf51142b46f47c04edad9d2fe9c716100f81
-    <loc>https://proquestionasker.github.io/portfolio/Titanic_Survival/</loc>
+    <loc>/projects/Titanic_md/</loc>
     <lastmod>2016-11-05T18:25:22+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/fcc_courses_files/figure-markdown_github/fig1/</loc>
+  </url>
+  
+  <url>
+    <loc>/projects/fcc_courses_files/figure-markdown_github/fig2/</loc>
+  </url>
+  
+  <url>
+    <loc>/projects/fcc_courses_files/figure-markdown_github/fig3/</loc>
+  </url>
+  
+  <url>
+    <loc>/projects/fcc_courses_files/figure-markdown_github/fig4/</loc>
+  </url>
+  
+  <url>
+    <loc>/projects/fcc_courses_files/figure-markdown_github/fig5/</loc>
+  </url>
+  
+  <url>
+    <loc>/projects/fcc_courses_files/figure-markdown_github/fig6/</loc>
+  </url>
+  
+  <url>
+    <loc>/projects/fcc_courses_files/figure-markdown_github/fig7/</loc>
+  </url>
+  
+  <url>
+    <loc>/projects/fcc_courses_files/figure-markdown_github/fig8/</loc>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/ds_courses/</loc>
+    <lastmod>2016-12-17T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>
