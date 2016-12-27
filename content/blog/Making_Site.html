@@ -7,6 +7,7 @@ draft: false
 weight: 0
 author: "Amber Thomas"
 image: "blog/img/SiteTutorial.jpg"
+description: "Wonder how I set up this website using just GitHub pages, Hugo, and RStudio package blogdown? This tutorial walks you through every step." 
 ---
 
 
@@ -14,7 +15,6 @@ image: "blog/img/SiteTutorial.jpg"
 
 /BLOGDOWN-BODY-BEFORE -->
 
-<p>Wonder how I set up this website using just GitHub pages, Hugo, and RStudio package blogdown? This tutorial walks you through every step.</p>
 <ul>
 <li><a href="#introduction">Introduction</a>
 <ul>
@@ -384,7 +384,8 @@ git subtree push --prefix=public \
 <li>The text from the body of the file shows up in this view</li>
 <li>We’re missing an image</li>
 </ul>
-<p>The text in this view is the <code>{{ .Summary }}</code>, or a <a href="https://gohugo.io/content/summaries#hugo-defined-automatic-summary-split">Hugo-generated</a> piece of text that includes the first 70 words of your file. To my knowledge, there’s currently no way to adjust this inside .Rmd files.</p>
+<p>The text in this view is the <code>{{ .Summary }}</code>, or a <a href="https://gohugo.io/content/summaries#hugo-defined-automatic-summary-split">Hugo-generated</a> piece of text that includes the first 70 words of your file. If you are working in a .md file, you can add <code>&lt;!--more--&gt;</code> where you’d like your summary to end.</p>
+<p>If you’d like a bit more control, take <a href="https://github.com/rstudio/blogdown/issues/21">this great suggestion</a> from <a href="https://github.com/tovare">Tov Are Jacobsen</a>.</p>
 <p>Now let’s deal with the missing image.</p>
 </div>
 <div id="adding-images" class="section level3">

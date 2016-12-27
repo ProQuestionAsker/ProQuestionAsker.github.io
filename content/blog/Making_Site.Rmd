@@ -7,9 +7,8 @@ draft: false
 weight: 0
 author: "Amber Thomas"
 image: "blog/img/SiteTutorial.jpg"
+description: "Wonder how I set up this website using just GitHub pages, Hugo, and RStudio package blogdown? This tutorial walks you through every step." 
 ---
-
-Wonder how I set up this website using just GitHub pages, Hugo, and RStudio package blogdown? This tutorial walks you through every step. 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
@@ -456,7 +455,9 @@ We notice a few things:
 * The text from the body of the file shows up in this view
 * We're missing an image
 
-The text in this view is the `{{ .Summary }}`, or a [Hugo-generated](https://gohugo.io/content/summaries#hugo-defined-automatic-summary-split) piece of text that includes the first 70 words of your file. To my knowledge, there's currently no way to adjust this inside .Rmd files. 
+The text in this view is the `{{ .Summary }}`, or a [Hugo-generated](https://gohugo.io/content/summaries#hugo-defined-automatic-summary-split) piece of text that includes the first 70 words of your file. If you are working in a .md file, you can add `<!--more-->` where you'd like your summary to end. 
+
+If you'd like a bit more control, take [this great suggestion](https://github.com/rstudio/blogdown/issues/21) from [Tov Are Jacobsen](https://github.com/tovare). 
 
 Now let's deal with the missing image.
 

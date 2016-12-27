@@ -32,7 +32,11 @@
                           <p><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Personal Project</p>
                           {{ end }}
                           
-                              <p>{{ .Summary }}</p>
+                              <p> {{ if .Description }}
+                                    {{ .Description }}
+                                        {{ else }}
+                                  {{ .Summary | plainify | safeHTML }}
+                                        {{ end }}</p>
                           </div>
                       </div>
                   </div>

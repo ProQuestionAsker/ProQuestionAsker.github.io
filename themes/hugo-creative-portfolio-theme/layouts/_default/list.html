@@ -50,7 +50,15 @@
                               <a href="{{ .Permalink }}"><i class="fa fa-calendar-o"></i> {{ .Date.Format "January 2, 2006" }}</a>
                           </p>
                       </div>
-                      <p class="intro">{{ .Summary }}</p>
+                      <p class="intro">
+                       {{ if .Description }}
+                          {{ .Description }}
+                       {{ else }}
+                          {{ .Summary | plainify | safeHTML }}
+                      {{ end }}</p>
+    
+
+
                       <p class="read-more"><a id="amber-btn" href="{{ .Permalink }}" class="btn btn-template-main">Continue reading</a>
                       </p>
                   </div>

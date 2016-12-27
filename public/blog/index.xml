@@ -20,7 +20,6 @@
 
 /BLOGDOWN-BODY-BEFORE --&gt;
 
-&lt;p&gt;Wonder how I set up this website using just GitHub pages, Hugo, and RStudio package blogdown? This tutorial walks you through every step.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;
 &lt;ul&gt;
@@ -390,7 +389,8 @@ git subtree push --prefix=public \
 &lt;li&gt;The text from the body of the file shows up in this view&lt;/li&gt;
 &lt;li&gt;We’re missing an image&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The text in this view is the &lt;code&gt;{{ .Summary }}&lt;/code&gt;, or a &lt;a href=&#34;https://gohugo.io/content/summaries#hugo-defined-automatic-summary-split&#34;&gt;Hugo-generated&lt;/a&gt; piece of text that includes the first 70 words of your file. To my knowledge, there’s currently no way to adjust this inside .Rmd files.&lt;/p&gt;
+&lt;p&gt;The text in this view is the &lt;code&gt;{{ .Summary }}&lt;/code&gt;, or a &lt;a href=&#34;https://gohugo.io/content/summaries#hugo-defined-automatic-summary-split&#34;&gt;Hugo-generated&lt;/a&gt; piece of text that includes the first 70 words of your file. If you are working in a .md file, you can add &lt;code&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt; where you’d like your summary to end.&lt;/p&gt;
+&lt;p&gt;If you’d like a bit more control, take &lt;a href=&#34;https://github.com/rstudio/blogdown/issues/21&#34;&gt;this great suggestion&lt;/a&gt; from &lt;a href=&#34;https://github.com/tovare&#34;&gt;Tov Are Jacobsen&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Now let’s deal with the missing image.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;adding-images&#34; class=&#34;section level3&#34;&gt;
@@ -468,8 +468,6 @@ git subtree push --prefix=public \
 
 /BLOGDOWN-BODY-BEFORE --&gt;
 
-&lt;p&gt;Summary: A list of the data science courses I’ve taken, my ratings on them, and comments for future learners.&lt;/p&gt;
-&lt;!--more--&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#prerequisites&#34;&gt;Prerequisites&lt;/a&gt;&lt;/li&gt;
@@ -697,7 +695,7 @@ git subtree push --prefix=public \
 
 &lt;!-- BLOGDOWN-HEAD
 
-&lt;link href=&#34;#####../content/blog/ds_courses_files/font-awesome-4.5.0/css/font-awesome.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;#####../content/blog/ds_courses_files/font-awesome/css/font-awesome.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 
 

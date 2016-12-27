@@ -7,16 +7,13 @@ image: "blog/img/DataSci_Classes.jpg"
 weight: 1
 type: "post"
 author: "Amber Thomas"
-summary: A list of the data science courses I've taken, my ratings on them, and comments for future learners.
+description: "A list of the data science courses I've taken, my ratings on them, and comments for future learners."
 ---
 
 ```{r, include = FALSE}
 htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ```
 
-Summary: A list of the data science courses I've taken, my ratings on them, and comments for future learners.
-
-<!--more-->
  
 -   [Introduction](#introduction)
 -   [Prerequisites](#prerequisites)
