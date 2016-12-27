@@ -2,7 +2,7 @@
 showonlyimage = false
 draft = false
 image = "projects/FCC_Courses_files/FCC_courses.jpg"
-date = "2016-12-19"
+date = "2016-12-27"
 title = "Mapping Student Course Activity"
 weight = 0
 type = "post"
