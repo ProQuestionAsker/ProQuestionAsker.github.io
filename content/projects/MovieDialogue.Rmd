@@ -28,7 +28,7 @@ knitr::opts_chunk$set(collapse = TRUE)
 htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ```
 
-Jump straight to the [Interactive Graphic](https://ProQuestionAsker.github.io/public/projects/MovieDialogueInteractive/index.html).
+Jump straight to the [Interactive Graphic](https://ProQuestionAsker.github.io/projects/MovieDialogueInteractive/).
 
 -   [Introduction](#introduction)
     -   [Choosing the Movies](#choosing-the-movies)
@@ -266,7 +266,7 @@ However, when I started this project, I had never once touched d3.js or Javascri
 
 The more I looked, the more I realized I'd need to learn some d3.js to do this the way I want. So, to internet classes and StackOverflow I went. Somewhere along the line, I stumbled upon a [fantastic interactive bubble chart](http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html?_r=0) from the New York Times and decided that if I was going to make my bubbles interactive, I also wanted to add the ability to separate them by gender. I was able to find a few excellent tutorials on how to make this happen ([here](https://www.youtube.com/watch?v=lPr60pexvEM) and [here](http://vallandingham.me/bubble_charts_with_d3v4.html)). So I played and experimented and played some more. When I got stuck I returned to Google searching and reading. At one point I was stuck on a problem for hours and could not find a workable solution, so I turned to the kind people of the internet, asked for [help](http://stackoverflow.com/questions/41479452/collision-detection-lost-after-toggle-d3v4), and was lucky enough to have a very knowledgable user respond right away. 
 
-I'm uploading my .js, .css, and .html files to Github, so anyone interested in exploring them, please do. As I learn more Javascript I hope to come back to this project and optimize the code. I know right now that it is far from perfect, but for my first project with d3.js, I'm very happy with how it turned out. To give some brief insight into parts of the d3.js code:
+I'm uploading my [.js](https://github.com/ProQuestionAsker/ProQuestionAsker.github.io/blob/sources/content/projects/MovieDialogueInteractive/movie_bubbles2.js), [.css](https://github.com/ProQuestionAsker/ProQuestionAsker.github.io/blob/sources/content/projects/MovieDialogueInteractive/style.css), and [.html](https://github.com/ProQuestionAsker/ProQuestionAsker.github.io/blob/sources/content/projects/MovieDialogueInteractive/index.html) files to Github, so anyone interested in exploring them, please do. As I learn more Javascript I hope to come back to this project and optimize the code. I know right now that it is far from perfect, but for my first project with d3.js, I'm very happy with how it turned out. To give some brief insight into parts of the d3.js code:
 
 I once again scale the circles by [area](https://github.com/d3/d3-scale/blob/master/README.md#scaleSqrt), with a maximum circle diameter of 40 px. 
 
@@ -351,7 +351,7 @@ I added a clickable element within each svg box to toggle between the combined a
 knitr::include_graphics("../2016MovieDialogue_images/FinalDesign.jpg")
 ```
 
-Again, the entire code used to generate the d3.js figure is available on my [Github]().
+Again, the entire code used to generate the d3.js figure is available on my [Github](https://github.com/ProQuestionAsker/ProQuestionAsker.github.io/tree/sources/content/projects/MovieDialogueInteractive) and the interactive version is [here](https://ProQuestionAsker.github.io/projects/MovieDialogueInteractive/)
 
 ### Color Considerations
 
@@ -374,6 +374,8 @@ But regardless of the color scheme, I couldn't easily tell which group represent
 
 
 ## Key Takeaways
+
+If you haven't already checked out the interactive version, do that [here](https://ProQuestionAsker.github.io/projects/MovieDialogueInteractive/).
 
 Before I start this section, I feel the need to point out that I **did not** do any statistics, machine learning, etc. on these data. I really set out on this project just to see if my impressions of female representation in 2016's movies could be backed up by data and to find an interesting way to visualize it. If you'd like to do some more in-depth analytics yourself, I made the word-count data [available]().  *For legal reasons, I can't post the transcripts themselves online.*
 
