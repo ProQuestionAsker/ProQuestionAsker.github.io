@@ -782,7 +782,7 @@ var simulation = d3.forceSimulation()
 
 
 d3.queue()
-	.defer(d3.csv, "JungleBook.csv")
+	.defer(d3.csv, "Junglebook.csv")
 	.await(ready)
 
 
