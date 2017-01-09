@@ -6,6 +6,18 @@ draft: false
 title: "Gender Equality and Dialogue in 2016’s Highest Grossing Films"
 image: "projects/2016MovieDialogue_images/MovieDialogue.jpg"
 description: "Text parsing, analytics, and d3.js interactive data visualization of movie transcripts"
+tags: [
+ "text parsing",
+ "data viz",
+ "d3.js"
+]
+keywords: [
+"Movie Transcripts",
+"interactive visualization",
+"data visualization",
+"d3.js",
+"Gender Equality"
+]
 ---
 
 ```{r setup, include=FALSE}
