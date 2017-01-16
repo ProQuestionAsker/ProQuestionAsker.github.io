@@ -2099,23 +2099,23 @@ function ready (error, datapoints) {
     		.attr("x", 100)
     		.attr("y", (height * (2/3) + 45))
     		.style("fill", "#3b3f93")
-    		.attr("width", 68)
+    		.attr("width", 67)
     		.attr("height", 10)
     		.on("mouseover", function(d) {
-              tooltip.html("68% Male Characters");
+              tooltip.html("67% Male Characters");
               tooltip.style("visibility", "visible");
       		})
       		.on("mousemove", mousemove) 
       		.on("mouseout", mouseout);
 
     var femaleCharacters = svg.append("rect")
-    		.attr("x", 168)
+    		.attr("x", 167)
     		.attr("y", (height * (2/3) + 45))
     		.style("fill", "#ff4a6b")
-    		.attr("width", 32)
+    		.attr("width", 33)
     		.attr("height", 10)
     		.on("mouseover", function(d) {
-              tooltip.html("32% Female Characters");
+              tooltip.html("33% Female Characters");
               tooltip.style("visibility", "visible");
       		})
       		.on("mousemove", mousemove)
