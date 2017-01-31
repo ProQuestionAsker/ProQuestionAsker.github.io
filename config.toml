@@ -1,5 +1,5 @@
 baseurl = "https://proquestionasker.github.io/"
-title = "Amber Thomas"
+title = "Amber Thomas' Data Science Portfolio"
 theme = "hugo-creative-portfolio-theme"
 languageCode = "en-us"
 pluralizeListTitles = false
@@ -8,12 +8,16 @@ disqusShortname = "amberthomas"
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = "UA-89036876-1"
 
+[author]
+    name = "Amber Thomas"
+
+
 [params]
   # Style options: default (pink), blue, green, pink, red, sea, violet
   # Use custom.css for your custom styling
   style = "default"
-  description = "Describe your website"
-  copyright = "&copy;2016 Amber Thomas"
+  description = "This website serves as a portfolio for my data science projects, as well as blog posts and tutorials for using R, RStudio and other data science topics."
+  copyright = "&copy;2017 Amber Thomas"
   sidebarAbout = [
     "I am a researcher, communicator, and aspiring data scientist. This site is home to my data projects, blogs and tutorials.",
     "I'm currently looking for data science work. Hiring? I'd love to hear from you. "
@@ -58,6 +62,7 @@ googleAnalytics = "UA-89036876-1"
   twitter      = "https://twitter.com/ProQuesAsker"
   linkedin     = "https://www.linkedin.com/in/amberrthomas"
   github       = "https://www.github.com/ProQuestionAsker"
+  rss          = "index.xml"
   
   #Adding widgets to the sidebar
   [params.widgets]

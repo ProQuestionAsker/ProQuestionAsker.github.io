@@ -39,4 +39,10 @@
   <i class="fa fa-github"></i>
 </a>
 {{end}}
+{{ with .Site.RSSLink }}
+<a href="{{ . }}" data-animate-hover="pulse">
+  <i class='fa fa-rss'></i>
+</a>
+{{end}}
+
 </p>
