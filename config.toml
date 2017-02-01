@@ -1,5 +1,5 @@
 baseurl = "https://proquestionasker.github.io/"
-title = "Amber Thomas' Data Science Portfolio"
+title = "Amber Thomas"
 theme = "hugo-creative-portfolio-theme"
 languageCode = "en-us"
 pluralizeListTitles = false
@@ -7,9 +7,6 @@ pluralizeListTitles = false
 disqusShortname = "amberthomas"
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = "UA-89036876-1"
-
-[author]
-    name = "Amber Thomas"
 
 
 [params]
