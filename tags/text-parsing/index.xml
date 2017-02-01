@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Amber Thomas&#39; Data Science Portfolio</title>
-    <link>/tags/text-parsing/index.xml</link>
-    <description>Recent content on Amber Thomas&#39; Data Science Portfolio</description>
+    <title>Amber Thomas</title>
+    <link>https://proquestionasker.github.io/tags/text-parsing/index.xml</link>
+    <description>Recent content on Amber Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2017 Amber Thomas</copyright>
-    <atom:link href="/tags/text-parsing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://proquestionasker.github.io/tags/text-parsing/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Gender Equality and Dialogue in 2016’s Highest Grossing Films</title>
-      <link>/projects/MovieDialogue/</link>
+      <link>https://proquestionasker.github.io/projects/MovieDialogue/</link>
       <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/projects/MovieDialogue/</guid>
+      <guid>https://proquestionasker.github.io/projects/MovieDialogue/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
