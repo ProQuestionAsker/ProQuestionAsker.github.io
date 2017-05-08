@@ -2,20 +2,609 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog-rss on Amber Thomas</title>
-    <link>https://proquestionasker.github.io/blog/index.xml</link>
+    <link>/blog/index.xml</link>
     <description>Recent content in Blog-rss on Amber Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2017 Amber Thomas</copyright>
-    <lastBuildDate>Mon, 19 Dec 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://proquestionasker.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 May 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Nesting and Accessing Data in d3v4</title>
+      <link>/blog/d3Nest/</link>
+      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/d3Nest/</guid>
+      <description>&lt;!-- BLOGDOWN-BODY-BEFORE
+
+/BLOGDOWN-BODY-BEFORE --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#before-nesting&#34;&gt;Before Nesting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#nest-level-1&#34;&gt;Nest Level 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#rollup-level-1&#34;&gt;Rollup Level 1&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sorting-keys&#34;&gt;Sorting Keys&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#nest-level-2&#34;&gt;Nest Level 2&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#styling-nested-elements&#34;&gt;Styling Nested Elements&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#creating-dropdown-menus-from-1st-level-nests&#34;&gt;Creating Dropdown Menus from 1st Level Nests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#rollup-level-2&#34;&gt;Rollup Level 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#creating-dropdown-menus-from-2nd-level-nests&#34;&gt;Creating Dropdown Menus from 2nd Level Nests&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;While learning how to make interactive data visualizations using &lt;a href=&#34;d3js.org&#34;&gt;d3.js&lt;/a&gt;, I ran into an issue with something new to me: &lt;em&gt;nests&lt;/em&gt;. The general idea is that data sometimes needs to be grouped based on certain variables and the groups need to be analyzed or graphed separately. Seems like a simple enough concept, but in practice, well…I got a little lost in the weeds.&lt;/p&gt;
+&lt;p&gt;I’m writing this post as a resource for how to nest and access nested d3 data both for myself and for anyone else who could benefit from my exploration of this topic.&lt;/p&gt;
+&lt;p&gt;So, let’s start at the beginning.&lt;/p&gt;
+&lt;div id=&#34;technical-details&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Technical Details&lt;/h2&gt;
+&lt;p&gt;In this post I am using:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;d3.v4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;before-nesting&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Before Nesting&lt;/h1&gt;
+&lt;p&gt;For this post, I’m going to be building upon the same dataset. The first version looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;##   Month Sales
+## 1   Jan    87
+## 2   Feb     3
+## 3   Mar    89
+## 4   Apr    56
+## 5   May     1
+## 6   Jun    17&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These data are just random numbers, but for our purposes, we’ll say that they are monthly sales of strawberries. And although there are a few ways we could represent this totally fake data, for demonstration purposes, we’ll use a line chart.&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa fa-question-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt; &lt;strong&gt;The basics for creating a line chart in d3 are outside the scope of this post, but if you need more background, &lt;a href=&#34;http://www.d3noob.org/2016/08/create-simple-line-graph-using-d3js-v4.html&#34;&gt;this&lt;/a&gt; is a good place to start.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Here’s what the final product looks like: &lt;img src=&#34;../nestImg/Example1.png&#34; width=&#34;80%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa fa-github&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt; &lt;strong&gt;The javascript, HTML and CSS needed to generate this figure are available &lt;a href=&#34;https://bl.ocks.org/ProQuestionAsker/9a909417edf206f2d3ff38cd41a30524/c7c24def8aea8d2e3f50453ee1d963e8f6ffc09b#file-example1-csv&#34;&gt;here&lt;/a&gt;. &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now, if we use &lt;code&gt;console.log()&lt;/code&gt; to look at the structure of the data, it looks like this: &lt;img src=&#34;../nestImg/Example1Structure.png&#34; width=&#34;60%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;So there’s an array with 12 objects inside: one for each month. And each object contains both the month variable and the Sales count. When generating the path for the line graph, we can access the data like this:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;// Define the line
+var valueLine = d3.line()
+    .x(function(d) { return x(d.Month); })
+    .y(function(d) { return y(+d.Sales); })
+
+// Add the path element
+  svg.selectAll(&amp;quot;.line&amp;quot;)
+      .data([data])
+      .enter()
+      .append(&amp;quot;path&amp;quot;)
+        .attr(&amp;quot;class&amp;quot;, &amp;quot;line&amp;quot;)
+        .attr(&amp;quot;d&amp;quot;, valueLine)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So far so good.&lt;/p&gt;
+&lt;p&gt;Now let’s expand the data and add a nest.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;nest-level-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Nest Level 1&lt;/h1&gt;
+&lt;p&gt;Ok, so now that we’ve plotted our monthly fake strawberry sales for one year, let’s add in our (again, randomly generated) grape and blueberry sales data.&lt;/p&gt;
+&lt;p&gt;That requires adding one column to look like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;##   Month Sales      Fruit
+## 1   Jan    87 strawberry
+## 2   Feb     3 strawberry
+## 3   Mar    89 strawberry
+## 4   Apr    56 strawberry
+## 5   May     1 strawberry
+## 6   Jun    17 strawberry&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If we try plotting the line chart the exact same way as before, we end up with something that looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../nestImg/Example2.png&#34; width=&#34;80%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Whoops, it looks like d3 tried to plot all of our data as one continuous line, which makes sense because we didn’t tell it that there are 3 separate categories here.&lt;/p&gt;
+&lt;p&gt;For native R users, the solution to this issue would be simple. In ggplot2, you’d just use the &lt;code&gt;group=&lt;/code&gt; and/or &lt;code&gt;color=&lt;/code&gt; options like this:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+ggplot(ex2, aes(x = Month, y = Sales, group = Fruit, color = Fruit)) + 
+    geom_path()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;#####../content/blog/d3Nest_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;In d3, this is where nests come in.&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa fa-question-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt; &lt;strong&gt;Looking for the actual documentation? Find it &lt;a href=&#34;https://github.com/d3/d3-collection/blob/master/README.md#nests&#34;&gt;here&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Just like with ggplot, we need to figure out which variable we want to group our data by. In this case, we want a separate line for each fruit’s sales. In R that’s &lt;code&gt;group = Fruit&lt;/code&gt; and in d3, you need to set the &lt;em&gt;key&lt;/em&gt; to the Fruit variable.&lt;/p&gt;
+&lt;p&gt;It looks like this:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;var nest = d3.nest()
+  .key(function(d){
+    return d.Fruit;
+  })
+  .entries(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;At this stage, since we are simply grouping the data, this nest has only two parts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The key (in this case, the d.Fruit variable)&lt;/li&gt;
+&lt;li&gt;The entries (the variable that holds the data that you are nesting)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Perhaps unsurprisingly, doing this changes the structure of our data.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../nestImg/Example2Structure.png&#34; width=&#34;80%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;To access the nested data and generate multiple lines, we can do this:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;// Define the line
+var valueLine = d3.line()
+    .x(function(d) { return x(d.Month); })
+    .y(function(d) { return y(+d.Sales); })
+
+// Draw the line
+  svg.selectAll(&amp;quot;.line&amp;quot;)
+      .data(nest)
+      .enter()
+      .append(&amp;quot;path&amp;quot;)
+          .attr(&amp;quot;class&amp;quot;, &amp;quot;line&amp;quot;)
+          .attr(&amp;quot;d&amp;quot;, function(d){
+            return valueLine(d.values);
+          });&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that there are only two things that have changed here, but they’re important things!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.data([data])&lt;/code&gt; became &lt;code&gt;.data(nest)&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Make sure to change the data source to your new nested data&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.attr(&amp;quot;d&amp;quot;, valueLine)&lt;/code&gt; became &lt;code&gt;.attr(&amp;quot;d&amp;quot;, function(d){ return valueLine(d.values); })&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Instead of being able to generate a line directly from the data as is, you need to now specify that you’d like to make a path from the values of the data (in this case, our Sales variable)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Just by making these small changes, you’ll see that we now have 3 separate lines. Hooray!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../nestImg/Example2Complete.png&#34; width=&#34;80%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa fa-github&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt; &lt;strong&gt;The entire js, html, css, and csv scripts are included &lt;a href=&#34;https://bl.ocks.org/ProQuestionAsker/295b81e1d59de386ce332a6401b98cc8&#34;&gt;here&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rollup-level-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Rollup Level 1&lt;/h1&gt;
+&lt;p&gt;Now that we’ve been able to draw 3 separate lines (one for each fruit), we can see the theoretical monthly sales for each fruit. But what if we wanted to compare the annual sales for each fruit instead?&lt;/p&gt;
+&lt;p&gt;For native R-users, the easiest option may come from the &lt;code&gt;dplyr&lt;/code&gt; package and the &lt;code&gt;group_by&lt;/code&gt; and &lt;code&gt;summarise&lt;/code&gt; functions. That may look something like this:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+
+annualSales &amp;lt;- ex2 %&amp;gt;% group_by(Fruit) %&amp;gt;% summarise(Annual = sum(Sales))
+
+annualSales&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 × 2
+##        Fruit Annual
+##        &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt;
+## 1  blueberry    729
+## 2      grape    673
+## 3 strawberry    617&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So we end up with data that has only one data point for each fruit. To replicate this in d3, we can again use &lt;code&gt;d3.nest&lt;/code&gt; but in combination with the function &lt;code&gt;d3.rollup&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;It would look like this:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;var nest = d3.nest()
+  .key(function(d){
+    return d.Fruit;
+  })
+  .rollup(function(leaves){
+        return d3.sum(leaves, function(d) {return (d.Sales)});
+    })
+  .entries(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The rollup function generates a sum of the sales data for each Fruit value, similarly to the &lt;code&gt;dplyr&lt;/code&gt; &lt;code&gt;group_by&lt;/code&gt; and &lt;code&gt;summarise&lt;/code&gt; functions.&lt;/p&gt;
+&lt;p&gt;The data structure then looks like this: &lt;img src=&#34;../nestImg/Example3Structure.png&#34; width=&#34;100%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Since we’ve reduced the data to just 3 values (one for each fruit), we can no longer represent the data using a line chart. Instead, here’s a bar chart generated with the nested and rolled-up data.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../nestImg/Example3Complete.png&#34; width=&#34;60%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Although the code is different due to the difference in chart type, here is the code to generate the bars.&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;  // Draw the bars
+  svg.selectAll(&amp;quot;.rect&amp;quot;)
+      .data(nest)
+      .enter()
+      .append(&amp;quot;rect&amp;quot;)
+          .attr(&amp;quot;class&amp;quot;, &amp;quot;bar&amp;quot;)
+          .attr(&amp;quot;x&amp;quot;, function(d) { return x(d.key); })
+          .attr(&amp;quot;y&amp;quot;, function(d) { return y(d.value); })
+          .attr(&amp;quot;width&amp;quot;, x.bandwidth())
+          .attr(&amp;quot;height&amp;quot;, function(d) { return height - y(d.value); });&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that the &lt;code&gt;d.key&lt;/code&gt; (remember, the key is our Fruit variable) is used for the x component of creating the shapes. Similarly the &lt;code&gt;d.value&lt;/code&gt; (this is our rolled up Sum of Sales data) is used for the y component of the bars.&lt;/p&gt;
+&lt;div id=&#34;sorting-keys&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Sorting Keys&lt;/h2&gt;
+&lt;p&gt;If necessary, you can also sort the keys using the &lt;code&gt;.sortKeys&lt;/code&gt; function. For instance, to put our fruit data in alphabetical order (by fruit), our new nesting function may look like this:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;var nest = d3.nest()
+  .key(function(d){
+    return d.Fruit;
+  })
+  .sortKeys(d3.ascending)
+  .rollup(function(leaves){
+        return d3.sum(leaves, function(d) {return (d.Sales)});
+    })
+  .entries(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Which results in an updated chart like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../nestImg/Example3Complete2.png&#34; width=&#34;60%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa fa-github&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt; &lt;strong&gt;The full code for this example is available &lt;a href=&#34;https://bl.ocks.org/ProQuestionAsker/60e7a6e3117f9f433ef9c998f6c776b6&#34;&gt;here&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;nest-level-2&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Nest Level 2&lt;/h1&gt;
+&lt;p&gt;We’re now familiar with how &lt;code&gt;d3.nest()&lt;/code&gt; and &lt;code&gt;d3.rollup()&lt;/code&gt; work, but we don’t have to stop at one level. For instance, imagine that we now have multiple years of fruit sale data.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;##   Month Sales      Fruit Year
+## 1   Jan    87 strawberry 2016
+## 2   Feb     3 strawberry 2016
+## 3   Mar    89 strawberry 2016
+## 4   Apr    56 strawberry 2016
+## 5   May     1 strawberry 2016
+## 6   Jun    17 strawberry 2016&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For this example, the data includes values for 2015 and 2016.&lt;/p&gt;
+&lt;p&gt;Now, we may want to nest by fruit and then by year. In this case, we don’t need the rollup, just the keys. First by fruit and then by year.&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;var nest = d3.nest()
+  .key(function(d){
+    return d.Fruit;
+  })
+  .key(function(d){
+    return d.Year;
+  })
+  .entries(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Our resulting data structure looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../nestImg/Example4Structure.png&#34; width=&#34;60%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The original sales data is still present, but notice that it’s now two levels down. That’ll make it slightly more challenging to access for making graphics with it.&lt;/p&gt;
+&lt;p&gt;Here’s how we get to it:&lt;/p&gt;
+&lt;p&gt;First, we need to bind the upper levels of data to “groups”, or in d3, g-elements.&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;var fruitGroups = svg.selectAll(&amp;quot;.fruitGroups&amp;quot;)
+    .data(nest)
+    .enter()
+    .append(&amp;quot;g&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This creates 3 groups: strawberry, grape, and blueberry. These were our first keys, so they are the first things to be grouped.&lt;/p&gt;
+&lt;p&gt;Now, we need to access the data inside each group by appending path elements like this:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;var paths = fruitGroups.selectAll(&amp;quot;.line&amp;quot;)
+    .data(function(d){ 
+      return d.values 
+    })
+    .enter()
+    .append(&amp;quot;path&amp;quot;);&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This leaves us with 3 arrays: strawberry, grape, and blueberry. Within each array we’ll find 2 paths: one bound with 2015 data and one bound with 2016 data. Now all that’s left is to actually draw the path element.&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;paths
+  .attr(&amp;quot;d&amp;quot;, function(d){
+    return d.values
+  })
+  .attr(&amp;quot;class&amp;quot;, &amp;quot;line&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After we’ve added that bit of code, this is the resulting graph:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../nestImg/Example4.png&#34; width=&#34;60%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Awesome! We now have 6 lines on our chart. It’s a little hard to tell the difference between our lines though, so we can add some styling.&lt;/p&gt;
+&lt;div id=&#34;styling-nested-elements&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Styling Nested Elements&lt;/h2&gt;
+&lt;p&gt;First, let’s make the color of the line reflect which fruit the data represents. We can do this by manually defining the colors for each. Here, we’ll do that manually making strawberry pink, grapes green, and blueberry blue-ish purple.&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;// Set the color scheme
+var colors = d3.scaleOrdinal()
+  .domain([&amp;quot;strawberry&amp;quot;, &amp;quot;grape&amp;quot;, &amp;quot;blueberry&amp;quot;])
+  .range([&amp;quot;#EF5285&amp;quot;, &amp;quot;#88F284&amp;quot; , &amp;quot;#5965A3&amp;quot;]);&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, adding a single line of code to the end of our grouping variable like this will adjust the color for each element:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;var fruitGroups = svg.selectAll(&amp;quot;.fruitGroups&amp;quot;)
+    .data(nest)
+    .enter()
+    .append(&amp;quot;g&amp;quot;)
+    .attr(&amp;quot;stroke&amp;quot;, function(d){ return colors(d.key)}); // Adding color!&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;../nestImg/Example4Colors.png&#34; width=&#34;60%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Getting closer! But we have a 2015 line for each fruit and a 2016 line for each fruit. Let’s separate those out by line type, adding a dash for 2015 lines.&lt;/p&gt;
+&lt;p&gt;That’s pretty simple, we can just add this line to the end of our path attributes:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;paths
+  .attr(&amp;quot;d&amp;quot;, function(d){
+    return valueLine(d.values)
+  })
+  .attr(&amp;quot;class&amp;quot;, &amp;quot;line&amp;quot;)
+  .style(&amp;quot;stroke-dasharray&amp;quot;, function(d){ 
+    return (d.key == 2015) ? (&amp;quot;3, 3&amp;quot;) : (&amp;quot;0, 0&amp;quot;)}); // Adding dashes to 2015!&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And we end up with this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../nestImg/Example4Dash.png&#34; width=&#34;60%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Yay! We now have 6 lines, 2 for each of our 3 fruits.&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa fa-github&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt; &lt;strong&gt;All of the code for this chart is available &lt;a href=&#34;https://bl.ocks.org/ProQuestionAsker/952a0699278d1bdfda36d4b7175924d3&#34;&gt;here&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;creating-dropdown-menus-from-1st-level-nests&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Creating Dropdown Menus from 1st Level Nests&lt;/h1&gt;
+&lt;p&gt;While the above chart totally works, it’s a little too crowded to help us gain valuable insights about specific fruits. It might help to add some drop-down menus so that we can choose which fruit we want to view. Adding a drop-down menu is relatively simple. First, you need to add a section into your html for the dropdown. Inside the &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; of your HTML file, add a div element for your dropdown. Something like this would work:&lt;/p&gt;
+&lt;pre class=&#34;html&#34;&gt;&lt;code&gt;&amp;lt;div id = &amp;quot;fruitDropdown&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, in your Javascript file, you’ll need to create the dropdown. Select the id that you assigned to the div element in your HTML file and append a “select” element to it. Then you append the “options” to the select element. In this case, we wanted the dropdown to contain a list of fruit names. Since our first level keys were the d.Fruit variables, assigning the “value” and “text” of our dropdowns to d.key fills them with the names of our 3 fruits.&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;var fruitMenu = d3.select(&amp;quot;#fruitDropdown&amp;quot;)
+
+  fruitMenu
+  .append(&amp;quot;select&amp;quot;)
+  .selectAll(&amp;quot;option&amp;quot;)
+      .data(nest)
+      .enter()
+      .append(&amp;quot;option&amp;quot;)
+      .attr(&amp;quot;value&amp;quot;, function(d){
+          return d.key;
+      })
+      .text(function(d){
+          return d.key;
+      })&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This creates a figure like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../nestImg/Example5Menu.png&#34; width=&#34;60%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Currently, clicking on the different options doesn’t do anything. We need to set up an event listener for the dropdown menu so that when something is changed, something happens on our figure. In this case, we’ll initially draw the chart with only the data for strawberries, and we’ll make the data update when the menu item is changed.&lt;/p&gt;
+&lt;p&gt;To do that, I’ve created 2 functions. The first, draws the initial graph:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;    // Function to create the initial graph
+    var initialGraph = function(fruit){
+
+        // Filter the data to include only fruit of interest
+        var selectFruit = nest.filter(function(d){
+                return d.key == fruit;
+              })
+
+        var selectFruitGroups = svg.selectAll(&amp;quot;.fruitGroups&amp;quot;)
+            .data(selectFruit, function(d){
+              return d ? d.key : this.key;
+            })
+            .enter()
+            .append(&amp;quot;g&amp;quot;)
+            .attr(&amp;quot;class&amp;quot;, &amp;quot;fruitGroups&amp;quot;)
+
+        var initialPath = selectFruitGroups.selectAll(&amp;quot;.line&amp;quot;)
+            .data(function(d) { return d.values; })
+            .enter()
+            .append(&amp;quot;path&amp;quot;)
+
+        initialPath
+            .attr(&amp;quot;d&amp;quot;, function(d){
+                return valueLine(d.values)
+            })
+            .attr(&amp;quot;class&amp;quot;, &amp;quot;line&amp;quot;)
+
+    }&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that this function is written almost exactly the same as the code used to draw our figures earlier. The only thing that has been added is the &lt;code&gt;nest.filter&lt;/code&gt; section which simply filters our data to only include the data for the fruit we’re interested in.&lt;/p&gt;
+&lt;p&gt;Then by running &lt;code&gt;initialGraph(&amp;quot;strawberry&amp;quot;)&lt;/code&gt;, the figure including only data for strawberry sales is created.&lt;/p&gt;
+&lt;p&gt;Next, we need a function to update the graph. that looks like this:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;var updateGraph = function(fruit){
+
+        // Filter the data to include only fruit of interest
+        var selectFruit = nest.filter(function(d){
+                return d.key == fruit;
+              })
+
+        // Select all of the grouped elements and update the data
+        var selectFruitGroups = svg.selectAll(&amp;quot;.fruitGroups&amp;quot;)
+            .data(selectFruit)
+
+            // Select all the lines and transition to new positions
+            selectFruitGroups.selectAll(&amp;quot;path.line&amp;quot;)
+               .data(function(d){
+                  return (d.values);
+                })
+                .transition()
+                  .duration(1000)
+                  .attr(&amp;quot;d&amp;quot;, function(d){
+                    return valueLine(d.values)
+                  })
+    }&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That will update the data and smoothly transition between the line shapes. Now, we just need to connect the update function to a change event on the dropdown menu. That looks like this:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt; // Run update function when dropdown selection changes
+ fruitMenu.on(&amp;#39;change&amp;#39;, function(){
+
+    // Find which fruit was selected from the dropdown
+    var selectedFruit = d3.select(this)
+          .select(&amp;quot;select&amp;quot;)
+          .property(&amp;quot;value&amp;quot;)
+  
+    // Run update function with the selected fruit
+    updateGraph(selectedFruit)
+
+});&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Great! We end up with a graph that looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../nestImg/Example5.png&#34; width=&#34;60%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa fa-github&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt; &lt;strong&gt;It is fully functional with all the supporting code &lt;a href=&#34;https://bl.ocks.org/ProQuestionAsker/8382f70af7f4a7355827c6dc4ee8817d&#34;&gt;here&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rollup-level-2&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Rollup Level 2&lt;/h1&gt;
+&lt;p&gt;We’re doing great so far and our code is sufficient enough to handle more data. Let’s add data for other years for each fruit’s sales.&lt;/p&gt;
+&lt;p&gt;I’ve added data so that each fruit now has 4 years worth of (remember, totally fake) data.&lt;/p&gt;
+&lt;p&gt;Here’s what 2 of the views look like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../nestImg/Example6Examples.png&#34; width=&#34;100%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;You’ll notice that the view for strawberries looks a little strange because of the Y-axis. Currently, we set our Y-domain like this:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;y.domain([0, d3.max(data, function(d) { return d.Sales; })]);&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We assign the Y-domain from 0 to the maximum Sales value across all of our data. So, even though the maximum number of fake strawberries sold in a month was 99, the Y axis extends to 250 because there was a month where either blueberry or grape sales reached 250. Once again, this is where nests can come to the rescue. We just need to determine the maximum number for each fruit and update the Y-domain dynamically.&lt;/p&gt;
+&lt;p&gt;We’ll start back at the nest function.&lt;/p&gt;
+&lt;p&gt;To find the maximum value for each Fruit, we need to perform a &lt;code&gt;d3.rollup()&lt;/code&gt; just like we did in #rollup-level-1. But in this case, we don’t want to lose the original values by performing the rollup. So, we want the rolled-up data &lt;em&gt;and&lt;/em&gt; the second key on the same level.&lt;/p&gt;
+&lt;p&gt;That would look like this:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;var nest = d3.nest()
+  .key(function(d){
+        return d.Fruit;
+    })
+    .rollup(function(leaves){
+          var max = d3.max(leaves, function(d){
+            return d.Sales
+          })
+          var year = d3.nest().key(function(d){
+            return d.Year
+          })
+          .entries(leaves);
+          return {max:max, year:year};
+          })
+  .entries(data)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The resulting data structure would then look like this: &lt;img src=&#34;../nestImg/Example6Structure.png&#34; width=&#34;60%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Now it’s just a matter of accessing and using this data. We already have a good initial structure for how to build this figure, so now to update it.&lt;/p&gt;
+&lt;p&gt;Here’s the updated function to create the initial graph:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;    // Function to create the initial graph
+    var initialGraph = function(fruit){
+
+        // Filter the data to include only fruit of interest
+        var selectFruit = nest.filter(function(d){
+                return d.key == fruit;
+              })
+
+        var selectFruitGroups = svg.selectAll(&amp;quot;.fruitGroups&amp;quot;)
+            .data(selectFruit, function(d){
+              return d ? d.key : this.key;
+            })
+            .enter()
+            .append(&amp;quot;g&amp;quot;)
+            .attr(&amp;quot;class&amp;quot;, &amp;quot;fruitGroups&amp;quot;)
+            .each(function(d){
+                y.domain([0, d.value.max])
+            }); // this is new! And necessary to change the y-axis
+
+        var initialPath = selectFruitGroups.selectAll(&amp;quot;.line&amp;quot;)
+            .data(function(d) { return d.value.year; })
+            .enter()
+            .append(&amp;quot;path&amp;quot;)
+
+        initialPath
+            .attr(&amp;quot;d&amp;quot;, function(d){
+                return valueLine(d.values)
+            })
+            .attr(&amp;quot;class&amp;quot;, &amp;quot;line&amp;quot;)
+
+          // Add the Y Axis
+           var yaxis = svg.append(&amp;quot;g&amp;quot;)
+               .attr(&amp;quot;class&amp;quot;, &amp;quot;y axis&amp;quot;)
+               .call(d3.axisLeft(y)
+                  .ticks(5)
+                  .tickSizeInner(0)
+                  .tickPadding(6)
+                  .tickSize(0, 0));
+          
+          // Add a label to the y axis
+          svg.append(&amp;quot;text&amp;quot;)
+                .attr(&amp;quot;transform&amp;quot;, &amp;quot;rotate(-90)&amp;quot;)
+                .attr(&amp;quot;y&amp;quot;, 0 - 60)
+                .attr(&amp;quot;x&amp;quot;, 0 - (height / 2))
+                .attr(&amp;quot;dy&amp;quot;, &amp;quot;1em&amp;quot;)
+                .style(&amp;quot;text-anchor&amp;quot;, &amp;quot;middle&amp;quot;)
+                .text(&amp;quot;Monthly Sales&amp;quot;)
+                .attr(&amp;quot;class&amp;quot;, &amp;quot;y axis label&amp;quot;);
+
+    }&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There’s a few minor, but notable changes to make this work:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Notice the addition of &lt;code&gt;.each(function(d){ y.domain([0, d.value.max]) });&lt;/code&gt; to the end of the group. This adjusts the Y domain of each view, based on the maximum value calculated in our rollup function.&lt;/li&gt;
+&lt;li&gt;We changed &lt;code&gt;.data(function(d) { return d.values; })&lt;/code&gt; to &lt;code&gt;.data(function(d) { return d.value.year; })&lt;/code&gt;. This specifies that we are looking for the values within the newly created &lt;em&gt;year&lt;/em&gt; section of our data.&lt;/li&gt;
+&lt;li&gt;I’ve also moved the creation of the Y axis within this function so that the initial figure is generated with the appropriate Y axis scale.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now to update our update function.&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;var updateGraph = function(fruit){
+
+        // Filter the data to include only fruit of interest
+        var selectFruit = nest.filter(function(d){
+                return d.key == fruit;
+              })
+
+        // Select all of the grouped elements and update the data
+        var selectFruitGroups = svg.selectAll(&amp;quot;.fruitGroups&amp;quot;)
+            .data(selectFruit)
+            .each(function(d){
+                y.domain([0, d.value.max])
+            });
+
+            // Select all the lines and transition to new positions
+            selectFruitGroups.selectAll(&amp;quot;path.line&amp;quot;)
+               .data(function(d) { return d.value.year; })
+               .transition()
+                  .duration(1000)
+                  .attr(&amp;quot;d&amp;quot;, function(d){
+                    return valueLine(d.values)
+                  })
+
+        // Update the Y-axis
+            d3.select(&amp;quot;.y&amp;quot;)
+                    .transition()
+                    .duration(1500)
+                    .call(d3.axisLeft(y)
+                      .ticks(5)
+                      .tickSizeInner(0)
+                      .tickPadding(6)
+                      .tickSize(0, 0));
+
+
+    }&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Again, we’ve added the &lt;code&gt;.each(function(d){ y.domain([0, d.value.max]) });&lt;/code&gt; to the end of our group. We’ve updated the &lt;code&gt;.data&lt;/code&gt; call to &lt;code&gt;.data(function(d) { return d.value.year; })&lt;/code&gt; just like in the above function. I’ve also included a way to update the Y axis based on the new data.&lt;/p&gt;
+&lt;p&gt;And that’s it!&lt;/p&gt;
+&lt;p&gt;Here’s what the graphs now look like. And check out those Y-axes!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../nestImg/Example6.png&#34; width=&#34;100%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa fa-github&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt; &lt;strong&gt;&lt;a href=&#34;https://bl.ocks.org/ProQuestionAsker/ee398d1478f6416bba9916cee66f145d&#34;&gt;Here&lt;/a&gt;’s the functional version and code.&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;creating-dropdown-menus-from-2nd-level-nests&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Creating Dropdown Menus from 2nd Level Nests&lt;/h1&gt;
+&lt;p&gt;The last thing I may want to do with this 2-level nested data is to generate a second dropdown menu based on our 2nd level keys. Remember, the first level keys were our fruits, and the 2nd level keys are the years. Creating the dropdown menu begins in the same way as before.&lt;/p&gt;
+&lt;p&gt;We add another div to the html file.&lt;/p&gt;
+&lt;pre class=&#34;html&#34;&gt;&lt;code&gt;&amp;lt;div id= &amp;quot;yearDropdown&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And another dropdown menu via JavaScript.&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;var yearMenu = d3.select(&amp;quot;#yearDropdown&amp;quot;)
+
+yearMenu
+    .data(nest)
+    .append(&amp;quot;select&amp;quot;)
+    .selectAll(&amp;quot;option&amp;quot;)
+  .data(function(d) { return d.value.year; })
+      .enter()
+    .append(&amp;quot;option&amp;quot;)
+    .attr(&amp;quot;value&amp;quot;, function(d){
+        return d.key;
+     })
+    .text(function(d){
+       return d.key;
+    })&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that this time, there are 2 &lt;code&gt;.data()&lt;/code&gt; calls. The first indicates that it will once again be our nested data that we’ll be dealing with. The second, specifies that it’s not the entire nested data set, but the data within the &lt;code&gt;d.value.year&lt;/code&gt; section.&lt;/p&gt;
+&lt;p&gt;Just adding that small amount of code has generated our second dropdown menu.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../nestImg/Example7Menu.png&#34; width=&#34;100%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;So far so good. Once again, we just need to add an event listener to the dropdown so that when a value is clicked, something happens. In this case, I want to change the color of the line that corresponds to the selected year.&lt;/p&gt;
+&lt;p&gt;This should work:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;// Change color of selected line when year dropdown changes
+yearMenu.on(&amp;#39;change&amp;#39;, function(){
+
+    // Find which year was selected
+    var selectedYear = d3.select(this)
+        .select(&amp;quot;select&amp;quot;)
+        .property(&amp;quot;value&amp;quot;)
+
+    // Change the class of the matching line to &amp;quot;selected&amp;quot;
+    var selLine = svg.selectAll(&amp;quot;.line&amp;quot;)
+          // de-select all the lines
+          .classed(&amp;quot;selected&amp;quot;, false)
+          .filter(function(d) {
+              return +d.key === +selectedYear
+          })
+          // Set class to selected for matching line
+          .classed(&amp;quot;selected&amp;quot;, true)
+})&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;Note: Make sure to also add styling for a “.selected” class in your CSS!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../nestImg/Example7Selected.png&#34; width=&#34;100%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Looking good! One more minor aesthetic thing that can we can adjust.&lt;/p&gt;
+&lt;p&gt;d3 draws our lines as SVG elements in the order that it runs into them in the code. That means the 2016 line is on the bottom and 2013 is on top. When all of the lines are the same color, this doesn’t matter, but if you look closely at our last image, you’ll see that the gray lines cross over the pink one.&lt;/p&gt;
+&lt;p&gt;Luckily in d3v4, this is an easy fix thanks to &lt;code&gt;.raise()&lt;/code&gt;. We can add that to the end of our Year dropdown event listener:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;// Change color of selected line when year dropdown changes
+yearMenu.on(&amp;#39;change&amp;#39;, function(){
+
+    // Find which year was selected
+    var selectedYear = d3.select(this)
+        .select(&amp;quot;select&amp;quot;)
+        .property(&amp;quot;value&amp;quot;)
+
+    // Change the class of the matching line to &amp;quot;selected&amp;quot;
+    var selLine = svg.selectAll(&amp;quot;.line&amp;quot;)
+          // de-select all the lines
+          .classed(&amp;quot;selected&amp;quot;, false)
+          .filter(function(d) {
+              return +d.key === +selectedYear
+          })
+          // Set class to selected for matching line
+          .classed(&amp;quot;selected&amp;quot;, true)
+          .raise()
+})&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Be careful using the &lt;code&gt;.raise()&lt;/code&gt; function, though. As is, we can select a year and that path image will be brought to the top. When you switch to a different fruit, a line will stay pink, &lt;strong&gt;but&lt;/strong&gt; since we never specified the index of the data, the pink line remains the one &lt;strong&gt;on top&lt;/strong&gt;, not necessarily the one that matches the year.&lt;/p&gt;
+&lt;p&gt;So, for instance, if you select “grape” and then “2015”, the line for grape sales in 2015 will turn pink and come to the top. But, if you then select “strawberry”, the pink line will move to the location of the 2013 strawberry sales (because the 2013 data is on top). Luckily, this is also a quick fix. Just define the index when you draw the lines. That looks like this:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;// Inside our &amp;quot;Update Graph&amp;quot; function
+// Select all the lines and transition to new positions
+  selectFruitGroups.selectAll(&amp;quot;path.line&amp;quot;)
+     .data(function(d) { return d.value.year; }, 
+            function(d){ return d.key; }) // defining the index!
+     .transition()
+        .duration(1000)
+        .attr(&amp;quot;d&amp;quot;, function(d){
+          return valueLine(d.values)
+        })&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;../nestImg/Example7Selected2.png&#34; width=&#34;100%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;That’s it!&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa fa-github&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt; &lt;strong&gt;You’ll find the fully functional version with all of the necessary code &lt;a href=&#34;https://bl.ocks.org/ProQuestionAsker/b8f8c2ab12c4f21e882aeb68728216c2&#34;&gt;here&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I hope this has been a helpful resource on using the &lt;code&gt;d3.nest()&lt;/code&gt; functions in your work. Good luck!&lt;/p&gt;
+&lt;/div&gt;
+
+
+
+&lt;!-- BLOGDOWN-HEAD
+
+&lt;link href=&#34;#####../content/blog/d3Nest_files/font-awesome/css/font-awesome.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+
+
+
+
+
+/BLOGDOWN-HEAD --&gt;
+</description>
+    </item>
     
     <item>
       <title>Making a Website Using Blogdown, Hugo, and GitHub pages.</title>
-      <link>https://proquestionasker.github.io/blog/Making_Site/</link>
+      <link>/blog/Making_Site/</link>
       <pubDate>Mon, 19 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://proquestionasker.github.io/blog/Making_Site/</guid>
+      <guid>/blog/Making_Site/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
@@ -460,10 +1049,10 @@ git subtree push --prefix=public \
     
     <item>
       <title>Online Data Science Classes in R</title>
-      <link>https://proquestionasker.github.io/blog/ds_courses/</link>
+      <link>/blog/ds_courses/</link>
       <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://proquestionasker.github.io/blog/ds_courses/</guid>
+      <guid>/blog/ds_courses/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
@@ -599,7 +1188,7 @@ git subtree push --prefix=public \
 &lt;li&gt;&lt;strong&gt;Difficulty Level&lt;/strong&gt;: Beginner&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Cost&lt;/strong&gt;: $29/month for unlimited access to DataCamp’s entire course library&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Time to Complete&lt;/strong&gt;: 3 Hours&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Comments&lt;/strong&gt;: I had no idea how simple RMarkdown could be before this course. Now I use RMarkdown all the time. In fact, each of my &lt;a href=&#34;https://proquestionasker.github.io/blog&#34;&gt;blog posts&lt;/a&gt; and &lt;a href=&#34;https://proquestionasker.github.io/portfolio&#34;&gt;projects&lt;/a&gt; were written using RMarkdown, making report-writing simple.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Comments&lt;/strong&gt;: I had no idea how simple RMarkdown could be before this course. Now I use RMarkdown all the time. In fact, each of my &lt;a href=&#34;../blog&#34;&gt;blog posts&lt;/a&gt; and &lt;a href=&#34;../portfolio&#34;&gt;projects&lt;/a&gt; were written using RMarkdown, making report-writing simple.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -687,7 +1276,7 @@ git subtree push --prefix=public \
 &lt;/div&gt;
 &lt;div id=&#34;wrap-up&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Wrap-Up&lt;/h1&gt;
-&lt;p&gt;As I said, this is by no means a total list of every course that you should take to become a data scientist, and I plan to make add new courses to this list as I continue learning. Feel free to comment below about some of your favorite (or least favorite) online courses or &lt;a href=&#34;https://proquestionasker.github.io/contact&#34;&gt;reach out&lt;/a&gt; to me with questions.&lt;/p&gt;
+&lt;p&gt;As I said, this is by no means a total list of every course that you should take to become a data scientist, and I plan to make add new courses to this list as I continue learning. Feel free to comment below about some of your favorite (or least favorite) online courses or &lt;a href=&#34;../contact&#34;&gt;reach out&lt;/a&gt; to me with questions.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Happy learning!&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 
