@@ -17,7 +17,7 @@ googleAnalytics = "UA-89036876-1"
   copyright = "&copy;2017 Amber Thomas"
   sidebarAbout = [
     "I am a researcher, communicator, and data journalist. This site is home to my data projects, blogs and tutorials.",
-    "I'm currently working as a Maker at Polygraph / The Pudding"
+    "I'm currently working as a Maker at Polygraph / The Pudding."
   ]
   # Contact page
      # Since this template is static, the contact form uses www.formspree.io as a

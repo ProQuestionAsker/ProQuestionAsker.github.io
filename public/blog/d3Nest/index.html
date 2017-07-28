@@ -28,6 +28,13 @@ ga('send', 'pageview');
 </script>
 <script async src='//www.google-analytics.com/analytics.js'></script>
 
+
+<link href="../../rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+
+
 </head>
 <body>
   <div id="all">
@@ -148,9 +155,7 @@ ga('send', 'pageview');
    <div class="content-column-content">
           <div class="col-lg-8">
 
-<!-- BLOGDOWN-BODY-BEFORE
 
-/BLOGDOWN-BODY-BEFORE -->
 
 <ul>
 <li><a href="#introduction">Introduction</a></li>
@@ -230,7 +235,7 @@ var valueLine = d3.line()
 <pre class="r"><code>library(ggplot2)
 ggplot(ex2, aes(x = Month, y = Sales, group = Fruit, color = Fruit)) + 
     geom_path()</code></pre>
-<p><img src="#####../content/blog/d3Nest_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="figures/unnamed-chunk-7-1.png" width="672" /></p>
 <p>In d3, this is where nests come in.</p>
 <p><i class="fa fa-question-circle" aria-hidden="true"></i> <strong>Looking for the actual documentation? Find it <a href="https://github.com/d3/d3-collection/blob/master/README.md#nests">here</a>.</strong></p>
 <p>Just like with ggplot, we need to figure out which variable we want to group our data by. In this case, we want a separate line for each fruit’s sales. In R that’s <code>group = Fruit</code> and in d3, you need to set the <em>key</em> to the Fruit variable.</p>
@@ -719,15 +724,6 @@ yearMenu.on(&#39;change&#39;, function(){
 
 
 
-<!-- BLOGDOWN-HEAD
-
-<link href="#####../content/blog/d3Nest_files/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-
-
-
-
-
-/BLOGDOWN-HEAD -->
 
       
        </div>
