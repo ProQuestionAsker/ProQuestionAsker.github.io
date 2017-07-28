@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ### TL;DR
-I'm a marine biologist and science communicator by training, but I'm taking all of the data analysis, statistics, and mathematical modeling skills I've learned (and continue to learn) and I'm now applying them to new problems.
+I'm a marine biologist and science communicator by training, but I'm taking all of the data analysis, statistics, and mathematical modeling skills I've learned (and continue to learn) and I'm now applying them to new problems. I'm currently a full-time "Maker" at [Polygraph](http://polygraph.cool/) and [The Pudding](https://pudding.cool/), but I'm always interested in chatting data/data viz! 
 
 ### The Long Version
 I've always loved science, exploration, and discovery.  My natural curiosity, love of animals and the environment, and constant pursuit of knowledge led me into a marine biology and chemistry double major in college (BS/BA) and a Master's degree in Marine Sciences. That generally leads people to think that I was "playing with animals" all day. 
@@ -58,6 +58,6 @@ Only about **5 - 10%** of my time was spent working with animals. The rest was s
 
 When a co-worker introduced me by saying "This is Amber, she does data analysis", I realized that, indeed, I was a data analyst (who happened to work with marine data).
 
-So, I decided to pursue the analytical side of my work and enter the world of data science.  I've been taking [lots of classes](https://proquestionasker.github.io/blog/ds_courses/), working on [lots of personal projects](../portfolio/), joining local Meetups, and looking for work in the field. 
+So, I decided to pursue the analytical side of my work and enter the world of data science.  I've been taking [lots of classes](https://proquestionasker.github.io/blog/ds_courses/), working on [lots of personal projects](../portfolio/), joining local Meetups, and finding work with the [Polygraph](http://polygraph.cool/)/[Pudding](http://pudding.cool) team. My day-to-day job now consists of data collection/scraping and analysis, story-writing, essay design, interactive data visualization creation, some front-end web development, and story-telling.  
 
 I'm always looking for new people to chat with and new problems to solve, so feel free to reach out to me!

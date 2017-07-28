@@ -16,8 +16,8 @@ googleAnalytics = "UA-89036876-1"
   description = "This website serves as a portfolio for my data science projects, as well as blog posts and tutorials for using R, RStudio and other data science topics."
   copyright = "&copy;2017 Amber Thomas"
   sidebarAbout = [
-    "I am a researcher, communicator, and aspiring data scientist. This site is home to my data projects, blogs and tutorials.",
-    "I'm currently looking for data science work. Hiring? I'd love to hear from you. "
+    "I am a researcher, communicator, and data journalist. This site is home to my data projects, blogs and tutorials.",
+    "I'm currently working as a Maker at [Polygraph](http://polygraph.cool/)/[The Pudding](http://pudding.cool/)"
   ]
   # Contact page
      # Since this template is static, the contact form uses www.formspree.io as a
