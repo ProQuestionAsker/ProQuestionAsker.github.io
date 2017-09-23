@@ -1,0 +1,45 @@
+---
+title: She Giggles, He Gallops
+author: Julia Silge + Russell Goldenberg, Amber Thomas, and Hannah Anderson
+date: '2017-08-22'
+slug: 2017-08-22_screenDirections
+categories: []
+tags: []
+type: "post"
+showonlyimage: true
+image: "work/img/mainImages/2017-08-22_screenDirections.png"
+description: "Analyzing gender tropes in film with screen direction from 2,000 scripts."
+output: 
+  html_document: 
+    fig_caption: yes
+---
+
+## [Read the Story](https://pudding.cool/2017/08/screen-direction/)
+
+## The Premise
+
+There have been several projects conducted that show a disparity in film dialogue between male and female characters. But, talking isn't the only thing important to a movie. The way characters are instructed to act plays a role as well. In this project, we investigate over 2,000 film scripts to find what verbs are more likely to follow the pronouns "he" and "she".  
+
+## My Contributions
+
+* Some front-end development (HTML, CSS, and D3)
+
+## Collaborators
+
+The data collection, analysis, graphic wireframes, and story-writing for this project came from [Julia Silge](https://twitter.com/juliasilge). [Russell Goldenberg](https://twitter.com/codenberg) designed the page and also performed much of the front-end development. 
+
+## Screenshots
+
+```{r echo = FALSE, out.width = "640", fig.align = "center"}
+knitr::include_graphics("../img/articleImages/2017-08-22_screenDirections_img/screenDirectionsVideo.gif")
+```
+
+```{r echo = FALSE, out.width = "50%"}
+knitr::include_graphics("../img/articleImages/2017-08-22_screenDirections_img/screenDirections_img1.png")
+knitr::include_graphics("../img/articleImages/2017-08-22_screenDirections_img/screenDirections_img3.png")
+```
+
+```{r echo = FALSE, out.width = "50%"}
+knitr::include_graphics("../img/articleImages/2017-08-22_screenDirections_img/screenDirections_img2.png")
+knitr::include_graphics("../img/articleImages/2017-08-22_screenDirections_img/screenDirections_img4.png")
+```

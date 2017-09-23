@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on Amber Thomas</title>
+    <link>/tags/machine-learning/</link>
+    <description>Recent content in Machine Learning on Amber Thomas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy;2017 Amber Thomas</copyright>
+    <lastBuildDate>Tue, 27 Dec 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mapping Student Course Activity</title>
+      <link>/projects/2016-12-27_fcccourses/</link>
+      <pubDate>Tue, 27 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2016-12-27_fcccourses/</guid>
+      <description>&lt;p&gt;Cleaning, exploration, interactive visualizations, and machine learning with Free Code Camp&amp;rsquo;s student course completion dataset.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ghosts, Goblins, and Ghouls</title>
+      <link>/projects/2016-11-09_ghosts/</link>
+      <pubDate>Wed, 09 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2016-11-09_ghosts/</guid>
+      <description>&lt;p&gt;Kaggle Playground Competition&lt;/p&gt;
+
+&lt;p&gt;Data exploration and machine learning in RMarkdown.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning from Disaster</title>
+      <link>/projects/2016-11-05_titanic/</link>
+      <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
+      
+      <guid>/projects/2016-11-05_titanic/</guid>
+      <description>&lt;p&gt;Kaggle Playground Competition&lt;/p&gt;
+
+&lt;p&gt;Data exploration and machine learning in RMarkdown.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,46 @@
+---
+title: Table for One
+author: Henrik Lindberg + Amber Thomas
+date: '2017-07-27'
+slug: eatingAlone
+categories: []
+tags: []
+type: "post"
+weight: 1
+showonlyimage: true
+image: "work/img/mainImages/2017-07-27_eatingAlone.png"
+description: "An exploration of the dining habits and companions of Americans."
+output: 
+  html_document: 
+    fig_caption: yes
+---
+
+## [Read the Story](https://pudding.cool/2017/07/eating-alone/)
+
+## The Premise
+
+Americans are beginning to spend more of their mealtimes solo. What does that look like for the US as a community of people? We explore the data surrounding the dining habits and companions of Americans. 
+
+## My Contributions
+
+* Story Design
+* Front-End Development (HTML, CSS, and D3)
+
+## Collaborators
+
+The data collection, analysis, graphic wireframes, and story-writing for this project came from [Henrik Lindberg](https://twitter.com/hnrklndbrg). 
+
+## Screenshots
+
+```{r echo = FALSE, out.width = "640", fig.align = "center", fig.cap = "The first graphic in this story is driven by the reader's scrolling. As the story continues, the data update to follow along."}
+knitr::include_graphics("../img/articleImages/2017-07-27_eatingAlone_img/eatingAloneVideo.gif")
+```
+
+```{r echo = FALSE, out.width = "50%"}
+knitr::include_graphics("../img/articleImages/2017-07-27_eatingAlone_img/eatingAlone_img1.png")
+knitr::include_graphics("../img/articleImages/2017-07-27_eatingAlone_img/eatingAlone_img2.png")
+```
+
+```{r echo = FALSE, out.width = "100%"}
+knitr::include_graphics("../img/articleImages/2017-07-27_eatingAlone_img/eatingAlone_img3.png")
+```

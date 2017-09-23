@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maps on Amber Thomas</title>
+    <link>/tags/maps/</link>
+    <description>Recent content in Maps on Amber Thomas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy;2017 Amber Thomas</copyright>
+    <lastBuildDate>Wed, 16 Nov 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/maps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dog Ownership in Seattle</title>
+      <link>/projects/2016-11-16_dogsseattle/</link>
+      <pubDate>Wed, 16 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2016-11-16_dogsseattle/</guid>
+      <description>&lt;p&gt;Data cleaning, exploration, mapping, and data visualizations in RMarkdown.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bicycle Sharing in Seattle</title>
+      <link>/projects/2016-11-10_bicyclesseattle/</link>
+      <pubDate>Thu, 10 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2016-11-10_bicyclesseattle/</guid>
+      <description>&lt;p&gt;Data exploration, mapping, and data visualizations in RMarkdown.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

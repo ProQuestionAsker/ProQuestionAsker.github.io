@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Making a Website Using Blogdown, Hugo, and GitHub pages.</title>
+<meta name="description" content="This website serves as a portfolio for my data science projects, as well as blog posts and tutorials for using R, RStudio and other data science topics.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/owl.carousel.css">
+<link rel="stylesheet" href="/css/owl.theme.css">
+
+
+  <link href="/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+
+<link href="/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-89036876-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              
+<div id="sidebar" class="col-sb-fixedpos col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="/">Amber Thomas</a></h1>
+
+    <ul class="sidebar-menu">
+      
+      
+        <li><a href="/about/">About</a></li>
+      
+        <li><a href="/projects/">Personal Projects</a></li>
+      
+        <li><a href="/work/">Work Portfolio</a></li>
+      
+        <li><a href="/blog/">Blog</a></li>
+      
+        <li><a href="/contact/">Get in Touch</a></li>
+      
+
+       
+
+
+
+ 
+
+      
+
+ 
+
+      
+ 
+
+    </ul>
+    <p class="social">
+  
+  
+  
+  <a href="https://twitter.com/ProQuesAsker" data-animate-hover="pulse" class="external twitter">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  
+  <a href="mailto:AmberThomasMSc@gmail.com" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  <a href="https://www.linkedin.com/in/amberrthomas" data-animate-hover="pulse">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  
+  
+  
+<a href="https://www.github.com/ProQuestionAsker">
+  <i class="fa fa-github"></i>
+</a>
+
+
+<a href="/index.xml" data-animate-hover="pulse">
+  <i class='fa fa-rss'></i>
+</a>
+
+
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2017 Amber Thomas
+        
+        | Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background col-main-fixedpos">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="/">Amber Thomas</a></h1>
+</div>
+
+
+            <div class="row">
+                  <div class="col-sm-4">
+                    <div class="image">
+                      <img src="/blog/img/mainImages/2016-12-19_creatingSite.jpg" class="img-responsive" alt="">
+                    </div>
+                  </div>
+
+                  <div class="col-md-8">
+                      <h2>Making a Website Using Blogdown, Hugo, and GitHub pages.</h2>
+                          <p class="author-category">
+                            Amber Thomas
+                          </p>
+
+                          <p class="date-comments">
+                          <i class="fa fa-calendar-o"></i> December 19, 2016
+                          </p>
+
+                          
+                  
+                      </div>
+                    </div>
+                  </br>
+
+<div class="row">
+   <div class="content-column-content">
+          <div class="col-lg-8">
+
+<link href="/rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+
+<ul>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#blogdown">Blogdown</a></li>
+<li><a href="#hugo">Hugo</a></li>
+<li><a href="#github">GitHub</a></li>
+</ul></li>
+<li><a href="#building-the-page">Building the Page</a>
+<ul>
+<li><a href="#installing-necessary-packages-and-software">Installing Necessary Packages and Software</a>
+<ul>
+<li><a href="#setting-up-github">Setting Up GitHub</a></li>
+<li><a href="#rstudio-and-blogdown">RStudio and Blogdown</a></li>
+</ul></li>
+<li><a href="#initializing-github-pages-to-work-with-hugo-and-blogdown">Initializing GitHub pages to work with Hugo and Blogdown</a></li>
+</ul></li>
+<li><a href="#adding-content">Adding Content</a>
+<ul>
+<li><a href="#site-configuration">Site Configuration</a></li>
+<li><a href="#adding-a-page">Adding a Page</a></li>
+<li><a href="#page-templates-and-fixing-blank-pages">Page Templates and Fixing Blank Pages</a></li>
+<li><a href="#adding-a-blog-post-or-portfolio-piece">Adding a Blog Post or Portfolio Piece</a></li>
+<li><a href="#adding-images">Adding images</a></li>
+</ul></li>
+<li><a href="#troubleshooting">Troubleshooting</a>
+<ul>
+<li><a href="#page-is-blank">Page is Blank</a></li>
+<li><a href="#images-arent-showing-up">Images Aren’t Showing Up</a></li>
+<li><a href="#page-has-no-formatting">Page Has No Formatting</a></li>
+<li><a href="#my-post-wont-show-up">My Post Won’t Show Up</a></li>
+</ul></li>
+</ul>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>As I transitioned into the data science world, I kept hearing one piece of advice over and over: build a portfolio. So, once I had completed a few personal projects, I decided to investigate the best way to build a portfolio that could also house blog posts, comments, and (naturally) display R code and outputs seamlessly.</p>
+<p>I looked into <a href="https://wordpress.com/">Wordpress</a> but I wasn’t thrilled with the theme choices available if I opted for free site hosting. Then I realized that you can generate your site entirely using <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html">RStudio</a>, which seemed like a great option but had limited customization options.</p>
+<p>Then I stumbled upon <a href="https://github.com/rstudio/blogdown">Blogdown</a>, a new RStudio package developed by <code>knitr</code> and <code>bookdown</code> creator <a href="https://github.com/yihui">Yihui Xie</a>. The package runs using a static-site generator called “<a href="https://gohugo.io/">Hugo</a>” which, when I started making my site, I had never heard of. And while the <code>blogdown</code> package was still under development and had no formal package documentation, I wanted to give it a try. After several days of googling, experimenting, and learning, I am now the proud owner of a site I love. This post details how I made it happen.</p>
+<p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> <strong><em>Disclaimer: My method may not be the most stream-lined at this time, and I fully expect to look back at this post in the future and wonder how I ever got anything done, but for the time being, this method works.</em></strong></p>
+<p>Alright, before I delve into the <em>how</em> of it all, I wanted to give a little bit of background information on the pieces that are involved in this: GitHub, Hugo, and blogdown. If you want to cut right to the chase, go <a href="#building-the-page">ahead</a>.</p>
+<div id="blogdown" class="section level3">
+<h3>Blogdown</h3>
+<p>Again, <a href="https://github.com/rstudio/blogdown">Blogdown</a> is a new package for R and RStudio that helps you to create blog posts and other types of web content using the RMarkdown language. At the time of this post’s writing, it has 8 functions:</p>
+<ul>
+<li><strong>build_site()</strong> : Compiles all .Rmd files into Hugo-readable HTML &amp; builds the site</li>
+<li><strong>html_page()</strong> : Renders .Rmd file into Hugo-readable HTML</li>
+<li><strong>hugo_cmd()</strong> : Allows you to run Hugo commands</li>
+<li><strong>install_hugo()</strong> : Downloads the appropriate Hugo files to your computer to allow site generation</li>
+<li><strong>install_theme()</strong> : Downloads the specified theme from GitHub</li>
+<li><strong>new_content()</strong> : Generates a new file in your working directory</li>
+<li><strong>new_site()</strong> : Creates the environment necessary for a new site</li>
+<li><strong>serve_site()</strong> : Allows you to preview a working version of your site</li>
+</ul>
+<p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> <strong><em>Disclaimer: Again, since there is no formal documentation for blogdown yet, those definitions come from the function descriptions and my experience with using them</em></strong></p>
+<p>Blogdown runs using Hugo, so we’ll look at that next.</p>
+</div>
+<div id="hugo" class="section level3">
+<h3>Hugo</h3>
+<p>Hugo is a static-site generator, meaning that instead of generating your website from scratch everytime someone visits your page, the pages are already made and ready to go when someone arrives (<a href="https://davidwalsh.name/introduction-static-site-generators">more info here</a>). It’s also open-source and free, which I appreciate.</p>
+<p>While I highly recommend going and reading some of the documentation on the <a href="https://gohugo.io/overview/introduction/">Hugo website</a> I’ll cover the important vocabulary for getting started on this process here. If you’re already familiar with Hugo, you can <a href="#github">skip this part</a>.</p>
+<ul>
+<li><strong><a href="https://gohugo.io/themes/overview/">Themes</a></strong> : These are user-generated files for formatting your website. Find one you like <a href="http://themes.gohugo.io/">here</a>.</li>
+<li><strong>Templates</strong> : Templates come from the theme and determine the look of a specific type of page. Hugo uses two types of page templates by default:
+<ul>
+<li><strong><a href="https://gohugo.io/templates/content#single-page">Single</a></strong> : This type is for pages that will only have one kind of content (e.g., a blog post)</li>
+<li><strong><a href="https://gohugo.io/templates/list/">List</a></strong> : This type is for pages that will only consist of a list of things (e.g., a portfolio page of your projects or a page that lists your blog posts)</li>
+</ul></li>
+<li><strong><a href="https://gohugo.io/themes/creation#partial-templates">Partials</a></strong> : To generate different kinds of content, Hugo relies on html files specific to that content type. (e.g., a different setup for an about page, the design of the sidebar or header of your page, etc.)</li>
+<li><strong><a href="https://gohugo.io/extras/shortcodes#shortcodes-without-markdown">Shortcodes</a></strong> : To cut down on the amount of by-hand coding needed to generate your site, Hugo uses “shortcodes” or small snippets of code that serve a single, commonly used purpose. (e.g., to insert a single Tweet in your page you can use the Twitter shortcode: <code>{{&lt; tweet idnumber &gt;}}</code> ). Shortcodes can be used <em>inside</em> of partials.</li>
+<li><strong><a href="https://gohugo.io/tutorials/creating-a-new-theme#front-matter">Front Matter</a></strong> : The information at the top section of any markdown (.md) or Rmarkdown (.Rmd) document that gives important information for the site development. For instance, at the top of this .Rmd document, the front matter looks like this.</li>
+</ul>
+<p><img src="img/articleImages/2016-12-19_creatingSite_img/frontmatter.png" width="80%" style="display: block; margin: auto;" /></p>
+<ul>
+<li><strong><a href="https://gohugo.io/templates/variables/">Variables</a></strong>: These pieces of information often come from either front matter, the content itself, or the file’s location (e.g., a file in the “blog” folder will automatically obtain the .Section variable “blog”, while the .Title variable is defined by you in the front matter, and the .Summary variable is automatically generated by Hugo to include the first 70 words of your post).</li>
+</ul>
+<p>Certainly, there are other important aspects of Hugo, but I found those to be the most important (and often most confusing) when making my site.</p>
+</div>
+<div id="github" class="section level3">
+<h3>GitHub</h3>
+<p>I don’t want to go into too much detail about GitHub (or this post will never actually get started), but I do want to provide some background information about what it does and why it’s useful. (Again, <a href="#building-the-page">skip ahead</a> if you’re a GitHub pro)</p>
+<p>First, GitHub is powered by Git, a command-line version-control system. If you’re not familiar with it, Git has no buttons to press, only commands to type to control it, but it allows you to save multiple versions of a file. The beauty of version control is that if you mess up (which, let’s be real, we’ve all done), you can go back to the last saved version. It’s like reaching a “save point” in a video game that you can return to if your character dies. GitHub is the place where you can store all of these versions of your work. Other developers can see, make a copy of, ammend their copy, and make suggestions on your work.</p>
+<p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> <strong>Keep in mind</strong>: GitHub does have a free version, but it makes all of your work publicly available. While this is fantastic for helping others to add on or change your project, be aware of this if you are building a website on this platform. For instance, you can go dig around in all of the code used to generate my site <a href="https://github.com/ProQuestionAsker/ProQuestionAsker.github.io">here</a>.</p>
+<p>Ok, <a href="https://help.github.com/articles/github-glossary/">basic vocab</a> for GitHub use and then I’ll promise I’ll get started!</p>
+<ul>
+<li><strong>Repository</strong> : When you make an account on <a href="https://github.com/">Github</a> the first thing you’ll want to do is make a repository (or repo). This is the place to store all of your files for a given project.</li>
+<li><strong>Forking</strong> : Say you really like someone else’s project on GitHub and you’d like to make a copy of it on your account to adjust however you’d like? Well, that process is called forking. To do it, find a repo that you like and click the ‘<i class="fa fa-code-fork" aria-hidden="true"></i> fork’ button in the right hand corner.</li>
+<li><strong>Branch</strong> : This is a “parallel version” of a repo that you can adjust without impacting the original repo.</li>
+<li><strong>Remote</strong> : The copy of your files that reside on GitHub.com</li>
+<li><strong>Local</strong> : The copy of your files that reside on your computer</li>
+<li><strong>Commit</strong> : A change to a file, usually submitted with a message from you to indicate what was changed</li>
+<li><strong>Push</strong> : Once you commit changes on your local files, you want to send (or push) them to your remote repo, making them available for others.</li>
+<li><strong>Pull</strong> : If multiple people are working in your remote repo, they may have made a change that is not reflected in your local version. You can pull the newest version down to your computer to work on it.</li>
+<li><strong>Subtree</strong> : This is a repo inside of a repo. More on this later.</li>
+</ul>
+<p>Ok, all of that will be helpful as we continue!</p>
+</div>
+</div>
+<div id="building-the-page" class="section level2">
+<h2>Building the Page</h2>
+<div id="installing-necessary-packages-and-software" class="section level3">
+<h3>Installing Necessary Packages and Software</h3>
+<p>3 last notes before I get started.</p>
+<ul>
+<li>Since my site is already created (and I didn’t think about documenting it while I was doing it), this post documents the creation of a near-identical site for an animation studio: <a href="http://animoplex.com">Animoplex</a>.</li>
+<li>I’m erring on the side of too much detail in this post, so skip past things you know as needed.</li>
+<li>I know, I’m behind the times and am still using the command line outside of RStudio to work with GitHub. Some day I’ll convert. If you’d like to do that today, there’s information <a href="https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN">here</a>.</li>
+</ul>
+<p>Ok, getting started for real.</p>
+<div id="setting-up-github" class="section level4">
+<h4>Setting Up GitHub</h4>
+<ol style="list-style-type: decimal">
+<li>If you don’t already have one, create a <a href="https://github.com/">GitHub</a> account.
+<ul>
+<li><em>Choose your username wisely as it will be in your new site URL</em>.</li>
+</ul></li>
+<li>On your dashboard, in the upper-right-hand corner, you’ll see a + sign with an arrow. Click it and go to “New Repository”. <img src="img/articleImages/2016-12-19_creatingSite_img/newrepo.png" width="50%" style="display: block; margin: auto;" /></li>
+<li>Name your repository your_username.github.io (see the below example for github username: animoplex) <img src="img/articleImages/2016-12-19_creatingSite_img/newrepo2.png" width="90%" style="display: block; margin: auto;" /></li>
+<li>Click Create Repository. You should be on your repository page.</li>
+<li>We now need to create a local copy (or clone) of this repo. Click the green “Clone or Download” button on the right hand side and copy the url displayed. <img src="img/articleImages/2016-12-19_creatingSite_img/clonerepo.png" width="60%" style="display: block; margin: auto;" /></li>
+<li>On a Mac, open Terminal (search “Terminal”). On Windows, open <a href="https://git-for-windows.github.io/">Git Bash</a>. More detail for different operating systems <a href="https://help.github.com/articles/cloning-a-repository/#platform-windows">here</a>. If this is the first time you’ve ever used GitHub on your machine, you’ll need to authenticate it (detailed instructions <a href="https://help.github.com/articles/generating-an-ssh-key/">here</a>)<br />
+</li>
+<li>Then navigate to your working directory (i.e., where you’d like all of your files to be stored). In git, to see your current working directory type <code>pwd</code> and to change directories use <code>cd</code>. Type <code>git clone</code> and then paste the URL of your repository. You should get feedback like that pictured below.</li>
+</ol>
+<p><img src="img/articleImages/2016-12-19_creatingSite_img/clonerepo2.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Great! So now we have a clone of our GitHub Repo on our local computer. Time to put things in it.</p>
+</div>
+<div id="rstudio-and-blogdown" class="section level4">
+<h4>RStudio and Blogdown</h4>
+<p><em>While you can certainly follow the below steps in the R command-line, I’m going to give examples of how to do this process in RStudio.</em></p>
+<ol style="list-style-type: decimal">
+<li>Launch RStudio and create a New Project. Select “Existing directory” and navigate to the folder above the working directory you just created from GitHub (in my case, it’s a folder called Parker_Website).</li>
+</ol>
+<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <strong>Your local GitHub directory (for me animoplex.github.io) must be completely empty to create a new_site. If you accidentally put any files in there, move them out until after the new_site is created</strong></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Install the <code>blogdown</code> package from GitHub and load it. I tend to use the <code>devtools</code> package to do this, but you can download it however you’d like.</li>
+</ol>
+<pre class="r"><code>devtools::install_github(&quot;rstudio/blogdown&quot;)
+library(blogdown)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Intall Hugo. You can either do it manually (<a href="https://gohugo.io/overview/installing/">see documentation</a>) or using <code>blogdown</code>. I recommend <code>blogdown</code>.</li>
+</ol>
+<pre class="r"><code>install_hugo()</code></pre>
+<p><i class="fa fa-apple" aria-hidden="true"></i> <strong>Note for Mac Users: the first time I installed Hugo, I also needed to install <a href="http://brew.sh/">homebrew</a></strong>.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Now, we create the site! Set your working directory to the GitHub directory (in my case, the folder called animoplex.github.io). Then use the following <code>blogdown</code> function.</li>
+</ol>
+<pre class="r"><code>new_site()</code></pre>
+<p><img src="img/articleImages/2016-12-19_creatingSite_img/newsite.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>You’ll notice a few things happened!</p>
+<ul>
+<li>A .Rmd document entitled “hello-world.Rmd” automatically opened.</li>
+<li>Your viewer window displays the homepage of your site.</li>
+<li>If you click the “Show in New Window” button on the top left of your viewer window, your website will open in your local web browser. To return to R editing, click the Stop sign in the right hand side of the RStudio console window.
+<ul>
+<li><em>Note: this site is not yet “live”, so you can only access it from your computer.</em></li>
+</ul></li>
+</ul>
+<p>Everything we just discussed is what happened in R. Let’s take a look at our working directory folder. <img src="img/articleImages/2016-12-19_creatingSite_img/folders.png" width="60%" style="display: block; margin: auto;" /></p>
+<p>The <code>new_site</code> function generated all of the folders that we’ll need to build our website. Take a minute to look at the contents of the folders, but don’t change anything just yet.</p>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Before moving any further, we need to select a theme. For this example, I’m going to use the <a href="http://themes.gohugo.io/hugo-creative-portfolio-theme/">same one</a> I use on my personal website, but you can use any one that you like. You can change themes later, but I’d recommend starting with one you like.</p></li>
+<li><p>Install your theme using the <code>blogdown</code> function <code>install_theme()</code>, and the theme creator’s GitHub username and the theme name (both are listed on the Hugo Theme site).</p></li>
+</ol>
+<pre class="r"><code>install_theme(&quot;kishaningithub/hugo-creative-portfolio-theme&quot;, theme_example = TRUE, update_config = TRUE)</code></pre>
+<p>We’re in great shape! We’ve got a GitHub repo full of the building blocks of our website. Now, we have go back to GitHub for one more thing before we start adding content to the site.</p>
+</div>
+</div>
+<div id="initializing-github-pages-to-work-with-hugo-and-blogdown" class="section level3">
+<h3>Initializing GitHub pages to work with Hugo and Blogdown</h3>
+<p>The way that GitHub pages work is that they take any information on the <strong>master</strong> branch of your repo and use that to build your website. Which is great <strong>except</strong> that it differs from how Hugo works.</p>
+<p>Hugo takes all of the content from its archetypes, content, data, layouts, static, and themes folders (the ones that were just added to your local working directory) and uses them to build a website <em>inside</em> of the public folder in your working directory.</p>
+<p>So, to get Hugo and GitHub pages to play nicely, we need to take all of the files from inside the <strong>public</strong> folder and keep them on the <strong>master</strong> branch, while we keep everything else on another branch. You can do this manually, but it is unnecessarily tedious, particularly when you make frequent updates. Luckily, a few people have already figured out how to make this more stream-lined (look at these fantastic posts <a href="https://hjdskes.github.io/blog/deploying-hugo-on-personal-gh-pages/index.html">here</a> and <a href="https://gohugo.io/tutorials/github-pages-blog/">here</a>).</p>
+<p>We will need to use a <strong>sub branch</strong>, which is essentially a repository inside of a repository. So we will make a branch called <strong>sources</strong> which will contain all of the folders and files inside of our local working directory (including the public folder). Then we’ll make a sub branch called <strong>master</strong> which will essentially exist <em>inside</em> of that public folder, filling up automatically with files as you generate them.</p>
+<p>Cool, right? Ok, so to make it happen:</p>
+<ol style="list-style-type: decimal">
+<li>Go to your repo on GitHub. On the left-hand side you’ll see a button that reads “Branch: Master”. Click on it and in the text box type “sources” and click “Create branch: sources from ‘master’”.</li>
+</ol>
+<p><img src="img/articleImages/2016-12-19_creatingSite_img/createbranch.png" width="50%" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Now you have 2 branches: ‘sources’ and ‘master’. You should see a button next to “1 commit” that reads “2 branches”. Click on it.</p></li>
+<li><p>You should see that ‘master’ is your default branch and ‘sources’ is your active branch. We want to switch these, so click the button that says “Change default branch”.</p></li>
+<li><p>Under Default Branch, choose ‘sources’ from the dropdown menu and click update. It will ask if you are sure. If you have followed each step so far <strong>and have nothing on your master branch</strong>, then click “I understand, update the default branch”.</p></li>
+<li><p>Your default branch is now ‘sources’. In your command line interface (terminal or git bash) navigate to your github working directory (for me, it’s animoplex.github.io), and type <code>git checkout sources</code>.</p></li>
+<li><p>Time to set up our sub branch. You have two options here.</p>
+<ul>
+<li>You can enter each of these code pieces below step by step into your command line interface (terminal or git bash). Make sure to replace $USERNAME with your GitHub username and $SOURCE with sources throughout.</li>
+<li>You can save this code chunk as setup.sh in your working directory. To run it, enter <code>bash setup.sh</code> in the command line interface.</li>
+</ul></li>
+</ol>
+<p>You can (and should) thank <a href="https://hjdskes.github.io/blog/deploying-hugo-on-personal-gh-pages/index.html">Jente Hidskes</a> for both of these options and for writing this script. Since we did not already have a README.md file in our sources folder, I added one line to this script to ammend that. Jente’s original notation is here for attribution.</p>
+<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <strong>THIS WILL DELETE YOUR MASTER BRANCH, DON’T DO THIS IF YOU HAVE ANY CONTENT IN YOUR MASTER BRANCH</strong></p>
+<p><i class="fa fa-question-circle" aria-hidden="true"></i> <em>If you run the below script and get an error about authentication, follow the GitHub authentication steps <a href="https://help.github.com/categories/ssh/">here</a></em></p>
+<pre class="sh"><code>#!/usr/bin/env bash
+
+# This script does the required work to set up your personal GitHub Pages
+# repository for deployment using Hugo. Run this script only once -- when the
+# setup has been done, run the `deploy.sh` script to deploy changes and update
+# your website. See
+# https://hjdskes.github.io/blog/deploying-hugo-on-personal-github-pages/index.html
+# for more information.
+
+# GitHub username
+USERNAME=hjdskes
+# Name of the branch containing the Hugo source files.
+SOURCE=hugo
+
+msg() {
+    printf &quot;\033[1;32m :: %s\n\033[0m&quot; &quot;$1&quot;
+}
+
+msg &quot;Adding a README.md file to \&#39;$SOURCE\&#39; branch&quot;
+touch README.md
+
+msg &quot;Deleting the \`master\` branch&quot;
+git branch -D master
+git push origin --delete master
+
+msg &quot;Creating an empty, orphaned \`master\` branch&quot;
+git checkout --orphan master
+git rm --cached $(git ls-files)
+
+msg &quot;Grabbing one file from the \`$SOURCE\` branch so that a commit can be made&quot;
+git checkout &quot;$SOURCE&quot; README.md
+git commit -m &quot;Initial commit on master branch&quot;
+git push origin master
+
+msg &quot;Returning to the \`$SOURCE\` branch&quot;
+git checkout -f &quot;$SOURCE&quot;
+
+msg &quot;Removing the \`public\` folder to make room for the \`master\` subtree&quot;
+rm -rf public
+git add -u
+git commit -m &quot;Remove stale public folder&quot;
+
+msg &quot;Adding the new \`master\` branch as a subtree&quot;
+git subtree add --prefix=public \
+    git@github.com:$USERNAME/$USERNAME.github.io.git master --squash
+
+msg &quot;Pulling down the just committed file to help avoid merge conflicts&quot;
+git subtree pull --prefix=public \
+    git@github.com:$USERNAME/$USERNAME.github.io.git master</code></pre>
+<p>You should only ever run the above script once.</p>
+<ol start="7" style="list-style-type: decimal">
+<li><p>Now need to commit any changes that we’ve made to our local repo. Type <code>git status</code> to see what you need to do next (usually add tracking to files, commit changes and <code>git push</code>).</p></li>
+<li>Now, we are set up to update our site as we go. Again <a href="https://hjdskes.github.io/blog/deploying-hugo-on-personal-gh-pages/index.html">Jente Hidskes</a> comes to our rescue with a great script to do this. Just like the last script, you can enter this line-by-line or save it as “deploy.sh” in your working directory and run it as <code>bash deploy.sh</code> every time you make updates to your site.
+<ul>
+<li><em>Don’t forget to change USERNAME or $USERNAME to your GitHub username and SOURCE or $SOURCE to sources</em></li>
+</ul></li>
+</ol>
+<pre class="sh"><code>#!/usr/bin/env bash
+
+# This script allows you to easily and quickly generate and deploy your website
+# using Hugo to your personal GitHub Pages repository. This script requires a
+# certain configuration, run the `setup.sh` script to configure this. See
+# https://hjdskes.github.io/blog/deploying-hugo-on-personal-github-pages/index.html
+# for more information.
+
+# Set the English locale for the `date` command.
+export LC_TIME=en_US.UTF-8
+
+# GitHub username.
+USERNAME=hjdskes
+# Name of the branch containing the Hugo source files.
+SOURCE=hugo
+# The commit message.
+MESSAGE=&quot;Site rebuild $(date)&quot;
+
+msg() {
+    printf &quot;\033[1;32m :: %s\n\033[0m&quot; &quot;$1&quot;
+}
+
+msg &quot;Pulling down the \`master\` branch into \`public\` to help avoid merge conflicts&quot;
+git subtree pull --prefix=public \
+    git@github.com:$USERNAME/$USERNAME.github.io.git origin master -m &quot;Merge origin master&quot;
+
+msg &quot;Building the website&quot;
+hugo
+
+msg &quot;Pushing the updated \`public\` folder to the \`$SOURCE\` branch&quot;
+git add public
+git commit -m &quot;$MESSAGE&quot;
+git push origin &quot;$SOURCE&quot;
+
+msg &quot;Pushing the updated \`public\` folder to the \`master\` branch&quot;
+git subtree push --prefix=public \
+    git@github.com:$USERNAME/$USERNAME.github.io.git master</code></pre>
+<ol start="9" style="list-style-type: decimal">
+<li>Make sure that everything worked correctly. Go to your GitHub repo and look at the contents of your sources and master branches. For me, they look like this:</li>
+</ol>
+<p><img src="img/articleImages/2016-12-19_creatingSite_img/sourcesbranch.png" width="90%" style="display: block; margin: auto;" /> <img src="img/articleImages/2016-12-19_creatingSite_img/masterbranch.png" width="90%" style="display: block; margin: auto;" /></p>
+<p>If something seems to have gone wrong, you can go back up to running the setup.sh script again. This will delete whatever you have in your master branch, so be careful!</p>
+<p>Now we’ve got our website files on our local machines, a github repo setup to play nicely with Hugo, and RStudio setup to work with <code>blogdown</code>. Time to add content!</p>
+</div>
+</div>
+<div id="adding-content" class="section level2">
+<h2>Adding content</h2>
+<div id="site-configuration" class="section level3">
+<h3>Site Configuration</h3>
+<p>The setup of this section will differ slightly based on the theme you picked, but most themes have the same basic building-blocks. Again, I’m using <a href="http://themes.gohugo.io/hugo-creative-portfolio-theme/">this one</a>.</p>
+<ol style="list-style-type: decimal">
+<li><p>In your local GitHub repo (mine is a folder called animoplex.github.io) find the file called “config.toml” and open it (RStudio will open this type of file). You’ll see lots of things to change that will impact the configuration of your site (<em>again, the exact contents may vary by theme</em>).</p>
+<ul>
+<li><strong>BaseURL</strong> : This is a link to your website’s home page (for me, it’s <a href="https://animoplex.github.io/" class="uri">https://animoplex.github.io/</a>)
+<ul>
+<li><strong>Don’t forget the last / </strong></li>
+</ul></li>
+<li><strong>Title</strong> : Insert the title for your site here.</li>
+<li><strong>disqusShortname</strong> : If you want to enable comments on your website, you can use the commenting engine disqus. You’ll first need to setup your account <a href="https://disqus.com/">here</a> and after you create a shortname, enter it in the config.toml file.</li>
+<li><strong>googleAnalytics</strong> : If you’d like to have Google monitor the analytics for your site so that you can study traffic flow on your pages, you’ll need to enable Google Analytics. First, sign up <a href="https://www.google.com/analytics/#?modal_active=none">here</a>. It will generate a tracking code for you. Enter the tracking code into config.toml</li>
+</ul></li>
+<li><p>Use the ReadMe from your specific theme to alter theme-specific changes.</p></li>
+<li><p>If there are options for social links that you don’t use, just delete them from the config.toml file.</p></li>
+<li><p>When you’re done in the config.toml file, save it. Return to your terminal/git bash window, check your <code>git status</code> and follow instructions (usually add, commit, push). Then use the <code>deploy.sh</code> script again to update your remote GitHub repo.</p></li>
+</ol>
+<p><i class="fa fa-question-circle" aria-hidden="true"></i> <em>If you are unfamiliar with Git Commands, check out <a href="https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html">this</a> resource.</em></p>
+</div>
+<div id="adding-a-page" class="section level3">
+<h3>Adding a Page</h3>
+<p>My theme comes pre-setup with a Home page, an About page, and a Contact page. But I’d like to add a Blog Page.</p>
+<ol style="list-style-type: decimal">
+<li>In the config.toml, find where your site creates new links (for me, it’s called [[params.navlinks]]). And add the name and location of your new page. Here’s what mine looks like (including the added “Blog”).</li>
+</ol>
+<p><img src="img/articleImages/2016-12-19_creatingSite_img/navlinks.png" width="40%" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>We added the location as “blog/”, which means that Hugo is going to look in our <strong>content</strong> folder for a folder called <strong>blog</strong>. If your theme didn’t come with one, go ahead and add one. This same process can be repeated for any new page you’d like to add. Just make sure that a folder exists where you told the config.toml file to look.</p></li>
+<li><p>To preview your site, save the config.toml file, and inside RStudio type <code>serve_site()</code>. Your preview will show up in the viewer window. We now have a link to a blog page!</p></li>
+</ol>
+</div>
+<div id="page-templates-and-fixing-blank-pages" class="section level3">
+<h3>Page Templates and Fixing Blank Pages</h3>
+<p>If you click on the “Blog” link we created in the last section, it’s going to take you to yourwebsite.github.io/blog. Depending on your theme, this may work fine, but for the theme I am using, clicking this link takes me to a white page.</p>
+<p>A blank page can indicate a few things:</p>
+<ul>
+<li>There is no content inside this page’s folder</li>
+<li>Hugo doesn’t have a template file for this type of page</li>
+</ul>
+<p>To check if there is content in the page’s folder, go to your blog folder and look inside. If there’s nothing in there, that could be the problem (jump to <a href="#adding-a-blog-post-or-portfolio-piece">Adding a Blog Post</a>). If there are files in there (.md, .HTML, or blogdown .Rmd files) and you’re still getting a blank page, then Hugo doesn’t have a template file for this type of page.</p>
+<p>Remember, by default, Hugo looks for two page templates: single page and list pages. We want our blog to be a list page. Does this template come with a list page?</p>
+<p>To find out:</p>
+<ol style="list-style-type: decimal">
+<li>Inside your local GitHub repo, navigate to themes &gt; the_theme_youre_using &gt; layouts &gt;_default and look for a list.html file</li>
+</ol>
+<p>Looks like my theme comes with one, but it’s empty!</p>
+<p><img src="img/articleImages/2016-12-19_creatingSite_img/listfile.png" width="90%" style="display: block; margin: auto;" /></p>
+<p>That means Hugo has no idea how it should format that list of objects. If you have chosen a theme that doesn’t have a list file and you’d like a page with a list, you have options:</p>
+<ul>
+<li><strong>Easy option</strong>: Switch to a <a href="http://themes.gohugo.io/">new theme</a> that does have a list template</li>
+<li><strong>Harder option</strong>: Create your own list template that matches the theme</li>
+</ul>
+<p>For <a href="https://proquestionasker.github.io">my site</a>, I made a new list.html file to match this theme. Getting into how I created it is outside the realm of this post, but if you’re using the <a href="http://themes.gohugo.io/hugo-creative-portfolio-theme/">Creative Portfolio Theme</a> and you’d like to use my list file, it’s available <a href="https://github.com/ProQuestionAsker/ProQuestionAsker.github.io/blob/sources/themes/hugo-creative-portfolio-theme/layouts/_default/list.html">here</a>. To use it, copy the text into a text editor, save the file as list.html inside the layouts/_default folder.</p>
+<p>Once you add the file, use <code>serve_site()</code> to check the formatting. You should no longer have a blank blog page!</p>
+</div>
+<div id="adding-a-blog-post-or-portfolio-piece" class="section level3">
+<h3>Adding a Blog Post or Portfolio Piece</h3>
+<p>If you’ve been following along this far, you may have guessed by now that the place to add new files is inside the <strong>content</strong> folder in your local GitHub repo.</p>
+<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <strong>Do not manually add anything to the public folder</strong></p>
+<p>If you want to add new blog posts, add a new file to your “Blog” folder. If you want to add new Portfolio pieces, add it to your “Portfolio” folder. If you want to add new content to a section that doesn’t exist yet, go <a href="#adding-a-page">back here</a> first.</p>
+<ol style="list-style-type: decimal">
+<li>In RStudio, to add new content, use the <code>new_content()</code> function. Blogdown automatically puts new content inside the <strong>content</strong> folder, but you need to indicate which sub-folder your new content should go into. For instance, if I want to add a blog post called “Animoplex Animations”, I’d enter:</li>
+</ol>
+<pre class="r"><code>new_content(&quot;blog/animoplex_animations.Rmd&quot;, format = &quot;yaml&quot;)</code></pre>
+<p>You now have a brand new .Rmd document, with date and title automatically in the <a href="https://gohugo.io/content/front-matter/">front matter</a>. You can add other fields as well, like tags, categories, author name, and an image to associate with your file. I’ll add a few things to the front matter of my new blog post, and then a little practice text.</p>
+<p><img src="img/articleImages/2016-12-19_creatingSite_img/newblog.png" width="60%" style="display: block; margin: auto;" /></p>
+<p>Great! So let’s use <code>serve_site()</code> to check out the page.</p>
+<p><img src="img/articleImages/2016-12-19_creatingSite_img/newblog2.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>We notice a few things:</p>
+<ul>
+<li>The text from the body of the file shows up in this view</li>
+<li>We’re missing an image</li>
+</ul>
+<p>The text in this view is the <code>{{ .Summary }}</code>, or a <a href="https://gohugo.io/content/summaries#hugo-defined-automatic-summary-split">Hugo-generated</a> piece of text that includes the first 70 words of your file. If you are working in a .md file, you can add <code>&lt;!--more--&gt;</code> where you’d like your summary to end.</p>
+<p>If you’d like a bit more control, take <a href="https://github.com/rstudio/blogdown/issues/21">this great suggestion</a> from <a href="https://github.com/tovare">Tov Are Jacobsen</a>.</p>
+<p>Now let’s deal with the missing image.</p>
+</div>
+<div id="adding-images" class="section level3">
+<h3>Adding images</h3>
+<p>In the blog post we just created, there’s no image, but clearly there should be. We know that this page is created using the list.html file, so let’s look there to see where Hugo expects the image to be.</p>
+<p>When we look at that file, we find this chunk of code referring to an image.</p>
+<p><img src="img/articleImages/2016-12-19_creatingSite_img/missingimage.png" width="90%" style="display: block; margin: auto;" /></p>
+<p>The Params.image indicates that it is looking for something named “image” in the front matter of your blog post.</p>
+<p>This essentially reads “If there is an image location specified in the front matter of the document, use that image. Otherwise, use the ‘placeholder.png’ located in the img folder”. We don’t have an image in either location! Let’s change that.</p>
+<p>Let’s add an image of Animoplex’s <a href="https://youtu.be/7_hZlzD4fos">Star Wars Yule Log</a> to this blog post. I put the image inside the content/blog folder, so now to the front matter of our post, we’ll just add</p>
+<p><code>image: &quot;blog/starwarsyulelog.gif&quot;</code></p>
+<p>Now, when we use <code>serve_site()</code> it looks like this:</p>
+<p><img src="img/articleImages/2016-12-19_creatingSite_img/newblog3.png" width="90%" style="display: block; margin: auto;" /></p>
+<p>That’s better!</p>
+<p>Again, this process can be repeated to find the missing information in any section of your site.</p>
+<p>One more example. In the <a href="http://themes.gohugo.io/hugo-creative-portfolio-theme/">Creative Portfolio Theme</a>, the home page has several portfolio pieces. If we wanted to add a new one of those, we’d add <code>new_content()</code> to the portfolio folder. We’ll also set an <a href="https://www.youtube.com/watch?v=7NyEX8DjOTw">image</a> to this one.</p>
+<p>So the front matter looks like this: <img src="img/articleImages/2016-12-19_creatingSite_img/pfrontmatter.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>And our home page now contains this: <img src="img/articleImages/2016-12-19_creatingSite_img/pfrontmatter2.png" width="90%" style="display: block; margin: auto;" /></p>
+<p>When you’re done adding and modifying content, don’t forget to check your <code>git status</code> and follow the instructions (usually add, commit, push) and then run <code>deploy.sh</code> to update your site.</p>
+<p>And that’s it! Use these steps to add new content throughout your site.</p>
+</div>
+</div>
+<div id="troubleshooting" class="section level2">
+<h2>Troubleshooting</h2>
+<div id="page-is-blank" class="section level3">
+<h3>Page is blank</h3>
+<p>Refer back to <a href="#Page-Templates-and-Fixing-Blank-Pages">this point</a></p>
+</div>
+<div id="images-arent-showing-up" class="section level3">
+<h3>Images aren’t showing up</h3>
+<p>Refer to <a href="#Adding-images">this point</a></p>
+</div>
+<div id="page-has-no-formatting" class="section level3">
+<h3>Page has no formatting</h3>
+<p>Check the baseurl in your config.toml file. It needs to be formatted like this:</p>
+<ul>
+<li>baseurl = “<a href="https://proquestionasker.github.io/" class="uri">https://proquestionasker.github.io/</a>”</li>
+</ul>
+<p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> <strong>Don’t forget the last / !!!</strong></p>
+<p>Also check the “type:” argument in the front matter of your post. If your about page is lacking formatting, set the <code>type: &quot;about&quot;</code> in the front matter of the page.</p>
+</div>
+<div id="my-post-wont-show-up" class="section level3">
+<h3>My post won’t show up!</h3>
+<p>This one plagued me forever. Turns out that in the front matter of my document, I had draft: true.</p>
+<p><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> <strong>If Hugo thinks your post is a draft, it will not publish it.</strong></p>
+</div>
+</div>
+<div id="have-fun" class="section level2">
+<h2>Have fun!</h2>
+<p>That’s it! That’s how I set up the page you are currently on, and I hope it has helped you figure out how to use GitHub, Hugo, and blogdown together.</p>
+<p>I’d love to hear any comments you may have and let me know if you have any questions at all. Good luck!</p>
+</div>
+
+      
+       </div>
+     </div>
+   </div>
+
+
+
+
+
+        <a href="#" class="back-to-top">
+        <i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+
+        </a>
+
+         <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "amberthomas" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+   
+
+          </div>
+      </div>
+  </div>
+  <script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.cookie.js"> </script>
+<script src="/js/ekko-lightbox.js"></script>
+<script src="/js/jquery.scrollTo.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/front.js"></script>
+<script src="/js/backtotop.js"></script> 
+
+</body>
+</html>

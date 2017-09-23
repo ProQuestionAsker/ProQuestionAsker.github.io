@@ -1,0 +1,48 @@
+---
+title: Free Willy and Flipper by the Numbers
+author: Amber Thomas
+date: '2017-07-06'
+slug: cetaceans
+categories: []
+tags: []
+type: "post"
+showonlyimage: false
+weight: 1
+image: "work/img/mainImages/2017-07-06_cetaceans.png"
+description: "The past, present, and future of captive whales and dolphins according to data and pop culture."
+output: 
+  html_document: 
+    fig_caption: yes
+---
+
+## [Read the Story](https://pudding.cool/2017/07/cetaceans/)
+
+## The Premise
+
+Around the world, people seem to have mixed feelings about whales and dolphins that live in aquariums. While it may be easy (and for some people even preferable) to say that the solution is to release all of the animals back to the ocean, their past makes it more difficult. In this story, we explore the data of where captive whales and dolphins in the US came from, their survival rate, and the projected timing of extinction for these animals in a captive setting. 
+
+## My Contributions
+
+* Story Idea
+* Data [Collection](https://github.com/polygraph-cool/cetaceans/tree/master/src/assets) 
+* Data Analysis
+* About 70% of Front-End Development (HTML, CSS, and D3)
+* Story Writing
+
+## Collaborators
+
+This project was done in collaboration with the fine folks at [The Pudding](www.pudding.cool). Specifically, [Russell Goldenberg](https://twitter.com/codenberg) who helped this story take shape, gave it a fresh design, fixed some of my coding blunders, and added those great videos to the first chart, and [Matt Daniels](https://twitter.com/matthew_daniels) for those beautiful geometric animals. 
+
+## Screenshots
+
+```{r echo = FALSE, out.width = "640", fig.align = "center", fig.cap = "The first graphic in this story is driven by the reader's scrolling. As the story continues, the data and associated videos update to follow along. The last graphic also requires the reader's input to determine when the population of captive animals in the US could be extinct."}
+knitr::include_graphics("../img/articleImages/2017-07-06_cetaceans_img/cetaceansVideo.gif")
+```
+
+```{r echo = FALSE, out.width = "50%"}
+knitr::include_graphics("../img/articleImages/2017-07-06_cetaceans_img/cetaceans_img1.png")
+knitr::include_graphics("../img/articleImages/2017-07-06_cetaceans_img/cetaceans_img2.png")
+knitr::include_graphics("../img/articleImages/2017-07-06_cetaceans_img/cetaceans_img3.png")
+knitr::include_graphics("../img/articleImages/2017-07-06_cetaceans_img/cetaceans_img4.png")
+```
+

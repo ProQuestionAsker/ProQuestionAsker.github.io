@@ -1,0 +1,194 @@
+#amber-btn {
+  font-weight: 700;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  border-radius: 0;
+  border: 1px solid #e01557;
+}
+
+
+
+
+
+
+
+ .back-to-top {
+   position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+ }
+ 
+  
+ .back-to-top i {
+   font-size: 60px;
+ }
+
+
+.panel.sidebar-menu h3 {
+  padding: 5px 0;
+  margin: 0;
+}
+.panel.sidebar-menu {
+  background: #f4f4f4
+  margin: 0 0 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.panel.sidebar-menu .panel-heading {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  padding: 0;
+  letter-spacing: 0.08em;
+  border-bottom: none;
+}
+.panel.sidebar-menu .panel-heading h1,
+.panel.sidebar-menu .panel-heading h2,
+.panel.sidebar-menu .panel-heading h3,
+.panel.sidebar-menu .panel-heading h4,
+.panel.sidebar-menu .panel-heading h5 {
+  display: inline-block;
+  border-bottom: solid 5px #e01557;
+  line-height: 1.1;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid transparent;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+}
+
+/* FOR FIXING ARROWS ON SEATTLE DOGS PAGE
+.content-column-content ul li p {
+  display: inline-block;
+}
+*/
+
+
+/* FOR ADDING TAG CLOUD TO SIDE BAR */
+
+.panel.sidebar-menu ul.tag-cloud {
+  list-style: none;
+  padding-left: 0;
+}
+.panel.sidebar-menu ul.tag-cloud li {
+  display: inline-block;
+}
+.panel.sidebar-menu ul.tag-cloud li a {
+  display: inline-block;
+  padding: 5px;
+  border: solid 1px #eeeeee;
+  border-radius: 0;
+  color: #e01557;
+  margin: 5px 5px 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 12px;
+}
+.panel.sidebar-menu ul.tag-cloud li a:hover {
+  color: #38a7bb;
+  text-decoration: none;
+  border-color: #38a7bb;
+}
+.panel.sidebar-menu ul.popular,
+.panel.sidebar-menu ul.recent {
+  list-style: none;
+  padding-left: 0;
+  padding: 20px 0;
+}
+.panel.sidebar-menu ul.popular li,
+.panel.sidebar-menu ul.recent li {
+  margin-bottom: 10px;
+  padding: 5px 0;
+  border-bottom: dotted 1px #eeeeee;
+}
+.panel.sidebar-menu ul.popular li:before,
+.panel.sidebar-menu ul.recent li:before,
+.panel.sidebar-menu ul.popular li:after,
+.panel.sidebar-menu ul.recent li:after {
+  content: " ";
+  display: table;
+}
+.panel.sidebar-menu ul.popular li:after,
+.panel.sidebar-menu ul.recent li:after {
+  clear: both;
+}
+.panel.sidebar-menu ul.popular li:before,
+.panel.sidebar-menu ul.recent li:before,
+.panel.sidebar-menu ul.popular li:after,
+.panel.sidebar-menu ul.recent li:after {
+  content: " ";
+  display: table;
+}
+.panel.sidebar-menu ul.popular li:after,
+.panel.sidebar-menu ul.recent li:after {
+  clear: both;
+}
+.panel.sidebar-menu ul.popular li img,
+.panel.sidebar-menu ul.recent li img {
+  width: 50px;
+  margin-right: 10px;
+}
+.panel.sidebar-menu ul.popular li h5,
+.panel.sidebar-menu ul.recent li h5 {
+  margin: 0 0 10px;
+}
+.panel.sidebar-menu ul.popular li h5 a,
+.panel.sidebar-menu ul.recent li h5 a {
+  font-weight: normal;
+}
+.panel.sidebar-menu ul.popular li p.date,
+.panel.sidebar-menu ul.recent li p.date {
+  float: right;
+  font-size: 12px;
+  color: #999999;
+}
+.panel.sidebar-menu ul.popular li:last-child,
+.panel.sidebar-menu ul.recent li:last-child {
+  border-bottom: none;
+}
+.panel.sidebar-menu .text-widget {
+  font-size: 12px;
+}
+.panel.sidebar-menu.with-icons ul.nav li a:after {
+  font-family: 'FontAwesome';
+  content: "\f105";
+  position: relative;
+  top: 0;
+  float: left;
+}
+
+
+ /* FOR ADDING VERTICAL SCROLL BAR TO LONG TEXT BOXES */
+
+ 
+ pre code, pre, code {
+  white-space: pre !important;
+  overflow-y: scroll !important;
+  max-height: 75vh !important;
+ }

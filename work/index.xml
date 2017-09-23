@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Work on Amber Thomas</title>
+    <link>/work/</link>
+    <description>Recent content in Work on Amber Thomas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy;2017 Amber Thomas</copyright>
+    <lastBuildDate>Fri, 08 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/work/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How far is too far?</title>
+      <link>/work/2017-09-08_clinics/</link>
+      <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/work/2017-09-08_clinics/</guid>
+      <description>Read the Story  The Premise For some people in the US, round-trip travel time to the nearest abortion-providing clinic can be about nine hours. We set out to quantify access to abortion clinics by measuring what really affects people: how long it takes to drive there.
+ My Contributions  Data Collection Some Data Analysis Some Graphical Mockups Animation Story Writing   Collaborators This project was done in collaboration with many of the fine folks at The Pudding.</description>
+    </item>
+    
+    <item>
+      <title>Table for One</title>
+      <link>/work/eatingalone/</link>
+      <pubDate>Thu, 27 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/work/eatingalone/</guid>
+      <description>Read the Story  The Premise Americans are beginning to spend more of their mealtimes solo. What does that look like for the US as a community of people? We explore the data surrounding the dining habits and companions of Americans.
+ My Contributions  Story Design Front-End Development (HTML, CSS, and D3)   Collaborators The data collection, analysis, graphic wireframes, and story-writing for this project came from Henrik Lindberg.</description>
+    </item>
+    
+    <item>
+      <title>Free Willy and Flipper by the Numbers</title>
+      <link>/work/cetaceans/</link>
+      <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/work/cetaceans/</guid>
+      <description>Read the Story  The Premise Around the world, people seem to have mixed feelings about whales and dolphins that live in aquariums. While it may be easy (and for some people even preferable) to say that the solution is to release all of the animals back to the ocean, their past makes it more difficult. In this story, we explore the data of where captive whales and dolphins in the US came from, their survival rate, and the projected timing of extinction for these animals in a captive setting.</description>
+    </item>
+    
+    <item>
+      <title>The Timing of Baby Making</title>
+      <link>/work/babytiming/</link>
+      <pubDate>Wed, 24 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/work/babytiming/</guid>
+      <description>Read the Story  The Premise Every time there is some sort of large scale storm (e.g., blizzard or hurricane) or big sports win, I seem to hear everyone chatting about how there will be a baby boom in that area 9 months later. Driven by the curiosity to see if there was any data to back up these claims, I decided to investigate a little further. This project tells the story of my findings while allowing readers to play with the interactive graphic to answer their own questions.</description>
+    </item>
+    
+    <item>
+      <title>She Giggles, He Gallops</title>
+      <link>/work/2017-08-22_screendirections/</link>
+      <pubDate>Tue, 22 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/work/2017-08-22_screendirections/</guid>
+      <description>Read the Story  The Premise There have been several projects conducted that show a disparity in film dialogue between male and female characters. But, talking isn’t the only thing important to a movie. The way characters are instructed to act plays a role as well. In this project, we investigate over 2,000 film scripts to find what verbs are more likely to follow the pronouns “he” and “she”.
+ My Contributions  Some front-end development (HTML, CSS, and D3)   Collaborators The data collection, analysis, graphic wireframes, and story-writing for this project came from Julia Silge.</description>
+    </item>
+    
+  </channel>
+</rss>

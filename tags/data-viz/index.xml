@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Viz on Amber Thomas</title>
+    <link>/tags/data-viz/</link>
+    <description>Recent content in Data Viz on Amber Thomas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy;2017 Amber Thomas</copyright>
+    <lastBuildDate>Sat, 07 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/data-viz/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gender Equality and Dialogue in 2016’s Highest Grossing Films</title>
+      <link>/projects/2017-01-07_gendermoviedialogue/</link>
+      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2017-01-07_gendermoviedialogue/</guid>
+      <description>Jump straight to the Interactive Graphic.
+ Introduction  Choosing the Movies Deciding on Data Collection  Analysis  Assigning Gender to Characters Counting Words  Visualizing the Data  In R In Illustrator Adding Interactivity with d3.js Color Considerations  Key Takeaways
+ Future Work  Introduction Unlike most of my personal projects, this one didn’t start with a dataset. It started with going to see the newest movie from the Star Wars universe: Rogue One.</description>
+    </item>
+    
+    <item>
+      <title>Mapping Student Course Activity</title>
+      <link>/projects/2016-12-27_fcccourses/</link>
+      <pubDate>Tue, 27 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2016-12-27_fcccourses/</guid>
+      <description>&lt;p&gt;Cleaning, exploration, interactive visualizations, and machine learning with Free Code Camp&amp;rsquo;s student course completion dataset.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Dog Ownership in Seattle</title>
+      <link>/projects/2016-11-16_dogsseattle/</link>
+      <pubDate>Wed, 16 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2016-11-16_dogsseattle/</guid>
+      <description>&lt;p&gt;Data cleaning, exploration, mapping, and data visualizations in RMarkdown.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bicycle Sharing in Seattle</title>
+      <link>/projects/2016-11-10_bicyclesseattle/</link>
+      <pubDate>Thu, 10 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2016-11-10_bicyclesseattle/</guid>
+      <description>&lt;p&gt;Data exploration, mapping, and data visualizations in RMarkdown.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ghosts, Goblins, and Ghouls</title>
+      <link>/projects/2016-11-09_ghosts/</link>
+      <pubDate>Wed, 09 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2016-11-09_ghosts/</guid>
+      <description>&lt;p&gt;Kaggle Playground Competition&lt;/p&gt;
+
+&lt;p&gt;Data exploration and machine learning in RMarkdown.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning from Disaster</title>
+      <link>/projects/2016-11-05_titanic/</link>
+      <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
+      
+      <guid>/projects/2016-11-05_titanic/</guid>
+      <description>&lt;p&gt;Kaggle Playground Competition&lt;/p&gt;
+
+&lt;p&gt;Data exploration and machine learning in RMarkdown.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

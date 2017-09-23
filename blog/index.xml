@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Amber Thomas</title>
+    <link>/blog/</link>
+    <description>Recent content in Blog on Amber Thomas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy;2017 Amber Thomas</copyright>
+    <lastBuildDate>Tue, 02 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nesting and Accessing Data in d3v4</title>
+      <link>/blog/2017-05-02_d3nest/</link>
+      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2017-05-02_d3nest/</guid>
+      <description>Introduction Before Nesting Nest Level 1 Rollup Level 1  Sorting Keys  Nest Level 2  Styling Nested Elements  Creating Dropdown Menus from 1st Level Nests Rollup Level 2 Creating Dropdown Menus from 2nd Level Nests  Introduction While learning how to make interactive data visualizations using d3.js, I ran into an issue with something new to me: nests. The general idea is that data sometimes needs to be grouped based on certain variables and the groups need to be analyzed or graphed separately.</description>
+    </item>
+    
+    <item>
+      <title>Making a Website Using Blogdown, Hugo, and GitHub pages.</title>
+      <link>/blog/2016-12-19_creatingsite/</link>
+      <pubDate>Mon, 19 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2016-12-19_creatingsite/</guid>
+      <description>Introduction  Blogdown Hugo GitHub  Building the Page  Installing Necessary Packages and Software  Setting Up GitHub RStudio and Blogdown  Initializing GitHub pages to work with Hugo and Blogdown  Adding Content  Site Configuration Adding a Page Page Templates and Fixing Blank Pages Adding a Blog Post or Portfolio Piece Adding images  Troubleshooting  Page is Blank Images Aren’t Showing Up Page Has No Formatting My Post Won’t Show Up   Introduction As I transitioned into the data science world, I kept hearing one piece of advice over and over: build a portfolio.</description>
+    </item>
+    
+    <item>
+      <title>Online Data Science Classes in R</title>
+      <link>/blog/2016-12-17_dscourses/</link>
+      <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2016-12-17_dscourses/</guid>
+      <description>Introduction Prerequisites Courses I’ve Taken  Getting Started in Data Science Getting Started in R R Studio Courses Machine Learning Courses SQL Databases Other Courses  Wrap-Up  Introduction While working as a marine biologist, I decided to switch career tracks slightly and pursue data science. I already had experience in mathematics, R programming and data visualization but filling in other knowledge gaps led me to searching the internet for the best places to learn these skills.</description>
+    </item>
+    
+  </channel>
+</rss>

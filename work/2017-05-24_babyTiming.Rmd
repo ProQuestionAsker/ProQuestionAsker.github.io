@@ -1,0 +1,47 @@
+---
+title: The Timing of Baby Making
+author: Amber Thomas
+date: '2017-05-24'
+type: "post"
+slug: babyTiming
+showonlyimage: false
+weight: 2
+image: "work/img/mainImages/2017-05-24_babyTiming.png"
+description: "Are more babies born after storms? Or superbowl wins? We investigate the data on timing and geography of births in the US."
+output: 
+  html_document: 
+    fig_caption: yes
+---
+
+## [Read the Story](https://pudding.cool/2017/05/births/)
+
+
+## The Premise
+
+Every time there is some sort of large scale storm (e.g., blizzard or hurricane) or big sports win, I seem to hear everyone chatting about how there will be a baby boom in that area 9 months later. Driven by the curiosity to see if there was any data to back up these claims, I decided to investigate a little further. This project tells the story of my findings while allowing readers to play with the interactive graphic to answer their own questions. 
+
+## My Contributions
+
+* Data [Collection](https://github.com/polygraph-cool/births/tree/master/Raw_Data) 
+* Data [Analysis](https://github.com/polygraph-cool/births/tree/master/RCode)
+* Project Design
+* Majority of Front-End Development (HTML, CSS, and D3)
+* Story Writing
+
+## Collaborators
+
+This project was done in collaboration with the fine folks at [The Pudding](www.pudding.cool). Specifically, [Matt Daniels](https://twitter.com/matthew_daniels) who helped me shape the story, make this piece mobile friendly, and fix some of my beginner-coding bugs, and [Russell Goldenberg](https://twitter.com/codenberg) who helped optimize my code. 
+
+## Screenshots
+
+```{r echo = FALSE, out.width = "640", fig.align = "center", fig.cap = "This interactive graphic is driven by the reader's scrolling. As you scroll and read the story, the figure updates with you. If you don't want to be told where to look, you can go rogue and explore within the graphic at any time."}
+knitr::include_graphics("../img/articleImages/2017-05-24_babyTiming_img/babyTimingVideo.gif")
+```
+
+```{r echo = FALSE, out.width = "50%"}
+knitr::include_graphics("../img/articleImages/2017-05-24_babyTiming_img/babyTiming_img1.png")
+knitr::include_graphics("../img/articleImages/2017-05-24_babyTiming_img/babyTiming_img2.png")
+knitr::include_graphics("../img/articleImages/2017-05-24_babyTiming_img/babyTiming_img3.png")
+knitr::include_graphics("../img/articleImages/2017-05-24_babyTiming_img/babyTiming_img4.png")
+```
+
