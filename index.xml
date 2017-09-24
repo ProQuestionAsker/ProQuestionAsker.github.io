@@ -65,7 +65,8 @@
       <pubDate>Mon, 19 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>/blog/2016-12-19_creatingsite/</guid>
-      <description>Introduction  Blogdown Hugo GitHub  Building the Page  Installing Necessary Packages and Software  Setting Up GitHub RStudio and Blogdown  Initializing GitHub pages to work with Hugo and Blogdown  Adding Content  Site Configuration Adding a Page Page Templates and Fixing Blank Pages Adding a Blog Post or Portfolio Piece Adding images  Troubleshooting  Page is Blank Images Aren’t Showing Up Page Has No Formatting My Post Won’t Show Up   Introduction As I transitioned into the data science world, I kept hearing one piece of advice over and over: build a portfolio.</description>
+      <description>Since the writing of this post, simpler methods of setting up sites have been documented. Check out the blogdown book and keep your eyes peeled for an updated post.
+ Introduction  Blogdown Hugo GitHub  Building the Page  Installing Necessary Packages and Software  Setting Up GitHub RStudio and Blogdown  Initializing GitHub pages to work with Hugo and Blogdown  Adding Content  Site Configuration Adding a Page Page Templates and Fixing Blank Pages Adding a Blog Post or Portfolio Piece Adding images  Troubleshooting  Page is Blank Images Aren’t Showing Up Page Has No Formatting My Post Won’t Show Up   Introduction As I transitioned into the data science world, I kept hearing one piece of advice over and over: build a portfolio.</description>
     </item>
     
     <item>

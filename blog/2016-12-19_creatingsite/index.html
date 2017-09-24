@@ -148,6 +148,7 @@ ga('send', 'pageview');
 <link href="/rmarkdown-libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
 
+<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <strong>Since the writing of this post, simpler methods of setting up sites have been documented. Check out the <a href="https://bookdown.org/yihui/blogdown/">blogdown book</a> and keep your eyes peeled for an updated post.</strong></p>
 <ul>
 <li><a href="#introduction">Introduction</a>
 <ul>
@@ -316,6 +317,7 @@ library(blogdown)</code></pre>
 </div>
 <div id="initializing-github-pages-to-work-with-hugo-and-blogdown" class="section level3">
 <h3>Initializing GitHub pages to work with Hugo and Blogdown</h3>
+<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <strong>While this method does work, there are easier ways to set up your site. I’d recommend checking out the <a href="https://bookdown.org/yihui/blogdown/">blogdown book</a> and keep your eyes peeled for an updated post.</strong></p>
 <p>The way that GitHub pages work is that they take any information on the <strong>master</strong> branch of your repo and use that to build your website. Which is great <strong>except</strong> that it differs from how Hugo works.</p>
 <p>Hugo takes all of the content from its archetypes, content, data, layouts, static, and themes folders (the ones that were just added to your local working directory) and uses them to build a website <em>inside</em> of the public folder in your working directory.</p>
 <p>So, to get Hugo and GitHub pages to play nicely, we need to take all of the files from inside the <strong>public</strong> folder and keep them on the <strong>master</strong> branch, while we keep everything else on another branch. You can do this manually, but it is unnecessarily tedious, particularly when you make frequent updates. Luckily, a few people have already figured out how to make this more stream-lined (look at these fantastic posts <a href="https://hjdskes.github.io/blog/deploying-hugo-on-personal-gh-pages/index.html">here</a> and <a href="https://gohugo.io/tutorials/github-pages-blog/">here</a>).</p>

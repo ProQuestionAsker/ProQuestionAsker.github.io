@@ -17,6 +17,7 @@ knitr::opts_chunk$set(collapse = TRUE)
 ```{r, include = FALSE}
 htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ```
+<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> **Since the writing of this post, simpler methods of setting up sites have been documented. Check out the [blogdown book](https://bookdown.org/yihui/blogdown/) and keep your eyes peeled for an updated post.**
 
 -   [Introduction](#introduction)
     -   [Blogdown](#blogdown)
@@ -205,6 +206,8 @@ install_theme("kishaningithub/hugo-creative-portfolio-theme", theme_example = TR
 We're in great shape! We've got a GitHub repo full of the building blocks of our website. Now, we have go back to GitHub for one more thing before we start adding content to the site. 
 
 ### Initializing GitHub pages to work with Hugo and Blogdown
+
+<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> **While this method does work, there are easier ways to set up your site. I'd recommend checking out the [blogdown book](https://bookdown.org/yihui/blogdown/) and keep your eyes peeled for an updated post.**
 
 The way that GitHub pages work is that they take any information on the **master** branch of your repo and use that to build your website. Which is great **except** that it differs from how Hugo works. 
 
