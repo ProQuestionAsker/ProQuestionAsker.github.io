@@ -14,10 +14,10 @@
     
     <item>
       <title>Gender Equality and Dialogue in 2016’s Highest Grossing Films</title>
-      <link>https://proquestionasker.github.io/projects/2017-01-07_gendermoviedialogue/</link>
+      <link>https://proquestionasker.github.io/projects/2017/01/07/gendermoviedialogue/</link>
       <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://proquestionasker.github.io/projects/2017-01-07_gendermoviedialogue/</guid>
+      <guid>https://proquestionasker.github.io/projects/2017/01/07/gendermoviedialogue/</guid>
       <description>Jump straight to the Interactive Graphic.
  Introduction  Choosing the Movies Deciding on Data Collection  Analysis  Assigning Gender to Characters Counting Words  Visualizing the Data  In R In Illustrator Adding Interactivity with d3.js Color Considerations  Key Takeaways
  Future Work  Introduction Unlike most of my personal projects, this one didn’t start with a dataset. It started with going to see the newest movie from the Star Wars universe: Rogue One.</description>

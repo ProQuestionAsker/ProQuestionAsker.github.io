@@ -35,13 +35,13 @@ This project was done in collaboration with the fine folks at [The Pudding](www.
 ## Screenshots
 
 ```{r echo = FALSE, out.width = "640", fig.align = "center", fig.cap = "This interactive graphic is driven by the reader's scrolling. As you scroll and read the story, the figure updates with you. If you don't want to be told where to look, you can go rogue and explore within the graphic at any time."}
-knitr::include_graphics("../img/articleImages/2017-05-24_babyTiming_img/babyTimingVideo.gif")
+knitr::include_graphics("/work/img/articleImages/2017-05-24_babyTiming_img/babyTimingVideo.gif")
 ```
 
 ```{r echo = FALSE, out.width = "50%"}
-knitr::include_graphics("../img/articleImages/2017-05-24_babyTiming_img/babyTiming_img1.png")
-knitr::include_graphics("../img/articleImages/2017-05-24_babyTiming_img/babyTiming_img2.png")
-knitr::include_graphics("../img/articleImages/2017-05-24_babyTiming_img/babyTiming_img3.png")
-knitr::include_graphics("../img/articleImages/2017-05-24_babyTiming_img/babyTiming_img4.png")
+knitr::include_graphics("/work/img/articleImages/2017-05-24_babyTiming_img/babyTiming_img1.png")
+knitr::include_graphics("/work/img/articleImages/2017-05-24_babyTiming_img/babyTiming_img2.png")
+knitr::include_graphics("/work/img/articleImages/2017-05-24_babyTiming_img/babyTiming_img3.png")
+knitr::include_graphics("/work/img/articleImages/2017-05-24_babyTiming_img/babyTiming_img4.png")
 ```
 

@@ -2,7 +2,7 @@
 title: She Giggles, He Gallops
 author: Julia Silge + Russell Goldenberg, Amber Thomas, and Hannah Anderson
 date: '2017-08-22'
-slug: 2017-08-22_screenDirections
+slug: screenDirections
 categories: []
 tags: []
 type: "post"
@@ -31,15 +31,15 @@ The data collection, analysis, graphic wireframes, and story-writing for this pr
 ## Screenshots
 
 ```{r echo = FALSE, out.width = "640", fig.align = "center"}
-knitr::include_graphics("../img/articleImages/2017-08-22_screenDirections_img/screenDirectionsVideo.gif")
+knitr::include_graphics("/work/img/articleImages/2017-08-22_screenDirections_img/screenDirectionsVideo.gif")
 ```
 
 ```{r echo = FALSE, out.width = "50%"}
-knitr::include_graphics("../img/articleImages/2017-08-22_screenDirections_img/screenDirections_img1.png")
-knitr::include_graphics("../img/articleImages/2017-08-22_screenDirections_img/screenDirections_img3.png")
+knitr::include_graphics("/work/img/articleImages/2017-08-22_screenDirections_img/screenDirections_img1.png")
+knitr::include_graphics("/work/img/articleImages/2017-08-22_screenDirections_img/screenDirections_img3.png")
 ```
 
 ```{r echo = FALSE, out.width = "50%"}
-knitr::include_graphics("../img/articleImages/2017-08-22_screenDirections_img/screenDirections_img2.png")
-knitr::include_graphics("../img/articleImages/2017-08-22_screenDirections_img/screenDirections_img4.png")
+knitr::include_graphics("/work/img/articleImages/2017-08-22_screenDirections_img/screenDirections_img2.png")
+knitr::include_graphics("/work/img/articleImages/2017-08-22_screenDirections_img/screenDirections_img4.png")
 ```

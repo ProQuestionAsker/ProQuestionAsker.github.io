@@ -36,13 +36,13 @@ This project was done in collaboration with the fine folks at [The Pudding](www.
 ## Screenshots
 
 ```{r echo = FALSE, out.width = "640", fig.align = "center", fig.cap = "The first graphic in this story is driven by the reader's scrolling. As the story continues, the data and associated videos update to follow along. The last graphic also requires the reader's input to determine when the population of captive animals in the US could be extinct."}
-knitr::include_graphics("../img/articleImages/2017-07-06_cetaceans_img/cetaceansVideo.gif")
+knitr::include_graphics("/work/img/articleImages/2017-07-06_cetaceans_img/cetaceansVideo.gif")
 ```
 
 ```{r echo = FALSE, out.width = "50%"}
-knitr::include_graphics("../img/articleImages/2017-07-06_cetaceans_img/cetaceans_img1.png")
-knitr::include_graphics("../img/articleImages/2017-07-06_cetaceans_img/cetaceans_img2.png")
-knitr::include_graphics("../img/articleImages/2017-07-06_cetaceans_img/cetaceans_img3.png")
-knitr::include_graphics("../img/articleImages/2017-07-06_cetaceans_img/cetaceans_img4.png")
+knitr::include_graphics("/work/img/articleImages/2017-07-06_cetaceans_img/cetaceans_img1.png")
+knitr::include_graphics("/work/img/articleImages/2017-07-06_cetaceans_img/cetaceans_img2.png")
+knitr::include_graphics("/work/img/articleImages/2017-07-06_cetaceans_img/cetaceans_img3.png")
+knitr::include_graphics("/work/img/articleImages/2017-07-06_cetaceans_img/cetaceans_img4.png")
 ```
 

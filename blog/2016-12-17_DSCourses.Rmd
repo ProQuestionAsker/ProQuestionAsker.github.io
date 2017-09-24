@@ -1,6 +1,7 @@
 ---
 date: "2016-12-17"
 title: "Online Data Science Classes in R"
+slug: "DSCourses"
 showonlyimage: true
 draft: false
 image: "blog/img/mainImages/2016-12-17_DSCourses.jpg"

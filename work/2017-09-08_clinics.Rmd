@@ -2,7 +2,7 @@
 title: How far is too far? 
 author: Russell Goldenberg, Amber Thomas, and Caitlyn Ralph
 date: '2017-09-08'
-slug: 2017-09-08_clinics
+slug: clinics
 categories: []
 tags: []
 type: "post"
@@ -37,12 +37,12 @@ This project was done in collaboration with many of the fine folks at [The Puddi
 ## Screenshots
 
 ```{r echo = FALSE, out.width = "640", fig.align = "center"}
-knitr::include_graphics("../img/articleImages/2017-09-08_clinics_img/clinicsVideo.gif")
+knitr::include_graphics("/work/img/articleImages/2017-09-08_clinics_img/clinicsVideo.gif")
 ```
 
 ```{r echo = FALSE, out.width = "50%"}
-knitr::include_graphics("../img/articleImages/2017-09-08_clinics_img/clinics_img1.png")
-knitr::include_graphics("../img/articleImages/2017-09-08_clinics_img/clinics_img2.png")
-knitr::include_graphics("../img/articleImages/2017-09-08_clinics_img/clinics_img3.png")
-knitr::include_graphics("../img/articleImages/2017-09-08_clinics_img/clinics_img4.png")
+knitr::include_graphics("/work/img/articleImages/2017-09-08_clinics_img/clinics_img1.png")
+knitr::include_graphics("/work/img/articleImages/2017-09-08_clinics_img/clinics_img2.png")
+knitr::include_graphics("/work/img/articleImages/2017-09-08_clinics_img/clinics_img3.png")
+knitr::include_graphics("/work/img/articleImages/2017-09-08_clinics_img/clinics_img4.png")
 ```

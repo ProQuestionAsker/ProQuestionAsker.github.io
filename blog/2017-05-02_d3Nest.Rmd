@@ -1,6 +1,7 @@
 ---
 date: "2017-05-02"
 title: "Nesting and Accessing Data in d3v4"
+slug: "d3Nest"
 author: "Amber Thomas"
 showonlyimage: true
 draft: false
@@ -61,14 +62,14 @@ These data are just random numbers, but for our purposes, we'll say that they ar
 
 Here's what the final product looks like:
 ```{r echo = FALSE, out.width = "80%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example1.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example1.png")
 ```
 
 <i class="fa fa-github" aria-hidden="true"></i> **The javascript, HTML and CSS needed to generate this figure are available [here](https://bl.ocks.org/ProQuestionAsker/9a909417edf206f2d3ff38cd41a30524/c7c24def8aea8d2e3f50453ee1d963e8f6ffc09b#file-example1-csv). **
 
 Now, if we use `console.log()` to look at the structure of the data, it looks like this:
 ```{r echo = FALSE, out.width = "60%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example1Structure.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example1Structure.png")
 ```
 
 So there's an array with 12 objects inside: one for each month. And each object contains both the month variable and the Sales count. When generating the path for the line graph, we can access the data like this:
@@ -109,7 +110,7 @@ head(ex2)
 If we try plotting the line chart the exact same way as before, we end up with something that looks like this:
 
 ```{r echo = FALSE, out.width = "80%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example2.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example2.png")
 ```
 
 Whoops, it looks like d3 tried to plot all of our data as one continuous line, which makes sense because we didn't tell it that there are 3 separate categories here. 
@@ -144,7 +145,7 @@ At this stage, since we are simply grouping the data, this nest has only two par
 Perhaps unsurprisingly, doing this changes the structure of our data. 
 
 ```{r echo = FALSE, out.width = "80%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example2Structure.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example2Structure.png")
 ```
 
 To access the nested data and generate multiple lines, we can do this:
@@ -176,7 +177,7 @@ Notice that there are only two things that have changed here, but they're import
 Just by making these small changes, you'll see that we now have 3 separate lines. Hooray!
 
 ```{r echo = FALSE, out.width = "80%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example2Complete.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example2Complete.png")
 ```
 
 <i class="fa fa-github" aria-hidden="true"></i> **The entire js, html, css, and csv scripts are included [here](https://bl.ocks.org/ProQuestionAsker/295b81e1d59de386ce332a6401b98cc8).**
@@ -215,13 +216,13 @@ The rollup function generates a sum of the sales data for each Fruit value, simi
 
 The data structure then looks like this:
 ```{r echo = FALSE, out.width = "100%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example3Structure.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example3Structure.png")
 ```
 
 Since we've reduced the data to just 3 values (one for each fruit), we can no longer represent the data using a line chart. Instead, here's a bar chart generated with the nested and rolled-up data. 
 
 ```{r echo = FALSE, out.width = "60%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example3Complete.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example3Complete.png")
 ```
 
 Although the code is different due to the difference in chart type, here is the code to generate the bars.
@@ -259,7 +260,7 @@ var nest = d3.nest()
 Which results in an updated chart like this:
 
 ```{r echo = FALSE, out.width = "60%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example3Complete2.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example3Complete2.png")
 ```
 
 <i class="fa fa-github" aria-hidden="true"></i> **The full code for this example is available [here](https://bl.ocks.org/ProQuestionAsker/60e7a6e3117f9f433ef9c998f6c776b6).**
@@ -292,7 +293,7 @@ var nest = d3.nest()
 Our resulting data structure looks like this:
 
 ```{r echo = FALSE, out.width = "60%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example4Structure.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example4Structure.png")
 ```
 
 The original sales data is still present, but notice that it's now two levels down. That'll make it slightly more challenging to access for making graphics with it. 
@@ -334,7 +335,7 @@ paths
 After we've added that bit of code, this is the resulting graph:
 
 ```{r echo = FALSE, out.width = "60%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example4.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example4.png")
 ```
 
 Awesome! We now have 6 lines on our chart. It's a little hard to tell the difference between our lines though, so we can add some styling. 
@@ -361,7 +362,7 @@ var fruitGroups = svg.selectAll(".fruitGroups")
 ```
 
 ```{r echo = FALSE, out.width = "60%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example4Colors.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example4Colors.png")
 ```
 
 Getting closer! But we have a 2015 line for each fruit and a 2016 line for each fruit. Let's separate those out by line type, adding a dash for 2015 lines. 
@@ -381,7 +382,7 @@ paths
 And we end up with this:
 
 ```{r echo = FALSE, out.width = "60%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example4Dash.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example4Dash.png")
 ```
 
 Yay! We now have 6 lines, 2 for each of our 3 fruits. 
@@ -420,7 +421,7 @@ var fruitMenu = d3.select("#fruitDropdown")
 This creates a figure like this:
 
 ```{r echo = FALSE, out.width = "60%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example5Menu.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example5Menu.png")
 ```
 
 Currently, clicking on the different options doesn't do anything. We need to set up an event listener for the dropdown menu so that when something is changed, something happens on our figure. In this case, we'll initially draw the chart with only the data for strawberries, and we'll make the data update when the menu item is changed. 
@@ -508,7 +509,7 @@ That will update the data and smoothly transition between the line shapes. Now, 
 Great! We end up with a graph that looks like this:
 
 ```{r echo = FALSE, out.width = "60%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example5.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example5.png")
 ```
 
 <i class="fa fa-github" aria-hidden="true"></i> **It is fully functional with all the supporting code [here](https://bl.ocks.org/ProQuestionAsker/8382f70af7f4a7355827c6dc4ee8817d).**
@@ -522,7 +523,7 @@ I've added data so that each fruit now has 4 years worth of (remember, totally f
 Here's what 2 of the views look like:
 
 ```{r echo = FALSE, out.width = "100%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example6Examples.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example6Examples.png")
 ```
 
 You'll notice that the view for strawberries looks a little strange because of the Y-axis. Currently, we set our Y-domain like this:
@@ -559,7 +560,7 @@ var nest = d3.nest()
 
 The resulting data structure would then look like this:
 ```{r echo = FALSE, out.width = "60%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example6Structure.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example6Structure.png")
 ```
 
 Now it's just a matter of accessing and using this data. We already have a good initial structure for how to build this figure, so now to update it.
@@ -672,7 +673,7 @@ And that's it!
 Here's what the graphs now look like. And check out those Y-axes!
 
 ```{r echo = FALSE, out.width = "100%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example6.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example6.png")
 ```
 
 <i class="fa fa-github" aria-hidden="true"></i> **[Here](https://bl.ocks.org/ProQuestionAsker/ee398d1478f6416bba9916cee66f145d)'s the functional version and code.**
@@ -712,7 +713,7 @@ Notice that this time, there are 2 `.data()` calls. The first indicates that it 
 Just adding that small amount of code has generated our second dropdown menu.
 
 ```{r echo = FALSE, out.width = "100%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example7Menu.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example7Menu.png")
 ```
 
 So far so good. Once again, we just need to add an event listener to the dropdown so that when a value is clicked, something happens. In this case, I want to change the color of the line that corresponds to the selected year. 
@@ -743,7 +744,7 @@ yearMenu.on('change', function(){
 *Note: Make sure to also add styling for a ".selected" class in your CSS!*
 
 ```{r echo = FALSE, out.width = "100%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example7Selected.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example7Selected.png")
 ```
 
 Looking good! One more minor aesthetic thing that can we can adjust. 
@@ -792,7 +793,7 @@ So, for instance, if you select "grape" and then "2015", the line for grape sale
 ```
 
 ```{r echo = FALSE, out.width = "100%", fig.align = "center"}
-knitr::include_graphics("img/articleImages/2017-05-02_d3Nest_img/Example7Selected2.png")
+knitr::include_graphics("/blog/img/articleImages/2017-05-02_d3Nest_img/Example7Selected2.png")
 ```
 
 That's it! 

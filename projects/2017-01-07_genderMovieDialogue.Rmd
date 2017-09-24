@@ -3,6 +3,7 @@ date: "2017-01-07"
 type: "post"
 showonlyimage: false
 draft: false
+slug: "genderMovieDialogue"
 title: "Gender Equality and Dialogue in 2016’s Highest Grossing Films"
 image: "projects/img/mainImages/2017-01-07_genderMovieDialogue.jpg"
 description: "Text parsing, analytics, and d3.js interactive data visualization of movie transcripts"
@@ -186,20 +187,20 @@ I should note that I did not include a "minimum number of spoken words limit" to
 #### Scatter Plot
 As a native R user, my first attempt to visualize all of this data was naturally in R. I started with a simple scatter plot for each movie. I had "Number of Turns Speaking" (i.e., the number of independent times that character's name showed up) on the x-axis, "Total Number of Words Spoken" on the y-axis, and the "Total Number of Words Spoken" also mapped to circle size. I decided to use the `highcharter` package and ended up with something like this: 
 
-<iframe seamless src="../img/articleImages/2017-01-07_genderMovieDialogue_img/RO_fig/index.html" width = "100%" height="500" id="iframe_container"></iframe>
+<iframe seamless src="/projects/img/articleImages/2017-01-07_genderMovieDialogue_img/RO_fig/index.html" width = "100%" height="500" id="iframe_container"></iframe>
 
 Again, this is the figure for Rogue One, and we can see some potentially interesting things here. For instance, Cassian (the male lead) speaks more than Jyn (the female lead). It's also easy to spot characters that are a bit more long-winded when they get to speak (Bodhi Rook and Galen) while others keep things short and to the point (Baze Malbus).
 
 I looked at these figures for each movie, and found a few other entertaining outliers. In The Jungle Book, Baloo spoke the most words, but also had fewer speaking opportunities than Mowgli. He rambled more than any other character in the movie (which, didn't actually contain too much dialogue, overall).
 
 ```{r echo = FALSE, out.width = "80%", fig.align = "center"}
-knitr::include_graphics("../img/articleImages/2017-01-07_genderMovieDialogue_img/JB_Baloo.jpg")
+knitr::include_graphics("/projects/img/articleImages/2017-01-07_genderMovieDialogue_img/JB_Baloo.jpg")
 ```
 
 There was another funny outlier in the Zootopia figure. This time, instead of the outlier belonging to a talkative bear, it belonged to a slow-talking sloth, Flash Slothmore. He spoke quite a few times, but didn't actually say many words.  
 
 ```{r echo = FALSE, out.width = "80%", fig.align = "center"}
-knitr::include_graphics("../img/articleImages/2017-01-07_genderMovieDialogue_img/Zootopia_Sloth.jpg")
+knitr::include_graphics("/projects/img/articleImages/2017-01-07_genderMovieDialogue_img/Zootopia_Sloth.jpg")
 ```
 
 Unfortunately, other than those few amusing findings, these figures weren't helping me to see the number of speaking female characters amongst the entire speaking cast or the number of words each spoke, particularly because there were so many characters with so few words that they all overlapped. 
@@ -208,7 +209,7 @@ Unfortunately, other than those few amusing findings, these figures weren't help
 
 Since the scatter plot didn't work, I thought maybe a bar chart would.  I plotted the characters along the X axis and total number of spoken words along the Y and (again for Rogue One) ended up with this:
 
-<iframe seamless src="../img/articleImages/2017-01-07_genderMovieDialogue_img/RO_fig2/index.html" width = "100%" height="500" id="iframe_container"></iframe>
+<iframe seamless src="/projects/img/articleImages/2017-01-07_genderMovieDialogue_img/RO_fig2/index.html" width = "100%" height="500" id="iframe_container"></iframe>
 
 Still less than ideal. My biggest problem here is that there is such a big range between the main characters with lots of words and the minor characters with very few. Even in an interactive figure, you are required to zoom to get an idea of the smaller characters' contributions. 
 
@@ -223,7 +224,7 @@ The problem? I had no idea how to make an axis-free bubble chart in R.
 Before going down the rabbit-hole of making a new type of graphic in R, I decided to use my trusty Adobe Illustrator to quickly see what these visualizations might look like first. So I pulled my highcharter bubble charts into Illustrator and traced the circles to get an idea of relative size. I ended up with lots of groups of bubbles that looked like this:
 
 ```{r echo = FALSE, out.width = "30%", fig.align = "center"}
-knitr::include_graphics("../img/articleImages/2017-01-07_genderMovieDialogue_img/RO_V1.jpg")
+knitr::include_graphics("/projects/img/articleImages/2017-01-07_genderMovieDialogue_img/RO_V1.jpg")
 ```
 
 But there were a few issues with this. While I liked that you could easily spot the main characters, I knew that there were several characters in Rogue One who had fewer than 10 words, but their bubbles seemed to indicate more. I'd clearly have to alter how I sized the circles. It was also difficult to get an idea of what percentage of the characters or spoken words actually came from female characters. 
@@ -243,13 +244,13 @@ I could now manually enter the necessary diameter for each circle into Adobe Ill
 *While a full how-to for Adobe Illustrator design is outside the scope of this post, you can find lots of information on [Adobe's site](https://helpx.adobe.com/illustrator/using/drawing-simple-lines-shapes.html).*
 
 ```{r echo = FALSE, out.width = "30%", fig.align = "center"}
-knitr::include_graphics("../img/articleImages/2017-01-07_genderMovieDialogue_img/RO_V2.jpg")
+knitr::include_graphics("/projects/img/articleImages/2017-01-07_genderMovieDialogue_img/RO_V2.jpg")
 ```
 
 That definitely helped make the circles a more reasonable size. Now to add some extra information, like the percentage of female characters and spoken words. Again, I calculated in R and added the data to Illustrator. I thought that the best way to display that information was just to put a circle around the bubbles, cut the circle, and color it to match the bubbles it was near. Then add a call-out of information. It looked like this:
 
 ```{r echo = FALSE, out.width = "30%", fig.align = "center"}
-knitr::include_graphics("../img/articleImages/2017-01-07_genderMovieDialogue_img/RO_V3.jpg")
+knitr::include_graphics("/projects/img/articleImages/2017-01-07_genderMovieDialogue_img/RO_V3.jpg")
 ```
 
 I was decently happy with it, until I (luckily) asked a friend to look at it. Her first response was asking about which percentage the pink outer line represented: the percentage of female characters or percentage of words spoken by females. It was an excellent question because, although I had intended the outer lines to be mostly decorative, they were so reminiscent of a pie or donut graph that we instinctively read it this way. So either I had to find a way to get the bubbles into "pie" pieces or get rid of the outer lines. 
@@ -348,7 +349,7 @@ function ready (error, datapoints) {
 I added a clickable element within each svg box to toggle between the combined and separated conditions for the bubbles. The style and functionality were inspired by the [toggle switch widget](http://jfmdev.github.io/SaVaGe/docs/toggle-switch.html) from the [SaVaGe](http://jfmdev.github.io/SaVaGe/index.html) library. I generated rectangles of sizes corresponding to the percentages of male and female characters and words spoken beneath my bubble grouping to give viewers an overall idea of representation within each movie. This percentage-wise stacked bar graph seemed to make the overarching trends clearest. I used [Font Awesome](http://fontawesome.io/icons/) icons alongside each bar graph to differentiate between character and word percentages. And that's about it! The final design looks like this:
 
 ```{r echo = FALSE, out.width = "30%", fig.align = "center"}
-knitr::include_graphics("../img/articleImages/2017-01-07_genderMovieDialogue_img/FinalDesign.jpg")
+knitr::include_graphics("/projects/img/articleImages/2017-01-07_genderMovieDialogue_img/FinalDesign.jpg")
 ```
 
 Again, the entire code used to generate the d3.js figure is available on my [Github](https://github.com/ProQuestionAsker/ProQuestionAsker.github.io/tree/sources/content/projects/MovieDialogueInteractive) and the interactive version is [here](https://ProQuestionAsker.github.io/projects/MovieDialogueInteractive/)
@@ -365,9 +366,9 @@ Once I had my bubble charts working with their corresponding bar graphs, I neede
 But I ran into an issue. I must have tried hundreds of color schemes (many of which looked better with the background gray than the ones that I screenshot here). 
 
 ```{r echo = FALSE, fig.show = 'hold', out.width = "30%", out.height = "200px"}
-knitr::include_graphics("../img/articleImages/2017-01-07_genderMovieDialogue_img/ColorScheme1.png")
-knitr::include_graphics("../img/articleImages/2017-01-07_genderMovieDialogue_img/ColorScheme2.png")
-knitr::include_graphics("../img/articleImages/2017-01-07_genderMovieDialogue_img/ColorScheme3.png")
+knitr::include_graphics("/projects/img/articleImages/2017-01-07_genderMovieDialogue_img/ColorScheme1.png")
+knitr::include_graphics("/projects/img/articleImages/2017-01-07_genderMovieDialogue_img/ColorScheme2.png")
+knitr::include_graphics("/projects/img/articleImages/2017-01-07_genderMovieDialogue_img/ColorScheme3.png")
 ```
 
 But regardless of the color scheme, I couldn't easily tell which group represented males and which represented females. Yes, that's what legends are for, but in the end, data visualization should be as easy to interpret as possible. In this case, that meant that some shade of blue and pink/red would be the easiest to understand. So, I found my favorite combination of the two and moved on. 
