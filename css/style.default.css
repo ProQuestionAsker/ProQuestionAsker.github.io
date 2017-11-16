@@ -549,6 +549,7 @@ SIDEBAR + RIGHT COLUMN
 .small-navbar:after {
   clear: both;
 }
+
 .small-navbar-heading {
   float: right;
   font-size: 18px;

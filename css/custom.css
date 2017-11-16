@@ -187,7 +187,7 @@
  /* FOR ADDING VERTICAL SCROLL BAR TO LONG TEXT BOXES */
 
  
- pre code, pre, code {
+pre {
   white-space: pre !important;
   overflow-y: scroll !important;
   max-height: 75vh !important;
