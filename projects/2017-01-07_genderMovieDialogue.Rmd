@@ -47,7 +47,6 @@ Jump straight to the [Interactive Graphic](https://ProQuestionAsker.github.io/pr
 
 
 ## Introduction
-
 Unlike most of my personal projects, this one didn't start with a dataset. It started with going to see the newest movie from the Star Wars universe: Rogue One. 
 
 While I'm not a die-hard member of the Star Wars fandom, I did grow up watching the films (my father IS a devoted member of the fandom) and truly enjoying the stories.  Like many other little girls watching those movies, Princess Leia's character always resonated with me because she was [just about the only speaking female character](https://www.youtube.com/watch?v=ODgwL7DJ9dY) in the original trilogy. 
@@ -271,12 +270,12 @@ I'm uploading my [.js](https://github.com/ProQuestionAsker/ProQuestionAsker.gith
 
 I once again scale the circles by [area](https://github.com/d3/d3-scale/blob/master/README.md#scaleSqrt), with a maximum circle diameter of 40 px. 
 
-```{r eval = FALSE}
+```js
 var radiusScale = d3.scaleSqrt().domain([1, 4692]).range([1, 40])
 ```
 I define a few [forces](https://github.com/d3/d3/blob/master/API.md#forces-d3-force) to move the circles throughout their .svg area (a 300 px by 300 px box). There are two separate X forces (forces that move the circles along the X axis) since I needed two conditions: all the bubbles combined and bubbles separated by gender. 
 
-```{r eval = FALSE}
+```js
 // Define the two forces along the X axis to split by gender
 // the drawing force for males is at 30% of the width of the svg box
 // the drawing force for females is at 70% of the width of the svg box
@@ -290,7 +289,7 @@ var forceXCombine = d3.forceX((width)/2).strength(0.1)
 
 Then, in order to keep the bubbles from overlapping one another, I added a [collision](https://github.com/d3/d3-force/blob/master/README.md#forceCollide) force. The radius of this force was scaled based on circle size so that larger circles pushed circles further from their center than smaller circles. 
 
-```{r, eval = FALSE}
+```js
 var forceCollide = d3.forceCollide(function(d){
 		return radiusScale(d.Total_Words) + 1
 	  })
@@ -299,7 +298,7 @@ var forceCollide = d3.forceCollide(function(d){
 
 With all of my forces defined, I could combine them in a [simulation](https://github.com/d3/d3-force/blob/master/README.md#forceSimulation) to determine the proper location of each bubble in the group. 
 
-```{r eval = FALSE}
+```js
 var simulation = d3.forceSimulation()
 	.force("x", forceXCombine)
 	.force("y", d3.forceY((height / 3) + 10).strength(0.15))
@@ -309,12 +308,12 @@ var simulation = d3.forceSimulation()
 Then I just needed to include my data file so that each circle could be created automatically and sized according to the total number of words spoken by a character. At the same time, I added the tool tips that triggered when the user's mouse hovered over a circle. Again, the tool tips were automatically filled with information from the data file. 
 
 
-```{r eval = FALSE}
+```js
 # Export data from R
 write.csv(RO_full2, "RogueOne.csv")
 ```
 
-```{r eval = FALSE}
+```js
 // Import data into Javascript
 d3.queue()
 	.defer(d3.csv, "RogueOne.csv")

@@ -362,9 +362,9 @@ RO_full2 &lt;- RO_full %&gt;%
 <p>The more I looked, the more I realized I’d need to learn some d3.js to do this the way I want. So, to internet classes and StackOverflow I went. Somewhere along the line, I stumbled upon a <a href="http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html?_r=0">fantastic interactive bubble chart</a> from the New York Times and decided that if I was going to make my bubbles interactive, I also wanted to add the ability to separate them by gender. I was able to find a few excellent tutorials on how to make this happen (<a href="https://www.youtube.com/watch?v=lPr60pexvEM">here</a> and <a href="http://vallandingham.me/bubble_charts_with_d3v4.html">here</a>). So I played and experimented and played some more. When I got stuck I returned to Google searching and reading. At one point I was stuck on a problem for hours and could not find a workable solution, so I turned to the kind people of the internet, asked for <a href="http://stackoverflow.com/questions/41479452/collision-detection-lost-after-toggle-d3v4">help</a>, and was lucky enough to have a very knowledgable user respond right away.</p>
 <p>I’m uploading my <a href="https://github.com/ProQuestionAsker/ProQuestionAsker.github.io/blob/sources/content/projects/MovieDialogueInteractive/movie_bubbles2.js">.js</a>, <a href="https://github.com/ProQuestionAsker/ProQuestionAsker.github.io/blob/sources/content/projects/MovieDialogueInteractive/style.css">.css</a>, and <a href="https://github.com/ProQuestionAsker/ProQuestionAsker.github.io/blob/sources/content/projects/MovieDialogueInteractive/index.html">.html</a> files to Github, so anyone interested in exploring them, please do. As I learn more Javascript I hope to come back to this project and optimize the code. I know right now that it is far from perfect, but for my first project with d3.js, I’m very happy with how it turned out. To give some brief insight into parts of the d3.js code:</p>
 <p>I once again scale the circles by <a href="https://github.com/d3/d3-scale/blob/master/README.md#scaleSqrt">area</a>, with a maximum circle diameter of 40 px.</p>
-<pre class="r"><code>var radiusScale = d3.scaleSqrt().domain([1, 4692]).range([1, 40])</code></pre>
+<pre class="js"><code>var radiusScale = d3.scaleSqrt().domain([1, 4692]).range([1, 40])</code></pre>
 <p>I define a few <a href="https://github.com/d3/d3/blob/master/API.md#forces-d3-force">forces</a> to move the circles throughout their .svg area (a 300 px by 300 px box). There are two separate X forces (forces that move the circles along the X axis) since I needed two conditions: all the bubbles combined and bubbles separated by gender.</p>
-<pre class="r"><code>// Define the two forces along the X axis to split by gender
+<pre class="js"><code>// Define the two forces along the X axis to split by gender
 // the drawing force for males is at 30% of the width of the svg box
 // the drawing force for females is at 70% of the width of the svg box
 var forceXSplit = d3.forceX(d =&gt; width * (d.Gender === &quot;male&quot; ? 0.3 : 0.7))
@@ -374,19 +374,19 @@ var forceXSplit = d3.forceX(d =&gt; width * (d.Gender === &quot;male&quot; ? 0.3
 // (at half the width of the svg box)
 var forceXCombine = d3.forceX((width)/2).strength(0.1)</code></pre>
 <p>Then, in order to keep the bubbles from overlapping one another, I added a <a href="https://github.com/d3/d3-force/blob/master/README.md#forceCollide">collision</a> force. The radius of this force was scaled based on circle size so that larger circles pushed circles further from their center than smaller circles.</p>
-<pre class="r"><code>var forceCollide = d3.forceCollide(function(d){
+<pre class="js"><code>var forceCollide = d3.forceCollide(function(d){
         return radiusScale(d.Total_Words) + 1
       })
       .iterations(10);</code></pre>
 <p>With all of my forces defined, I could combine them in a <a href="https://github.com/d3/d3-force/blob/master/README.md#forceSimulation">simulation</a> to determine the proper location of each bubble in the group.</p>
-<pre class="r"><code>var simulation = d3.forceSimulation()
+<pre class="js"><code>var simulation = d3.forceSimulation()
     .force(&quot;x&quot;, forceXCombine)
     .force(&quot;y&quot;, d3.forceY((height / 3) + 10).strength(0.15))
     .force(&quot;collide&quot;, forceCollide);</code></pre>
 <p>Then I just needed to include my data file so that each circle could be created automatically and sized according to the total number of words spoken by a character. At the same time, I added the tool tips that triggered when the user’s mouse hovered over a circle. Again, the tool tips were automatically filled with information from the data file.</p>
-<pre class="r"><code># Export data from R
+<pre class="js"><code># Export data from R
 write.csv(RO_full2, &quot;RogueOne.csv&quot;)</code></pre>
-<pre class="r"><code>// Import data into Javascript
+<pre class="js"><code>// Import data into Javascript
 d3.queue()
     .defer(d3.csv, &quot;RogueOne.csv&quot;)
     .await(ready)
