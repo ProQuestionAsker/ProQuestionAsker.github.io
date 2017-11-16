@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogdown on Amber Thomas</title>
+    <link>/tags/blogdown/</link>
+    <description>Recent content in Blogdown on Amber Thomas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy;2017 Amber Thomas</copyright>
+    <lastBuildDate>Wed, 15 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adding Syntax Highlighting to Blogdown Posts</title>
+      <link>/blog/2017/11/15/syntax-highlighting/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2017/11/15/syntax-highlighting/</guid>
+      <description>The Backstory Step One: Check Your Theme Step Two: Add Highlight.js Step Three: Blame Bootstrap   The Backstory I’ve been playing with Yihui Xie’s blogdown package for almost a year now, and I’m constantly amazed by all of the things that it can do. Maybe I’ll get around to turning this post into a series, with each addition explaining one more cool thing that you can now add to your blog posts from R.</description>
+    </item>
+    
+  </channel>
+</rss>

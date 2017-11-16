@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+<title>Adding Syntax Highlighting to Blogdown Posts - Amber Thomas</title>
+<meta property="og:title" content="Adding Syntax Highlighting to Blogdown Posts - Amber Thomas">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://amber.rbind.io/blog/img/mainImages/2017-11-15-syntax-highlighting.png" >
+  
+
+<meta property="description" content="Enabling syntax highlighting in blogdown posts">
+<meta property="og:description" content="Enabling syntax highlighting in blogdown posts">
+
+
+<meta name="twitter:creator" content="">
+
+<meta name="description" content="This website serves as a portfolio for my data science projects, as well as blog posts and tutorials for using R, RStudio and other data science topics.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="twitter:creator" content="">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/owl.carousel.css">
+<link rel="stylesheet" href="/css/owl.theme.css">
+
+
+
+  <link href="/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+
+<link href="/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<link rel="stylesheet" href="/css/github-gist.css" rel="stylesheet" id="theme-stylesheet">
+
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-89036876-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              
+<div id="sidebar" class="col-sb-fixedpos col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="/">Amber Thomas</a></h1>
+
+    <ul class="sidebar-menu">
+      
+      
+        <li><a href="/about/">About</a></li>
+      
+        <li><a href="/projects/">Personal Projects</a></li>
+      
+        <li><a href="/work/">Work Portfolio</a></li>
+      
+        <li><a href="/blog/">Blog</a></li>
+      
+        <li><a href="/contact/">Get in Touch</a></li>
+      
+
+       
+
+
+
+ 
+
+      
+
+ 
+
+      
+ 
+
+    </ul>
+    <p class="social">
+  
+  
+  
+  <a href="https://twitter.com/ProQuesAsker" data-animate-hover="pulse" class="external twitter">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  
+  <a href="mailto:AmberThomasMSc@gmail.com" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  <a href="https://www.linkedin.com/in/amberrthomas" data-animate-hover="pulse">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  
+  
+  
+<a href="https://www.github.com/ProQuestionAsker">
+  <i class="fa fa-github"></i>
+</a>
+
+
+
+
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2017 Amber Thomas
+        
+        | Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background col-main-fixedpos">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="/">Amber Thomas</a></h1>
+</div>
+
+
+            <div class="row">
+                  <div class="col-sm-4">
+                    <div class="image">
+                      <img src="/blog/img/mainImages/2017-11-15-syntax-highlighting.png" class="img-responsive" alt="">
+                    </div>
+                  </div>
+
+                  <div class="col-md-8">
+                      <h2>Adding Syntax Highlighting to Blogdown Posts</h2>
+                          <p class="author-category">
+                            Amber Thomas
+                          </p>
+
+                          <p class="date-comments">
+                          <i class="fa fa-calendar-o"></i> November 15, 2017
+                          </p>
+
+                          
+                  
+                      </div>
+                    </div>
+                  </br>
+
+<div class="row">
+   <div class="content-column-content">
+          <div class="col-lg-8">
+
+<div id="TOC">
+<ul>
+<li><a href="#the-backstory">The Backstory</a></li>
+<li><a href="#step-one-check-your-theme">Step One: Check Your Theme</a></li>
+<li><a href="#step-two-add-highlight.js">Step Two: Add Highlight.js</a></li>
+<li><a href="#step-three-blame-bootstrap">Step Three: Blame Bootstrap</a></li>
+</ul>
+</div>
+
+<div id="the-backstory" class="section level1">
+<h1>The Backstory</h1>
+<p>I’ve been playing with <a href="https://yihui.name/">Yihui Xie</a>’s <code>blogdown</code> package for <a href="http://amber.rbind.io/blog/2016/12/19/creatingsite/">almost a year</a> now, and I’m constantly amazed by all of the things that it can do. Maybe I’ll get around to turning this post into a series, with each addition explaining one more cool thing that you can now add to your blog posts from R. But, for now, there’s just one I’d like to touch on: <strong>syntax highlighting</strong>.</p>
+<p>When I first began my <code>blogdown</code> journey, I didn’t think syntax highlighting was possible. I had started with <a href="https://themes.gohugo.io/hugo-creative-portfolio-theme/">this</a> theme and any code I added to posts was just a solid color.</p>
+<p>For example, when I typed code into an RMarkdown document in RStudio, it would look like this:</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="/blog/img/articleImages/2017-11-15-syntax-highlighting_img/Example1.png" alt="See how certain elements are colored?" width="80%" />
+<p class="caption">
+Figure 1: See how certain elements are colored?
+</p>
+</div>
+<p>but rendered on my website, it looked like this:</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="/blog/img/articleImages/2017-11-15-syntax-highlighting_img/Example2.png" alt="Boo, no colors" width="80%" />
+<p class="caption">
+Figure 2: Boo, no colors
+</p>
+</div>
+<p>Ok, so, I recognize that this is mostly text decoration, but when you have very long chunks of code it is a little bit helpful to have certain parts colored. It also helps me quickly notice if I’ve made a typo.</p>
+<p>Anyway, I thought this was just a blogging dream of mine until I was reviewing the <code>blogdown</code> <a href="https://bookdown.org/yihui/blogdown/">book</a> and stumbled upon <a href="https://bookdown.org/yihui/blogdown/themes.html#the-default-theme">this section</a> which mentions the use of <code>highlight.js</code>, a <a href="https://highlightjs.org/">javascript library</a> that highlights the syntax of different programming languages. The blogdown book goes into more detail about syntax highlighting <a href="https://bookdown.org/yihui/blogdown/templates.html#how-to">here</a>, but I hadn’t given it a try until <a href="https://maraaverick.rbind.io">Mara Averick</a> shared some <a href="https://maraaverick.rbind.io/2017/11/r-blog-tips-from-an-inveterate-tweeter-thereof/">tips</a> for R blogging and this was included:</p>
+<p><img src="/blog/img/articleImages/2017-11-15-syntax-highlighting_img/Example6.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>I finally decided to take the dive and after lots of code-tweaking and googling I got it working.</p>
+<p>Here’s that same piece of code on my website now:</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="/blog/img/articleImages/2017-11-15-syntax-highlighting_img/Example3.png" alt="Yay, colors!" width="80%" />
+<p class="caption">
+Figure 3: Yay, colors!
+</p>
+</div>
+<p>Alright, so how did I do it?</p>
+</div>
+<div id="step-one-check-your-theme" class="section level1">
+<h1>Step One: Check Your Theme</h1>
+<p>As it so happens, some Hugo <a href="https://themes.gohugo.io/">themes</a> already have <code>highlight.js</code> functionality built in. For instance, if you use the <a href="https://github.com/yihui/hugo-lithium-theme">default theme</a> within <code>blogdown</code>, you’re all set.</p>
+<p>All you’d need to do is go to your <code>config.toml</code> file, and update this section:</p>
+<pre class="toml"><code>[params]
+    description = &quot;A website built through Hugo and blogdown.&quot;
+
+    highlightjsVersion = &quot;9.11.0&quot;
+    highlightjsCDN = &quot;//cdn.bootcss.com&quot;
+    highlightjsLang = [&quot;r&quot;, &quot;yaml&quot;]
+    highlightjsTheme = &quot;github&quot;
+
+    MathJaxCDN = &quot;//cdn.bootcss.com&quot;
+    MathJaxVersion = &quot;2.7.1&quot;</code></pre>
+<p>The <code>highlightjsLang</code> argument allows you to specify which languages you want to highlight, and the <code>highlightjsTheme</code> controls what colors are used to highlight (more options available <a href="https://highlightjs.org/static/demo/">here</a>).</p>
+<p>If, like me, your theme does not allow for highlighting out-of-the-box, keep reading.</p>
+</div>
+<div id="step-two-add-highlight.js" class="section level1">
+<h1>Step Two: Add Highlight.js</h1>
+<p>There are several ways to add highlight.js to your <code>blogdown</code> site, but here’s the way that I did it.</p>
+<ul>
+<li>Go to the <code>highlight.js</code> <a href="https://highlightjs.org/download/">download page</a>.</li>
+<li>Scroll down to “Custom Package” and select only the languages you plan to highlight on your site.</li>
+<li>Click <em>Download</em>.</li>
+<li>Unzip the folder and inside you should see several files. One of these should be <code>highlight.js</code>. Copy only this file to the js folder for your theme (it should be located in themes/<em>name-of-your-theme</em>/static/js).</li>
+<li>In the partials folder for your theme (themes/<em>name-of-your-theme</em>/layouts/partials), you should see a file called <code>head.css</code>. Add the following code:</li>
+</ul>
+<pre class="html"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;{{&quot;css/github-gist.css&quot; | absURL}}&quot; rel=&quot;stylesheet&quot; id=&quot;theme-stylesheet&quot;&gt;
+&lt;script src=&quot;{{ &quot;js/highlight.pack.js&quot; | absURL }}&quot;&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;</code></pre>
+<ul>
+<li>Almost there. See in the first line of the html code above where it says <code>css/github-gist.css</code>? That is indicating that there should be a css file called <code>github-gist.css</code> in my css folder. The Github Gist theme is the one I am currently using from <code>highlight.js</code>, but again, you can select whichever one you want from <a href="https://highlightjs.org/static/demo/">here</a>. Choose which theme you’d like and switch out <code>css/github-gist.css</code> for <code>css/my-favorite-theme.css</code> (where “my-favorite-theme” is the theme you chose, of course).</li>
+<li>Now we need to make sure that the css for that theme is in the correct place. Back in the folder that you downloaded and unzipped from <code>highlight.js</code>, there is a <code>styles</code> folder. Go in there, find the file that matches the name of the theme you want, copy that file, and paste it in the css folder for your theme (themes/<em>name-of-your-theme</em>/static/css).</li>
+</ul>
+<p>Hopefully that will work for some of you! In my case though, there was more to be done.</p>
+</div>
+<div id="step-three-blame-bootstrap" class="section level1">
+<h1>Step Three: Blame Bootstrap</h1>
+<p>I had done the steps above, and my syntax highlighting still wasn’t working. I figured the next logical step was to figure out if there was some CSS leftover somewhere that was being used over my new <code>highlight.js</code> css file.</p>
+<p>Here’s how I checked:</p>
+<ul>
+<li>I navigated to my website and opened up the developer tools (in Google Chrome you can do this by right-clicking on the page and clicking <code>Inspect</code>).</li>
+<li>Click the inspector tool (it looks like a mouse cursor inside of a box), and hover over elements on your website. You should see them lighting up various colors. If that’s working, click on one of the code boxes that should be highlighted.</li>
+</ul>
+<p>When I do that, this is what I see:</p>
+<p><img src="/blog/img/articleImages/2017-11-15-syntax-highlighting_img/Example4.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>There’s a lot going on there, but focus on this part:</p>
+<p><img src="/blog/img/articleImages/2017-11-15-syntax-highlighting_img/Example5.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><em>I accidentally forgot to take screenshots when I was having this problem, so these screenshots show what it should look like</em></p>
+<p>Notice how items in the class <code>hljs</code> (written as .hljs) are being styled by <code>github-gist.css</code> and the elements <code>pre</code> and <code>code</code> (written as <code>pre code</code>) are being styled by <code>bootstrap.css</code>? Well, when I originally ran into this issue, there was no <code>hljs</code> class items, and all <code>pre</code> and <code>code</code> items were being styled by a file called <code>code.less</code>.</p>
+<p>I spent forever searching for a file (both visible and hidden) named <code>code.less</code> that was messing up my syntax highlighting, but it was nowhere to be found. After much googling, I discovered that it is bundled in <code>bootstrap.css</code> which has been minified (i.e., all excess white-space and formatting has been removed, making it not very human-readable). This made it really hard to pin-point the issue, but luckily someone on StackOverflow had asked <a href="https://stackoverflow.com/questions/42313441/css-how-do-i-change-bootstrap-less-code-less-source-code-to-customize-my-code-c">this question</a> already. Essentially, the top-respondent suggested I had 3 choices:</p>
+<ul>
+<li>Option:1 Download the bootstrap source code less.css. modify the file and use it.</li>
+<li>Option:2 Place !important beside the css that you want to override in your custom.css</li>
+<li>Option:3 Go to developer tools identify the portions of less.css which you want to override and use your own id with those elements. After that style them in your own css file.</li>
+</ul>
+<p>After lots of playing around, option 1 seemed like my best bet…sorta. I decided to download a new <code>bootstrap.js</code> and <code>bootstrap.css</code> file without the code.less file bundled in.</p>
+<ul>
+<li>You can do that by going <a href="http://getbootstrap.com/docs/3.3/customize/">here</a> and under “Common CSS”, uncheck the box that says “Code”. I had no idea what other files had been changed between this version of <code>bootstrap</code> and the one used in my theme, so I left everything else untouched.</li>
+<li>Click “Compile &amp; Download”.</li>
+<li><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <strong>Warning: you are about to replace some of your theme’s js and css files, I’d recommend copying these to a safe location until you see if you will need to undo this step</strong> Unzip the folder, and move the “bootstrap.min.js” file to the js file of your site (themes/<em>name-of-your-theme</em>/static/js) and the “bootstrap.min.css” file to the css folder of your site (themes/<em>name-of-your-theme</em>/static/css).</li>
+<li>Serve your site using <code>blogdown::serve_site()</code> and see if your syntax is working (For some of you, I assume, it should be).</li>
+</ul>
+<p>At this point, my syntax highlighting was, indeed, working (🙌 🎉), but the layout of my page was a little messed up. That makes sense, as I had replaced the CSS file that ran my site. I decided to put my original <code>bootstrap.min.js</code> and <code>bootstrap.min.css</code> files back in their original locations which fixed the layout but my syntax highlighting was gone again. Here’s what finally got it working with my theme:</p>
+<ul>
+<li>Open the <code>bootstrap.min.css</code> file in your text editor and copy all of the text into an unminifier (I used <a href="http://unminify.com/">this one</a>)</li>
+<li>Copy the output into a new file in your css folder (themes/<em>name-of-your-theme</em>/static/css) called <code>bootstrap.css</code>.</li>
+<li>Search that doc for any instances of <code>pre</code> or <code>code</code> and find the chunk that has the background-color and text color that your theme is currently generating displaying. In my theme, it looked like this:</li>
+</ul>
+<pre class="css"><code>pre, code, pre code,  {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px
+}</code></pre>
+<p>All I needed to do was remove any instances of <code>pre</code> from this. So it now looks like this:</p>
+<pre class="css"><code>code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px
+}</code></pre>
+<ul>
+<li>Save the file</li>
+<li>In your <code>header.html</code> file, you should see a line that looks something like this</li>
+</ul>
+<pre class="html"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ &quot;css/bootstrap.min.css&quot; | absURL }}&quot;&gt;</code></pre>
+<p>just remove the call to the minified version and save</p>
+<pre class="html"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ &quot;css/bootstrap.css&quot; | absURL }}&quot;&gt;</code></pre>
+<ul>
+<li>Serve your site using <code>blogdown::serve_site()</code></li>
+</ul>
+<p>And that’s it! This may not work for every theme, but hopefully I hit walls frequently enough to keep you clear of them. Now go enjoy your colorful code 😄</p>
+</div>
+
+      
+       </div>
+     </div>
+   </div>
+
+
+
+
+
+        <a href="#" class="back-to-top">
+        <i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+
+        </a>
+
+         <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "amberthomas" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+   
+
+          </div>
+      </div>
+  </div>
+  <script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.cookie.js"> </script>
+<script src="/js/ekko-lightbox.js"></script>
+<script src="/js/jquery.scrollTo.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/front.js"></script>
+<script src="/js/backtotop.js"></script> 
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
