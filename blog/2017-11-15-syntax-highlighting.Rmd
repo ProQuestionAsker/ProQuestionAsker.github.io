@@ -82,7 +82,7 @@ There are several ways to add highlight.js to your `blogdown` site, but here's t
 * Scroll down to "Custom Package" and select only the languages you plan to highlight on your site. 
 * Click *Download*.
 * Unzip the folder and inside you should see several files. One of these should be `highlight.pack.js`. Copy only this file to the js folder for your theme (it should be located in themes/*name-of-your-theme*/static/js).
-* In the partials folder for your theme (themes/*name-of-your-theme*/layouts/partials), you should see a file called `head.css` or `header.css`. Add the following code: 
+* In the partials folder for your theme (themes/*name-of-your-theme*/layouts/partials), you should see a file called `head.html` or `header.html`. Add the following code: 
 
 ```html
 <link rel="stylesheet" href="{{"css/github-gist.css" | absURL}}" rel="stylesheet" id="theme-stylesheet">
@@ -163,7 +163,7 @@ code {
 
 
 * Save the file
-* In your `header.html` file, you should see a line that looks something like this
+* In your `header.html` or `head.html` file, you should see a line that looks something like this
 
 ```html
 <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | absURL }}">
