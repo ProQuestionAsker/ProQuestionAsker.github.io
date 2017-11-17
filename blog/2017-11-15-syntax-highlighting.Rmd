@@ -81,8 +81,8 @@ There are several ways to add highlight.js to your `blogdown` site, but here's t
 * Go to the `highlight.js` [download page](https://highlightjs.org/download/).
 * Scroll down to "Custom Package" and select only the languages you plan to highlight on your site. 
 * Click *Download*.
-* Unzip the folder and inside you should see several files. One of these should be `highlight.js`. Copy only this file to the js folder for your theme (it should be located in themes/*name-of-your-theme*/static/js).
-* In the partials folder for your theme (themes/*name-of-your-theme*/layouts/partials), you should see a file called `head.css`. Add the following code: 
+* Unzip the folder and inside you should see several files. One of these should be `highlight.pack.js`. Copy only this file to the js folder for your theme (it should be located in themes/*name-of-your-theme*/static/js).
+* In the partials folder for your theme (themes/*name-of-your-theme*/layouts/partials), you should see a file called `head.css` or `header.css`. Add the following code: 
 
 ```html
 <link rel="stylesheet" href="{{"css/github-gist.css" | absURL}}" rel="stylesheet" id="theme-stylesheet">
@@ -176,6 +176,12 @@ just remove the call to the minified version and save
 * Serve your site using `blogdown::serve_site()`
 
 And that's it! This may not work for every theme, but hopefully I hit walls frequently enough to keep you clear of them. Now go enjoy your colorful code 😄
+
+---
+
+Did you overcome different walls to get syntax highlighting working on your Blogdown site? [Let me know](https://twitter.com/proquesasker).
+
+Many thanks to [Lucy](https://twitter.com/LucyStats/status/931568551927967744) who pointed out a few tweaks based on her theme. They are now included in this article ☝🏻
 
 
 

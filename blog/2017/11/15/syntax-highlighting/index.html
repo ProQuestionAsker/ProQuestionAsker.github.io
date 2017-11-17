@@ -230,8 +230,8 @@ Figure 3: Yay, colors!
 <li>Go to the <code>highlight.js</code> <a href="https://highlightjs.org/download/">download page</a>.</li>
 <li>Scroll down to “Custom Package” and select only the languages you plan to highlight on your site.</li>
 <li>Click <em>Download</em>.</li>
-<li>Unzip the folder and inside you should see several files. One of these should be <code>highlight.js</code>. Copy only this file to the js folder for your theme (it should be located in themes/<em>name-of-your-theme</em>/static/js).</li>
-<li>In the partials folder for your theme (themes/<em>name-of-your-theme</em>/layouts/partials), you should see a file called <code>head.css</code>. Add the following code:</li>
+<li>Unzip the folder and inside you should see several files. One of these should be <code>highlight.pack.js</code>. Copy only this file to the js folder for your theme (it should be located in themes/<em>name-of-your-theme</em>/static/js).</li>
+<li>In the partials folder for your theme (themes/<em>name-of-your-theme</em>/layouts/partials), you should see a file called <code>head.css</code> or <code>header.css</code>. Add the following code:</li>
 </ul>
 <pre class="html"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;{{&quot;css/github-gist.css&quot; | absURL}}&quot; rel=&quot;stylesheet&quot; id=&quot;theme-stylesheet&quot;&gt;
 &lt;script src=&quot;{{ &quot;js/highlight.pack.js&quot; | absURL }}&quot;&gt;&lt;/script&gt;
@@ -301,6 +301,9 @@ Figure 3: Yay, colors!
 <li>Serve your site using <code>blogdown::serve_site()</code></li>
 </ul>
 <p>And that’s it! This may not work for every theme, but hopefully I hit walls frequently enough to keep you clear of them. Now go enjoy your colorful code 😄</p>
+<hr />
+<p>Did you overcome different walls to get syntax highlighting working on your Blogdown site? <a href="https://twitter.com/proquesasker">Let me know</a>.</p>
+<p>Many thanks to <a href="https://twitter.com/LucyStats/status/931568551927967744">Lucy</a> who pointed out a few tweaks based on her theme. They are now included in this article ☝🏻</p>
 </div>
 
       
