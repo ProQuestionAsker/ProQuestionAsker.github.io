@@ -29,7 +29,7 @@ knitr::opts_chunk$set(collapse = TRUE)
 htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ```
 
-Jump straight to the [Interactive Graphic](https://ProQuestionAsker.github.io/projects/MovieDialogueInteractive/).
+Jump straight to the [Interactive Graphic](http://amber.rbind.io/2016MovieDialogue/).
 
 -   [Introduction](#introduction)
     -   [Choosing the Movies](#choosing-the-movies)
