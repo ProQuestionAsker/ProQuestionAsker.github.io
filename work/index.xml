@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2017 Amber Thomas</copyright>
-    <lastBuildDate>Fri, 08 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/work/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>10 Things Everyone Hates About You</title>
+      <link>/work/2017/12/04/haterdater/</link>
+      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/work/2017/12/04/haterdater/</guid>
+      <description>Read the Story The Premise My Contributions Collaborators Screenshots   Read the Story  The Premise Using data from the new-age dating app, Hater, we can learn about the types of things that people in the US love, hate, and can never agree on.
+ My Contributions  Data Analysis Story Writing Some front-end work (primarily the swarm chart) Static chart design Social image creation   Collaborators This project was done in collaboration with Russell Goldenberg at The Pudding.</description>
+    </item>
     
     <item>
       <title>How far is too far?</title>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/work/2017/12/04/haterdater/</loc>
+    <lastmod>2017-12-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/blog/2017/11/15/syntax-highlighting/</loc>
     <lastmod>2017-11-15T00:00:00+00:00</lastmod>
   </url>
@@ -133,7 +138,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-11-15T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -222,7 +227,7 @@
   
   <url>
     <loc>/work/</loc>
-    <lastmod>2017-09-08T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
