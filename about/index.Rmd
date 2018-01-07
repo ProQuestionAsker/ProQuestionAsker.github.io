@@ -3,8 +3,9 @@ title: "About Me"
 type: "about"
 ---
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
 library(knitr)
+library(magick)
 "print.magick-image" <- function(x, ...){
   ext <- ifelse(length(x), tolower(image_info(x[1])$format), "gif")
   tmp <- tempfile(fileext = paste0(".", ext))
@@ -18,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ### TL;DR
-I'm a marine biologist and science communicator by training, but I'm taking all of the data analysis, statistics, and mathematical modeling skills I've learned (and continue to learn) and I'm now applying them to new problems. I'm a full-time "Maker" at [Polygraph](http://polygraph.cool/) and [The Pudding](https://pudding.cool/).  
+I'm a marine biologist and science communicator by training, but I'm taking all of the data analysis, statistics, and mathematical modeling skills I've learned (and continue to learn) and I'm now applying them to new problems. I'm a full-time "Journalist-Engineer" at [Polygraph](http://polygraph.cool/) and [The Pudding](https://pudding.cool/).  
 
 ### The Long Version
 Hey there, I’m Amber. Professionally-speaking, I took a bit of a winding road to get to where I am now. By training, I’m a marine biologist. I studied marine biology (and chemistry) in college, followed it up with a Master’s in Marine Sciences, and ended up with a full-blown job as an Aquatic Research Associate at an aquarium (yes, that’s a real thing). Throughout school and work, I never really found a niche field that was more fascinating than the rest, which is generally frowned upon in focused academic work.  Luckily for me, I was allowed (and encouraged) to be flexible, so I’ve spent time studying seal pups, cuttlefish, parasites, water chemistry, sting-rays, dolphins, corals and other under-water topics and critters.  When explaining my job as a scientist to visiting children, I started referring to myself as a Professional Question-Asker (hence the seemingly strange Twitter handle @[ProQuesAsker](www.twitter.com/proquesasker)). I’d tell them that my job was to ask questions about the animals around me and do my best to find ways to answer those questions. It was the perfect description of my work and the ideal segue to finding my next career.
