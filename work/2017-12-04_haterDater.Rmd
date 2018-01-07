@@ -7,7 +7,7 @@ categories: []
 tags: []
 showonlyimage: false
 draft: false
-image: "work/img/mainImages/2017-12-04_haterdater.png"
+image: "work/img/mainImages/2017-12-04_haterDater.png"
 weight: 1
 type: "post"
 description: "Exploring over 30 million feelings towards 3,000+ topics"
