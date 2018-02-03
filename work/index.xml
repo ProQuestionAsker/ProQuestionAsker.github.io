@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2017 Amber Thomas</copyright>
-    <lastBuildDate>Mon, 04 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/work/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Greetings from Mars</title>
+      <link>/work/2018/02/01/mars-weather/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/work/2018/02/01/mars-weather/</guid>
+      <description>Read the Story The Premise My Contributions Collaborators Screenshots   Read the Story  The Premise I discovered that the Curiosity Rover transmitted weather data (amongst other types of data) back to Earth nearly every day. I decided that in order to have the reader understand what weather conditions are like on Mars, the data needed to be made personal. With Curiosity as my inspiration, I wrote the story from the rover’s perspective in the form of digital “postcards”.</description>
+    </item>
     
     <item>
       <title>10 Things Everyone Hates About You</title>

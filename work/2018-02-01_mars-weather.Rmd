@@ -1,0 +1,52 @@
+---
+title: Greetings from Mars
+author: Amber Thomas
+date: '2018-02-01'
+slug: mars-weather
+categories: []
+tags: []
+showonlyimage: true
+draft: false
+image: "work/img/mainImages/2018-02-01_mars-weather.png"
+weight: 1
+type: "post"
+description: "Exploring today's weather on Mars and in your area with the Curiosity Rover."
+output:
+  blogdown::html_page:
+    toc: true
+---
+
+## [Read the Story](https://pudding.cool/2018/01/mars-weather/)
+
+## The Premise
+
+I discovered that the [Curiosity Rover](https://mars.jpl.nasa.gov/msl/) transmitted weather data (amongst other types of data) back to Earth nearly every day. I decided that in order to have the reader understand what weather conditions are like on Mars, the data needed to be made personal. With Curiosity as my inspiration, I wrote the story from the rover's perspective in the form of digital "postcards". After all, the "human tradition" with postcards is to write home while on a long journey and report back on how the "weather is beautiful" and that you wished they were there. Incorporating the reader's geo-located weather for the day and updating the data daily added more personal elements to this piece.  
+
+## My Contributions
+
+* Writing and setup of web scraper to collect Earth and Mars weather daily
+* Story Writing
+* Front-end Development
+* Design
+* Icon creation
+* Postcard image creation
+* Social image creation
+
+## Collaborators
+
+While I am the sole author on this project, [Matt Daniels](https://twitter.com/matthewfdaniels) was my editor and provided helpful feedback throughout the creative process. [Russell Goldenberg](https://twitter.com/codenberg) helped me create the Node.js and Heroku app that scraped Mars and Earth weather data daily (as well as other various coding snafus).
+
+## Screenshots
+
+```{r echo = FALSE, out.width = "640", fig.align = "center"}
+knitr::include_graphics("/work/img/articleImages/2018-02-01_mars-weather_img/marsWeather_video.gif")
+```
+
+```{r echo = FALSE, out.width = "50%"}
+knitr::include_graphics("/work/img/articleImages/2018-02-01_mars-weather_img/marsWeather_1.png")
+knitr::include_graphics("/work/img/articleImages/2018-02-01_mars-weather_img/marsWeather_2.png")
+knitr::include_graphics("/work/img/articleImages/2018-02-01_mars-weather_img/marsWeather_3.png")
+knitr::include_graphics("/work/img/articleImages/2018-02-01_mars-weather_img/marsWeather_4.png")
+```
+
+
