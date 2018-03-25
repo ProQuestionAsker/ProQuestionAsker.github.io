@@ -13,7 +13,7 @@ output:
     fig_caption: yes
 ---
 
-## [Read the Story](https://pudding.cool/2017/05/births/)
+## [Read the Story](https://pudding.cool/2017/05/births/) &bull; [Download the Data](https://github.com/polygraph-cool/data/tree/master/births)
 
 
 ## The Premise

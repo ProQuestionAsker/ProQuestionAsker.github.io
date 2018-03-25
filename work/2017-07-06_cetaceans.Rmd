@@ -15,7 +15,7 @@ output:
     fig_caption: yes
 ---
 
-## [Read the Story](https://pudding.cool/2017/07/cetaceans/)
+## [Read the Story](https://pudding.cool/2017/07/cetaceans/) &bull; [Download the Data](https://github.com/polygraph-cool/data/tree/master/cetaceans)
 
 ## The Premise
 

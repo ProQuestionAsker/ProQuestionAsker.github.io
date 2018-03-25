@@ -6,7 +6,7 @@ slug: clinics
 categories: []
 tags: []
 type: "post"
-showonlyimage: true
+showonlyimage: false
 weight: 1
 image: "work/img/mainImages/2017-09-08_clinics.png"
 description: "An analysis of driving times to abortion clinics in the

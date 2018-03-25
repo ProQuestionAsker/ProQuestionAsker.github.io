@@ -5,18 +5,17 @@ date: '2018-02-01'
 slug: mars-weather
 categories: []
 tags: []
-showonlyimage: true
+showonlyimage: false
 draft: false
 image: "work/img/mainImages/2018-02-01_mars-weather.png"
 weight: 1
 type: "post"
 description: "Exploring today's weather on Mars and in your area with the Curiosity Rover."
 output:
-  blogdown::html_page:
-    toc: true
+  blogdown::html_page
 ---
 
-## [Read the Story](https://pudding.cool/2018/01/mars-weather/)
+## [Read the Story](https://pudding.cool/2018/01/mars-weather/) &bull; [Download the Data](https://github.com/polygraph-cool/data/tree/master/mars-weather)
 
 ## The Premise
 

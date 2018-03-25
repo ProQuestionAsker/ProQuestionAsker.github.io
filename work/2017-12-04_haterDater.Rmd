@@ -5,7 +5,7 @@ date: '2017-12-04'
 slug: haterDater
 categories: []
 tags: []
-showonlyimage: false
+showonlyimage: true
 draft: false
 image: "work/img/mainImages/2017-12-04_haterDater.png"
 weight: 1

@@ -304,10 +304,10 @@ annualSales &lt;- ex2 %&gt;% group_by(Fruit) %&gt;% summarise(Annual = sum(Sales
 
 annualSales</code></pre>
 <pre><code>## # A tibble: 3 x 2
-##        Fruit Annual
-##        &lt;chr&gt;  &lt;int&gt;
-## 1  blueberry    729
-## 2      grape    673
+##   Fruit      Annual
+##   &lt;chr&gt;       &lt;int&gt;
+## 1 blueberry     729
+## 2 grape         673
 ## 3 strawberry    617</code></pre>
 <p>So we end up with data that has only one data point for each fruit. To replicate this in d3, we can again use <code>d3.nest</code> but in combination with the function <code>d3.rollup</code>.</p>
 <p>It would look like this:</p>
