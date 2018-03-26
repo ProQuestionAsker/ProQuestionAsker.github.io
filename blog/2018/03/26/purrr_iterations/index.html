@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+<title>Making Multi-Argument Functions &amp; Data Frames Purrr - Amber Thomas</title>
+<meta property="og:title" content="Making Multi-Argument Functions &amp; Data Frames Purrr - Amber Thomas">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://amber.rbind.io/blog/img/mainImages/2018-03-26_purrr-iterations.png" >
+  
+
+<meta property="description" content="Using the purrr package to iterate over lots of values and return a data frame.">
+<meta property="og:description" content="Using the purrr package to iterate over lots of values and return a data frame.">
+
+
+<meta name="twitter:creator" content="">
+
+<meta name="description" content="This website serves as a portfolio for my data science projects, as well as blog posts and tutorials for using R, RStudio and other data science topics.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="twitter:creator" content="">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/owl.carousel.css">
+<link rel="stylesheet" href="/css/owl.theme.css">
+
+
+
+  <link href="/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+
+<link href="/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<link rel="stylesheet" href="/css/github-gist.css" rel="stylesheet" id="theme-stylesheet">
+
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-89036876-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              
+<div id="sidebar" class="col-sb-fixedpos col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="/">Amber Thomas</a></h1>
+
+    <ul class="sidebar-menu">
+      
+      
+        <li><a href="/about/">About</a></li>
+      
+        <li><a href="/projects/">Personal Projects</a></li>
+      
+        <li><a href="/work/">Work Portfolio</a></li>
+      
+        <li><a href="/blog/">Blog</a></li>
+      
+        <li><a href="/contact/">Get in Touch</a></li>
+      
+
+       
+
+
+
+ 
+
+      
+
+ 
+
+      
+ 
+
+    </ul>
+    <p class="social">
+  
+  
+  
+  <a href="https://twitter.com/ProQuesAsker" data-animate-hover="pulse" class="external twitter">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  
+  <a href="mailto:AmberThomasMSc@gmail.com" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  <a href="https://www.linkedin.com/in/amberrthomas" data-animate-hover="pulse">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  
+  
+  
+<a href="https://www.github.com/ProQuestionAsker">
+  <i class="fa fa-github"></i>
+</a>
+
+
+
+
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2017 Amber Thomas
+        
+        | Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background col-main-fixedpos">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="/">Amber Thomas</a></h1>
+</div>
+
+
+            <div class="row">
+                  <div class="col-sm-4">
+                    <div class="image">
+                      <img src="/blog/img/mainImages/2018-03-26_purrr-iterations.png" class="img-responsive" alt="">
+                    </div>
+                  </div>
+
+                  <div class="col-md-8">
+                      <h2>Making Multi-Argument Functions &amp; Data Frames Purrr</h2>
+                          <p class="author-category">
+                            Amber Thomas
+                          </p>
+
+                          <p class="date-comments">
+                          <i class="fa fa-calendar-o"></i> March 26, 2018
+                          </p>
+
+                          
+                  
+                      </div>
+                    </div>
+                  </br>
+
+<div class="row">
+   <div class="content-column-content">
+          <div class="col-lg-8">
+
+<div id="TOC">
+<ul>
+<li><a href="#why-purrr">Why purrr?</a></li>
+<li><a href="#functions-with-one-argument">Functions with One Argument</a></li>
+<li><a href="#functions-with-two-arguments">Functions with Two Arguments</a></li>
+<li><a href="#functions-with-3-or-more-arguments">Functions with 3 or More Arguments</a></li>
+<li><a href="#crossing-your-argument-vectors">Crossing Your Argument Vectors</a></li>
+</ul>
+</div>
+
+<div id="why-purrr" class="section level3">
+<h3>Why purrr?</h3>
+<p>Ah, the <code>purrr</code> package for R. Months after it had been released, I was still simply amused by all of the cat-related puns that this new package invoked, but I had no idea what it did. What did it mean to make your functions “purr”?</p>
+<p>I started seeing <a href="https://maraaverick.rbind.io/2017/09/purrr-ty-posts/">post after post</a> about why <a href="https://twitter.com/hadleywickham">Hadley Wickham</a>’s newest R package was a game-changer. But it was actually <a href="https://stackoverflow.com/questions/45101045/why-use-purrrmap-instead-of-lapply/47123420#47123420">this</a> Stack Overflow response that finally convinced me.</p>
+<p>Essentially, for my purposes, I could substitute <code>for()</code> loops and the <code>*apply()</code> family of functions for <code>purrr</code>. Since I <em>consistently</em> mess up the syntax of <code>*apply()</code> functions and have a semi-irrational fear of never-ending <code>for()</code> loops, I was so ready to jump on the <code>purrr</code> bandwagon. I’ve only just started dipping my toe in the waters of this package, but there’s one use-case that I’ve found insanely helpful so far: <strong>iterating a function over several variables and combining the results into a new data frame. </strong></p>
+<blockquote>
+<p><strong>Note</strong>: <em>Many <code>purrr</code> functions result in lists. In much of my work I prefer to work in data frames, so this post will focus on using <code>purrr</code> with data frames.</em></p>
+</blockquote>
+<p>Here’s what I mean.</p>
+</div>
+<div id="functions-with-one-argument" class="section level3">
+<h3>Functions with One Argument</h3>
+<p>Imagine you have a function like this:</p>
+<pre class="r"><code>myFunction &lt;- function(arg1){
+    # Cool stuff in here that returns a data frame!
+}
+
+# Example
+myFunction &lt;- function(arg1){
+  col &lt;- arg1 * 2
+  x &lt;- as.data.frame(col)
+}</code></pre>
+<p>If you wanted to run the function once, with <code>arg1 = 5</code>, you could do:</p>
+<pre class="r"><code>myFunction(5)</code></pre>
+<p>But what if you’d like to run <code>myFunction()</code> for several <code>arg1</code> values and combine all of the results in a data frame?</p>
+<p>You can do it with a <code>for()</code> loop:</p>
+<pre class="r"><code># Define the values you&#39;d like to loop over
+values &lt;- c(1, 3, 5, 7, 9)
+
+# Make a blank data frame with 1 columns that you can fill
+df &lt;- data.frame(col = vector())
+
+# Write a for loop (assuming)
+for (i in 1:length(values)) {
+  col &lt;- myFunction(values[i])      # returns the result of myFunction 
+  df[i,1] &lt;- col                    # places the first result into row i, column 1
+}</code></pre>
+<p>Or using the <code>*apply()</code> family:</p>
+<pre class="r"><code># Define the values you&#39;d like to loop over
+values &lt;- c(1, 3, 5, 7, 9)
+
+# Use the apply family of functions (assuming myFunction returns a data frame)
+df &lt;- do.call(rbind, (lapply(values, (myFunction))))</code></pre>
+<p>Or you can use the <code>purrr</code> family of <code>map*()</code> functions:</p>
+<pre class="r"><code># Load purrr
+library(purrr)
+
+# Define the values you&#39;d like to loop over
+values &lt;- c(1, 3, 5, 7, 9)
+
+# Use purrr::map_df
+df &lt;- map_dfr(values, myFunction)</code></pre>
+<p>There are several <code>map*()</code> functions in the <code>purrr</code> package and I highly recommend checking out the <a href="http://purrr.tidyverse.org/reference/map.html">documentation</a> or the <a href="https://github.com/rstudio/cheatsheets/blob/master/purrr.pdf">cheat sheet</a> to become more familiar with them, but <code>map_dfr()</code> runs <code>myFunction()</code> for each value in <code>values</code> and binds the results together rowwise. If you want to bind the results together as columns, you can use <code>map_dfc()</code>.</p>
+<p>In my opinion, using <code>purrr::map_dfr</code> is the easiest way to solve this problem ☝🏻 and it gets even better if your function has more than one argument.</p>
+<p><em>Before we move on a few things to keep in mind:</em></p>
+<blockquote>
+<p><strong>Warning</strong>: If you use <code>map_dfr()</code> on a function that <em>does not</em> return a data frame, you will get the following error: <em>Error in bind_rows_(x, .id) : Argument 1 must have names</em>.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note</strong>: This also works if you would like to iterate along columns of a data frame. If you had a dataframe called <code>df</code> and you wanted to iterate along column <code>values</code> in function <code>myFunction()</code>, you could call:</p>
+</blockquote>
+<pre class="r"><code>myData &lt;- map_dfr(df$values, myFunction)</code></pre>
+<p>Ok, now we can continue.</p>
+</div>
+<div id="functions-with-two-arguments" class="section level3">
+<h3>Functions with Two Arguments</h3>
+<p>Imagine you have a function with two arguments:</p>
+<pre class="r"><code>myFunction &lt;- function(arg1, arg2){
+  # Cool stuff in here that returns a data frame!
+}
+
+# Example
+myFunction &lt;- function(arg1, arg2){
+  col &lt;- arg1 * arg2
+  x &lt;- as.data.frame(col)
+}</code></pre>
+<p>There’s a <code>purrr</code> function for that! Use <code>map2_dfr()</code></p>
+<pre class="r"><code>arg1 &lt;- c(1, 3, 5, 7, 9)
+arg2 &lt;- c(2, 4, 6, 8, 10)
+
+df &lt;- map2_dfr(arg1, arg2, myFunction)</code></pre>
+<blockquote>
+<p>If you’re dealing with 2 or more arguments, make sure to read down to the <a href="#crossing-your-argument-vectors">Crossing Your Argument Vectors</a> section.</p>
+</blockquote>
+</div>
+<div id="functions-with-3-or-more-arguments" class="section level3">
+<h3>Functions with 3 or More Arguments</h3>
+<p>And if your function has 3 or more arguments, make a list of your variable vectors and use <code>pmap_dfr()</code></p>
+<pre class="r"><code>myComplexFunction &lt;- function(arg1, arg2, arg3, arg4){
+    # Still cool stuff here!
+}
+
+# Example
+myComplexFunction &lt;- function(arg1, arg2, arg3, arg4){
+  col &lt;- arg1 * arg2 * arg3 * arg4
+  x &lt;- as.data.frame(col)
+}
+
+arg1 &lt;- c(1, 3, 5, 7, 9)
+arg2 &lt;- c(2, 4, 6, 8, 10)
+arg3 &lt;- c(5, 10, 15, 20, 25)
+arg4 &lt;- c(10, 20, 30, 40, 50)
+
+argList &lt;- list(arg1, arg2, arg3, arg4)
+
+myData &lt;- pmap_dfr(argList, myComplexFunction)</code></pre>
+<p>Pretty simple, right?</p>
+</div>
+<div id="crossing-your-argument-vectors" class="section level3">
+<h3>Crossing Your Argument Vectors</h3>
+<p>There’s one more thing to keep in mind with <code>map*()</code> functions. If your function has more than one argument, it iterates the values on each argument’s vector with matching indeces at the same time.</p>
+<p>In other words, if you run this:</p>
+<pre class="r"><code>arg1 &lt;- c(1, 3, 5, 7, 9)
+arg2 &lt;- c(2, 4, 6, 8, 10)
+
+df &lt;- map2_dfr(arg1, arg2, myFunction)</code></pre>
+<p>You are essentially running</p>
+<pre class="r"><code>myFunction(1, 2)
+myFunction(3, 4)
+myFunction(5, 6)
+myFunction(7, 8)
+myFunction(9, 10)</code></pre>
+<p>If instead, you want every possible combination of the items on this list, like this:</p>
+<pre class="r"><code>myFunction(1, 2)
+myFunction(1, 4)
+myFunction(1, 6)
+myFunction(1, 8)
+myFunction(1, 10)
+myFunction(3, 2)
+myFunction(3, 4)
+# All the way to...
+myFunction(9, 8)
+myFunction(9, 10)</code></pre>
+<p>you’ll need to incorporate the <code>cross*()</code> series of functions from <code>purrr</code>. Each of the functions <code>cross()</code>, <code>cross2()</code>, and <code>cross3()</code> return a list item. If you’d instead prefer a dataframe, use <code>cross_df()</code> like this:</p>
+<pre class="r"><code>arg1 &lt;- c(1, 3, 5, 9)
+arg2 &lt;- c(2, 4, 6, 10)
+
+crossArg &lt;- cross_df(arg1, arg2)
+
+myData &lt;- map2_dfr(crossArg$arg1, crossArg$arg2, myFunction)</code></pre>
+<p>And that’s it! Again, <code>purrr</code> has so many other great functions (ICYMI, I <em>highly</em> recommend checking out <code>possibly</code>, <code>safely</code>, and <code>quietly</code>), but the combination of <code>map*()</code> and <code>cross*()</code> functions are my favorites so far.</p>
+</div>
+
+      
+       </div>
+     </div>
+   </div>
+
+
+
+
+
+        <a href="#" class="back-to-top">
+        <i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>
+
+        </a>
+
+         <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "amberthomas" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+   
+
+          </div>
+      </div>
+  </div>
+  <script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.cookie.js"> </script>
+<script src="/js/ekko-lightbox.js"></script>
+<script src="/js/jquery.scrollTo.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/front.js"></script>
+<script src="/js/backtotop.js"></script> 
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

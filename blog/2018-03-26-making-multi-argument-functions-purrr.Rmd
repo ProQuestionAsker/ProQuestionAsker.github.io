@@ -1,0 +1,198 @@
+---
+title: Making Multi-Argument Functions & Data Frames Purrr
+author: Amber Thomas
+date: '2018-03-26'
+slug: purrr_iterations
+categories: []
+tags: []
+type: "post"
+showonlyimage: false
+weight: 1
+image: "blog/img/mainImages/2018-03-26_purrr-iterations.png"
+description: "Using the purrr package to iterate over lots of values and return a data frame."
+output:
+  blogdown::html_page:
+    toc: true
+---
+### Why purrr?
+Ah, the `purrr` package for R. Months after it had been released, I was still simply amused by all of the cat-related puns that this new package invoked, but I had no idea what it did. What did it mean to make your functions "purr"? 
+
+I started seeing [post after post](https://maraaverick.rbind.io/2017/09/purrr-ty-posts/) about why [Hadley Wickham](https://twitter.com/hadleywickham)'s newest R package was a game-changer. But it was actually [this](https://stackoverflow.com/questions/45101045/why-use-purrrmap-instead-of-lapply/47123420#47123420) Stack Overflow response that finally convinced me. 
+
+Essentially, for my purposes, I could substitute `for()` loops and the `*apply()` family of functions for `purrr`. Since I *consistently* mess up the syntax of `*apply()` functions and have a semi-irrational fear of never-ending `for()` loops, I was so ready to jump on the `purrr` bandwagon. I've only just started dipping my toe in the waters of this package, but there's one use-case that I've found insanely helpful so far: **iterating a function over several variables and combining the results into a new data frame. **
+
+> **Note**: *Many `purrr` functions result in lists. In much of my work I prefer to work in data frames, so this post will focus on using `purrr` with data frames.* 
+
+Here's what I mean. 
+
+### Functions with One Argument
+Imagine you have a function like this:
+
+```{r eval = FALSE}
+myFunction <- function(arg1){
+	# Cool stuff in here that returns a data frame!
+}
+
+# Example
+myFunction <- function(arg1){
+  col <- arg1 * 2
+  x <- as.data.frame(col)
+}
+```
+
+If you wanted to run the function once, with `arg1 = 5`, you could do:
+```{r eval = FALSE}
+myFunction(5)
+```
+
+But what if you'd like to run `myFunction()` for several `arg1` values and combine all of the results in a data frame? 
+
+You can do it with a `for()` loop: 
+```{r eval = FALSE}
+# Define the values you'd like to loop over
+values <- c(1, 3, 5, 7, 9)
+
+# Make a blank data frame with 1 columns that you can fill
+df <- data.frame(col = vector())
+
+# Write a for loop (assuming)
+for (i in 1:length(values)) {
+  col <- myFunction(values[i])      # returns the result of myFunction 
+  df[i,1] <- col                    # places the first result into row i, column 1
+}
+```
+
+Or using the `*apply()` family:
+```{r eval = FALSE}
+# Define the values you'd like to loop over
+values <- c(1, 3, 5, 7, 9)
+
+# Use the apply family of functions (assuming myFunction returns a data frame)
+df <- do.call(rbind, (lapply(values, (myFunction))))
+```
+
+Or you can use the `purrr` family of `map*()` functions:
+```{r eval = FALSE}
+# Load purrr
+library(purrr)
+
+# Define the values you'd like to loop over
+values <- c(1, 3, 5, 7, 9)
+
+# Use purrr::map_df
+df <- map_dfr(values, myFunction)
+```
+
+There are several `map*()` functions in the `purrr` package and I highly recommend checking out the [documentation](http://purrr.tidyverse.org/reference/map.html) or the [cheat sheet](https://github.com/rstudio/cheatsheets/blob/master/purrr.pdf) to become more familiar with them, but `map_dfr()` runs `myFunction()` for each value in `values` and binds the results together rowwise. If you want to bind the results together as columns, you can use `map_dfc()`.
+
+In my opinion, using `purrr::map_dfr` is the easiest way to solve this problem ☝🏻 and it gets even better if your function has more than one argument. 
+
+*Before we move on a few things to keep in mind:*
+
+> **Warning**: If you use `map_dfr()` on a function that *does not* return a data frame, you will get the following error: *Error in bind_rows_(x, .id) : Argument 1 must have names*. 
+
+> **Note**: This also works if you would like to iterate along columns of a data frame. If you had a dataframe called `df` and you wanted to iterate along column `values` in function `myFunction()`, you could call:
+
+```{r eval = FALSE}
+myData <- map_dfr(df$values, myFunction)
+```
+
+Ok, now we can continue.
+
+### Functions with Two Arguments
+
+Imagine you have a function with two arguments:
+```{r eval = FALSE}
+myFunction <- function(arg1, arg2){
+  # Cool stuff in here that returns a data frame!
+}
+
+# Example
+myFunction <- function(arg1, arg2){
+  col <- arg1 * arg2
+  x <- as.data.frame(col)
+}
+```
+
+There's a `purrr` function for that! Use `map2_dfr()`
+```{r eval = FALSE}
+arg1 <- c(1, 3, 5, 7, 9)
+arg2 <- c(2, 4, 6, 8, 10)
+
+df <- map2_dfr(arg1, arg2, myFunction)
+```
+
+> If you're dealing with 2 or more arguments, make sure to read down to the [Crossing Your Argument Vectors](#crossing-your-argument-vectors) section.
+
+### Functions with 3 or More Arguments
+And if your function has 3 or more arguments, make a list of your variable vectors and use `pmap_dfr()`
+```{r eval = FALSE}
+myComplexFunction <- function(arg1, arg2, arg3, arg4){
+	# Still cool stuff here!
+}
+
+# Example
+myComplexFunction <- function(arg1, arg2, arg3, arg4){
+  col <- arg1 * arg2 * arg3 * arg4
+  x <- as.data.frame(col)
+}
+
+arg1 <- c(1, 3, 5, 7, 9)
+arg2 <- c(2, 4, 6, 8, 10)
+arg3 <- c(5, 10, 15, 20, 25)
+arg4 <- c(10, 20, 30, 40, 50)
+
+argList <- list(arg1, arg2, arg3, arg4)
+
+myData <- pmap_dfr(argList, myComplexFunction)
+```
+
+Pretty simple, right? 
+
+
+### Crossing Your Argument Vectors
+
+There's one more thing to keep in mind with `map*()` functions. If your function has more than one argument, it iterates the values on each argument's vector with matching indeces at the same time. 
+
+In other words, if you run this:
+```{r eval = FALSE}
+arg1 <- c(1, 3, 5, 7, 9)
+arg2 <- c(2, 4, 6, 8, 10)
+
+df <- map2_dfr(arg1, arg2, myFunction)
+```
+
+You are essentially running
+```{r eval = FALSE}
+myFunction(1, 2)
+myFunction(3, 4)
+myFunction(5, 6)
+myFunction(7, 8)
+myFunction(9, 10)
+```
+
+If instead, you want every possible combination of the items on this list, like this:
+```{r eval = FALSE}
+myFunction(1, 2)
+myFunction(1, 4)
+myFunction(1, 6)
+myFunction(1, 8)
+myFunction(1, 10)
+myFunction(3, 2)
+myFunction(3, 4)
+# All the way to...
+myFunction(9, 8)
+myFunction(9, 10)
+```
+you'll need to incorporate the `cross*()` series of functions from `purrr`. Each of the functions `cross()`, `cross2()`, and `cross3()` return a list item. If you'd instead prefer a dataframe, use `cross_df()` like this:
+```{r eval = FALSE}
+arg1 <- c(1, 3, 5, 9)
+arg2 <- c(2, 4, 6, 10)
+
+crossArg <- cross_df(arg1, arg2)
+
+myData <- map2_dfr(crossArg$arg1, crossArg$arg2, myFunction)
+```
+
+And that's it! Again, `purrr` has so many other great functions (ICYMI, I *highly* recommend checking out `possibly`, `safely`, and `quietly`), but the combination of `map*()` and `cross*()` functions are my favorites so far. 
+

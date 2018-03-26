@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2017 Amber Thomas</copyright>
-    <lastBuildDate>Wed, 15 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Making Multi-Argument Functions &amp; Data Frames Purrr</title>
+      <link>/blog/2018/03/26/purrr_iterations/</link>
+      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2018/03/26/purrr_iterations/</guid>
+      <description>Why purrr? Functions with One Argument Functions with Two Arguments Functions with 3 or More Arguments Crossing Your Argument Vectors   Why purrr? Ah, the purrr package for R. Months after it had been released, I was still simply amused by all of the cat-related puns that this new package invoked, but I had no idea what it did. What did it mean to make your functions “purr”?</description>
+    </item>
     
     <item>
       <title>Adding Syntax Highlighting to Blogdown Posts</title>
