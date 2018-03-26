@@ -1,6 +1,6 @@
 ---
 title: A Tale of Two Cities
-author: Amber Thomas and Ilia Blinderman
+author: Ilia Blinderman and Amber Thomas
 date: '2018-03-21'
 slug: neighborhoods
 categories: []
@@ -20,11 +20,11 @@ output:
 
 ## The Premise
 
-When you love the city where you live, you often have personal connections and memories tied to the different corners of the city's limits. In this story, we wanted to combine our personal experiences in Seattle and New York City's neighborhoods, with data about the businesses that operate in those neighborhoods. Do we have different perceptions of areas with an overabundance of massage parlors or doctors?  
+When you love the city where you live, you often have personal connections and memories tied to the different corners of the city's limits. In this story, we wanted to combine our personal experiences in Seattle and New York City's neighborhoods, with data about the businesses that operate in those neighborhoods. Do we have different perceptions of areas with an overabundance of massage parlors than we do to an area with a ton of doctors?  
 
 ## My Contributions
 
-* Writing and setup of web scraper to Yelp data for every business in Seattle and New York
+* Writing and setup of web scraper to collect Yelp data for every business in Seattle and New York
 * Data Analysis
 * Some front-end development (primarily creation of animated header)
 * Story Writing (of the Seattle-specific sections)
@@ -32,7 +32,7 @@ When you love the city where you live, you often have personal connections and m
 
 ## Collaborators
 
-The original story idea, narrative angle, map creation, and writing about New York were all beautifully executed by The Pudding's [Ilia Blinderman](https://twitter.com/iliablinderman). [Matt Daniels](https://twitter.com/matthewfdaniels) was our editor and provided helpful feedback throughout the creative process. The design of the maps (and the rest of the story) were inspired by the "Ice Cream" [Mapbox Theme](https://www.mapbox.com/designer-maps/#ice-cream) by [Maya Gao](https://twitter.com/mayaqgao).
+The original story idea, narrative angle, map creation, and writing about New York were all beautifully executed by The Pudding's [Ilia Blinderman](https://twitter.com/iliablinderman). [Matt Daniels](https://twitter.com/matthewfdaniels) was our editor and provided helpful feedback throughout the creative process. The design of the maps (and the rest of the story) was inspired by the "Ice Cream" [Mapbox Theme](https://www.mapbox.com/designer-maps/#ice-cream) by [Maya Gao](https://twitter.com/mayaqgao).
 
 ## Screenshots
 
