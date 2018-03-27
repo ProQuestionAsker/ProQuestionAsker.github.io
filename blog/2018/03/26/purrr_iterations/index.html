@@ -286,7 +286,7 @@ myData &lt;- pmap_dfr(argList, myComplexFunction)</code></pre>
 </div>
 <div id="crossing-your-argument-vectors" class="section level3">
 <h3>Crossing Your Argument Vectors</h3>
-<p>There’s one more thing to keep in mind with <code>map*()</code> functions. If your function has more than one argument, it iterates the values on each argument’s vector with matching indeces at the same time.</p>
+<p>There’s one more thing to keep in mind with <code>map*()</code> functions. If your function has more than one argument, it iterates the values on each argument’s vector with matching indices at the same time.</p>
 <p>In other words, if you run this:</p>
 <pre class="r"><code>arg1 &lt;- c(1, 3, 5, 7, 9)
 arg2 &lt;- c(2, 4, 6, 8, 10)
@@ -313,9 +313,13 @@ myFunction(9, 10)</code></pre>
 <pre class="r"><code>arg1 &lt;- c(1, 3, 5, 9)
 arg2 &lt;- c(2, 4, 6, 10)
 
-crossArg &lt;- cross_df(arg1, arg2)
+argList &lt;- list(x = arg1, y = arg2)
+crossArg &lt;- cross_df(argList)
 
-myData &lt;- map2_dfr(crossArg$arg1, crossArg$arg2, myFunction)</code></pre>
+myData &lt;- map2_dfr(crossArg$x, crossArg$y, myFunction)</code></pre>
+<blockquote>
+<p><strong>Correction</strong>: In the original version of this post, I had forgotten that <code>cross_df()</code> expects a list of (named) arguments. The code above is now fixed. Many thanks to <a href="https://twitter.com/sf99">sf99</a> for pointing out the error! 🎉</p>
+</blockquote>
 <p>And that’s it! Again, <code>purrr</code> has so many other great functions (ICYMI, I <em>highly</em> recommend checking out <code>possibly</code>, <code>safely</code>, and <code>quietly</code>), but the combination of <code>map*()</code> and <code>cross*()</code> functions are my favorites so far.</p>
 </div>
 

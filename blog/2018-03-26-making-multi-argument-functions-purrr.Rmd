@@ -152,7 +152,7 @@ Pretty simple, right?
 
 ### Crossing Your Argument Vectors
 
-There's one more thing to keep in mind with `map*()` functions. If your function has more than one argument, it iterates the values on each argument's vector with matching indeces at the same time. 
+There's one more thing to keep in mind with `map*()` functions. If your function has more than one argument, it iterates the values on each argument's vector with matching indices at the same time. 
 
 In other words, if you run this:
 ```{r eval = FALSE}
@@ -189,10 +189,14 @@ you'll need to incorporate the `cross*()` series of functions from `purrr`. Each
 arg1 <- c(1, 3, 5, 9)
 arg2 <- c(2, 4, 6, 10)
 
-crossArg <- cross_df(arg1, arg2)
+argList <- list(x = arg1, y = arg2)
+crossArg <- cross_df(argList)
 
-myData <- map2_dfr(crossArg$arg1, crossArg$arg2, myFunction)
+myData <- map2_dfr(crossArg$x, crossArg$y, myFunction)
 ```
 
+> **Correction**: In the original version of this post, I had forgotten that `cross_df()` expects a list of (named) arguments. The code above is now fixed. Many thanks to [sf99](https://twitter.com/sf99) for pointing out the error! 🎉
+
 And that's it! Again, `purrr` has so many other great functions (ICYMI, I *highly* recommend checking out `possibly`, `safely`, and `quietly`), but the combination of `map*()` and `cross*()` functions are my favorites so far. 
+
 
