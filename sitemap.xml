@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/work/2018/05/10/cookies/</loc>
+    <lastmod>2018-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/blog/2018/03/26/purrr_iterations/</loc>
     <lastmod>2018-03-26T00:00:00+00:00</lastmod>
   </url>
@@ -135,16 +140,11 @@
   </url>
   
   <url>
-    <loc>/projects/1/01/01.html</loc>
+    <loc>/projects/1/01/01/</loc>
   </url>
   
   <url>
-    <loc>/projects/1/01/01.html</loc>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-    <priority>0</priority>
+    <loc>/projects/1/01/01/</loc>
   </url>
   
   <url>
@@ -153,7 +153,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-03-26T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -177,12 +177,6 @@
   <url>
     <loc>/tags/cleaning/</loc>
     <lastmod>2016-11-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/contact/</loc>
-    <lastmod>2016-11-06T13:00:25+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -242,7 +236,7 @@
   
   <url>
     <loc>/work/</loc>
-    <lastmod>2018-03-21T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

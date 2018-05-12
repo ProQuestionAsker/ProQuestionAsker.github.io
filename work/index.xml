@@ -6,11 +6,19 @@
     <description>Recent content in Work on Amber Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy;2017 Amber Thomas</copyright>
-    <lastBuildDate>Wed, 21 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/work/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Baking the Most Average Chocolate Chip Cookie</title>
+      <link>/work/2018/05/10/cookies/</link>
+      <pubDate>Thu, 10 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/work/2018/05/10/cookies/</guid>
+      <description>Read the Story • Download the Data  The Premise Since the invention of the chocolate chip cookie, the original recipe has been altered and amended in attempts to make the recipe more gooey, chocolatey, and generally tastier than its predecessors. Is there a way to leverage computers and hundreds of existing cookie recipes to generate the most average recipe? Perhaps, like averaging human faces, the average cookie recipe could be the most delicious of them all.</description>
+    </item>
     
     <item>
       <title>A Tale of Two Cities</title>

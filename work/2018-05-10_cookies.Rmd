@@ -1,0 +1,48 @@
+---
+title: Baking the Most Average Chocolate Chip Cookie
+author: Elle O'Brien and Amber Thomas
+date: '2018-05-10'
+slug: cookies
+categories: []
+tags: []
+showonlyimage: true
+draft: false
+image: "work/img/mainImages/2018-05-10_cookies.png"
+weight: 1
+type: "post"
+description: "Cookie recipes written by computers. What could go wrong?"
+output:
+  blogdown::html_page:
+    toc: false
+---
+
+## [Read the Story](https://pudding.cool/2018/05/cookies) &bull; [Download the Data](https://github.com/polygraph-cool/data/tree/master/cookies)
+
+## The Premise
+
+Since the invention of the chocolate chip cookie, the original recipe has been altered and amended in attempts to make the recipe more gooey, chocolatey, and generally tastier than its predecessors. Is there a way to leverage computers and hundreds of existing cookie recipes to generate the most average recipe? Perhaps, like averaging human faces, the average cookie recipe could be the most delicious of them all. We used three different algorithms to test this idea and baked the results. 
+
+## My Contributions
+
+* Front-end Development (HTML, CSS, & JS)
+* Some writing and copy-editing
+* "Translation" of how the algorithms work from words to visuals 
+
+## Collaborators
+
+The original story idea came from The Pudding's [Russell Goldenberg](https://twitter.com/codenberg), and was brought to life by [Elle O'Brien](https://twitter.com/andronovhopf). Elle collected the cookie recipes, performed the machine learning and recipe creation and wrote some of the story. Much of the design inspiration and the header image came from The Pudding's [Jan Diehm](https://twitter.com/jadiehm). 
+
+## Screenshots
+
+```{r echo = FALSE, out.width = "640", fig.align = "center"}
+knitr::include_graphics("/work/img/articleImages/2018-05-10_cookies_img/cookies_video.gif")
+```
+
+```{r echo = FALSE, out.width = "50%"}
+knitr::include_graphics("/work/img/articleImages/2018-05-10_cookies_img/cookies_1.png")
+knitr::include_graphics("/work/img/articleImages/2018-05-10_cookies_img/cookies_2.png")
+knitr::include_graphics("/work/img/articleImages/2018-05-10_cookies_img/cookies_3.png")
+knitr::include_graphics("/work/img/articleImages/2018-05-10_cookies_img/cookies_4.png")
+```
+---
+
