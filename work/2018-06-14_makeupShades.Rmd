@@ -1,0 +1,49 @@
+---
+title: The Diversity of Makeup Shades
+author: Jason Li, Amber Thomas, and Divya Manian
+date: '2018-06-14'
+slug: makeupShades
+categories: []
+tags: []
+showonlyimage: false
+draft: false
+image: "work/img/mainImages/2018-06-14_makeupShades.png"
+weight: 1
+type: "post"
+description: "Rihanna's Fenty Beauty is a champion for makeup inclusivity. But how do other brands across the US and the world compare?"
+output:
+  blogdown::html_page:
+    toc: false
+---
+
+## [Read the Story](https://pudding.cool/2018/06/makeup-shades/) &bull; [Download the Data](https://github.com/the-pudding/data/tree/master/makeup-shades)
+
+## The Premise
+
+When FentyBeauty launched last year with a ground-breaking 40 shades of foundation, it became a champion of inclusivity in the makeup world. Beauty brand Make Up For Ever challenged the newcomer, stating that they have had 40 shades for years. But are all 40 shades equally diverse? We used the hexadecimal color values that represent each foundation shade for Fenty and several other US-based and global brands to find the spread of lightness values as proxy for diversity.
+
+## My Contributions
+
+* Front-end Development (HTML, CSS, & JS)
+* Some writing and copy-editing
+* Data Visualization Design & Programming
+
+## Collaborators
+
+This story was inspired by [Jason Li](http://www.hongkonggong.com/)'s [blogpost](https://notebook.hongkonggong.com/2018/01/16/inclusive-illustration-research-part-2/) about using makeup shades to develop a more inclusive color palette for illustrating characters. He collected all of the data for this article and performed preliminary analysis. He also worked together with [Divya Manian](https://nimbu.in/) to develop the story and write most of the prose.  Jason created all of the boxing makeup illustrations.
+
+## Screenshots
+
+```{r echo = FALSE, out.width = "640", fig.align = "center"}
+knitr::include_graphics("/work/img/articleImages/2018-06-14_makeupShades_img/makeupShades_video.gif")
+```
+
+```{r echo = FALSE, out.width = "50%"}
+knitr::include_graphics("/work/img/articleImages/2018-06-14_makeupShades_img/makeup_1.png")
+knitr::include_graphics("/work/img/articleImages/2018-06-14_makeupShades_img/makeup_2.png")
+knitr::include_graphics("/work/img/articleImages/2018-06-14_makeupShades_img/makeup_3.png")
+knitr::include_graphics("/work/img/articleImages/2018-06-14_makeupShades_img/makeup_4.png")
+```
+---
+
+

@@ -6,10 +6,28 @@
     <description>Recent content on Amber Thomas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Let’s Talk About Birth Control</title>
+      <link>/work/2018/07/17/birth-control/</link>
+      <pubDate>Tue, 17 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/work/2018/07/17/birth-control/</guid>
+      <description>Read the Story • Download the Data and Scripts  The Premise Hundreds of thousands of people throughout the US are contraceptive users, but generally, the topic is kept “hush-hush”. We talk about it with friends and peers, but the more information we have, the more informed decisions we can make for ourselves. I analyzed data from the CDC’s National Survey on Family Growth to learn more about contraceptive use in the US.</description>
+    </item>
+    
+    <item>
+      <title>The Diversity of Makeup Shades</title>
+      <link>/work/2018/06/14/makeupshades/</link>
+      <pubDate>Thu, 14 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/work/2018/06/14/makeupshades/</guid>
+      <description>Read the Story • Download the Data  The Premise When FentyBeauty launched last year with a ground-breaking 40 shades of foundation, it became a champion of inclusivity in the makeup world. Beauty brand Make Up For Ever challenged the newcomer, stating that they have had 40 shades for years. But are all 40 shades equally diverse? We used the hexadecimal color values that represent each foundation shade for Fenty and several other US-based and global brands to find the spread of lightness values as proxy for diversity.</description>
+    </item>
     
     <item>
       <title>Baking the Most Average Chocolate Chip Cookie</title>
